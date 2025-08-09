@@ -989,8 +989,11 @@ def get_fast_predictions():
         if ULTRA_FAST_AVAILABLE:
             engine = FastPredictionEngine()
             
-            # Use ONLY the engine's get_todays_real_games() to avoid duplicates
-            games_tuples = engine.get_todays_real_games()
+            # Get selected date from query parameter, default to None (today)
+            selected_date = request.args.get('date', None)
+            
+            # Use ONLY the engine's get_todays_real_games() with selected date to avoid duplicates
+            games_tuples = engine.get_todays_real_games(selected_date)
             
             predictions = []
             for away, home in games_tuples:
@@ -1041,11 +1044,14 @@ def get_fast_predictions():
                     continue
             
             from datetime import date
+            # Use selected date or today's date for response
+            response_date = selected_date if selected_date else date.today().strftime('%Y-%m-%d')
+            
             return jsonify({
                 'success': True,
                 'predictions': predictions,
                 'total_time_ms': sum(p['meta']['execution_time_ms'] for p in predictions),
-                'games_date': date.today().strftime('%Y-%m-%d'),
+                'games_date': response_date,
                 'total_games': len(predictions)
             })
         else:

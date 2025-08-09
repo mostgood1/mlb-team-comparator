@@ -748,25 +748,64 @@ class FastPredictionEngine:
             }
         }
     
-    def get_todays_real_games(self) -> List[Tuple[str, str]]:
-        """Get today's real games from ProjectedStarters.json for proper pitcher matchups"""
+    def get_todays_real_games(self, game_date: str = None) -> List[Tuple[str, str]]:
+        """Get real games from ProjectedStarters.json for specific date or today"""
         real_games = []
-        today = date.today().strftime('%Y-%m-%d')
+        target_date = game_date if game_date else date.today().strftime('%Y-%m-%d')
         
-        # Get games from ProjectedStarters.json
-        if hasattr(self.sim_engine, 'projected_starters') and self.sim_engine.projected_starters:
-            for game_key, game_data in self.sim_engine.projected_starters.items():
-                if isinstance(game_data, dict) and 'away_team' in game_data and 'home_team' in game_data:
-                    away_team = game_data['away_team']
-                    home_team = game_data['home_team']
-                    
-                    # Convert full team names to short names for consistency
-                    away_short = self._convert_to_short_name(away_team)
-                    home_short = self._convert_to_short_name(home_team)
-                    
-                    real_games.append((away_short, home_short))
+        # Access raw ProjectedStarters.json file directly for date-specific data
+        import os
+        import json
         
-        # If no real games found, return a few sample games with realistic team names
+        starters_file = os.path.join(os.path.dirname(__file__), 'ProjectedStarters.json')
+        
+        try:
+            if os.path.exists(starters_file):
+                with open(starters_file, 'r') as f:
+                    raw_data = json.load(f)
+                
+                # Check if target date exists in raw data
+                if target_date in raw_data:
+                    # Date-organized structure: {'2025-08-09': {games...}}
+                    date_data = raw_data[target_date]
+                    for game_key, game_data in date_data.items():
+                        if isinstance(game_data, dict) and 'away_team' in game_data and 'home_team' in game_data:
+                            away_team = game_data['away_team']
+                            home_team = game_data['home_team']
+                            
+                            # Convert full team names to short names for consistency
+                            away_short = self._convert_to_short_name(away_team)
+                            home_short = self._convert_to_short_name(home_team)
+                            
+                            real_games.append((away_short, home_short))
+                else:
+                    # Fallback: check flattened data from engine for today
+                    if target_date == date.today().strftime('%Y-%m-%d'):
+                        if hasattr(self.sim_engine, 'projected_starters') and self.sim_engine.projected_starters:
+                            for game_key, game_data in self.sim_engine.projected_starters.items():
+                                if isinstance(game_data, dict) and 'away_team' in game_data and 'home_team' in game_data:
+                                    away_team = game_data['away_team']
+                                    home_team = game_data['home_team']
+                                    
+                                    # Convert full team names to short names for consistency
+                                    away_short = self._convert_to_short_name(away_team)
+                                    home_short = self._convert_to_short_name(home_team)
+                                    
+                                    real_games.append((away_short, home_short))
+                    
+                    # If still no games found, use generic fallback for non-today dates
+                    if not real_games and target_date != date.today().strftime('%Y-%m-%d'):
+                        real_games = [
+                            ("Yankees", "Red Sox"),     # Classic rivalry
+                            ("Dodgers", "Giants"),      # NL West rivalry  
+                            ("Cubs", "Cardinals"),      # NL Central rivalry
+                            ("Astros", "Rangers"),      # AL West rivalry
+                            ("Phillies", "Mets")        # NL East rivalry
+                        ]
+        except Exception as e:
+            print(f"Warning: Error reading ProjectedStarters.json: {e}")
+        
+        # Final fallback if no games found
         if not real_games:
             real_games = [
                 ("Astros", "Yankees"),
