@@ -19,15 +19,27 @@ except ImportError as e:
     print(f"⚠ Ultra-fast engine not available: {e}")
     ULTRA_FAST_AVAILABLE = False
 
-# Fallback imports
+# Fallback imports - skip if not available
+IMPROVED_AVAILABLE = False
 try:
     from improved_prediction_engine import ImprovedMLBPredictionEngine
     print("✓ Improved engine available as fallback")
     IMPROVED_AVAILABLE = True
 except ImportError:
-    IMPROVED_AVAILABLE = False
+    print("ℹ Improved engine not available (using ultra-fast only)")
 
 app = Flask(__name__)
+
+# Initialize prediction engine
+prediction_engine = None
+if ULTRA_FAST_AVAILABLE:
+    try:
+        prediction_engine = FastPredictionEngine()
+        print("✓ Ultra-fast prediction engine initialized")
+    except Exception as e:
+        print(f"❌ Failed to initialize prediction engine: {e}")
+else:
+    print("❌ No prediction engine available")
 
 # Enhanced HTML template with real-time features
 HTML_TEMPLATE = """
