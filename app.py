@@ -1060,52 +1060,51 @@ def get_fast_predictions():
             
             predictions = []
             for away, home in games:
-                # Use cumulative simulation approach instead of starting fresh each time
+                # Use the updated ultra-fast engine with real pitcher impacts
                 try:
-                    from cumulative_ultra_fast_engine import CumulativeUltraFastEngine
-                    if not hasattr(app, 'cumulative_engine'):
-                        app.cumulative_engine = CumulativeUltraFastEngine()
+                    # Get direct prediction from our tuned engine
+                    prediction = engine.get_fast_prediction(away, home, sim_count=1500)
                     
-                    # Get cumulative prediction (builds up data over time)
-                    cumulative_pred = app.cumulative_engine.get_cumulative_prediction(
-                        away, home, selected_date, target_simulations=5000
-                    )
+                    # Ensure the prediction has the correct format
+                    if 'pitcher_quality' not in prediction:
+                        prediction['pitcher_quality'] = {
+                            'away_pitcher_name': 'TBD',
+                            'home_pitcher_name': 'TBD', 
+                            'away_pitcher_factor': 1.000,
+                            'home_pitcher_factor': 1.000
+                        }
                     
-                    # Get pitcher information for this matchup
-                    pitcher_info = get_pitcher_info_for_teams(away, home, selected_date)
+                    predictions.append(prediction)
                     
-                    # Get betting lines for this matchup
-                    betting_lines = get_betting_lines_for_teams(away, home, selected_date)
-                    
-                    # Convert to expected format for compatibility
+                except Exception as e:
+                    print(f"Error getting prediction for {away} @ {home}: {e}")
+                    # Create a basic prediction on error
                     prediction = {
                         'away_team': away,
                         'home_team': home,
                         'predictions': {
-                            'home_win_probability': cumulative_pred['home_win_probability'],
-                            'away_win_probability': cumulative_pred['away_win_probability'],
-                            'predicted_home_score': cumulative_pred['predicted_home_score'],
-                            'predicted_away_score': cumulative_pred['predicted_away_score'],
-                            'predicted_total': cumulative_pred['predicted_total'],
-                            'confidence': cumulative_pred['confidence']
+                            'home_win_probability': 0.5,
+                            'away_win_probability': 0.5,
+                            'predicted_home_score': 5.0,
+                            'predicted_away_score': 5.0,
+                            'predicted_total': 10.0,
+                            'confidence': 50
                         },
                         'meta': {
-                            'execution_time_ms': 10,  # Cumulative lookups are very fast
-                            'simulations_run': cumulative_pred['total_simulations'],
+                            'execution_time_ms': 10,
+                            'simulations_run': 1500,
                             'recommendations_found': 0,
-                            'cumulative_mode': True,
-                            'simulation_period': cumulative_pred.get('simulation_period', 'Unknown')
+                            'error': str(e)
                         },
                         'recommendations': [],
-                        'pitcher_quality': pitcher_info,
-                        'betting_lines': betting_lines
+                        'pitcher_quality': {
+                            'away_pitcher_name': 'ERROR',
+                            'home_pitcher_name': 'ERROR',
+                            'away_pitcher_factor': 1.000,
+                            'home_pitcher_factor': 1.000
+                        }
                     }
-                    
-                except ImportError:
-                    # Fallback to original method if cumulative engine not available
-                    prediction = engine.get_fast_prediction(away, home, sim_count=1500)
-                
-                predictions.append(prediction)
+                    predictions.append(prediction)
             
             return jsonify({
                 'success': True,
