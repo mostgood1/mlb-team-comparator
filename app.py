@@ -211,17 +211,39 @@ HTML_TEMPLATE = """
         let currentEngine = null;
         
         async function loadTodaysPredictions() {
-            document.getElementById('predictions-container').innerHTML = '<div class="loading">⚡ Loading today's predictions...</div>';
+            console.log('📡 Starting loadTodaysPredictions...');
+            document.getElementById('predictions-container').innerHTML = '<div class="loading">⚡ Loading today\\'s predictions...</div>';
             
             try {
+                console.log('📞 Fetching /api/fast-predictions...');
                 const response = await fetch('/api/fast-predictions');
+                console.log('📊 Response status:', response.status);
+                
+                if (!response.ok) {
+                    throw new Error(`HTTP ${response.status}: ${response.statusText}`);
+                }
+                
                 const data = await response.json();
+                console.log('✅ JSON parsed, predictions count:', data.predictions?.length || 0);
                 
                 if (data.error) throw new Error(data.error);
+                
+                if (!data.predictions || data.predictions.length === 0) {
+                    throw new Error('No predictions returned from API');
+                }
+                
                 displayMultiplePredictions(data.predictions);
+                console.log('✅ Predictions displayed successfully');
+                
             } catch (error) {
+                console.error('❌ loadTodaysPredictions error:', error);
                 document.getElementById('predictions-container').innerHTML = 
-                    `<div class="prediction-card"><h3>❌ Error: ${error.message}</h3></div>`;
+                    `<div class="prediction-card">
+                        <h3>❌ Error: ${error.message}</h3>
+                        <p>Check browser console for details</p>
+                        <button onclick="loadTodaysPredictions()">🔄 Retry</button>
+                        <button onclick="window.open('/api/fast-predictions', '_blank')">🔍 Check API</button>
+                    </div>`;
             }
         }
         
@@ -797,12 +819,21 @@ HTML_TEMPLATE = """
         
         // Auto-load today's games on page load
         window.onload = () => {
+            console.log('🚀 Page loaded, initializing...');
+            
             // Set today's date in the date input
             const today = new Date();
             document.getElementById('game-date').value = today.toISOString().split('T')[0];
+            console.log('📅 Date set to:', today.toISOString().split('T')[0]);
             
-            // Load today's predictions
-            loadTodaysPredictions();
+            // Load today's predictions with error handling
+            console.log('📍 Loading today\\'s predictions...');
+            loadTodaysPredictions().catch(error => {
+                console.error('❌ Auto-load failed:', error);
+                document.getElementById('predictions-container').innerHTML = 
+                    `<div class="prediction-card"><h3>❌ Auto-load failed: ${error.message}</h3>
+                     <button onclick="loadTodaysPredictions()">🔄 Retry</button></div>`;
+            });
         };
     </script>
 </body>
