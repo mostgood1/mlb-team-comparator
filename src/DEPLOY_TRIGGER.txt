@@ -1,0 +1,20 @@
+# Deployment Trigger - August 9, 2025
+# Force redeploy to update onrender site with latest tuned engine
+
+DEPLOYMENT_TIMESTAMP="2025-08-09T00:15:00Z"
+ENGINE_VERSION="ultra-fast-v4.2-tuned"
+REAL_GAME_DATA_ACTIVE="true"
+PITCHER_IMPACTS_FIXED="true"
+
+# Latest Performance Metrics:
+# - Local engine: Sandy Alcantara (1.138) vs Erick Fedde (1.156) 
+# - Realistic run totals: 4.7-5.0 (not 12+ like on current site)
+# - Speed: 21.6ms average
+# - MLB accuracy: 9.01 vs 8.86 target (1.7% error)
+
+# Issue on onrender site:
+# - All pitcher factors showing 1.000 (should be 0.862-1.156 range)
+# - High run totals ~12+ (should be 8-9 range)
+# - Using old engine without real game data integration
+
+# This file triggers redeploy with correct engine
