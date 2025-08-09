@@ -475,7 +475,13 @@ class UltraFastSimEngine:
         """
         Ultra-fast vectorized simulation with EXTREME variance to match real MLB
         Uses Poisson distribution with team/pitcher adjustments for realistic variance
+        STABILIZED: Uses consistent seed for more reliable predictions
         """
+        # Set consistent seed based on teams for more stable predictions
+        seed_value = hash(f"{away_team}{home_team}") % 1000000
+        np.random.seed(seed_value)
+        random.seed(seed_value)
+        
         # Get pitcher information for return
         away_starter, home_starter = self.get_matchup_starters(away_team, home_team)
         
@@ -670,7 +676,7 @@ class FastPredictionEngine:
         self.historical_betting_lookup = HistoricalBettingLinesLookup()
         
     def get_fast_prediction(self, away_team: str, home_team: str, 
-                          sim_count: int = 250, game_date: str = None) -> Dict:
+                          sim_count: int = 2000, game_date: str = None) -> Dict:
         """
         Generate complete prediction with recommendations in <200ms
         """
