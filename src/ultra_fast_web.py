@@ -150,6 +150,10 @@ HTML_TEMPLATE = """
         </div>
         
         <div class="controls">
+            <div style="display: flex; justify-content: center; gap: 15px; flex-wrap: wrap; margin-bottom: 15px;">
+                <input type="date" id="game-date" style="padding: 12px; border-radius: 8px; border: 1px solid #ddd; font-size: 1em;" value="2025-08-08" />
+                <button onclick="loadGamesForDate()">📅 Load Games for Date</button>
+            </div>
             <div style="display: flex; justify-content: center; gap: 15px; flex-wrap: wrap;">
                 <button onclick="loadTodaysRealGames()">🏟️ Today's Real Games</button>
                 <button onclick="speedTest()">⚡ Speed Test</button>
@@ -173,6 +177,27 @@ HTML_TEMPLATE = """
                 
                 if (data.error) throw new Error(data.error);
                 displayMultiplePredictions(data.predictions);
+            } catch (error) {
+                document.getElementById('predictions-container').innerHTML = 
+                    `<div class="prediction-card"><h3>❌ Error: ${error.message}</h3></div>`;
+            }
+        }
+        
+        async function loadGamesForDate() {
+            const selectedDate = document.getElementById('game-date').value;
+            if (!selectedDate) {
+                alert('Please select a date first');
+                return;
+            }
+            
+            document.getElementById('predictions-container').innerHTML = `<div class="loading">⚡ Loading games for ${selectedDate}...</div>`;
+            
+            try {
+                const response = await fetch(`/api/games-predictions?date=${selectedDate}`);
+                const data = await response.json();
+                
+                if (data.error) throw new Error(data.error);
+                displayMultiplePredictions(data.predictions, selectedDate);
             } catch (error) {
                 document.getElementById('predictions-container').innerHTML = 
                     `<div class="prediction-card"><h3>❌ Error: ${error.message}</h3></div>`;
@@ -361,7 +386,63 @@ HTML_TEMPLATE = """
             }
         }
         
-        function createPredictionHTML(data) {
+        function createHistoricalPredictionHTML(data) {
+            const pred = data.predictions;
+            const actual = data.actual_results;
+            const meta = data.meta;
+            
+            // Calculate accuracy indicators
+            const scoreDiff = Math.abs((pred.away_score + pred.home_score) - (actual.away_score + actual.home_score));
+            const winnerCorrect = actual.winner_correct;
+            
+            return `
+                <div class="execution-time" style="background: rgba(255, 193, 7, 0.2);">
+                    🔒 Historical Data - Cached Prediction (${meta.matched_key})
+                </div>
+                
+                <div class="matchup">
+                    ✈️ ${data.away_team} @ 🏠 ${data.home_team}
+                    <span class="real-game-badge" style="background: linear-gradient(45deg, #ffc107, #e0a800);">HISTORICAL</span>
+                </div>
+                
+                <div class="stats-grid">
+                    <div class="stat-box">
+                        <div class="stat-label">Predicted Score</div>
+                        <div class="stat-value">${pred.away_score.toFixed(1)} - ${pred.home_score.toFixed(1)}</div>
+                    </div>
+                    <div class="stat-box">
+                        <div class="stat-label">Actual Score</div>
+                        <div class="stat-value" style="color: #28a745; font-weight: bold;">${actual.away_score} - ${actual.home_score}</div>
+                    </div>
+                    <div class="stat-box">
+                        <div class="stat-label">Prediction Error</div>
+                        <div class="stat-value">${actual.prediction_error || scoreDiff.toFixed(1)} runs</div>
+                    </div>
+                    <div class="stat-box">
+                        <div class="stat-label">Winner Prediction</div>
+                        <div class="stat-value" style="color: ${winnerCorrect ? '#28a745' : '#dc3545'};">
+                            ${winnerCorrect ? '✅ Correct' : '❌ Incorrect'}
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="pitcher-summary">
+                    <strong>⚾ Starting Pitchers (Historical Matchup):</strong><br>
+                    <span class="pitcher-factor">Away:</span> ${actual.away_pitcher || 'Unknown'}<br>
+                    <span class="pitcher-factor">Home:</span> ${actual.home_pitcher || 'Unknown'}
+                </div>
+                
+                <div style="margin-top: 15px; padding: 10px; background: rgba(40, 167, 69, 0.1); border-radius: 8px; border-left: 3px solid #28a745;">
+                    <strong>🎯 Accuracy Demonstration:</strong> This historical game shows how our prediction engine performed against the actual MLB result.
+                </div>
+            `;
+        }
+        
+        function createPredictionHTML(data, isHistorical = false) {
+            if (isHistorical && data.result_type === 'HISTORICAL') {
+                return createHistoricalPredictionHTML(data);
+            }
+            
             const p = data.predictions;
             const meta = data.meta;
             const recs = data.recommendations;
@@ -449,22 +530,32 @@ HTML_TEMPLATE = """
             return html;
         }
 
-        function displayMultiplePredictions(predictions) {
+        function displayMultiplePredictions(predictions, gameDate = null) {
             const container = document.getElementById('predictions-container');
             container.innerHTML = '';
             
-            // Add real games header
+            // Determine if this is historical data
+            const isHistorical = predictions.length > 0 && predictions[0].result_type === 'HISTORICAL';
+            
+            // Add header
             const headerDiv = document.createElement('div');
             headerDiv.className = 'prediction-card';
-            headerDiv.style.backgroundColor = 'rgba(40, 167, 69, 0.2)';
-            headerDiv.style.textAlign = 'center';
-            headerDiv.innerHTML = `<h2>🏟️ Today's Real MLB Games with Verified Pitcher Impacts</h2>`;
+            if (isHistorical) {
+                headerDiv.style.backgroundColor = 'rgba(255, 193, 7, 0.2)';
+                headerDiv.style.textAlign = 'center';
+                headerDiv.innerHTML = `<h2>📚 Historical Games - ${gameDate || 'Past Date'}</h2>
+                                      <p>🎯 Showing cached predictions with actual results for accuracy demonstration</p>`;
+            } else {
+                headerDiv.style.backgroundColor = 'rgba(40, 167, 69, 0.2)';
+                headerDiv.style.textAlign = 'center';
+                headerDiv.innerHTML = `<h2>🏟️ ${gameDate ? gameDate : "Today's"} Real MLB Games with Verified Pitcher Impacts</h2>`;
+            }
             container.appendChild(headerDiv);
             
             predictions.forEach(pred => {
                 const predictionDiv = document.createElement('div');
                 predictionDiv.className = 'prediction-card';
-                predictionDiv.innerHTML = createPredictionHTML(pred);
+                predictionDiv.innerHTML = createPredictionHTML(pred, isHistorical);
                 container.appendChild(predictionDiv);
             });
         }
@@ -514,6 +605,49 @@ def get_real_games_predictions():
             
     except Exception as e:
         return jsonify({'error': f'Error generating real game predictions: {str(e)}'})
+
+@app.route('/api/games-predictions')
+def get_games_predictions():
+    """Get predictions for games on a specific date (supports historical data)"""
+    try:
+        game_date = request.args.get('date')
+        if not game_date:
+            return jsonify({'error': 'Date parameter is required'})
+            
+        if ULTRA_FAST_AVAILABLE:
+            engine = FastPredictionEngine()
+            
+            # Get games for the specified date
+            real_games = engine.get_todays_real_games(game_date)
+            
+            predictions = []
+            start_time = datetime.now()
+            
+            for away, home in real_games:
+                # Pass the game_date to enable historical lookup
+                prediction = engine.get_fast_prediction(away, home, sim_count=1500, game_date=game_date)
+                predictions.append(prediction)
+            
+            total_time = (datetime.now() - start_time).total_seconds() * 1000
+            
+            # Check if any predictions are historical
+            historical_count = sum(1 for p in predictions if p.get('result_type') == 'HISTORICAL')
+            
+            return jsonify({
+                'success': True,
+                'predictions': predictions,
+                'total_time_ms': total_time,
+                'total_games': len(real_games),
+                'historical_games': historical_count,
+                'live_games': len(real_games) - historical_count,
+                'game_date': game_date,
+                'games_source': f'Games for {game_date} - {"Historical cache" if historical_count > 0 else "Live simulation"}'
+            })
+        else:
+            return jsonify({'error': 'Ultra-fast engine not available'})
+            
+    except Exception as e:
+        return jsonify({'error': f'Error generating predictions for {game_date}: {str(e)}'})
 
 @app.route('/api/speed-test')
 def speed_test():
