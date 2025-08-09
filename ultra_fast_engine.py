@@ -111,9 +111,13 @@ class UltraFastSimEngine:
         return {}
     
     def _load_projected_starters(self) -> Dict[str, Dict]:
-        """Load projected starters for today's games"""
+        """Load projected starters for today's games with auto-refresh"""
         try:
             starters_file = os.path.join(os.path.dirname(__file__), 'ProjectedStarters.json')
+            
+            # Check if we need to refresh today's data
+            self._auto_refresh_starters_if_needed(starters_file)
+            
             if os.path.exists(starters_file):
                 with open(starters_file, 'r') as f:
                     raw_data = json.load(f)
@@ -138,6 +142,66 @@ class UltraFastSimEngine:
         except Exception as e:
             print(f"Warning: Could not load projected starters: {e}")
         return {}
+    
+    def _auto_refresh_starters_if_needed(self, starters_file: str):
+        """Auto-refresh projected starters if today's data is missing"""
+        try:
+            from datetime import datetime
+            import requests
+            
+            today = datetime.now().strftime('%Y-%m-%d')
+            
+            # Check if today's data exists
+            needs_refresh = True
+            if os.path.exists(starters_file):
+                with open(starters_file, 'r') as f:
+                    data = json.load(f)
+                    if today in data and len(data[today]) > 0:
+                        needs_refresh = False
+            
+            if needs_refresh:
+                print(f"🔄 Auto-refreshing projected starters for {today}...")
+                
+                # Fetch from MLB API
+                url = f"https://statsapi.mlb.com/api/v1/schedule?sportId=1&date={today}&hydrate=probablePitcher,team,linescore"
+                resp = requests.get(url, timeout=10)
+                resp.raise_for_status()
+                api_data = resp.json()
+                
+                # Parse the data
+                starters = {today: {}}
+                for date in api_data.get('dates', []):
+                    for game in date.get('games', []):
+                        away_team = game['teams']['away']['team']['name']
+                        home_team = game['teams']['home']['team']['name']
+                        away_starter = game['teams']['away'].get('probablePitcher', {}).get('fullName')
+                        home_starter = game['teams']['home'].get('probablePitcher', {}).get('fullName')
+                        
+                        matchup_key = f"{away_team} at {home_team}"
+                        starters[today][matchup_key] = {
+                            'away_team': away_team,
+                            'home_team': home_team,
+                            'away_starter': away_starter,
+                            'home_starter': home_starter
+                        }
+                
+                # Load existing data and merge
+                if os.path.exists(starters_file):
+                    with open(starters_file, 'r') as f:
+                        all_data = json.load(f)
+                else:
+                    all_data = {}
+                
+                all_data.update(starters)
+                
+                # Save updated data
+                with open(starters_file, 'w') as f:
+                    json.dump(all_data, f, indent=2)
+                
+                print(f"✅ Refreshed {len(starters[today])} games for {today}")
+                
+        except Exception as e:
+            print(f"⚠️ Auto-refresh failed: {e}")
     
     def get_pitcher_quality_factor(self, pitcher_name: str) -> float:
         """
