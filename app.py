@@ -984,83 +984,16 @@ def get_pitcher_info_for_teams(away_team, home_team, game_date=None):
 
 @app.route('/api/fast-predictions')
 def get_fast_predictions():
-    """Get multiple ultra-fast predictions"""
+    """Get multiple ultra-fast predictions - SIMPLIFIED to avoid duplicates"""
     try:
         if ULTRA_FAST_AVAILABLE:
             engine = FastPredictionEngine()
             
-            # Get date from query parameter, default to today
-            selected_date = request.args.get('date')
-            if not selected_date:
-                from datetime import date
-                selected_date = date.today().strftime('%Y-%m-%d')
-            
-            # Get games for the selected date
-            try:
-                import TodaysGames
-                real_games = TodaysGames.get_games_for_date(selected_date)
-            except ImportError:
-                # Use sample games if TodaysGames not available
-                real_games = [
-                    {'away_team': 'Yankees', 'home_team': 'Red Sox'},
-                    {'away_team': 'Dodgers', 'home_team': 'Giants'},
-                    {'away_team': 'Cubs', 'home_team': 'Cardinals'},
-                    {'away_team': 'Astros', 'home_team': 'Angels'},
-                    {'away_team': 'Phillies', 'home_team': 'Mets'}
-                ]
-            
-            # Convert to (away, home) tuples and limit to first 15 games for speed
-            games = []
-            for game in real_games[:15]:  # Increased limit to 15 games
-                if isinstance(game, dict):
-                    if 'away_team' in game and 'home_team' in game:
-                        away = game['away_team']
-                        home = game['home_team']
-                    elif 'away' in game and 'home' in game:
-                        away = game['away']
-                        home = game['home']
-                    else:
-                        continue
-                elif isinstance(game, (list, tuple)) and len(game) >= 2:
-                    away, home = game[0], game[1]
-                else:
-                    continue
-                
-                # Normalize team names for consistency
-                def normalize_team(team):
-                    if team in ['OAK', 'Oakland', 'Oakland Athletics']:
-                        return 'Athletics'
-                    elif team in ['SF', 'SFG', 'San Francisco']:
-                        return 'Giants'
-                    elif team in ['KC', 'KCR']:
-                        return 'Royals'
-                    return team
-                
-                games.append((normalize_team(away), normalize_team(home)))
-            
-            # Fallback to sample games if no real games found (for past dates or off-days)
-            if not games:
-                from datetime import date
-                if selected_date == date.today().strftime('%Y-%m-%d'):
-                    # Today - use current sample games
-                    games = [
-                        ("Athletics", "Nationals"),  # Known to be in ProjectedStarters.json
-                        ("Giants", "Pirates"),       # Also in the file
-                        ("Astros", "Marlins")        # Also in the file
-                    ]
-                else:
-                    # Past/future date - return empty with message
-                    return jsonify({
-                        'success': True,
-                        'predictions': [],
-                        'message': f'No games found for {selected_date}. Try selecting a different date.',
-                        'games_date': selected_date,
-                        'total_games': 0
-                    })
+            # Use ONLY the engine's get_todays_real_games() to avoid duplicates
+            games_tuples = engine.get_todays_real_games()
             
             predictions = []
-            for away, home in games:
-                # Use the updated ultra-fast engine with real pitcher impacts
+            for away, home in games_tuples:
                 try:
                     # Get direct prediction from our tuned engine
                     prediction = engine.get_fast_prediction(away, home, sim_count=1500)
@@ -1104,40 +1037,16 @@ def get_fast_predictions():
                     
                 except Exception as e:
                     print(f"Error getting prediction for {away} @ {home}: {e}")
-                    # Create a basic prediction on error
-                    prediction = {
-                        'away_team': away,
-                        'home_team': home,
-                        'predictions': {
-                            'home_win_probability': 0.5,
-                            'away_win_probability': 0.5,
-                            'predicted_home_score': 5.0,
-                            'predicted_away_score': 5.0,
-                            'predicted_total': 10.0,
-                            'confidence': 50
-                        },
-                        'meta': {
-                            'execution_time_ms': 10,
-                            'simulations_run': 1500,
-                            'recommendations_found': 0,
-                            'error': str(e)
-                        },
-                        'recommendations': [],
-                        'pitcher_quality': {
-                            'away_pitcher_name': 'ERROR',
-                            'home_pitcher_name': 'ERROR',
-                            'away_pitcher_factor': 1.000,
-                            'home_pitcher_factor': 1.000
-                        }
-                    }
-                    predictions.append(prediction)
+                    # Skip broken predictions rather than include errors
+                    continue
             
+            from datetime import date
             return jsonify({
                 'success': True,
                 'predictions': predictions,
                 'total_time_ms': sum(p['meta']['execution_time_ms'] for p in predictions),
-                'games_date': selected_date,
-                'total_games': len(real_games) if 'real_games' in locals() else 0
+                'games_date': date.today().strftime('%Y-%m-%d'),
+                'total_games': len(predictions)
             })
         else:
             return jsonify({'error': 'Ultra-fast engine not available'})
