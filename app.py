@@ -211,7 +211,7 @@ HTML_TEMPLATE = """
         let currentEngine = null;
         
         async function loadTodaysPredictions() {
-            document.getElementById('predictions-container').innerHTML = '<div class="loading">⚡ Loading today\\'s predictions...</div>';
+            document.getElementById('predictions-container').innerHTML = '<div class="loading">⚡ Loading today's predictions...</div>';
             
             try {
                 const response = await fetch('/api/fast-predictions');
