@@ -125,6 +125,32 @@ HTML_TEMPLATE = """
             color: #333; font-size: 1em;
         }
         
+        .date-selector {
+            background: rgba(255,255,255,0.1); backdrop-filter: blur(10px);
+            border-radius: 15px; padding: 20px; margin-bottom: 20px;
+            border: 1px solid rgba(255,255,255,0.2); text-align: center;
+        }
+        
+        .date-controls {
+            display: flex; align-items: center; gap: 15px; 
+            justify-content: center; flex-wrap: wrap;
+        }
+        
+        .date-label {
+            font-weight: bold; font-size: 1.1em; color: #fff;
+            text-shadow: 1px 1px 2px rgba(0,0,0,0.3);
+        }
+        
+        #game-date {
+            padding: 12px 15px; border-radius: 10px; border: 2px solid rgba(255,255,255,0.3);
+            background: rgba(255,255,255,0.95); color: #333; font-size: 1.1em; font-weight: bold;
+            transition: all 0.3s; min-width: 160px;
+        }
+        
+        #game-date:focus {
+            outline: none; border-color: #3498db; box-shadow: 0 0 15px rgba(52, 152, 219, 0.5);
+        }
+        
         .pitcher-summary {
             margin-top: 10px; padding: 10px; 
             background: rgba(255, 193, 7, 0.2); 
@@ -151,6 +177,22 @@ HTML_TEMPLATE = """
         
         <div class="speed-banner">
             🎯 ENHANCED PREDICTABILITY: Confidence intervals • Multiple scenarios • Realistic game variance • Ultra-fast performance
+        </div>
+        
+        <div class="date-selector">
+            <div class="date-controls">
+                <span class="date-label">📅 Select Game Date:</span>
+                <input type="date" id="game-date" value="">
+                <button onclick="loadGamesByDate()">🏟️ Load Games</button>
+                <button onclick="loadTodaysPredictions()">📍 Today</button>
+            </div>
+            <div style="margin-top: 15px; display: flex; justify-content: center; gap: 10px; flex-wrap: wrap;">
+                <button onclick="setYesterday()" style="background: linear-gradient(45deg, #e67e22, #d35400); font-size: 0.9em; padding: 8px 16px;">⏮️ Yesterday</button>
+                <button onclick="setTomorrow()" style="background: linear-gradient(45deg, #27ae60, #229954); font-size: 0.9em; padding: 8px 16px;">⏭️ Tomorrow</button>
+            </div>
+            <div style="margin-top: 10px; font-size: 0.9em; opacity: 0.8;">
+                💡 View any date - past games show final results, future games show predictions
+            </div>
         </div>
         
         <div class="controls">
@@ -181,6 +223,45 @@ HTML_TEMPLATE = """
                 document.getElementById('predictions-container').innerHTML = 
                     `<div class="prediction-card"><h3>❌ Error: ${error.message}</h3></div>`;
             }
+        }
+        
+        async function loadGamesByDate() {
+            const dateInput = document.getElementById('game-date');
+            const selectedDate = dateInput.value;
+            
+            if (!selectedDate) {
+                alert('Please select a date first');
+                return;
+            }
+            
+            document.getElementById('predictions-container').innerHTML = 
+                `<div class="loading">⚡ Loading predictions for ${selectedDate}...</div>`;
+            
+            try {
+                const response = await fetch(`/api/fast-predictions?date=${selectedDate}`);
+                const data = await response.json();
+                
+                if (data.error) throw new Error(data.error);
+                displayMultiplePredictions(data.predictions, selectedDate);
+            } catch (error) {
+                document.getElementById('predictions-container').innerHTML = 
+                    `<div class="prediction-card"><h3>❌ Error: ${error.message}</h3></div>`;
+            }
+        }
+        
+        // Quick date selector functions
+        function setYesterday() {
+            const yesterday = new Date();
+            yesterday.setDate(yesterday.getDate() - 1);
+            document.getElementById('game-date').value = yesterday.toISOString().split('T')[0];
+            loadGamesByDate();
+        }
+        
+        function setTomorrow() {
+            const tomorrow = new Date();
+            tomorrow.setDate(tomorrow.getDate() + 1);
+            document.getElementById('game-date').value = tomorrow.toISOString().split('T')[0];
+            loadGamesByDate();
         }
         
         async function speedTest() {
@@ -716,6 +797,11 @@ HTML_TEMPLATE = """
         
         // Auto-load today's games on page load
         window.onload = () => {
+            // Set today's date in the date input
+            const today = new Date();
+            document.getElementById('game-date').value = today.toISOString().split('T')[0];
+            
+            // Load today's predictions
             loadTodaysPredictions();
         };
     </script>
@@ -753,13 +839,16 @@ def get_fast_predictions():
         if ULTRA_FAST_AVAILABLE:
             engine = FastPredictionEngine()
             
-            # Get today's actual games from TodaysGames (if available)
-            from datetime import date
-            today = date.today().strftime('%Y-%m-%d')
+            # Get date from query parameter, default to today
+            selected_date = request.args.get('date')
+            if not selected_date:
+                from datetime import date
+                selected_date = date.today().strftime('%Y-%m-%d')
             
+            # Get games for the selected date
             try:
                 import TodaysGames
-                real_games = TodaysGames.get_games_for_date(today)
+                real_games = TodaysGames.get_games_for_date(selected_date)
             except ImportError:
                 # Use sample games if TodaysGames not available
                 real_games = [
@@ -770,9 +859,9 @@ def get_fast_predictions():
                     {'away_team': 'Phillies', 'home_team': 'Mets'}
                 ]
             
-            # Convert to (away, home) tuples and limit to first 10 games for speed
+            # Convert to (away, home) tuples and limit to first 15 games for speed
             games = []
-            for game in real_games[:10]:  # Limit to 10 games for ultra-fast performance
+            for game in real_games[:15]:  # Increased limit to 15 games
                 if isinstance(game, dict):
                     if 'away_team' in game and 'home_team' in game:
                         away = game['away_team']
@@ -799,13 +888,25 @@ def get_fast_predictions():
                 
                 games.append((normalize_team(away), normalize_team(home)))
             
-            # Fallback to sample games if no real games found
+            # Fallback to sample games if no real games found (for past dates or off-days)
             if not games:
-                games = [
-                    ("Yankees", "Red Sox"),      # Classic rivalry
-                    ("Dodgers", "Giants"),       # West coast rivalry
-                    ("Cubs", "Cardinals")        # Central rivalry
-                ]
+                from datetime import date
+                if selected_date == date.today().strftime('%Y-%m-%d'):
+                    # Today - use current sample games
+                    games = [
+                        ("Athletics", "Nationals"),  # Known to be in ProjectedStarters.json
+                        ("Giants", "Pirates"),       # Also in the file
+                        ("Astros", "Marlins")        # Also in the file
+                    ]
+                else:
+                    # Past/future date - return empty with message
+                    return jsonify({
+                        'success': True,
+                        'predictions': [],
+                        'message': f'No games found for {selected_date}. Try selecting a different date.',
+                        'games_date': selected_date,
+                        'total_games': 0
+                    })
             
             predictions = []
             for away, home in games:
@@ -816,7 +917,7 @@ def get_fast_predictions():
                 'success': True,
                 'predictions': predictions,
                 'total_time_ms': sum(p['meta']['execution_time_ms'] for p in predictions),
-                'games_date': today,
+                'games_date': selected_date,
                 'total_games': len(real_games) if 'real_games' in locals() else 0
             })
         else:
