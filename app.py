@@ -996,7 +996,7 @@ def get_fast_predictions():
             for away, home in games_tuples:
                 try:
                     # Get direct prediction from our tuned engine
-                    prediction = engine.get_fast_prediction(away, home, sim_count=1500)
+                    prediction = engine.get_fast_prediction(away, home, sim_count=2000)
                     
                     # Convert response format for frontend compatibility
                     if 'predictions' in prediction:
