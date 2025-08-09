@@ -1,18 +1,64 @@
-# Clean deployment repository - only essential files for GitHub Pages
+# RESTRICTIVE .gitignore - Only allow essential optimized files
 
-# OS files
-.DS_Store
-Thumbs.db
+# Block ALL files by default, then explicitly allow what we need
+*
 
-# IDE files
+# Allow essential root files
+!.gitignore
+!README.md
+!package.json
+!tsconfig.json
+
+# Allow only core optimized engine files
+!src/
+!src/ultra_fast_engine.py
+!src/ultra_fast_web.py
+!src/TodaysGames.py
+!src/__init__.py
+
+# Allow only essential small data files (<1MB)
+!src/ProjectedStarters.json
+!src/mlb_betting_lines.json
+!src/park_factors.json
+!src/injury_availability.json
+
+# Allow clean deployment package
+!mlb-clean-minimal/
+!mlb-clean-minimal/**
+
+# Block all large data files explicitly (even if somehow added)
+src/**/*.json
+!src/ProjectedStarters.json
+!src/mlb_betting_lines.json
+!src/park_factors.json
+!src/injury_availability.json
+
+# Block all logs, cache, and simulation files
+src/**/*_logs_*.json
+src/**/*_cache*.json
+src/**/*_stats_*.json
+src/**/*_splits_*.json
+src/**/*simulation*.json*
+src/**/*.jsonl
+src/**/*.bak
+src/**/*.pkl
+src/**/*.pickle
+
+# Standard Python ignores
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+
+# Environment
+venv/
+env/
+.env
+
+# IDE
 .vscode/
 .idea/
-*.swp
-*.swo
 
-# Logs
-*.log
-
-# Keep docs folder for GitHub Pages
-# Keep .github folder for Actions
-# All large data files are excluded from this clean repository
+# OS
+.DS_Store
+Thumbs.db
