@@ -311,33 +311,33 @@ class UltraFastSimEngine:
         if games_started < 5:
             return 1.0
         
-        # ENHANCED ERA-based adjustment - OPTIMIZED for better differentiation
+        # ENHANCED ERA-based adjustment - STRENGTHENED based on 8/8 validation
         if era < 2.00:
-            era_factor = 0.68  # Cy Young level (elite shutdown) - slightly raised
+            era_factor = 0.60  # Cy Young level (elite shutdown) - STRENGTHENED
         elif era < 2.75:
-            era_factor = 0.78  # Elite pitcher - better impact
+            era_factor = 0.70  # Elite pitcher - STRENGTHENED 
         elif era < 3.50:
-            era_factor = 0.90  # Good pitcher - slight adjustment
+            era_factor = 0.85  # Good pitcher - STRENGTHENED
         elif era < 4.25:
-            era_factor = 0.98  # Average pitcher
+            era_factor = 0.95  # Average pitcher - slight adjustment
         elif era < 5.25:
-            era_factor = 1.10  # Below average - reduced impact
+            era_factor = 1.15  # Below average - STRENGTHENED penalty
         elif era < 6.50:
-            era_factor = 1.18  # Poor pitcher - more reasonable
+            era_factor = 1.25  # Poor pitcher - STRENGTHENED penalty
         else:
-            era_factor = 1.30  # Terrible pitcher - reduced from 1.40
+            era_factor = 1.40  # Terrible pitcher - STRENGTHENED penalty
         
-        # OPTIMIZED WHIP adjustment - refined for better balance
+        # STRENGTHENED WHIP adjustment - based on 8/8 validation
         if whip < 1.00:
-            whip_factor = 0.88  # Elite control - slightly reduced impact
+            whip_factor = 0.80  # Elite control - STRENGTHENED impact
         elif whip < 1.15:
-            whip_factor = 0.94  # Good control
+            whip_factor = 0.90  # Good control - STRENGTHENED
         elif whip < 1.30:
-            whip_factor = 0.98  # Average control
+            whip_factor = 0.97  # Average control - slight adjustment
         elif whip < 1.45:
-            whip_factor = 1.04  # Poor control - reduced
+            whip_factor = 1.08  # Poor control - STRENGTHENED penalty
         else:
-            whip_factor = 1.10  # Very poor control - significantly reduced
+            whip_factor = 1.20  # Very poor control - STRENGTHENED penalty
         
         # INNINGS PITCHED adjustment (reliability factor)
         try:
@@ -358,7 +358,7 @@ class UltraFastSimEngine:
         quality_factor = 1.0 + ((base_factor - 1.0) * ip_factor)
         
         # EXTREME bounds for maximum realistic variance (matches real MLB range)
-        return max(0.60, min(1.50, quality_factor))  # Massive expansion for realistic outcomes
+        return max(0.50, min(1.60, quality_factor))  # More extreme range to better differentiate pitchers
     
     def get_matchup_starters(self, away_team: str, home_team: str) -> Tuple[Optional[str], Optional[str]]:
         """Get projected starters for this matchup"""
@@ -438,7 +438,7 @@ class UltraFastSimEngine:
     def _setup_speed_cache(self):
         """Setup caching for maximum speed"""
         self.home_field_advantage = 0.15
-        self.base_runs_per_team = 4.43  # Updated to match 2025 MLB reality (~8.86 total/game)
+        self.base_runs_per_team = 3.75  # REDUCED from 4.43 based on 8/8 validation (was predicting ~11 vs actual ~8)
     
     def get_team_multiplier_with_pitchers(self, away_team: str, home_team: str) -> Tuple[float, float]:
         """Get run multipliers for both teams including pitcher quality"""
@@ -502,8 +502,8 @@ class UltraFastSimEngine:
         # REFINED: Create balanced game-level variance with optimal MLB realism
         # This single variance factor applies to the ENTIRE prediction
         # Tuned for realistic MLB game distribution: 8 avg, 3+ std dev
-        game_chaos_factor = np.random.normal(1.0, 0.42)  # Increased slightly for better variance
-        game_chaos_factor = max(0.55, min(1.75, game_chaos_factor))  # Expanded bounds for more realistic range
+        game_chaos_factor = np.random.normal(1.0, 0.20)  # REDUCED from 0.42 based on 8/8 validation - too much variance
+        game_chaos_factor = max(0.75, min(1.25, game_chaos_factor))  # TIGHTENED bounds from 0.55-1.75 to reduce extreme predictions
         
         # Apply chaos to both teams (correlated - high/low scoring games affect both)
         away_lambda *= game_chaos_factor
