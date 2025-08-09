@@ -10,7 +10,7 @@ from dataclasses import dataclass
 import json
 import os
 from datetime import datetime, date
-from historical_betting_lines_lookup import HistoricalBettingLinesLookup
+# from historical_betting_lines_lookup import HistoricalBettingLinesLookup  # Removed in cleanup
 
 @dataclass
 class FastGameResult:
@@ -673,16 +673,110 @@ class FastPredictionEngine:
     def __init__(self):
         self.sim_engine = UltraFastSimEngine()
         self.betting_analyzer = SmartBettingAnalyzer()
-        self.historical_betting_lookup = HistoricalBettingLinesLookup()
+        # self.historical_betting_lookup = HistoricalBettingLinesLookup()  # Removed in cleanup
+        self.historical_cache = self._load_historical_cache()
+        
+    def _load_historical_cache(self) -> Dict:
+        """Load cached historical predictions and results"""
+        try:
+            import os
+            import json
+            cache_file = os.path.join(os.path.dirname(__file__), 'historical_predictions_cache.json')
+            if os.path.exists(cache_file):
+                with open(cache_file, 'r') as f:
+                    return json.load(f)
+        except Exception as e:
+            print(f"Warning: Could not load historical cache: {e}")
+        return {}
+    
+    def _is_historical_date(self, game_date: str) -> bool:
+        """Check if the date is in the past (historical)"""
+        from datetime import date
+        if not game_date:
+            return False
+        try:
+            target_date = datetime.strptime(game_date, '%Y-%m-%d').date()
+            return target_date < date.today()
+        except:
+            return False
+    
+    def _get_cached_historical_prediction(self, away_team: str, home_team: str, game_date: str) -> Dict:
+        """Get cached historical prediction with actual results for comparison"""
+        if game_date not in self.historical_cache:
+            return None
+            
+        date_cache = self.historical_cache[game_date]
+        if 'cached_predictions' not in date_cache:
+            return None
+            
+        # Try different matchup key formats
+        matchup_keys = [
+            f"{away_team} @ {home_team}",
+            f"{away_team} at {home_team}",
+            f"{home_team} vs {away_team}"
+        ]
+        
+        cached_prediction = None
+        for key in matchup_keys:
+            if key in date_cache['cached_predictions']:
+                cached_prediction = date_cache['cached_predictions'][key]
+                break
+        
+        if not cached_prediction:
+            return None
+            
+        # Return formatted prediction with actual vs predicted comparison
+        return {
+            'predictions': {
+                'away_score': cached_prediction.get('predicted_away_score', 0),
+                'home_score': cached_prediction.get('predicted_home_score', 0),
+                'predicted_total_runs': cached_prediction.get('predicted_total_runs', 0),
+                'home_win_probability': 0.5,  # Placeholder
+                'away_win_probability': 0.5   # Placeholder
+            },
+            'actual_results': {
+                'actual_away_score': cached_prediction.get('actual_away_score'),
+                'actual_home_score': cached_prediction.get('actual_home_score'),
+                'actual_total_runs': cached_prediction.get('actual_total_runs'),
+                'prediction_error': cached_prediction.get('prediction_error'),
+                'winner_correct': cached_prediction.get('winner_correct')
+            },
+            'pitcher_quality': {
+                'away_pitcher_name': cached_prediction.get('away_pitcher'),
+                'home_pitcher_name': cached_prediction.get('home_pitcher'),
+                'away_pitcher_factor': 1.0,  # Could be cached too
+                'home_pitcher_factor': 1.0   # Could be cached too
+            },
+            'meta': {
+                'execution_time_ms': 0.1,  # Instant for cached results
+                'simulation_count': 'CACHED',
+                'is_historical': True,
+                'has_actual_results': True
+            },
+            'betting_analysis': {},  # Placeholder for cached historical data
+            'team_matchup': {
+                'away_team': away_team,
+                'home_team': home_team
+            },
+            'away_team': away_team,
+            'home_team': home_team
+        }
         
     def get_fast_prediction(self, away_team: str, home_team: str, 
                           sim_count: int = 2000, game_date: str = None) -> Dict:
         """
         Generate complete prediction with recommendations in <200ms
+        For historical dates, return cached predictions with actual results
         """
         start_time = datetime.now()
         
-        # Run ultra-fast simulations
+        # Check if this is a historical date with cached data
+        if game_date and self._is_historical_date(game_date):
+            cached_result = self._get_cached_historical_prediction(away_team, home_team, game_date)
+            if cached_result:
+                return cached_result
+        
+        # Run ultra-fast simulations for current/future dates
         results, pitcher_info = self.sim_engine.simulate_game_vectorized(away_team, home_team, sim_count)
         
         # Calculate statistics (vectorized)
