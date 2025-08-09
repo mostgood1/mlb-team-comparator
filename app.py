@@ -120,6 +120,11 @@ HTML_TEMPLATE = """
             text-align: center; margin-bottom: 15px; font-weight: bold;
         }
         
+        .cumulative-info {
+            font-size: 0.9em; margin-top: 5px; opacity: 0.8;
+            color: #2ecc71; font-weight: normal;
+        }
+        
         input, select { 
             padding: 10px; border-radius: 8px; border: none; background: rgba(255,255,255,0.9);
             color: #333; font-size: 1em;
@@ -720,7 +725,8 @@ HTML_TEMPLATE = """
             
             let html = `
                 <div class="execution-time">
-                    ⚡ Generated in ${meta.execution_time_ms}ms with ${meta.simulations_run} simulations
+                    ${meta.cumulative_mode ? '📊 Cumulative:' : '⚡ Generated in'} ${meta.simulations_run} total simulations
+                    ${meta.cumulative_mode ? `<div class="cumulative-info">📈 Built up over time | Period: ${meta.simulation_period || 'Multiple sessions'}</div>` : ''}
                 </div>
                 
                 <div class="matchup">
@@ -941,7 +947,44 @@ def get_fast_predictions():
             
             predictions = []
             for away, home in games:
-                prediction = engine.get_fast_prediction(away, home, sim_count=1500)  # OPTIMAL: Speed-focused for multiple games
+                # Use cumulative simulation approach instead of starting fresh each time
+                try:
+                    from cumulative_ultra_fast_engine import CumulativeUltraFastEngine
+                    if not hasattr(app, 'cumulative_engine'):
+                        app.cumulative_engine = CumulativeUltraFastEngine()
+                    
+                    # Get cumulative prediction (builds up data over time)
+                    cumulative_pred = app.cumulative_engine.get_cumulative_prediction(
+                        away, home, selected_date, target_simulations=5000
+                    )
+                    
+                    # Convert to expected format for compatibility
+                    prediction = {
+                        'away_team': away,
+                        'home_team': home,
+                        'predictions': {
+                            'home_win_probability': cumulative_pred['home_win_probability'],
+                            'away_win_probability': cumulative_pred['away_win_probability'],
+                            'predicted_home_score': cumulative_pred['predicted_home_score'],
+                            'predicted_away_score': cumulative_pred['predicted_away_score'],
+                            'predicted_total': cumulative_pred['predicted_total'],
+                            'confidence': cumulative_pred['confidence']
+                        },
+                        'meta': {
+                            'execution_time_ms': 10,  # Cumulative lookups are very fast
+                            'simulations_run': cumulative_pred['total_simulations'],
+                            'recommendations_found': 0,
+                            'cumulative_mode': True,
+                            'simulation_period': cumulative_pred.get('simulation_period', 'Unknown')
+                        },
+                        'recommendations': [],
+                        'betting_lines': {}
+                    }
+                    
+                except ImportError:
+                    # Fallback to original method if cumulative engine not available
+                    prediction = engine.get_fast_prediction(away, home, sim_count=1500)
+                
                 predictions.append(prediction)
             
             return jsonify({
@@ -956,6 +999,25 @@ def get_fast_predictions():
             
     except Exception as e:
         return jsonify({'error': f'Error generating predictions: {str(e)}'})
+
+@app.route('/api/cumulative-stats')
+def get_cumulative_stats():
+    """Get cumulative simulation statistics"""
+    try:
+        from cumulative_ultra_fast_engine import CumulativeUltraFastEngine
+        if not hasattr(app, 'cumulative_engine'):
+            app.cumulative_engine = CumulativeUltraFastEngine()
+        
+        summary = app.cumulative_engine.cumulative_manager.get_simulation_summary()
+        return jsonify({
+            'success': True,
+            'cumulative_stats': summary
+        })
+    except Exception as e:
+        return jsonify({
+            'success': False,
+            'error': str(e)
+        })
 
 @app.route('/api/speed-test')
 def speed_test():
