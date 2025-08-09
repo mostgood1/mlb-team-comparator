@@ -17,6 +17,7 @@ def summarize_auto_refresh_system():
         ("auto_update_mlb_data.py", "MLB data fetcher and updater"),
         ("auto_refresh_starters.py", "Projected starters auto-refresher"),
         ("auto_update_betting_lines.py", "Real-time betting lines auto-updater"),
+        ("historical_betting_lines_lookup.py", "Historical betting lines lookup"),
         ("TodaysGames.py", "Real-time MLB games fetcher")
     ]
     
@@ -32,7 +33,8 @@ def summarize_auto_refresh_system():
         ("pitcher_stats_2025_and_career.json", "Pitcher statistics (24h refresh)"),
         ("ProjectedStarters.json", "Daily starting pitchers (1h refresh)"),
         ("pitcher_id_map.json", "Pitcher name-to-ID mapping"),
-        ("mlb_betting_lines.json", "Real-time betting lines (3h refresh)")
+        ("mlb_betting_lines.json", "Real-time betting lines (3h refresh)"),
+        ("historical_betting_lines_cache.json", "Historical betting lines cache")
     ]
     
     for filename, description in data_files:
@@ -69,6 +71,7 @@ def summarize_auto_refresh_system():
         "✅ Current season team strength from standings",
         "✅ Real-time pitcher statistics (2025 season)",
         "✅ Live betting lines from Odds-API (every 3 hours)",
+        "✅ Historical betting lines lookup for past games",
         "✅ Smart file age detection (prevents unnecessary updates)",
         "✅ Fallback protection (uses existing data if API fails)",
         "✅ Integrated into prediction engine (automatic on startup)",
