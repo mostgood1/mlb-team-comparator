@@ -1,0 +1,11 @@
+# Minimal deployment files only
+*.pyc
+__pycache__/
+.DS_Store
+.env
+*.log
+
+# Development files not needed for deployment
+test_*.py
+debug_*.py
+*_test.py

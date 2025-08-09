@@ -1,0 +1,7 @@
+flask
+numpy
+pandas
+requests
+datetime
+python-dateutil
+tzlocal
