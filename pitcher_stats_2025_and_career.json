@@ -64,7 +64,17 @@
       "sacBunts": 3,
       "sacFlies": 2
     },
-    "career": {}
+    "career": {},
+    "team": "Cincinnati Reds",
+    "era": 2.34,
+    "whip": 1.13,
+    "strikeouts": 99,
+    "walks": 35,
+    "innings_pitched": 115.1,
+    "games_started": 20,
+    "wins": 8,
+    "losses": 2,
+    "last_updated": "2025-08-08T22:08:09.717397"
   },
   "690953": {
     "id": "690953",
@@ -198,7 +208,17 @@
       "sacBunts": 0,
       "sacFlies": 0
     },
-    "career": {}
+    "career": {},
+    "team": "Houston Astros",
+    "era": 1.72,
+    "whip": 1.05,
+    "strikeouts": 78,
+    "walks": 24,
+    "innings_pitched": 52.1,
+    "games_started": 0,
+    "wins": 3,
+    "losses": 3,
+    "last_updated": "2025-08-08T22:08:23.321357"
   },
   "592094": {
     "id": "592094",
@@ -265,7 +285,17 @@
       "sacBunts": 1,
       "sacFlies": 2
     },
-    "career": {}
+    "career": {},
+    "team": "San Diego Padres",
+    "era": 1.78,
+    "whip": 1.2,
+    "strikeouts": 60,
+    "walks": 24,
+    "innings_pitched": 55.2,
+    "games_started": 0,
+    "wins": 6,
+    "losses": 3,
+    "last_updated": "2025-08-08T22:07:05.358597"
   },
   "701519": {
     "id": "701519",
@@ -332,7 +362,17 @@
       "sacBunts": 0,
       "sacFlies": 5
     },
-    "career": {}
+    "career": {},
+    "team": "Minnesota Twins",
+    "era": 6.86,
+    "whip": 1.42,
+    "strikeouts": 18,
+    "walks": 4,
+    "innings_pitched": 19.2,
+    "games_started": 1,
+    "wins": 1,
+    "losses": 1,
+    "last_updated": "2025-08-08T22:07:31.752497"
   },
   "686654": {
     "id": "686654",
@@ -533,7 +573,17 @@
       "sacBunts": 0,
       "sacFlies": 0
     },
-    "career": {}
+    "career": {},
+    "team": "Baltimore Orioles",
+    "era": 3.21,
+    "whip": 1.43,
+    "strikeouts": 41,
+    "walks": 22,
+    "innings_pitched": 42.0,
+    "games_started": 3,
+    "wins": 3,
+    "losses": 1,
+    "last_updated": "2025-08-08T22:08:01.447793"
   },
   "660896": {
     "id": "660896",
@@ -667,7 +717,17 @@
       "sacBunts": 0,
       "sacFlies": 8
     },
-    "career": {}
+    "career": {},
+    "team": "Miami Marlins",
+    "era": 6.44,
+    "whip": 1.42,
+    "strikeouts": 86,
+    "walks": 43,
+    "innings_pitched": 116.0,
+    "games_started": 22,
+    "wins": 6,
+    "losses": 10,
+    "last_updated": "2025-08-08T22:07:45.106802"
   },
   "691951": {
     "id": "691951",
@@ -801,7 +861,17 @@
       "sacBunts": 0,
       "sacFlies": 2
     },
-    "career": {}
+    "career": {},
+    "team": "Houston Astros",
+    "era": 5.97,
+    "whip": 1.61,
+    "strikeouts": 26,
+    "walks": 15,
+    "innings_pitched": 31.2,
+    "games_started": 4,
+    "wins": 2,
+    "losses": 1,
+    "last_updated": "2025-08-08T22:08:24.903179"
   },
   "518397": {
     "id": "518397",
@@ -935,7 +1005,17 @@
       "sacBunts": 2,
       "sacFlies": 1
     },
-    "career": {}
+    "career": {},
+    "team": "Chicago White Sox",
+    "era": 4.52,
+    "whip": 1.29,
+    "strikeouts": 62,
+    "walks": 24,
+    "innings_pitched": 73.2,
+    "games_started": 5,
+    "wins": 4,
+    "losses": 10,
+    "last_updated": "2025-08-08T22:07:41.641478"
   },
   "663465": {
     "id": "663465",
@@ -1002,7 +1082,17 @@
       "sacBunts": 3,
       "sacFlies": 2
     },
-    "career": {}
+    "career": {},
+    "team": "Cleveland Guardians",
+    "era": 2.54,
+    "whip": 1.24,
+    "strikeouts": 29,
+    "walks": 10,
+    "innings_pitched": 46.0,
+    "games_started": 2,
+    "wins": 2,
+    "losses": 1,
+    "last_updated": "2025-08-08T22:08:14.871638"
   },
   "671106": {
     "id": "671106",
@@ -1069,7 +1159,17 @@
       "sacBunts": 2,
       "sacFlies": 5
     },
-    "career": {}
+    "career": {},
+    "team": "Cleveland Guardians",
+    "era": 3.96,
+    "whip": 1.37,
+    "strikeouts": 87,
+    "walks": 44,
+    "innings_pitched": 113.2,
+    "games_started": 21,
+    "wins": 7,
+    "losses": 9,
+    "last_updated": "2025-08-08T22:08:15.100390"
   },
   "656186": {
     "id": "656186",
@@ -1203,7 +1303,17 @@
       "sacBunts": 0,
       "sacFlies": 0
     },
-    "career": {}
+    "career": {},
+    "team": "Athletics",
+    "era": 3.27,
+    "whip": 1.27,
+    "strikeouts": 27,
+    "walks": 11,
+    "innings_pitched": 22.0,
+    "games_started": 0,
+    "wins": 0,
+    "losses": 0,
+    "last_updated": "2025-08-08T22:06:58.067506"
   },
   "621237": {
     "id": "621237",
@@ -1337,7 +1447,17 @@
       "sacBunts": 0,
       "sacFlies": 2
     },
-    "career": {}
+    "career": {},
+    "team": "Milwaukee Brewers",
+    "era": 3.23,
+    "whip": 1.17,
+    "strikeouts": 61,
+    "walks": 23,
+    "innings_pitched": 55.2,
+    "games_started": 0,
+    "wins": 2,
+    "losses": 3,
+    "last_updated": "2025-08-08T22:07:50.535174"
   },
   "666120": {
     "id": "666120",
@@ -1471,7 +1591,17 @@
       "sacBunts": 0,
       "sacFlies": 0
     },
-    "career": {}
+    "career": {},
+    "team": "Colorado Rockies",
+    "era": 12.27,
+    "whip": 1.91,
+    "strikeouts": 2,
+    "walks": 0,
+    "innings_pitched": 3.2,
+    "games_started": 0,
+    "wins": 0,
+    "losses": 0,
+    "last_updated": "2025-08-08T22:08:18.342879"
   },
   "641312": {
     "id": "641312",
@@ -1605,7 +1735,17 @@
       "sacBunts": 0,
       "sacFlies": 5
     },
-    "career": {}
+    "career": {},
+    "team": "Los Angeles Angels",
+    "era": 4.63,
+    "whip": 1.4,
+    "strikeouts": 97,
+    "walks": 47,
+    "innings_pitched": 122.1,
+    "games_started": 23,
+    "wins": 2,
+    "losses": 7,
+    "last_updated": "2025-08-08T22:07:55.340349"
   },
   "678215": {
     "id": "678215",
@@ -1739,7 +1879,17 @@
       "sacBunts": 0,
       "sacFlies": 4
     },
-    "career": {}
+    "career": {},
+    "team": "Texas Rangers",
+    "era": 2.9,
+    "whip": 0.89,
+    "strikeouts": 51,
+    "walks": 16,
+    "innings_pitched": 49.2,
+    "games_started": 2,
+    "wins": 4,
+    "losses": 3,
+    "last_updated": "2025-08-08T22:07:25.405253"
   },
   "681293": {
     "id": "681293",
@@ -1806,7 +1956,17 @@
       "sacBunts": 0,
       "sacFlies": 1
     },
-    "career": {}
+    "career": {},
+    "team": "Houston Astros",
+    "era": 7.43,
+    "whip": 1.58,
+    "strikeouts": 13,
+    "walks": 6,
+    "innings_pitched": 13.1,
+    "games_started": 3,
+    "wins": 1,
+    "losses": 2,
+    "last_updated": "2025-08-08T22:08:25.579839"
   },
   "676879": {
     "id": "676879",
@@ -1873,7 +2033,17 @@
       "sacBunts": 1,
       "sacFlies": 1
     },
-    "career": {}
+    "career": {},
+    "team": "Milwaukee Brewers",
+    "era": 2.02,
+    "whip": 1.21,
+    "strikeouts": 38,
+    "walks": 15,
+    "innings_pitched": 35.2,
+    "games_started": 0,
+    "wins": 2,
+    "losses": 1,
+    "last_updated": "2025-08-08T22:07:49.391781"
   },
   "677952": {
     "id": "677952",
@@ -1940,7 +2110,17 @@
       "sacBunts": 1,
       "sacFlies": 1
     },
-    "career": {}
+    "career": {},
+    "team": "Pittsburgh Pirates",
+    "era": 3.24,
+    "whip": 1.38,
+    "strikeouts": 28,
+    "walks": 12,
+    "innings_pitched": 33.1,
+    "games_started": 1,
+    "wins": 3,
+    "losses": 2,
+    "last_updated": "2025-08-08T22:07:01.723559"
   },
   "668933": {
     "id": "668933",
@@ -2007,7 +2187,17 @@
       "sacBunts": 3,
       "sacFlies": 0
     },
-    "career": {}
+    "career": {},
+    "team": "Cincinnati Reds",
+    "era": 4.01,
+    "whip": 1.46,
+    "strikeouts": 48,
+    "walks": 21,
+    "innings_pitched": 49.1,
+    "games_started": 0,
+    "wins": 6,
+    "losses": 4,
+    "last_updated": "2025-08-08T22:08:10.851558"
   },
   "669199": {
     "id": "669199",
@@ -2074,7 +2264,17 @@
       "sacBunts": 0,
       "sacFlies": 3
     },
-    "career": {}
+    "career": {},
+    "team": "Miami Marlins",
+    "era": 3.22,
+    "whip": 1.17,
+    "strikeouts": 57,
+    "walks": 22,
+    "innings_pitched": 50.1,
+    "games_started": 0,
+    "wins": 5,
+    "losses": 0,
+    "last_updated": "2025-08-08T22:07:44.604967"
   },
   "696147": {
     "id": "696147",
@@ -2208,7 +2408,17 @@
       "sacBunts": 2,
       "sacFlies": 1
     },
-    "career": {}
+    "career": {},
+    "team": "Arizona Diamondbacks",
+    "era": 4.7,
+    "whip": 1.43,
+    "strikeouts": 17,
+    "walks": 3,
+    "innings_pitched": 15.1,
+    "games_started": 0,
+    "wins": 0,
+    "losses": 2,
+    "last_updated": "2025-08-08T22:07:58.687646"
   },
   "641329": {
     "id": "641329",
@@ -2275,7 +2485,17 @@
       "sacBunts": 0,
       "sacFlies": 0
     },
-    "career": {}
+    "career": {},
+    "team": "Tampa Bay Rays",
+    "era": 4.31,
+    "whip": 1.15,
+    "strikeouts": 61,
+    "walks": 13,
+    "innings_pitched": 48.0,
+    "games_started": 0,
+    "wins": 3,
+    "losses": 4,
+    "last_updated": "2025-08-08T22:07:19.106458"
   },
   "607455": {
     "id": "607455",
@@ -2342,7 +2562,17 @@
       "sacBunts": 0,
       "sacFlies": 3
     },
-    "career": {}
+    "career": {},
+    "team": "Los Angeles Dodgers",
+    "era": 3.55,
+    "whip": 1.22,
+    "strikeouts": 45,
+    "walks": 23,
+    "innings_pitched": 50.2,
+    "games_started": 0,
+    "wins": 5,
+    "losses": 1,
+    "last_updated": "2025-08-08T22:08:30.486975"
   },
   "621383": {
     "id": "621383",
@@ -2409,7 +2639,17 @@
       "sacBunts": 2,
       "sacFlies": 0
     },
-    "career": {}
+    "career": {},
+    "team": "Philadelphia Phillies",
+    "era": 3.28,
+    "whip": 0.97,
+    "strikeouts": 48,
+    "walks": 8,
+    "innings_pitched": 49.1,
+    "games_started": 1,
+    "wins": 3,
+    "losses": 2,
+    "last_updated": "2025-08-08T22:07:35.052709"
   },
   "605130": {
     "id": "605130",
@@ -2476,7 +2716,17 @@
       "sacBunts": 0,
       "sacFlies": 2
     },
-    "career": {}
+    "career": {},
+    "team": "Cincinnati Reds",
+    "era": 3.75,
+    "whip": 1.29,
+    "strikeouts": 56,
+    "walks": 31,
+    "innings_pitched": 50.1,
+    "games_started": 0,
+    "wins": 5,
+    "losses": 0,
+    "last_updated": "2025-08-08T22:08:12.088983"
   },
   "606930": {
     "id": "606930",
@@ -2610,7 +2860,17 @@
       "sacBunts": 0,
       "sacFlies": 2
     },
-    "career": {}
+    "career": {},
+    "team": "Toronto Blue Jays",
+    "era": 4.12,
+    "whip": 1.31,
+    "strikeouts": 126,
+    "walks": 33,
+    "innings_pitched": 129.0,
+    "games_started": 23,
+    "wins": 11,
+    "losses": 5,
+    "last_updated": "2025-08-08T22:07:26.370544"
   },
   "642585": {
     "id": "642585",
@@ -2744,7 +3004,17 @@
       "sacBunts": 1,
       "sacFlies": 2
     },
-    "career": {}
+    "career": {},
+    "team": "Tampa Bay Rays",
+    "era": 4.92,
+    "whip": 1.34,
+    "strikeouts": 133,
+    "walks": 48,
+    "innings_pitched": 128.0,
+    "games_started": 23,
+    "wins": 8,
+    "losses": 8,
+    "last_updated": "2025-08-08T22:07:21.690639"
   },
   "660825": {
     "id": "660825",
@@ -2811,7 +3081,17 @@
       "sacBunts": 0,
       "sacFlies": 3
     },
-    "career": {}
+    "career": {},
+    "team": "Seattle Mariners",
+    "era": 2.93,
+    "whip": 1.08,
+    "strikeouts": 56,
+    "walks": 25,
+    "innings_pitched": 58.1,
+    "games_started": 0,
+    "wins": 5,
+    "losses": 0,
+    "last_updated": "2025-08-08T22:07:09.337281"
   },
   "663941": {
     "id": "663941",
@@ -2878,7 +3158,17 @@
       "sacBunts": 0,
       "sacFlies": 2
     },
-    "career": {}
+    "career": {},
+    "team": "San Francisco Giants",
+    "era": 5.6,
+    "whip": 1.17,
+    "strikeouts": 16,
+    "walks": 10,
+    "innings_pitched": 27.1,
+    "games_started": 0,
+    "wins": 1,
+    "losses": 0,
+    "last_updated": "2025-08-08T22:07:14.520201"
   },
   "670280": {
     "id": "670280",
@@ -2945,7 +3235,17 @@
       "sacBunts": 0,
       "sacFlies": 1
     },
-    "career": {}
+    "career": {},
+    "team": "New York Yankees",
+    "era": 2.55,
+    "whip": 1.16,
+    "strikeouts": 59,
+    "walks": 12,
+    "innings_pitched": 42.1,
+    "games_started": 0,
+    "wins": 2,
+    "losses": 5,
+    "last_updated": "2025-08-08T22:07:46.955692"
   },
   "656222": {
     "id": "656222",
@@ -3012,7 +3312,17 @@
       "sacBunts": 0,
       "sacFlies": 1
     },
-    "career": {}
+    "career": {},
+    "team": "Arizona Diamondbacks",
+    "era": 4.19,
+    "whip": 1.14,
+    "strikeouts": 39,
+    "walks": 17,
+    "innings_pitched": 43.0,
+    "games_started": 0,
+    "wins": 2,
+    "losses": 1,
+    "last_updated": "2025-08-08T22:07:57.968780"
   },
   "690925": {
     "id": "690925",
@@ -3079,7 +3389,17 @@
       "sacBunts": 1,
       "sacFlies": 0
     },
-    "career": {}
+    "career": {},
+    "team": "Washington Nationals",
+    "era": 11.12,
+    "whip": 2.29,
+    "strikeouts": 4,
+    "walks": 6,
+    "innings_pitched": 5.2,
+    "games_started": 0,
+    "wins": 0,
+    "losses": 1,
+    "last_updated": "2025-08-08T22:08:33.709820"
   },
   "678394": {
     "id": "678394",
@@ -3146,7 +3466,17 @@
       "sacBunts": 2,
       "sacFlies": 5
     },
-    "career": {}
+    "career": {},
+    "team": "Boston Red Sox",
+    "era": 3.03,
+    "whip": 1.28,
+    "strikeouts": 88,
+    "walks": 42,
+    "innings_pitched": 116.0,
+    "games_started": 19,
+    "wins": 8,
+    "losses": 5,
+    "last_updated": "2025-08-08T22:08:03.514558"
   },
   "678368": {
     "id": "678368",
@@ -3213,7 +3543,17 @@
       "sacBunts": 0,
       "sacFlies": 2
     },
-    "career": {}
+    "career": {},
+    "team": "Miami Marlins",
+    "era": 3.47,
+    "whip": 1.22,
+    "strikeouts": 42,
+    "walks": 17,
+    "innings_pitched": 62.1,
+    "games_started": 5,
+    "wins": 1,
+    "losses": 3,
+    "last_updated": "2025-08-08T22:07:45.561157"
   },
   "669622": {
     "id": "669622",
@@ -3280,7 +3620,17 @@
       "sacBunts": 0,
       "sacFlies": 0
     },
-    "career": {}
+    "career": {},
+    "team": "Miami Marlins",
+    "era": 2.3,
+    "whip": 1.09,
+    "strikeouts": 38,
+    "walks": 19,
+    "innings_pitched": 47.0,
+    "games_started": 0,
+    "wins": 3,
+    "losses": 5,
+    "last_updated": "2025-08-08T22:07:42.711238"
   },
   "686701": {
     "id": "686701",
@@ -3347,7 +3697,17 @@
       "sacBunts": 1,
       "sacFlies": 0
     },
-    "career": {}
+    "career": {},
+    "team": "Kansas City Royals",
+    "era": 2.83,
+    "whip": 1.11,
+    "strikeouts": 36,
+    "walks": 20,
+    "innings_pitched": 41.1,
+    "games_started": 8,
+    "wins": 1,
+    "losses": 1,
+    "last_updated": "2025-08-08T22:08:28.838391"
   },
   "657514": {
     "id": "657514",
@@ -3481,7 +3841,17 @@
       "sacBunts": 1,
       "sacFlies": 2
     },
-    "career": {}
+    "career": {},
+    "team": "Toronto Blue Jays",
+    "era": 3.89,
+    "whip": 1.27,
+    "strikeouts": 116,
+    "walks": 45,
+    "innings_pitched": 136.2,
+    "games_started": 24,
+    "wins": 8,
+    "losses": 4,
+    "last_updated": "2025-08-08T22:07:27.115536"
   },
   "676440": {
     "id": "676440",
@@ -3548,7 +3918,17 @@
       "sacBunts": 2,
       "sacFlies": 2
     },
-    "career": {}
+    "career": {},
+    "team": "Cleveland Guardians",
+    "era": 4.6,
+    "whip": 1.27,
+    "strikeouts": 119,
+    "walks": 39,
+    "innings_pitched": 131.0,
+    "games_started": 23,
+    "wins": 8,
+    "losses": 9,
+    "last_updated": "2025-08-08T22:08:15.948704"
   },
   "674370": {
     "id": "674370",
@@ -3615,7 +3995,17 @@
       "sacBunts": 1,
       "sacFlies": 8
     },
-    "career": {}
+    "career": {},
+    "team": "Athletics",
+    "era": 5.62,
+    "whip": 1.65,
+    "strikeouts": 38,
+    "walks": 25,
+    "innings_pitched": 57.2,
+    "games_started": 9,
+    "wins": 2,
+    "losses": 4,
+    "last_updated": "2025-08-08T22:07:00.378422"
   },
   "685801": {
     "id": "685801",
@@ -3883,7 +4273,17 @@
       "sacBunts": 1,
       "sacFlies": 1
     },
-    "career": {}
+    "career": {},
+    "team": "San Francisco Giants",
+    "era": 4.75,
+    "whip": 1.36,
+    "strikeouts": 44,
+    "walks": 18,
+    "innings_pitched": 55.0,
+    "games_started": 0,
+    "wins": 2,
+    "losses": 3,
+    "last_updated": "2025-08-08T22:07:14.268975"
   },
   "696131": {
     "id": "696131",
@@ -4084,7 +4484,17 @@
       "sacBunts": 0,
       "sacFlies": 2
     },
-    "career": {}
+    "career": {},
+    "team": "Colorado Rockies",
+    "era": 7.68,
+    "whip": 1.66,
+    "strikeouts": 18,
+    "walks": 11,
+    "innings_pitched": 38.2,
+    "games_started": 7,
+    "wins": 1,
+    "losses": 3,
+    "last_updated": "2025-08-08T22:08:16.903989"
   },
   "669854": {
     "id": "669854",
@@ -4486,7 +4896,17 @@
       "sacBunts": 1,
       "sacFlies": 0
     },
-    "career": {}
+    "career": {},
+    "team": "Pittsburgh Pirates",
+    "era": 4.71,
+    "whip": 1.15,
+    "strikeouts": 26,
+    "walks": 11,
+    "innings_pitched": 28.2,
+    "games_started": 0,
+    "wins": 1,
+    "losses": 3,
+    "last_updated": "2025-08-08T22:07:03.859485"
   },
   "676961": {
     "id": "676961",
@@ -4620,7 +5040,17 @@
       "sacBunts": 0,
       "sacFlies": 1
     },
-    "career": {}
+    "career": {},
+    "team": "Athletics",
+    "era": 2.84,
+    "whip": 1.11,
+    "strikeouts": 1,
+    "walks": 2,
+    "innings_pitched": 6.1,
+    "games_started": 0,
+    "wins": 0,
+    "losses": 0,
+    "last_updated": "2025-08-08T22:06:57.847776"
   },
   "680742": {
     "id": "680742",
@@ -4821,7 +5251,17 @@
       "sacBunts": 2,
       "sacFlies": 5
     },
-    "career": {}
+    "career": {},
+    "team": "Chicago Cubs",
+    "era": 2.45,
+    "whip": 1.05,
+    "strikeouts": 121,
+    "walks": 29,
+    "innings_pitched": 135.2,
+    "games_started": 23,
+    "wins": 11,
+    "losses": 5,
+    "last_updated": "2025-08-08T22:08:08.187058"
   },
   "671212": {
     "id": "671212",
@@ -4888,7 +5328,17 @@
       "sacBunts": 0,
       "sacFlies": 0
     },
-    "career": {}
+    "career": {},
+    "team": "Tampa Bay Rays",
+    "era": 2.3,
+    "whip": 0.88,
+    "strikeouts": 26,
+    "walks": 11,
+    "innings_pitched": 27.1,
+    "games_started": 3,
+    "wins": 1,
+    "losses": 1,
+    "last_updated": "2025-08-08T22:07:20.547745"
   },
   "671737": {
     "id": "671737",
@@ -5022,7 +5472,17 @@
       "sacBunts": 3,
       "sacFlies": 1
     },
-    "career": {}
+    "career": {},
+    "team": "Seattle Mariners",
+    "era": 1.24,
+    "whip": 1.17,
+    "strikeouts": 31,
+    "walks": 12,
+    "innings_pitched": 29.0,
+    "games_started": 0,
+    "wins": 1,
+    "losses": 0,
+    "last_updated": "2025-08-08T22:07:11.023381"
   },
   "518489": {
     "id": "518489",
@@ -5089,7 +5549,17 @@
       "sacBunts": 0,
       "sacFlies": 2
     },
-    "career": {}
+    "career": {},
+    "team": "Chicago Cubs",
+    "era": 3.91,
+    "whip": 1.13,
+    "strikeouts": 19,
+    "walks": 4,
+    "innings_pitched": 23.0,
+    "games_started": 1,
+    "wins": 0,
+    "losses": 1,
+    "last_updated": "2025-08-08T22:08:08.641461"
   },
   "623211": {
     "id": "623211",
@@ -5424,7 +5894,17 @@
       "sacBunts": 1,
       "sacFlies": 1
     },
-    "career": {}
+    "career": {},
+    "team": "Los Angeles Angels",
+    "era": 4.67,
+    "whip": 1.21,
+    "strikeouts": 29,
+    "walks": 13,
+    "innings_pitched": 34.2,
+    "games_started": 0,
+    "wins": 2,
+    "losses": 1,
+    "last_updated": "2025-08-08T22:07:53.445830"
   },
   "676962": {
     "id": "676962",
@@ -5491,7 +5971,17 @@
       "sacBunts": 0,
       "sacFlies": 1
     },
-    "career": {}
+    "career": {},
+    "team": "Chicago Cubs",
+    "era": 6.04,
+    "whip": 1.44,
+    "strikeouts": 104,
+    "walks": 27,
+    "innings_pitched": 92.1,
+    "games_started": 15,
+    "wins": 5,
+    "losses": 7,
+    "last_updated": "2025-08-08T22:08:06.646463"
   },
   "686613": {
     "id": "686613",
@@ -5558,7 +6048,17 @@
       "sacBunts": 1,
       "sacFlies": 2
     },
-    "career": {}
+    "career": {},
+    "team": "Houston Astros",
+    "era": 2.51,
+    "whip": 0.98,
+    "strikeouts": 160,
+    "walks": 40,
+    "innings_pitched": 136.1,
+    "games_started": 23,
+    "wins": 9,
+    "losses": 5,
+    "last_updated": "2025-08-08T22:08:24.648448"
   },
   "664141": {
     "id": "664141",
@@ -5893,7 +6393,17 @@
       "sacBunts": 0,
       "sacFlies": 2
     },
-    "career": {}
+    "career": {},
+    "team": "Boston Red Sox",
+    "era": 5.47,
+    "whip": 1.58,
+    "strikeouts": 75,
+    "walks": 46,
+    "innings_pitched": 98.2,
+    "games_started": 20,
+    "wins": 6,
+    "losses": 6,
+    "last_updated": "2025-08-08T22:08:05.847175"
   },
   "607481": {
     "id": "607481",
@@ -5960,7 +6470,17 @@
       "sacBunts": 0,
       "sacFlies": 3
     },
-    "career": {}
+    "career": {},
+    "team": "Atlanta Braves",
+    "era": 4.21,
+    "whip": 1.32,
+    "strikeouts": 46,
+    "walks": 16,
+    "innings_pitched": 47.0,
+    "games_started": 2,
+    "wins": 1,
+    "losses": 2,
+    "last_updated": "2025-08-08T22:07:35.835124"
   },
   "595897": {
     "id": "595897",
@@ -6161,7 +6681,17 @@
       "sacBunts": 3,
       "sacFlies": 5
     },
-    "career": {}
+    "career": {},
+    "team": "Los Angeles Angels",
+    "era": 3.0,
+    "whip": 1.29,
+    "strikeouts": 40,
+    "walks": 17,
+    "innings_pitched": 48.0,
+    "games_started": 1,
+    "wins": 5,
+    "losses": 1,
+    "last_updated": "2025-08-08T22:07:52.964476"
   },
   "680732": {
     "id": "680732",
@@ -6228,7 +6758,17 @@
       "sacBunts": 1,
       "sacFlies": 3
     },
-    "career": {}
+    "career": {},
+    "team": "Chicago White Sox",
+    "era": 4.23,
+    "whip": 1.41,
+    "strikeouts": 100,
+    "walks": 50,
+    "innings_pitched": 110.2,
+    "games_started": 18,
+    "wins": 4,
+    "losses": 8,
+    "last_updated": "2025-08-08T22:07:40.909997"
   },
   "669203": {
     "id": "669203",
@@ -6362,7 +6902,17 @@
       "sacBunts": 1,
       "sacFlies": 0
     },
-    "career": {}
+    "career": {},
+    "team": "Cincinnati Reds",
+    "era": 5.24,
+    "whip": 1.34,
+    "strikeouts": 57,
+    "walks": 13,
+    "innings_pitched": 34.1,
+    "games_started": 8,
+    "wins": 0,
+    "losses": 3,
+    "last_updated": "2025-08-08T22:08:10.411666"
   },
   "621114": {
     "id": "621114",
@@ -6496,7 +7046,17 @@
       "sacBunts": 0,
       "sacFlies": 2
     },
-    "career": {}
+    "career": {},
+    "team": "Pittsburgh Pirates",
+    "era": 4.45,
+    "whip": 1.29,
+    "strikeouts": 63,
+    "walks": 24,
+    "innings_pitched": 62.2,
+    "games_started": 13,
+    "wins": 1,
+    "losses": 4,
+    "last_updated": "2025-08-08T22:07:03.291355"
   },
   "676130": {
     "id": "676130",
@@ -6563,7 +7123,17 @@
       "sacBunts": 1,
       "sacFlies": 3
     },
-    "career": {}
+    "career": {},
+    "team": "San Francisco Giants",
+    "era": 3.4,
+    "whip": 1.33,
+    "strikeouts": 44,
+    "walks": 23,
+    "innings_pitched": 50.1,
+    "games_started": 0,
+    "wins": 3,
+    "losses": 2,
+    "last_updated": "2025-08-08T22:07:12.304323"
   },
   "665795": {
     "id": "665795",
@@ -6630,7 +7200,17 @@
       "sacBunts": 1,
       "sacFlies": 2
     },
-    "career": {}
+    "career": {},
+    "team": "Miami Marlins",
+    "era": 3.08,
+    "whip": 1.13,
+    "strikeouts": 114,
+    "walks": 35,
+    "innings_pitched": 108.0,
+    "games_started": 20,
+    "wins": 6,
+    "losses": 5,
+    "last_updated": "2025-08-08T22:07:43.353036"
   },
   "650893": {
     "id": "650893",
@@ -6764,7 +7344,17 @@
       "sacBunts": 1,
       "sacFlies": 0
     },
-    "career": {}
+    "career": {},
+    "team": "Kansas City Royals",
+    "era": 2.68,
+    "whip": 1.01,
+    "strikeouts": 72,
+    "walks": 24,
+    "innings_pitched": 87.1,
+    "games_started": 15,
+    "wins": 5,
+    "losses": 5,
+    "last_updated": "2025-08-08T22:08:28.598940"
   },
   "663462": {
     "id": "663462",
@@ -6831,7 +7421,17 @@
       "sacBunts": 0,
       "sacFlies": 0
     },
-    "career": {}
+    "career": {},
+    "team": "Boston Red Sox",
+    "era": 6.75,
+    "whip": 1.75,
+    "strikeouts": 2,
+    "walks": 0,
+    "innings_pitched": 4.0,
+    "games_started": 0,
+    "wins": 0,
+    "losses": 0,
+    "last_updated": "2025-08-08T22:08:04.769405"
   },
   "656288": {
     "id": "656288",
@@ -7032,7 +7632,17 @@
       "sacBunts": 3,
       "sacFlies": 1
     },
-    "career": {}
+    "career": {},
+    "team": "Baltimore Orioles",
+    "era": 5.36,
+    "whip": 1.44,
+    "strikeouts": 39,
+    "walks": 14,
+    "innings_pitched": 40.1,
+    "games_started": 0,
+    "wins": 1,
+    "losses": 6,
+    "last_updated": "2025-08-08T22:08:02.783641"
   },
   "676282": {
     "id": "676282",
@@ -7099,7 +7709,17 @@
       "sacBunts": 0,
       "sacFlies": 2
     },
-    "career": {}
+    "career": {},
+    "team": "Cleveland Guardians",
+    "era": 4.37,
+    "whip": 1.44,
+    "strikeouts": 72,
+    "walks": 30,
+    "innings_pitched": 55.2,
+    "games_started": 6,
+    "wins": 2,
+    "losses": 2,
+    "last_updated": "2025-08-08T22:08:14.597808"
   },
   "471911": {
     "id": "471911",
@@ -7166,7 +7786,17 @@
       "sacBunts": 0,
       "sacFlies": 1
     },
-    "career": {}
+    "career": {},
+    "team": "Atlanta Braves",
+    "era": 6.18,
+    "whip": 1.58,
+    "strikeouts": 32,
+    "walks": 14,
+    "innings_pitched": 43.2,
+    "games_started": 8,
+    "wins": 2,
+    "losses": 2,
+    "last_updated": "2025-08-08T22:07:36.431993"
   },
   "692024": {
     "id": "692024",
@@ -7300,7 +7930,17 @@
       "sacBunts": 1,
       "sacFlies": 1
     },
-    "career": {}
+    "career": {},
+    "team": "Los Angeles Dodgers",
+    "era": 4.92,
+    "whip": 1.27,
+    "strikeouts": 61,
+    "walks": 16,
+    "innings_pitched": 67.2,
+    "games_started": 3,
+    "wins": 7,
+    "losses": 4,
+    "last_updated": "2025-08-08T22:08:30.737359"
   },
   "680604": {
     "id": "680604",
@@ -7501,7 +8141,17 @@
       "sacBunts": 0,
       "sacFlies": 2
     },
-    "career": {}
+    "career": {},
+    "team": "Seattle Mariners",
+    "era": 3.21,
+    "whip": 1.19,
+    "strikeouts": 119,
+    "walks": 37,
+    "innings_pitched": 137.1,
+    "games_started": 24,
+    "wins": 8,
+    "losses": 6,
+    "last_updated": "2025-08-08T22:07:10.788338"
   },
   "622379": {
     "id": "622379",
@@ -7702,7 +8352,17 @@
       "sacBunts": 0,
       "sacFlies": 0
     },
-    "career": {}
+    "career": {},
+    "team": "Washington Nationals",
+    "era": 0.0,
+    "whip": 0.92,
+    "strikeouts": 6,
+    "walks": 1,
+    "innings_pitched": 4.1,
+    "games_started": 1,
+    "wins": 0,
+    "losses": 0,
+    "last_updated": "2025-08-08T22:08:33.483800"
   },
   "656302": {
     "id": "656302",
@@ -7769,7 +8429,17 @@
       "sacBunts": 2,
       "sacFlies": 4
     },
-    "career": {}
+    "career": {},
+    "team": "San Diego Padres",
+    "era": 4.6,
+    "whip": 1.3,
+    "strikeouts": 162,
+    "walks": 48,
+    "innings_pitched": 123.1,
+    "games_started": 23,
+    "wins": 4,
+    "losses": 10,
+    "last_updated": "2025-08-08T22:07:05.135830"
   },
   "677944": {
     "id": "677944",
@@ -7836,7 +8506,17 @@
       "sacBunts": 1,
       "sacFlies": 2
     },
-    "career": {}
+    "career": {},
+    "team": "Cleveland Guardians",
+    "era": 3.72,
+    "whip": 1.19,
+    "strikeouts": 69,
+    "walks": 23,
+    "innings_pitched": 82.1,
+    "games_started": 14,
+    "wins": 5,
+    "losses": 4,
+    "last_updated": "2025-08-08T22:08:15.802361"
   },
   "605177": {
     "id": "605177",
@@ -7903,7 +8583,17 @@
       "sacBunts": 1,
       "sacFlies": 0
     },
-    "career": {}
+    "career": {},
+    "team": "Los Angeles Angels",
+    "era": 2.28,
+    "whip": 1.52,
+    "strikeouts": 21,
+    "walks": 14,
+    "innings_pitched": 23.2,
+    "games_started": 0,
+    "wins": 1,
+    "losses": 1,
+    "last_updated": "2025-08-08T22:07:52.724839"
   },
   "547973": {
     "id": "547973",
@@ -7970,7 +8660,17 @@
       "sacBunts": 0,
       "sacFlies": 1
     },
-    "career": {}
+    "career": {},
+    "team": "Boston Red Sox",
+    "era": 1.21,
+    "whip": 0.76,
+    "strikeouts": 65,
+    "walks": 13,
+    "innings_pitched": 44.2,
+    "games_started": 0,
+    "wins": 3,
+    "losses": 2,
+    "last_updated": "2025-08-08T22:08:03.314564"
   },
   "683409": {
     "id": "683409",
@@ -8171,7 +8871,17 @@
       "sacBunts": 1,
       "sacFlies": 2
     },
-    "career": {}
+    "career": {},
+    "team": "Chicago White Sox",
+    "era": 4.91,
+    "whip": 1.34,
+    "strikeouts": 62,
+    "walks": 27,
+    "innings_pitched": 73.1,
+    "games_started": 15,
+    "wins": 3,
+    "losses": 7,
+    "last_updated": "2025-08-08T22:07:39.271002"
   },
   "664199": {
     "id": "664199",
@@ -8238,7 +8948,17 @@
       "sacBunts": 0,
       "sacFlies": 0
     },
-    "career": {}
+    "career": {},
+    "team": "Kansas City Royals",
+    "era": 3.53,
+    "whip": 0.76,
+    "strikeouts": 26,
+    "walks": 5,
+    "innings_pitched": 35.2,
+    "games_started": 0,
+    "wins": 1,
+    "losses": 1,
+    "last_updated": "2025-08-08T22:08:29.456121"
   },
   "661403": {
     "id": "661403",
@@ -8372,7 +9092,17 @@
       "sacBunts": 0,
       "sacFlies": 0
     },
-    "career": {}
+    "career": {},
+    "team": "Tampa Bay Rays",
+    "era": 2.2,
+    "whip": 1.02,
+    "strikeouts": 53,
+    "walks": 13,
+    "innings_pitched": 41.0,
+    "games_started": 0,
+    "wins": 1,
+    "losses": 4,
+    "last_updated": "2025-08-08T22:07:19.822912"
   },
   "605182": {
     "id": "605182",
@@ -8573,7 +9303,17 @@
       "sacBunts": 2,
       "sacFlies": 2
     },
-    "career": {}
+    "career": {},
+    "team": "Texas Rangers",
+    "era": 3.91,
+    "whip": 1.31,
+    "strikeouts": 96,
+    "walks": 35,
+    "innings_pitched": 112.2,
+    "games_started": 21,
+    "wins": 6,
+    "losses": 7,
+    "last_updated": "2025-08-08T22:07:24.471605"
   },
   "641482": {
     "id": "641482",
@@ -8640,7 +9380,17 @@
       "sacBunts": 0,
       "sacFlies": 1
     },
-    "career": {}
+    "career": {},
+    "team": "San Diego Padres",
+    "era": 7.11,
+    "whip": 1.58,
+    "strikeouts": 11,
+    "walks": 10,
+    "innings_pitched": 12.2,
+    "games_started": 3,
+    "wins": 1,
+    "losses": 1,
+    "last_updated": "2025-08-08T22:07:06.067521"
   },
   "676680": {
     "id": "676680",
@@ -8774,7 +9524,17 @@
       "sacBunts": 1,
       "sacFlies": 1
     },
-    "career": {}
+    "career": {},
+    "team": "Texas Rangers",
+    "era": 1.06,
+    "whip": 1.0,
+    "strikeouts": 35,
+    "walks": 12,
+    "innings_pitched": 34.0,
+    "games_started": 1,
+    "wins": 2,
+    "losses": 0,
+    "last_updated": "2025-08-08T22:07:22.473164"
   },
   "680735": {
     "id": "680735",
@@ -8841,7 +9601,17 @@
       "sacBunts": 0,
       "sacFlies": 0
     },
-    "career": {}
+    "career": {},
+    "team": "Atlanta Braves",
+    "era": 3.38,
+    "whip": 1.31,
+    "strikeouts": 13,
+    "walks": 3,
+    "innings_pitched": 10.2,
+    "games_started": 1,
+    "wins": 0,
+    "losses": 0,
+    "last_updated": "2025-08-08T22:07:36.048913"
   },
   "681867": {
     "id": "681867",
@@ -8975,7 +9745,17 @@
       "sacBunts": 0,
       "sacFlies": 1
     },
-    "career": {}
+    "career": {},
+    "team": "Boston Red Sox",
+    "era": 2.24,
+    "whip": 1.07,
+    "strikeouts": 183,
+    "walks": 39,
+    "innings_pitched": 148.1,
+    "games_started": 23,
+    "wins": 13,
+    "losses": 4,
+    "last_updated": "2025-08-08T22:08:04.095048"
   },
   "518585": {
     "id": "518585",
@@ -9310,7 +10090,17 @@
       "sacBunts": 0,
       "sacFlies": 0
     },
-    "career": {}
+    "career": {},
+    "team": "Arizona Diamondbacks",
+    "era": 4.41,
+    "whip": 1.16,
+    "strikeouts": 7,
+    "walks": 2,
+    "innings_pitched": 16.1,
+    "games_started": 0,
+    "wins": 1,
+    "losses": 0,
+    "last_updated": "2025-08-08T22:07:58.218680"
   },
   "681168": {
     "id": "681168",
@@ -9377,7 +10167,17 @@
       "sacBunts": 0,
       "sacFlies": 0
     },
-    "career": {}
+    "career": {},
+    "team": "Texas Rangers",
+    "era": 7.11,
+    "whip": 1.26,
+    "strikeouts": 6,
+    "walks": 3,
+    "innings_pitched": 6.1,
+    "games_started": 0,
+    "wins": 1,
+    "losses": 0,
+    "last_updated": "2025-08-08T22:07:23.810342"
   },
   "702674": {
     "id": "702674",
@@ -9578,7 +10378,17 @@
       "sacBunts": 0,
       "sacFlies": 0
     },
-    "career": {}
+    "career": {},
+    "team": "Colorado Rockies",
+    "era": 3.6,
+    "whip": 1.2,
+    "strikeouts": 3,
+    "walks": 1,
+    "innings_pitched": 5.0,
+    "games_started": 0,
+    "wins": 1,
+    "losses": 0,
+    "last_updated": "2025-08-08T22:08:17.141749"
   },
   "690382": {
     "id": "690382",
@@ -9712,7 +10522,17 @@
       "sacBunts": 1,
       "sacFlies": 0
     },
-    "career": {}
+    "career": {},
+    "team": "San Diego Padres",
+    "era": 6.51,
+    "whip": 1.34,
+    "strikeouts": 23,
+    "walks": 11,
+    "innings_pitched": 27.2,
+    "games_started": 6,
+    "wins": 1,
+    "losses": 3,
+    "last_updated": "2025-08-08T22:07:07.304215"
   },
   "663562": {
     "id": "663562",
@@ -9913,7 +10733,17 @@
       "sacBunts": 0,
       "sacFlies": 3
     },
-    "career": {}
+    "career": {},
+    "team": "Texas Rangers",
+    "era": 2.8,
+    "whip": 0.94,
+    "strikeouts": 135,
+    "walks": 29,
+    "innings_pitched": 128.2,
+    "games_started": 22,
+    "wins": 10,
+    "losses": 4,
+    "last_updated": "2025-08-08T22:07:23.334547"
   },
   "660853": {
     "id": "660853",
@@ -9980,7 +10810,17 @@
       "sacBunts": 0,
       "sacFlies": 0
     },
-    "career": {}
+    "career": {},
+    "team": "Houston Astros",
+    "era": 4.53,
+    "whip": 1.31,
+    "strikeouts": 38,
+    "walks": 18,
+    "innings_pitched": 43.2,
+    "games_started": 0,
+    "wins": 3,
+    "losses": 3,
+    "last_updated": "2025-08-08T22:08:24.016737"
   },
   "660787": {
     "id": "660787",
@@ -10047,7 +10887,17 @@
       "sacBunts": 2,
       "sacFlies": 1
     },
-    "career": {}
+    "career": {},
+    "team": "New York Yankees",
+    "era": 1.63,
+    "whip": 1.45,
+    "strikeouts": 21,
+    "walks": 14,
+    "innings_pitched": 27.2,
+    "games_started": 0,
+    "wins": 0,
+    "losses": 0,
+    "last_updated": "2025-08-08T22:07:48.867663"
   },
   "543101": {
     "id": "543101",
@@ -10114,7 +10964,17 @@
       "sacBunts": 1,
       "sacFlies": 1
     },
-    "career": {}
+    "career": {},
+    "team": "Arizona Diamondbacks",
+    "era": 4.2,
+    "whip": 1.2,
+    "strikeouts": 28,
+    "walks": 9,
+    "innings_pitched": 30.0,
+    "games_started": 3,
+    "wins": 1,
+    "losses": 2,
+    "last_updated": "2025-08-08T22:07:56.773162"
   },
   "672282": {
     "id": "672282",
@@ -10181,7 +11041,17 @@
       "sacBunts": 0,
       "sacFlies": 0
     },
-    "career": {}
+    "career": {},
+    "team": "Los Angeles Angels",
+    "era": 4.64,
+    "whip": 1.38,
+    "strikeouts": 67,
+    "walks": 21,
+    "innings_pitched": 52.1,
+    "games_started": 0,
+    "wins": 3,
+    "losses": 3,
+    "last_updated": "2025-08-08T22:07:54.863158"
   },
   "606965": {
     "id": "606965",
@@ -10315,7 +11185,17 @@
       "sacBunts": 0,
       "sacFlies": 0
     },
-    "career": {}
+    "career": {},
+    "team": "Los Angeles Dodgers",
+    "era": 8.49,
+    "whip": 1.46,
+    "strikeouts": 7,
+    "walks": 6,
+    "innings_pitched": 11.2,
+    "games_started": 0,
+    "wins": 1,
+    "losses": 0,
+    "last_updated": "2025-08-08T22:08:30.265310"
   },
   "621242": {
     "id": "621242",
@@ -10382,7 +11262,17 @@
       "sacBunts": 0,
       "sacFlies": 2
     },
-    "career": {}
+    "career": {},
+    "team": "New York Mets",
+    "era": 1.41,
+    "whip": 0.92,
+    "strikeouts": 67,
+    "walks": 17,
+    "innings_pitched": 44.2,
+    "games_started": 0,
+    "wins": 5,
+    "losses": 1,
+    "last_updated": "2025-08-08T22:08:36.998861"
   },
   "646242": {
     "id": "646242",
@@ -10717,7 +11607,17 @@
       "sacBunts": 0,
       "sacFlies": 0
     },
-    "career": {}
+    "career": {},
+    "team": "Atlanta Braves",
+    "era": 3.8,
+    "whip": 0.84,
+    "strikeouts": 20,
+    "walks": 2,
+    "innings_pitched": 21.1,
+    "games_started": 0,
+    "wins": 0,
+    "losses": 0,
+    "last_updated": "2025-08-08T22:07:36.882458"
   },
   "801403": {
     "id": "801403",
@@ -10851,7 +11751,17 @@
       "sacBunts": 0,
       "sacFlies": 0
     },
-    "career": {}
+    "career": {},
+    "team": "Toronto Blue Jays",
+    "era": 3.6,
+    "whip": 1.31,
+    "strikeouts": 58,
+    "walks": 25,
+    "innings_pitched": 45.0,
+    "games_started": 0,
+    "wins": 2,
+    "losses": 4,
+    "last_updated": "2025-08-08T22:07:28.195839"
   },
   "666808": {
     "id": "666808",
@@ -10918,7 +11828,17 @@
       "sacBunts": 1,
       "sacFlies": 1
     },
-    "career": {}
+    "career": {},
+    "team": "New York Yankees",
+    "era": 3.04,
+    "whip": 1.23,
+    "strikeouts": 52,
+    "walks": 26,
+    "innings_pitched": 50.1,
+    "games_started": 0,
+    "wins": 4,
+    "losses": 3,
+    "last_updated": "2025-08-08T22:07:46.475401"
   },
   "676263": {
     "id": "676263",
@@ -10985,7 +11905,17 @@
       "sacBunts": 2,
       "sacFlies": 4
     },
-    "career": {}
+    "career": {},
+    "team": "Los Angeles Dodgers",
+    "era": 2.93,
+    "whip": 1.12,
+    "strikeouts": 52,
+    "walks": 20,
+    "innings_pitched": 55.1,
+    "games_started": 5,
+    "wins": 2,
+    "losses": 2,
+    "last_updated": "2025-08-08T22:08:32.087584"
   },
   "681869": {
     "id": "681869",
@@ -11253,7 +12183,17 @@
       "sacBunts": 0,
       "sacFlies": 2
     },
-    "career": {}
+    "career": {},
+    "team": "Philadelphia Phillies",
+    "era": 1.93,
+    "whip": 1.13,
+    "strikeouts": 54,
+    "walks": 18,
+    "innings_pitched": 51.1,
+    "games_started": 0,
+    "wins": 6,
+    "losses": 4,
+    "last_updated": "2025-08-08T22:07:33.203647"
   },
   "671109": {
     "id": "671109",
@@ -11588,7 +12528,17 @@
       "sacBunts": 1,
       "sacFlies": 3
     },
-    "career": {}
+    "career": {},
+    "team": "Chicago White Sox",
+    "era": 4.2,
+    "whip": 1.3,
+    "strikeouts": 56,
+    "walks": 14,
+    "innings_pitched": 49.1,
+    "games_started": 3,
+    "wins": 2,
+    "losses": 3,
+    "last_updated": "2025-08-08T22:07:39.483619"
   },
   "693821": {
     "id": "693821",
@@ -11655,7 +12605,17 @@
       "sacBunts": 1,
       "sacFlies": 3
     },
-    "career": {}
+    "career": {},
+    "team": "Atlanta Braves",
+    "era": 6.12,
+    "whip": 1.56,
+    "strikeouts": 81,
+    "walks": 39,
+    "innings_pitched": 100.0,
+    "games_started": 19,
+    "wins": 4,
+    "losses": 9,
+    "last_updated": "2025-08-08T22:07:36.194278"
   },
   "686642": {
     "id": "686642",
@@ -11789,7 +12749,17 @@
       "sacBunts": 0,
       "sacFlies": 1
     },
-    "career": {}
+    "career": {},
+    "team": "Tampa Bay Rays",
+    "era": 3.86,
+    "whip": 1.19,
+    "strikeouts": 32,
+    "walks": 7,
+    "innings_pitched": 32.2,
+    "games_started": 0,
+    "wins": 0,
+    "losses": 1,
+    "last_updated": "2025-08-08T22:07:20.750611"
   },
   "608650": {
     "id": "608650",
@@ -11856,7 +12826,17 @@
       "sacBunts": 0,
       "sacFlies": 1
     },
-    "career": {}
+    "career": {},
+    "team": "Baltimore Orioles",
+    "era": 5.06,
+    "whip": 1.55,
+    "strikeouts": 23,
+    "walks": 4,
+    "innings_pitched": 21.1,
+    "games_started": 2,
+    "wins": 1,
+    "losses": 1,
+    "last_updated": "2025-08-08T22:08:00.751790"
   },
   "663671": {
     "id": "663671",
@@ -11923,7 +12903,17 @@
       "sacBunts": 0,
       "sacFlies": 0
     },
-    "career": {}
+    "career": {},
+    "team": "Cleveland Guardians",
+    "era": 2.01,
+    "whip": 0.94,
+    "strikeouts": 20,
+    "walks": 9,
+    "innings_pitched": 22.1,
+    "games_started": 0,
+    "wins": 2,
+    "losses": 0,
+    "last_updated": "2025-08-08T22:08:15.587204"
   },
   "543135": {
     "id": "543135",
@@ -11990,7 +12980,17 @@
       "sacBunts": 1,
       "sacFlies": 2
     },
-    "career": {}
+    "career": {},
+    "team": "Texas Rangers",
+    "era": 1.38,
+    "whip": 0.84,
+    "strikeouts": 111,
+    "walks": 20,
+    "innings_pitched": 111.0,
+    "games_started": 19,
+    "wins": 10,
+    "losses": 3,
+    "last_updated": "2025-08-08T22:07:24.254213"
   },
   "668674": {
     "id": "668674",
@@ -12057,7 +13057,17 @@
       "sacBunts": 0,
       "sacFlies": 0
     },
-    "career": {}
+    "career": {},
+    "team": "Kansas City Royals",
+    "era": 2.49,
+    "whip": 1.15,
+    "strikeouts": 38,
+    "walks": 15,
+    "innings_pitched": 47.0,
+    "games_started": 0,
+    "wins": 4,
+    "losses": 3,
+    "last_updated": "2025-08-08T22:08:28.057059"
   },
   "683155": {
     "id": "683155",
@@ -12191,7 +13201,17 @@
       "sacBunts": 1,
       "sacFlies": 1
     },
-    "career": {}
+    "career": {},
+    "team": "Kansas City Royals",
+    "era": 2.59,
+    "whip": 1.15,
+    "strikeouts": 40,
+    "walks": 17,
+    "innings_pitched": 48.2,
+    "games_started": 0,
+    "wins": 4,
+    "losses": 3,
+    "last_updated": "2025-08-08T22:08:27.034747"
   },
   "669093": {
     "id": "669093",
@@ -12258,7 +13278,17 @@
       "sacBunts": 2,
       "sacFlies": 3
     },
-    "career": {}
+    "career": {},
+    "team": "San Diego Padres",
+    "era": 2.61,
+    "whip": 1.03,
+    "strikeouts": 73,
+    "walks": 17,
+    "innings_pitched": 51.2,
+    "games_started": 0,
+    "wins": 4,
+    "losses": 4,
+    "last_updated": "2025-08-08T22:07:05.571042"
   },
   "681751": {
     "id": "681751",
@@ -12392,7 +13422,17 @@
       "sacBunts": 1,
       "sacFlies": 1
     },
-    "career": {}
+    "career": {},
+    "team": "Seattle Mariners",
+    "era": 4.3,
+    "whip": 1.41,
+    "strikeouts": 53,
+    "walks": 23,
+    "innings_pitched": 69.0,
+    "games_started": 13,
+    "wins": 5,
+    "losses": 4,
+    "last_updated": "2025-08-08T22:07:10.292590"
   },
   "664126": {
     "id": "664126",
@@ -12459,7 +13499,17 @@
       "sacBunts": 1,
       "sacFlies": 0
     },
-    "career": {}
+    "career": {},
+    "team": "Tampa Bay Rays",
+    "era": 2.7,
+    "whip": 1.06,
+    "strikeouts": 40,
+    "walks": 15,
+    "innings_pitched": 43.1,
+    "games_started": 0,
+    "wins": 4,
+    "losses": 3,
+    "last_updated": "2025-08-08T22:07:21.200420"
   },
   "663559": {
     "id": "663559",
@@ -12526,7 +13576,17 @@
       "sacBunts": 3,
       "sacFlies": 4
     },
-    "career": {}
+    "career": {},
+    "team": "Kansas City Royals",
+    "era": 4.14,
+    "whip": 1.23,
+    "strikeouts": 72,
+    "walks": 41,
+    "innings_pitched": 117.1,
+    "games_started": 23,
+    "wins": 7,
+    "losses": 6,
+    "last_updated": "2025-08-08T22:08:26.781823"
   },
   "676534": {
     "id": "676534",
@@ -12593,7 +13653,17 @@
       "sacBunts": 0,
       "sacFlies": 3
     },
-    "career": {}
+    "career": {},
+    "team": "Miami Marlins",
+    "era": 3.48,
+    "whip": 1.36,
+    "strikeouts": 43,
+    "walks": 21,
+    "innings_pitched": 44.0,
+    "games_started": 0,
+    "wins": 3,
+    "losses": 2,
+    "last_updated": "2025-08-08T22:07:43.182382"
   },
   "607200": {
     "id": "607200",
@@ -12660,7 +13730,17 @@
       "sacBunts": 3,
       "sacFlies": 2
     },
-    "career": {}
+    "career": {},
+    "team": "Atlanta Braves",
+    "era": 5.32,
+    "whip": 1.48,
+    "strikeouts": 66,
+    "walks": 51,
+    "innings_pitched": 111.2,
+    "games_started": 22,
+    "wins": 3,
+    "losses": 12,
+    "last_updated": "2025-08-08T22:07:37.463700"
   },
   "663372": {
     "id": "663372",
@@ -12794,7 +13874,17 @@
       "sacBunts": 1,
       "sacFlies": 2
     },
-    "career": {}
+    "career": {},
+    "team": "Seattle Mariners",
+    "era": 3.47,
+    "whip": 1.05,
+    "strikeouts": 35,
+    "walks": 14,
+    "innings_pitched": 46.2,
+    "games_started": 0,
+    "wins": 2,
+    "losses": 2,
+    "last_updated": "2025-08-08T22:07:08.617707"
   },
   "621053": {
     "id": "621053",
@@ -12861,7 +13951,17 @@
       "sacBunts": 2,
       "sacFlies": 4
     },
-    "career": {}
+    "career": {},
+    "team": "Athletics",
+    "era": 6.5,
+    "whip": 1.5,
+    "strikeouts": 33,
+    "walks": 23,
+    "innings_pitched": 36.0,
+    "games_started": 0,
+    "wins": 2,
+    "losses": 2,
+    "last_updated": "2025-08-08T22:07:00.852040"
   },
   "820862": {
     "id": "820862",
@@ -13062,7 +14162,17 @@
       "sacBunts": 0,
       "sacFlies": 0
     },
-    "career": {}
+    "career": {},
+    "team": "St. Louis Cardinals",
+    "era": 12.6,
+    "whip": 2.4,
+    "strikeouts": 7,
+    "walks": 7,
+    "innings_pitched": 10.0,
+    "games_started": 0,
+    "wins": 0,
+    "losses": 2,
+    "last_updated": "2025-08-08T22:07:17.882405"
   },
   "678606": {
     "id": "678606",
@@ -13129,7 +14239,17 @@
       "sacBunts": 4,
       "sacFlies": 1
     },
-    "career": {}
+    "career": {},
+    "team": "Washington Nationals",
+    "era": 4.94,
+    "whip": 1.24,
+    "strikeouts": 47,
+    "walks": 12,
+    "innings_pitched": 54.2,
+    "games_started": 0,
+    "wins": 3,
+    "losses": 3,
+    "last_updated": "2025-08-08T22:08:34.487198"
   },
   "701581": {
     "id": "701581",
@@ -13263,7 +14383,17 @@
       "sacBunts": 1,
       "sacFlies": 2
     },
-    "career": {}
+    "career": {},
+    "team": "Cleveland Guardians",
+    "era": 4.37,
+    "whip": 1.03,
+    "strikeouts": 31,
+    "walks": 10,
+    "innings_pitched": 35.0,
+    "games_started": 0,
+    "wins": 3,
+    "losses": 2,
+    "last_updated": "2025-08-08T22:08:15.348032"
   },
   "656420": {
     "id": "656420",
@@ -13397,7 +14527,17 @@
       "sacBunts": 1,
       "sacFlies": 2
     },
-    "career": {}
+    "career": {},
+    "team": "Detroit Tigers",
+    "era": 4.04,
+    "whip": 1.2,
+    "strikeouts": 37,
+    "walks": 14,
+    "innings_pitched": 42.1,
+    "games_started": 0,
+    "wins": 1,
+    "losses": 4,
+    "last_updated": "2025-08-08T22:08:21.102315"
   },
   "680755": {
     "id": "680755",
@@ -13464,7 +14604,17 @@
       "sacBunts": 0,
       "sacFlies": 1
     },
-    "career": {}
+    "career": {},
+    "team": "Toronto Blue Jays",
+    "era": 2.36,
+    "whip": 0.93,
+    "strikeouts": 44,
+    "walks": 9,
+    "innings_pitched": 34.1,
+    "games_started": 1,
+    "wins": 4,
+    "losses": 0,
+    "last_updated": "2025-08-08T22:07:25.900679"
   },
   "690916": {
     "id": "690916",
@@ -13598,7 +14748,17 @@
       "sacBunts": 0,
       "sacFlies": 1
     },
-    "career": {}
+    "career": {},
+    "team": "Detroit Tigers",
+    "era": 4.56,
+    "whip": 1.28,
+    "strikeouts": 147,
+    "walks": 48,
+    "innings_pitched": 120.1,
+    "games_started": 23,
+    "wins": 6,
+    "losses": 11,
+    "last_updated": "2025-08-08T22:08:20.889634"
   },
   "623167": {
     "id": "623167",
@@ -13732,7 +14892,17 @@
       "sacBunts": 1,
       "sacFlies": 1
     },
-    "career": {}
+    "career": {},
+    "team": "Toronto Blue Jays",
+    "era": 5.36,
+    "whip": 1.26,
+    "strikeouts": 43,
+    "walks": 18,
+    "innings_pitched": 42.0,
+    "games_started": 0,
+    "wins": 4,
+    "losses": 2,
+    "last_updated": "2025-08-08T22:07:27.807956"
   },
   "670102": {
     "id": "670102",
@@ -13866,7 +15036,17 @@
       "sacBunts": 1,
       "sacFlies": 4
     },
-    "career": {}
+    "career": {},
+    "team": "Colorado Rockies",
+    "era": 5.53,
+    "whip": 1.52,
+    "strikeouts": 78,
+    "walks": 28,
+    "innings_pitched": 109.0,
+    "games_started": 21,
+    "wins": 2,
+    "losses": 12,
+    "last_updated": "2025-08-08T22:08:18.108562"
   },
   "673965": {
     "id": "673965",
@@ -14000,7 +15180,17 @@
       "sacBunts": 1,
       "sacFlies": 0
     },
-    "career": {}
+    "career": {},
+    "team": "New York Yankees",
+    "era": 2.78,
+    "whip": 1.07,
+    "strikeouts": 132,
+    "walks": 35,
+    "innings_pitched": 139.0,
+    "games_started": 23,
+    "wins": 12,
+    "losses": 4,
+    "last_updated": "2025-08-08T22:07:48.200631"
   },
   "800311": {
     "id": "800311",
@@ -14134,7 +15324,17 @@
       "sacBunts": 0,
       "sacFlies": 0
     },
-    "career": {}
+    "career": {},
+    "team": "Los Angeles Angels",
+    "era": 3.06,
+    "whip": 0.91,
+    "strikeouts": 19,
+    "walks": 6,
+    "innings_pitched": 17.2,
+    "games_started": 0,
+    "wins": 0,
+    "losses": 0,
+    "last_updated": "2025-08-08T22:07:53.212467"
   },
   "605242": {
     "id": "605242",
@@ -14268,7 +15468,17 @@
       "sacBunts": 0,
       "sacFlies": 2
     },
-    "career": {}
+    "career": {},
+    "team": "Minnesota Twins",
+    "era": 6.1,
+    "whip": 1.94,
+    "strikeouts": 15,
+    "walks": 9,
+    "innings_pitched": 20.2,
+    "games_started": 0,
+    "wins": 2,
+    "losses": 1,
+    "last_updated": "2025-08-08T22:07:30.791038"
   },
   "683769": {
     "id": "683769",
@@ -14335,7 +15545,17 @@
       "sacBunts": 2,
       "sacFlies": 2
     },
-    "career": {}
+    "career": {},
+    "team": "Cleveland Guardians",
+    "era": 3.61,
+    "whip": 1.31,
+    "strikeouts": 54,
+    "walks": 16,
+    "innings_pitched": 47.1,
+    "games_started": 0,
+    "wins": 1,
+    "losses": 1,
+    "last_updated": "2025-08-08T22:08:14.109388"
   },
   "657424": {
     "id": "657424",
@@ -14402,7 +15622,17 @@
       "sacBunts": 0,
       "sacFlies": 0
     },
-    "career": {}
+    "career": {},
+    "team": "San Francisco Giants",
+    "era": 0.0,
+    "whip": 1.0,
+    "strikeouts": 12,
+    "walks": 5,
+    "innings_pitched": 16.0,
+    "games_started": 2,
+    "wins": 0,
+    "losses": 0,
+    "last_updated": "2025-08-08T22:07:13.341918"
   },
   "668678": {
     "id": "668678",
@@ -14469,7 +15699,17 @@
       "sacBunts": 1,
       "sacFlies": 2
     },
-    "career": {}
+    "career": {},
+    "team": "Arizona Diamondbacks",
+    "era": 5.32,
+    "whip": 1.36,
+    "strikeouts": 130,
+    "walks": 50,
+    "innings_pitched": 138.2,
+    "games_started": 24,
+    "wins": 8,
+    "losses": 12,
+    "last_updated": "2025-08-08T22:07:59.117998"
   },
   "642520": {
     "id": "642520",
@@ -14670,7 +15910,17 @@
       "sacBunts": 0,
       "sacFlies": 1
     },
-    "career": {}
+    "career": {},
+    "team": "Baltimore Orioles",
+    "era": 3.52,
+    "whip": 0.91,
+    "strikeouts": 18,
+    "walks": 4,
+    "innings_pitched": 15.1,
+    "games_started": 0,
+    "wins": 0,
+    "losses": 0,
+    "last_updated": "2025-08-08T22:08:01.848835"
   },
   "472610": {
     "id": "472610",
@@ -14737,7 +15987,17 @@
       "sacBunts": 2,
       "sacFlies": 0
     },
-    "career": {}
+    "career": {},
+    "team": "Los Angeles Angels",
+    "era": 4.05,
+    "whip": 1.5,
+    "strikeouts": 34,
+    "walks": 18,
+    "innings_pitched": 40.0,
+    "games_started": 0,
+    "wins": 2,
+    "losses": 0,
+    "last_updated": "2025-08-08T22:07:54.632036"
   },
   "676395": {
     "id": "676395",
@@ -14804,7 +16064,17 @@
       "sacBunts": 2,
       "sacFlies": 1
     },
-    "career": {}
+    "career": {},
+    "team": "Texas Rangers",
+    "era": 3.27,
+    "whip": 1.34,
+    "strikeouts": 51,
+    "walks": 18,
+    "innings_pitched": 44.0,
+    "games_started": 0,
+    "wins": 1,
+    "losses": 7,
+    "last_updated": "2025-08-08T22:07:25.149242"
   },
   "554340": {
     "id": "554340",
@@ -14938,7 +16208,17 @@
       "sacBunts": 0,
       "sacFlies": 0
     },
-    "career": {}
+    "career": {},
+    "team": "New York Mets",
+    "era": 2.51,
+    "whip": 1.16,
+    "strikeouts": 54,
+    "walks": 22,
+    "innings_pitched": 46.2,
+    "games_started": 0,
+    "wins": 3,
+    "losses": 4,
+    "last_updated": "2025-08-08T22:08:38.035986"
   },
   "621057": {
     "id": "621057",
@@ -15072,7 +16352,17 @@
       "sacBunts": 1,
       "sacFlies": 3
     },
-    "career": {}
+    "career": {},
+    "team": "Toronto Blue Jays",
+    "era": 3.85,
+    "whip": 1.08,
+    "strikeouts": 135,
+    "walks": 39,
+    "innings_pitched": 135.2,
+    "games_started": 23,
+    "wins": 8,
+    "losses": 8,
+    "last_updated": "2025-08-08T22:07:27.333956"
   },
   "801434": {
     "id": "801434",
@@ -15340,7 +16630,17 @@
       "sacBunts": 0,
       "sacFlies": 1
     },
-    "career": {}
+    "career": {},
+    "team": "New York Yankees",
+    "era": 13.5,
+    "whip": 2.7,
+    "strikeouts": 3,
+    "walks": 4,
+    "innings_pitched": 3.1,
+    "games_started": 1,
+    "wins": 0,
+    "losses": 1,
+    "last_updated": "2025-08-08T22:07:47.415063"
   },
   "669302": {
     "id": "669302",
@@ -15407,7 +16707,17 @@
       "sacBunts": 1,
       "sacFlies": 0
     },
-    "career": {}
+    "career": {},
+    "team": "Seattle Mariners",
+    "era": 3.35,
+    "whip": 0.98,
+    "strikeouts": 118,
+    "walks": 21,
+    "innings_pitched": 83.1,
+    "games_started": 16,
+    "wins": 3,
+    "losses": 4,
+    "last_updated": "2025-08-08T22:07:10.535057"
   },
   "656457": {
     "id": "656457",
@@ -15474,7 +16784,17 @@
       "sacBunts": 1,
       "sacFlies": 1
     },
-    "career": {}
+    "career": {},
+    "team": "Chicago White Sox",
+    "era": 2.86,
+    "whip": 1.1,
+    "strikeouts": 32,
+    "walks": 17,
+    "innings_pitched": 34.2,
+    "games_started": 3,
+    "wins": 4,
+    "losses": 1,
+    "last_updated": "2025-08-08T22:07:41.892885"
   },
   "670810": {
     "id": "670810",
@@ -15742,7 +17062,17 @@
       "sacBunts": 0,
       "sacFlies": 0
     },
-    "career": {}
+    "career": {},
+    "team": "Athletics",
+    "era": 4.39,
+    "whip": 1.24,
+    "strikeouts": 58,
+    "walks": 17,
+    "innings_pitched": 53.1,
+    "games_started": 8,
+    "wins": 2,
+    "losses": 4,
+    "last_updated": "2025-08-08T22:06:58.207473"
   },
   "608337": {
     "id": "608337",
@@ -15809,7 +17139,17 @@
       "sacBunts": 2,
       "sacFlies": 3
     },
-    "career": {}
+    "career": {},
+    "team": "Boston Red Sox",
+    "era": 3.57,
+    "whip": 1.19,
+    "strikeouts": 81,
+    "walks": 27,
+    "innings_pitched": 95.2,
+    "games_started": 17,
+    "wins": 8,
+    "losses": 2,
+    "last_updated": "2025-08-08T22:08:05.452683"
   },
   "687830": {
     "id": "687830",
@@ -15943,7 +17283,17 @@
       "sacBunts": 0,
       "sacFlies": 0
     },
-    "career": {}
+    "career": {},
+    "team": "Los Angeles Dodgers",
+    "era": 3.06,
+    "whip": 1.09,
+    "strikeouts": 56,
+    "walks": 23,
+    "innings_pitched": 47.0,
+    "games_started": 10,
+    "wins": 1,
+    "losses": 1,
+    "last_updated": "2025-08-08T22:08:32.555134"
   },
   "596295": {
     "id": "596295",
@@ -16010,7 +17360,17 @@
       "sacBunts": 1,
       "sacFlies": 1
     },
-    "career": {}
+    "career": {},
+    "team": "Colorado Rockies",
+    "era": 6.66,
+    "whip": 1.6,
+    "strikeouts": 30,
+    "walks": 14,
+    "innings_pitched": 48.2,
+    "games_started": 10,
+    "wins": 0,
+    "losses": 5,
+    "last_updated": "2025-08-08T22:08:16.671542"
   },
   "672782": {
     "id": "672782",
@@ -16211,7 +17571,17 @@
       "sacBunts": 0,
       "sacFlies": 0
     },
-    "career": {}
+    "career": {},
+    "team": "Chicago White Sox",
+    "era": 2.57,
+    "whip": 1.14,
+    "strikeouts": 5,
+    "walks": 4,
+    "innings_pitched": 7.0,
+    "games_started": 0,
+    "wins": 0,
+    "losses": 0,
+    "last_updated": "2025-08-08T22:07:42.124473"
   },
   "676467": {
     "id": "676467",
@@ -16278,7 +17648,17 @@
       "sacBunts": 2,
       "sacFlies": 3
     },
-    "career": {}
+    "career": {},
+    "team": "Houston Astros",
+    "era": 5.27,
+    "whip": 1.46,
+    "strikeouts": 60,
+    "walks": 12,
+    "innings_pitched": 66.2,
+    "games_started": 13,
+    "wins": 4,
+    "losses": 4,
+    "last_updated": "2025-08-08T22:08:23.763743"
   },
   "685299": {
     "id": "685299",
@@ -16345,7 +17725,17 @@
       "sacBunts": 0,
       "sacFlies": 0
     },
-    "career": {}
+    "career": {},
+    "team": "Colorado Rockies",
+    "era": 6.59,
+    "whip": 1.78,
+    "strikeouts": 16,
+    "walks": 8,
+    "innings_pitched": 28.2,
+    "games_started": 6,
+    "wins": 2,
+    "losses": 4,
+    "last_updated": "2025-08-08T22:08:18.789258"
   },
   "669022": {
     "id": "669022",
@@ -16412,7 +17802,17 @@
       "sacBunts": 2,
       "sacFlies": 5
     },
-    "career": {}
+    "career": {},
+    "team": "Washington Nationals",
+    "era": 4.29,
+    "whip": 1.37,
+    "strikeouts": 148,
+    "walks": 46,
+    "innings_pitched": 126.0,
+    "games_started": 23,
+    "wins": 4,
+    "losses": 12,
+    "last_updated": "2025-08-08T22:08:34.930312"
   },
   "700669": {
     "id": "700669",
@@ -16479,7 +17879,17 @@
       "sacBunts": 0,
       "sacFlies": 2
     },
-    "career": {}
+    "career": {},
+    "team": "St. Louis Cardinals",
+    "era": 5.65,
+    "whip": 1.15,
+    "strikeouts": 26,
+    "walks": 6,
+    "innings_pitched": 28.2,
+    "games_started": 0,
+    "wins": 3,
+    "losses": 0,
+    "last_updated": "2025-08-08T22:07:15.655392"
   },
   "701552": {
     "id": "701552",
@@ -16546,7 +17956,17 @@
       "sacBunts": 1,
       "sacFlies": 2
     },
-    "career": {}
+    "career": {},
+    "team": "St. Louis Cardinals",
+    "era": 4.85,
+    "whip": 1.46,
+    "strikeouts": 8,
+    "walks": 2,
+    "innings_pitched": 13.0,
+    "games_started": 0,
+    "wins": 1,
+    "losses": 0,
+    "last_updated": "2025-08-08T22:07:15.100882"
   },
   "608665": {
     "id": "608665",
@@ -16613,7 +18033,17 @@
       "sacBunts": 0,
       "sacFlies": 0
     },
-    "career": {}
+    "career": {},
+    "team": "Arizona Diamondbacks",
+    "era": 6.32,
+    "whip": 1.91,
+    "strikeouts": 8,
+    "walks": 11,
+    "innings_pitched": 15.2,
+    "games_started": 0,
+    "wins": 1,
+    "losses": 0,
+    "last_updated": "2025-08-08T22:07:58.450090"
   },
   "592351": {
     "id": "592351",
@@ -16680,7 +18110,17 @@
       "sacBunts": 0,
       "sacFlies": 0
     },
-    "career": {}
+    "career": {},
+    "team": "Texas Rangers",
+    "era": 5.91,
+    "whip": 1.13,
+    "strikeouts": 9,
+    "walks": 3,
+    "innings_pitched": 10.2,
+    "games_started": 0,
+    "wins": 1,
+    "losses": 1,
+    "last_updated": "2025-08-08T22:07:23.567938"
   },
   "543243": {
     "id": "543243",
@@ -16747,7 +18187,17 @@
       "sacBunts": 0,
       "sacFlies": 1
     },
-    "career": {}
+    "career": {},
+    "team": "St. Louis Cardinals",
+    "era": 4.21,
+    "whip": 1.17,
+    "strikeouts": 141,
+    "walks": 21,
+    "innings_pitched": 128.1,
+    "games_started": 23,
+    "wins": 10,
+    "losses": 5,
+    "last_updated": "2025-08-08T22:07:18.103840"
   },
   "643338": {
     "id": "643338",
@@ -17149,7 +18599,17 @@
       "sacBunts": 2,
       "sacFlies": 1
     },
-    "career": {}
+    "career": {},
+    "team": "Houston Astros",
+    "era": 2.05,
+    "whip": 0.85,
+    "strikeouts": 76,
+    "walks": 16,
+    "innings_pitched": 52.2,
+    "games_started": 0,
+    "wins": 6,
+    "losses": 2,
+    "last_updated": "2025-08-08T22:08:25.118231"
   },
   "663795": {
     "id": "663795",
@@ -17216,7 +18676,17 @@
       "sacBunts": 0,
       "sacFlies": 0
     },
-    "career": {}
+    "career": {},
+    "team": "New York Mets",
+    "era": 4.4,
+    "whip": 1.19,
+    "strikeouts": 14,
+    "walks": 1,
+    "innings_pitched": 14.1,
+    "games_started": 1,
+    "wins": 0,
+    "losses": 1,
+    "last_updated": "2025-08-08T22:08:37.689360"
   },
   "534910": {
     "id": "534910",
@@ -17350,7 +18820,17 @@
       "sacBunts": 0,
       "sacFlies": 0
     },
-    "career": {}
+    "career": {},
+    "team": "Milwaukee Brewers",
+    "era": 3.16,
+    "whip": 1.02,
+    "strikeouts": 22,
+    "walks": 15,
+    "innings_pitched": 31.1,
+    "games_started": 3,
+    "wins": 1,
+    "losses": 0,
+    "last_updated": "2025-08-08T22:07:50.010990"
   },
   "678020": {
     "id": "678020",
@@ -18020,7 +19500,17 @@
       "sacBunts": 0,
       "sacFlies": 0
     },
-    "career": {}
+    "career": {},
+    "team": "Kansas City Royals",
+    "era": 0.0,
+    "whip": 0.52,
+    "strikeouts": 10,
+    "walks": 1,
+    "innings_pitched": 9.2,
+    "games_started": 0,
+    "wins": 1,
+    "losses": 0,
+    "last_updated": "2025-08-08T22:08:27.565179"
   },
   "641672": {
     "id": "641672",
@@ -18087,7 +19577,17 @@
       "sacBunts": 0,
       "sacFlies": 0
     },
-    "career": {}
+    "career": {},
+    "team": "Minnesota Twins",
+    "era": 3.38,
+    "whip": 0.94,
+    "strikeouts": 4,
+    "walks": 1,
+    "innings_pitched": 5.1,
+    "games_started": 0,
+    "wins": 1,
+    "losses": 0,
+    "last_updated": "2025-08-08T22:07:31.502741"
   },
   "687396": {
     "id": "687396",
@@ -18154,7 +19654,17 @@
       "sacBunts": 0,
       "sacFlies": 0
     },
-    "career": {}
+    "career": {},
+    "team": "New York Yankees",
+    "era": 3.6,
+    "whip": 0.95,
+    "strikeouts": 25,
+    "walks": 4,
+    "innings_pitched": 20.0,
+    "games_started": 0,
+    "wins": 0,
+    "losses": 0,
+    "last_updated": "2025-08-08T22:07:46.072155"
   },
   "571760": {
     "id": "571760",
@@ -18221,7 +19731,17 @@
       "sacBunts": 2,
       "sacFlies": 4
     },
-    "career": {}
+    "career": {},
+    "team": "Pittsburgh Pirates",
+    "era": 4.77,
+    "whip": 1.27,
+    "strikeouts": 80,
+    "walks": 36,
+    "innings_pitched": 115.0,
+    "games_started": 22,
+    "wins": 5,
+    "losses": 9,
+    "last_updated": "2025-08-08T22:07:01.442235"
   },
   "664854": {
     "id": "664854",
@@ -18288,7 +19808,17 @@
       "sacBunts": 1,
       "sacFlies": 3
     },
-    "career": {}
+    "career": {},
+    "team": "New York Mets",
+    "era": 2.77,
+    "whip": 1.36,
+    "strikeouts": 46,
+    "walks": 15,
+    "innings_pitched": 39.0,
+    "games_started": 0,
+    "wins": 3,
+    "losses": 2,
+    "last_updated": "2025-08-08T22:08:38.312389"
   },
   "701656": {
     "id": "701656",
@@ -18422,7 +19952,17 @@
       "sacBunts": 1,
       "sacFlies": 5
     },
-    "career": {}
+    "career": {},
+    "team": "Los Angeles Angels",
+    "era": 4.63,
+    "whip": 1.23,
+    "strikeouts": 78,
+    "walks": 28,
+    "innings_pitched": 116.2,
+    "games_started": 22,
+    "wins": 6,
+    "losses": 8,
+    "last_updated": "2025-08-08T22:07:54.399554"
   },
   "521230": {
     "id": "521230",
@@ -18623,7 +20163,17 @@
       "sacBunts": 1,
       "sacFlies": 1
     },
-    "career": {}
+    "career": {},
+    "team": "Miami Marlins",
+    "era": 2.77,
+    "whip": 1.16,
+    "strikeouts": 78,
+    "walks": 22,
+    "innings_pitched": 55.1,
+    "games_started": 0,
+    "wins": 6,
+    "losses": 1,
+    "last_updated": "2025-08-08T22:07:44.863054"
   },
   "669371": {
     "id": "669371",
@@ -18690,7 +20240,17 @@
       "sacBunts": 0,
       "sacFlies": 1
     },
-    "career": {}
+    "career": {},
+    "team": "Washington Nationals",
+    "era": 3.76,
+    "whip": 1.35,
+    "strikeouts": 39,
+    "walks": 21,
+    "innings_pitched": 40.2,
+    "games_started": 0,
+    "wins": 1,
+    "losses": 1,
+    "last_updated": "2025-08-08T22:08:33.908494"
   },
   "674072": {
     "id": "674072",
@@ -18824,7 +20384,17 @@
       "sacBunts": 1,
       "sacFlies": 3
     },
-    "career": {}
+    "career": {},
+    "team": "Colorado Rockies",
+    "era": 2.82,
+    "whip": 1.27,
+    "strikeouts": 50,
+    "walks": 19,
+    "innings_pitched": 60.2,
+    "games_started": 0,
+    "wins": 0,
+    "losses": 1,
+    "last_updated": "2025-08-08T22:08:17.611193"
   },
   "643361": {
     "id": "643361",
@@ -18958,7 +20528,17 @@
       "sacBunts": 2,
       "sacFlies": 2
     },
-    "career": {}
+    "career": {},
+    "team": "Cleveland Guardians",
+    "era": 6.51,
+    "whip": 1.77,
+    "strikeouts": 36,
+    "walks": 20,
+    "innings_pitched": 37.1,
+    "games_started": 0,
+    "wins": 1,
+    "losses": 0,
+    "last_updated": "2025-08-08T22:08:13.371435"
   },
   "678226": {
     "id": "678226",
@@ -19025,7 +20605,17 @@
       "sacBunts": 1,
       "sacFlies": 0
     },
-    "career": {}
+    "career": {},
+    "team": "Atlanta Braves",
+    "era": 2.18,
+    "whip": 1.36,
+    "strikeouts": 31,
+    "walks": 27,
+    "innings_pitched": 33.0,
+    "games_started": 0,
+    "wins": 4,
+    "losses": 2,
+    "last_updated": "2025-08-08T22:07:36.657488"
   },
   "663321": {
     "id": "663321",
@@ -19226,7 +20816,17 @@
       "sacBunts": 0,
       "sacFlies": 0
     },
-    "career": {}
+    "career": {},
+    "team": "Detroit Tigers",
+    "era": 6.75,
+    "whip": 0.75,
+    "strikeouts": 1,
+    "walks": 0,
+    "innings_pitched": 1.1,
+    "games_started": 0,
+    "wins": 0,
+    "losses": 0,
+    "last_updated": "2025-08-08T22:08:20.657900"
   },
   "663855": {
     "id": "663855",
@@ -19293,7 +20893,17 @@
       "sacBunts": 1,
       "sacFlies": 1
     },
-    "career": {}
+    "career": {},
+    "team": "Boston Red Sox",
+    "era": 6.41,
+    "whip": 1.59,
+    "strikeouts": 51,
+    "walks": 26,
+    "innings_pitched": 59.0,
+    "games_started": 9,
+    "wins": 1,
+    "losses": 7,
+    "last_updated": "2025-08-08T22:08:05.020584"
   },
   "677955": {
     "id": "677955",
@@ -19360,7 +20970,17 @@
       "sacBunts": 0,
       "sacFlies": 1
     },
-    "career": {}
+    "career": {},
+    "team": "Colorado Rockies",
+    "era": 5.63,
+    "whip": 2.13,
+    "strikeouts": 6,
+    "walks": 7,
+    "innings_pitched": 8.0,
+    "games_started": 0,
+    "wins": 1,
+    "losses": 0,
+    "last_updated": "2025-08-08T22:08:17.370658"
   },
   "448179": {
     "id": "448179",
@@ -19494,7 +21114,17 @@
       "sacBunts": 0,
       "sacFlies": 1
     },
-    "career": {}
+    "career": {},
+    "team": "New York Yankees",
+    "era": 2.63,
+    "whip": 1.01,
+    "strikeouts": 27,
+    "walks": 13,
+    "innings_pitched": 51.1,
+    "games_started": 0,
+    "wins": 4,
+    "losses": 3,
+    "last_updated": "2025-08-08T22:07:48.411033"
   },
   "682274": {
     "id": "682274",
@@ -19561,7 +21191,17 @@
       "sacBunts": 0,
       "sacFlies": 0
     },
-    "career": {}
+    "career": {},
+    "team": "Baltimore Orioles",
+    "era": 4.05,
+    "whip": 0.75,
+    "strikeouts": 4,
+    "walks": 0,
+    "innings_pitched": 6.2,
+    "games_started": 0,
+    "wins": 0,
+    "losses": 0,
+    "last_updated": "2025-08-08T22:08:02.538466"
   },
   "663546": {
     "id": "663546",
@@ -19829,7 +21469,17 @@
       "sacBunts": 1,
       "sacFlies": 1
     },
-    "career": {}
+    "career": {},
+    "team": "Toronto Blue Jays",
+    "era": 4.56,
+    "whip": 1.04,
+    "strikeouts": 64,
+    "walks": 11,
+    "innings_pitched": 47.1,
+    "games_started": 0,
+    "wins": 6,
+    "losses": 4,
+    "last_updated": "2025-08-08T22:07:26.876985"
   },
   "694851": {
     "id": "694851",
@@ -19896,7 +21546,17 @@
       "sacBunts": 0,
       "sacFlies": 0
     },
-    "career": {}
+    "career": {},
+    "team": "Arizona Diamondbacks",
+    "era": 2.84,
+    "whip": 1.89,
+    "strikeouts": 7,
+    "walks": 5,
+    "innings_pitched": 6.1,
+    "games_started": 0,
+    "wins": 0,
+    "losses": 0,
+    "last_updated": "2025-08-08T22:07:56.311862"
   },
   "680684": {
     "id": "680684",
@@ -20231,7 +21891,17 @@
       "sacBunts": 1,
       "sacFlies": 3
     },
-    "career": {}
+    "career": {},
+    "team": "New York Mets",
+    "era": 3.46,
+    "whip": 1.3,
+    "strikeouts": 97,
+    "walks": 47,
+    "innings_pitched": 122.1,
+    "games_started": 23,
+    "wins": 9,
+    "losses": 6,
+    "last_updated": "2025-08-08T22:08:36.475065"
   },
   "656550": {
     "id": "656550",
@@ -20365,7 +22035,17 @@
       "sacBunts": 2,
       "sacFlies": 4
     },
-    "career": {}
+    "career": {},
+    "team": "Detroit Tigers",
+    "era": 3.97,
+    "whip": 1.08,
+    "strikeouts": 47,
+    "walks": 10,
+    "innings_pitched": 56.2,
+    "games_started": 5,
+    "wins": 5,
+    "losses": 3,
+    "last_updated": "2025-08-08T22:08:22.247275"
   },
   "690544": {
     "id": "690544",
@@ -20499,7 +22179,17 @@
       "sacBunts": 0,
       "sacFlies": 3
     },
-    "career": {}
+    "career": {},
+    "team": "Chicago Cubs",
+    "era": 3.18,
+    "whip": 1.22,
+    "strikeouts": 59,
+    "walks": 25,
+    "innings_pitched": 79.1,
+    "games_started": 14,
+    "wins": 6,
+    "losses": 3,
+    "last_updated": "2025-08-08T22:08:07.085085"
   },
   "656557": {
     "id": "656557",
@@ -20633,7 +22323,17 @@
       "sacBunts": 0,
       "sacFlies": 2
     },
-    "career": {}
+    "career": {},
+    "team": "Tampa Bay Rays",
+    "era": 2.54,
+    "whip": 1.29,
+    "strikeouts": 50,
+    "walks": 23,
+    "innings_pitched": 74.1,
+    "games_started": 12,
+    "wins": 6,
+    "losses": 3,
+    "last_updated": "2025-08-08T22:07:18.790606"
   },
   "663542": {
     "id": "663542",
@@ -20700,7 +22400,17 @@
       "sacBunts": 1,
       "sacFlies": 0
     },
-    "career": {}
+    "career": {},
+    "team": "Chicago White Sox",
+    "era": 5.25,
+    "whip": 2.08,
+    "strikeouts": 16,
+    "walks": 13,
+    "innings_pitched": 12.0,
+    "games_started": 0,
+    "wins": 0,
+    "losses": 1,
+    "last_updated": "2025-08-08T22:07:39.721610"
   },
   "676428": {
     "id": "676428",
@@ -20767,7 +22477,17 @@
       "sacBunts": 2,
       "sacFlies": 1
     },
-    "career": {}
+    "career": {},
+    "team": "Detroit Tigers",
+    "era": 2.53,
+    "whip": 1.25,
+    "strikeouts": 61,
+    "walks": 23,
+    "innings_pitched": 57.0,
+    "games_started": 4,
+    "wins": 3,
+    "losses": 3,
+    "last_updated": "2025-08-08T22:08:19.632447"
   },
   "628452": {
     "id": "628452",
@@ -20834,7 +22554,17 @@
       "sacBunts": 0,
       "sacFlies": 1
     },
-    "career": {}
+    "career": {},
+    "team": "Atlanta Braves",
+    "era": 4.44,
+    "whip": 1.14,
+    "strikeouts": 52,
+    "walks": 10,
+    "innings_pitched": 46.2,
+    "games_started": 0,
+    "wins": 4,
+    "losses": 6,
+    "last_updated": "2025-08-08T22:07:38.119717"
   },
   "684007": {
     "id": "684007",
@@ -20901,7 +22631,17 @@
       "sacBunts": 1,
       "sacFlies": 2
     },
-    "career": {}
+    "career": {},
+    "team": "Chicago Cubs",
+    "era": 3.12,
+    "whip": 1.0,
+    "strikeouts": 70,
+    "walks": 17,
+    "innings_pitched": 89.1,
+    "games_started": 16,
+    "wins": 8,
+    "losses": 4,
+    "last_updated": "2025-08-08T22:08:08.901713"
   },
   "663623": {
     "id": "663623",
@@ -20968,7 +22708,17 @@
       "sacBunts": 0,
       "sacFlies": 1
     },
-    "career": {}
+    "career": {},
+    "team": "Washington Nationals",
+    "era": 4.92,
+    "whip": 1.35,
+    "strikeouts": 91,
+    "walks": 43,
+    "innings_pitched": 133.2,
+    "games_started": 24,
+    "wins": 8,
+    "losses": 6,
+    "last_updated": "2025-08-08T22:08:34.244736"
   },
   "592426": {
     "id": "592426",
@@ -21236,7 +22986,17 @@
       "sacBunts": 1,
       "sacFlies": 0
     },
-    "career": {}
+    "career": {},
+    "team": "Los Angeles Angels",
+    "era": 2.79,
+    "whip": 1.07,
+    "strikeouts": 40,
+    "walks": 13,
+    "innings_pitched": 42.0,
+    "games_started": 0,
+    "wins": 4,
+    "losses": 2,
+    "last_updated": "2025-08-08T22:07:54.232039"
   },
   "686826": {
     "id": "686826",
@@ -21370,7 +23130,17 @@
       "sacBunts": 1,
       "sacFlies": 1
     },
-    "career": {}
+    "career": {},
+    "team": "Tampa Bay Rays",
+    "era": 4.47,
+    "whip": 1.3,
+    "strikeouts": 75,
+    "walks": 15,
+    "innings_pitched": 48.1,
+    "games_started": 0,
+    "wins": 1,
+    "losses": 5,
+    "last_updated": "2025-08-08T22:07:20.041009"
   },
   "695549": {
     "id": "695549",
@@ -21504,7 +23274,17 @@
       "sacBunts": 0,
       "sacFlies": 1
     },
-    "career": {}
+    "career": {},
+    "team": "Atlanta Braves",
+    "era": 2.36,
+    "whip": 1.0,
+    "strikeouts": 44,
+    "walks": 10,
+    "innings_pitched": 42.0,
+    "games_started": 0,
+    "wins": 3,
+    "losses": 3,
+    "last_updated": "2025-08-08T22:07:37.901497"
   },
   "696270": {
     "id": "696270",
@@ -21772,7 +23552,17 @@
       "sacBunts": 1,
       "sacFlies": 2
     },
-    "career": {}
+    "career": {},
+    "team": "Cleveland Guardians",
+    "era": 3.31,
+    "whip": 1.35,
+    "strikeouts": 37,
+    "walks": 16,
+    "innings_pitched": 49.0,
+    "games_started": 0,
+    "wins": 3,
+    "losses": 1,
+    "last_updated": "2025-08-08T22:08:14.388881"
   },
   "676083": {
     "id": "676083",
@@ -21839,7 +23629,17 @@
       "sacBunts": 1,
       "sacFlies": 6
     },
-    "career": {}
+    "career": {},
+    "team": "Miami Marlins",
+    "era": 3.97,
+    "whip": 1.12,
+    "strikeouts": 50,
+    "walks": 8,
+    "innings_pitched": 70.1,
+    "games_started": 9,
+    "wins": 6,
+    "losses": 2,
+    "last_updated": "2025-08-08T22:07:44.155761"
   },
   "592454": {
     "id": "592454",
@@ -21906,7 +23706,17 @@
       "sacBunts": 0,
       "sacFlies": 0
     },
-    "career": {}
+    "career": {},
+    "team": "Detroit Tigers",
+    "era": 4.87,
+    "whip": 1.26,
+    "strikeouts": 37,
+    "walks": 20,
+    "innings_pitched": 44.1,
+    "games_started": 0,
+    "wins": 1,
+    "losses": 3,
+    "last_updated": "2025-08-08T22:08:21.736650"
   },
   "641745": {
     "id": "641745",
@@ -21973,7 +23783,17 @@
       "sacBunts": 1,
       "sacFlies": 0
     },
-    "career": {}
+    "career": {},
+    "team": "Chicago Cubs",
+    "era": 2.7,
+    "whip": 1.08,
+    "strikeouts": 49,
+    "walks": 16,
+    "innings_pitched": 50.0,
+    "games_started": 1,
+    "wins": 3,
+    "losses": 1,
+    "last_updated": "2025-08-08T22:08:06.865904"
   },
   "656605": {
     "id": "656605",
@@ -22040,7 +23860,17 @@
       "sacBunts": 0,
       "sacFlies": 1
     },
-    "career": {}
+    "career": {},
+    "team": "Pittsburgh Pirates",
+    "era": 3.86,
+    "whip": 1.23,
+    "strikeouts": 107,
+    "walks": 37,
+    "innings_pitched": 137.2,
+    "games_started": 24,
+    "wins": 5,
+    "losses": 10,
+    "last_updated": "2025-08-08T22:07:03.412476"
   },
   "543391": {
     "id": "543391",
@@ -22107,7 +23937,17 @@
       "sacBunts": 0,
       "sacFlies": 0
     },
-    "career": {}
+    "career": {},
+    "team": "Arizona Diamondbacks",
+    "era": 0.0,
+    "whip": 1.5,
+    "strikeouts": 0,
+    "walks": 0,
+    "innings_pitched": 0.2,
+    "games_started": 0,
+    "wins": 0,
+    "losses": 0,
+    "last_updated": "2025-08-08T22:07:57.264491"
   },
   "518876": {
     "id": "518876",
@@ -22174,7 +24014,17 @@
       "sacBunts": 0,
       "sacFlies": 0
     },
-    "career": {}
+    "career": {},
+    "team": "Texas Rangers",
+    "era": 3.38,
+    "whip": 1.08,
+    "strikeouts": 131,
+    "walks": 43,
+    "innings_pitched": 138.2,
+    "games_started": 24,
+    "wins": 9,
+    "losses": 6,
+    "last_updated": "2025-08-08T22:07:24.025551"
   },
   "687330": {
     "id": "687330",
@@ -22308,7 +24158,17 @@
       "sacBunts": 0,
       "sacFlies": 1
     },
-    "career": {}
+    "career": {},
+    "team": "Athletics",
+    "era": 1.77,
+    "whip": 1.28,
+    "strikeouts": 14,
+    "walks": 9,
+    "innings_pitched": 20.1,
+    "games_started": 0,
+    "wins": 2,
+    "losses": 1,
+    "last_updated": "2025-08-08T22:07:00.134292"
   },
   "677161": {
     "id": "677161",
@@ -22509,7 +24369,17 @@
       "sacBunts": 0,
       "sacFlies": 2
     },
-    "career": {}
+    "career": {},
+    "team": "Philadelphia Phillies",
+    "era": 2.74,
+    "whip": 1.36,
+    "strikeouts": 46,
+    "walks": 19,
+    "innings_pitched": 42.2,
+    "games_started": 0,
+    "wins": 6,
+    "losses": 4,
+    "last_updated": "2025-08-08T22:07:34.350112"
   },
   "477132": {
     "id": "477132",
@@ -22576,7 +24446,17 @@
       "sacBunts": 1,
       "sacFlies": 2
     },
-    "career": {}
+    "career": {},
+    "team": "Los Angeles Dodgers",
+    "era": 3.23,
+    "whip": 1.26,
+    "strikeouts": 45,
+    "walks": 18,
+    "innings_pitched": 69.2,
+    "games_started": 14,
+    "wins": 5,
+    "losses": 2,
+    "last_updated": "2025-08-08T22:08:31.603852"
   },
   "579328": {
     "id": "579328",
@@ -22643,7 +24523,17 @@
       "sacBunts": 0,
       "sacFlies": 3
     },
-    "career": {}
+    "career": {},
+    "team": "Los Angeles Angels",
+    "era": 3.22,
+    "whip": 1.4,
+    "strikeouts": 139,
+    "walks": 56,
+    "innings_pitched": 134.0,
+    "games_started": 24,
+    "wins": 5,
+    "losses": 7,
+    "last_updated": "2025-08-08T22:07:55.600647"
   },
   "518886": {
     "id": "518886",
@@ -22777,7 +24667,17 @@
       "sacBunts": 0,
       "sacFlies": 2
     },
-    "career": {}
+    "career": {},
+    "team": "Houston Astros",
+    "era": 3.04,
+    "whip": 1.16,
+    "strikeouts": 52,
+    "walks": 9,
+    "innings_pitched": 47.1,
+    "games_started": 0,
+    "wins": 3,
+    "losses": 2,
+    "last_updated": "2025-08-08T22:08:23.554572"
   },
   "667463": {
     "id": "667463",
@@ -22978,7 +24878,17 @@
       "sacBunts": 0,
       "sacFlies": 2
     },
-    "career": {}
+    "career": {},
+    "team": "Atlanta Braves",
+    "era": 5.54,
+    "whip": 1.49,
+    "strikeouts": 55,
+    "walks": 31,
+    "innings_pitched": 50.1,
+    "games_started": 0,
+    "wins": 1,
+    "losses": 3,
+    "last_updated": "2025-08-08T22:07:38.765481"
   },
   "669923": {
     "id": "669923",
@@ -23045,7 +24955,17 @@
       "sacBunts": 0,
       "sacFlies": 5
     },
-    "career": {}
+    "career": {},
+    "team": "Seattle Mariners",
+    "era": 4.04,
+    "whip": 1.13,
+    "strikeouts": 83,
+    "walks": 20,
+    "innings_pitched": 78.0,
+    "games_started": 14,
+    "wins": 7,
+    "losses": 5,
+    "last_updated": "2025-08-08T22:07:09.808695"
   },
   "552640": {
     "id": "552640",
@@ -23112,7 +25032,17 @@
       "sacBunts": 0,
       "sacFlies": 2
     },
-    "career": {}
+    "career": {},
+    "team": "Chicago Cubs",
+    "era": 4.15,
+    "whip": 1.13,
+    "strikeouts": 38,
+    "walks": 9,
+    "innings_pitched": 34.2,
+    "games_started": 0,
+    "wins": 2,
+    "losses": 3,
+    "last_updated": "2025-08-08T22:08:06.405524"
   },
   "694361": {
     "id": "694361",
@@ -23313,7 +25243,17 @@
       "sacBunts": 0,
       "sacFlies": 5
     },
-    "career": {}
+    "career": {},
+    "team": "Los Angeles Angels",
+    "era": 5.85,
+    "whip": 1.63,
+    "strikeouts": 70,
+    "walks": 53,
+    "innings_pitched": 104.2,
+    "games_started": 21,
+    "wins": 3,
+    "losses": 9,
+    "last_updated": "2025-08-08T22:07:53.644285"
   },
   "657649": {
     "id": "657649",
@@ -23380,7 +25320,17 @@
       "sacBunts": 2,
       "sacFlies": 1
     },
-    "career": {}
+    "career": {},
+    "team": "Milwaukee Brewers",
+    "era": 3.52,
+    "whip": 1.3,
+    "strikeouts": 42,
+    "walks": 15,
+    "innings_pitched": 46.0,
+    "games_started": 0,
+    "wins": 3,
+    "losses": 1,
+    "last_updated": "2025-08-08T22:07:50.770118"
   },
   "663568": {
     "id": "663568",
@@ -23581,7 +25531,17 @@
       "sacBunts": 0,
       "sacFlies": 0
     },
-    "career": {}
+    "career": {},
+    "team": "Seattle Mariners",
+    "era": 2.63,
+    "whip": 0.88,
+    "strikeouts": 10,
+    "walks": 4,
+    "innings_pitched": 13.2,
+    "games_started": 0,
+    "wins": 2,
+    "losses": 0,
+    "last_updated": "2025-08-08T22:07:10.033160"
   },
   "668820": {
     "id": "668820",
@@ -23715,7 +25675,17 @@
       "sacBunts": 0,
       "sacFlies": 2
     },
-    "career": {}
+    "career": {},
+    "team": "Baltimore Orioles",
+    "era": 4.35,
+    "whip": 1.28,
+    "strikeouts": 110,
+    "walks": 35,
+    "innings_pitched": 132.1,
+    "games_started": 22,
+    "wins": 8,
+    "losses": 8,
+    "last_updated": "2025-08-08T22:08:00.505342"
   },
   "621139": {
     "id": "621139",
@@ -23782,7 +25752,17 @@
       "sacBunts": 0,
       "sacFlies": 0
     },
-    "career": {}
+    "career": {},
+    "team": "Minnesota Twins",
+    "era": 1.13,
+    "whip": 1.25,
+    "strikeouts": 6,
+    "walks": 5,
+    "innings_pitched": 8.0,
+    "games_started": 0,
+    "wins": 0,
+    "losses": 0,
+    "last_updated": "2025-08-08T22:07:29.471693"
   },
   "640454": {
     "id": "640454",
@@ -24184,7 +26164,17 @@
       "sacBunts": 1,
       "sacFlies": 1
     },
-    "career": {}
+    "career": {},
+    "team": "Toronto Blue Jays",
+    "era": 2.59,
+    "whip": 0.98,
+    "strikeouts": 79,
+    "walks": 18,
+    "innings_pitched": 80.0,
+    "games_started": 12,
+    "wins": 7,
+    "losses": 2,
+    "last_updated": "2025-08-08T22:07:26.601168"
   },
   "596271": {
     "id": "596271",
@@ -24385,7 +26375,17 @@
       "sacBunts": 0,
       "sacFlies": 0
     },
-    "career": {}
+    "career": {},
+    "team": "Philadelphia Phillies",
+    "era": 4.73,
+    "whip": 1.28,
+    "strikeouts": 19,
+    "walks": 8,
+    "innings_pitched": 26.2,
+    "games_started": 0,
+    "wins": 1,
+    "losses": 1,
+    "last_updated": "2025-08-08T22:07:34.126088"
   },
   "681517": {
     "id": "681517",
@@ -24452,7 +26452,17 @@
       "sacBunts": 0,
       "sacFlies": 2
     },
-    "career": {}
+    "career": {},
+    "team": "St. Louis Cardinals",
+    "era": 2.59,
+    "whip": 1.07,
+    "strikeouts": 55,
+    "walks": 19,
+    "innings_pitched": 62.2,
+    "games_started": 0,
+    "wins": 2,
+    "losses": 1,
+    "last_updated": "2025-08-08T22:07:16.156230"
   },
   "673929": {
     "id": "673929",
@@ -24519,7 +26529,17 @@
       "sacBunts": 0,
       "sacFlies": 1
     },
-    "career": {}
+    "career": {},
+    "team": "Chicago White Sox",
+    "era": 4.19,
+    "whip": 1.44,
+    "strikeouts": 52,
+    "walks": 23,
+    "innings_pitched": 43.0,
+    "games_started": 1,
+    "wins": 4,
+    "losses": 6,
+    "last_updated": "2025-08-08T22:07:40.466842"
   },
   "600917": {
     "id": "600917",
@@ -24720,7 +26740,17 @@
       "sacBunts": 2,
       "sacFlies": 1
     },
-    "career": {}
+    "career": {},
+    "team": "Atlanta Braves",
+    "era": 3.04,
+    "whip": 0.97,
+    "strikeouts": 55,
+    "walks": 12,
+    "innings_pitched": 50.1,
+    "games_started": 0,
+    "wins": 1,
+    "losses": 3,
+    "last_updated": "2025-08-08T22:07:37.222073"
   },
   "668984": {
     "id": "668984",
@@ -24787,7 +26817,17 @@
       "sacBunts": 1,
       "sacFlies": 1
     },
-    "career": {}
+    "career": {},
+    "team": "Seattle Mariners",
+    "era": 5.31,
+    "whip": 1.42,
+    "strikeouts": 47,
+    "walks": 22,
+    "innings_pitched": 42.1,
+    "games_started": 1,
+    "wins": 4,
+    "losses": 6,
+    "last_updated": "2025-08-08T22:07:09.089670"
   },
   "683004": {
     "id": "683004",
@@ -24854,7 +26894,17 @@
       "sacBunts": 0,
       "sacFlies": 1
     },
-    "career": {}
+    "career": {},
+    "team": "Texas Rangers",
+    "era": 4.05,
+    "whip": 1.35,
+    "strikeouts": 93,
+    "walks": 52,
+    "innings_pitched": 100.0,
+    "games_started": 20,
+    "wins": 7,
+    "losses": 6,
+    "last_updated": "2025-08-08T22:07:23.081097"
   },
   "643410": {
     "id": "643410",
@@ -24921,7 +26971,17 @@
       "sacBunts": 0,
       "sacFlies": 0
     },
-    "career": {}
+    "career": {},
+    "team": "New York Yankees",
+    "era": 4.29,
+    "whip": 1.51,
+    "strikeouts": 46,
+    "walks": 12,
+    "innings_pitched": 35.2,
+    "games_started": 0,
+    "wins": 5,
+    "losses": 6,
+    "last_updated": "2025-08-08T22:07:47.922435"
   },
   "669461": {
     "id": "669461",
@@ -24988,7 +27048,17 @@
       "sacBunts": 3,
       "sacFlies": 4
     },
-    "career": {}
+    "career": {},
+    "team": "St. Louis Cardinals",
+    "era": 3.98,
+    "whip": 1.29,
+    "strikeouts": 85,
+    "walks": 27,
+    "innings_pitched": 113.0,
+    "games_started": 21,
+    "wins": 6,
+    "losses": 9,
+    "last_updated": "2025-08-08T22:07:16.660930"
   },
   "641793": {
     "id": "641793",
@@ -25055,7 +27125,17 @@
       "sacBunts": 0,
       "sacFlies": 3
     },
-    "career": {}
+    "career": {},
+    "team": "Cincinnati Reds",
+    "era": 3.46,
+    "whip": 1.1,
+    "strikeouts": 97,
+    "walks": 23,
+    "innings_pitched": 140.1,
+    "games_started": 23,
+    "wins": 9,
+    "losses": 8,
+    "last_updated": "2025-08-08T22:08:12.595638"
   },
   "663893": {
     "id": "663893",
@@ -25122,7 +27202,17 @@
       "sacBunts": 1,
       "sacFlies": 0
     },
-    "career": {}
+    "career": {},
+    "team": "Toronto Blue Jays",
+    "era": 2.7,
+    "whip": 1.28,
+    "strikeouts": 73,
+    "walks": 30,
+    "innings_pitched": 50.0,
+    "games_started": 0,
+    "wins": 4,
+    "losses": 1,
+    "last_updated": "2025-08-08T22:07:26.123850"
   },
   "669193": {
     "id": "669193",
@@ -25524,7 +27614,17 @@
       "sacBunts": 0,
       "sacFlies": 0
     },
-    "career": {}
+    "career": {},
+    "team": "Kansas City Royals",
+    "era": 6.94,
+    "whip": 1.63,
+    "strikeouts": 21,
+    "walks": 13,
+    "innings_pitched": 23.1,
+    "games_started": 0,
+    "wins": 1,
+    "losses": 2,
+    "last_updated": "2025-08-08T22:08:29.049229"
   },
   "682052": {
     "id": "682052",
@@ -25591,7 +27691,17 @@
       "sacBunts": 1,
       "sacFlies": 0
     },
-    "career": {}
+    "career": {},
+    "team": "Athletics",
+    "era": 3.59,
+    "whip": 1.25,
+    "strikeouts": 94,
+    "walks": 30,
+    "innings_pitched": 77.2,
+    "games_started": 14,
+    "wins": 5,
+    "losses": 6,
+    "last_updated": "2025-08-08T22:06:58.766250"
   },
   "605347": {
     "id": "605347",
@@ -25859,7 +27969,17 @@
       "sacBunts": 3,
       "sacFlies": 1
     },
-    "career": {}
+    "career": {},
+    "team": "Washington Nationals",
+    "era": 3.42,
+    "whip": 1.23,
+    "strikeouts": 65,
+    "walks": 26,
+    "innings_pitched": 79.0,
+    "games_started": 9,
+    "wins": 2,
+    "losses": 6,
+    "last_updated": "2025-08-08T22:08:33.227506"
   },
   "547179": {
     "id": "547179",
@@ -26194,7 +28314,17 @@
       "sacBunts": 1,
       "sacFlies": 0
     },
-    "career": {}
+    "career": {},
+    "team": "San Francisco Giants",
+    "era": 2.41,
+    "whip": 1.02,
+    "strikeouts": 18,
+    "walks": 3,
+    "innings_pitched": 18.2,
+    "games_started": 0,
+    "wins": 0,
+    "losses": 1,
+    "last_updated": "2025-08-08T22:07:12.035804"
   },
   "607625": {
     "id": "607625",
@@ -26261,7 +28391,17 @@
       "sacBunts": 3,
       "sacFlies": 1
     },
-    "career": {}
+    "career": {},
+    "team": "Kansas City Royals",
+    "era": 3.46,
+    "whip": 1.2,
+    "strikeouts": 108,
+    "walks": 43,
+    "innings_pitched": 127.1,
+    "games_started": 22,
+    "wins": 8,
+    "losses": 6,
+    "last_updated": "2025-08-08T22:08:29.210778"
   },
   "666200": {
     "id": "666200",
@@ -26328,7 +28468,17 @@
       "sacBunts": 0,
       "sacFlies": 2
     },
-    "career": {}
+    "career": {},
+    "team": "Philadelphia Phillies",
+    "era": 4.32,
+    "whip": 1.35,
+    "strikeouts": 147,
+    "walks": 44,
+    "innings_pitched": 127.0,
+    "games_started": 23,
+    "wins": 10,
+    "losses": 5,
+    "last_updated": "2025-08-08T22:07:32.980333"
   },
   "663738": {
     "id": "663738",
@@ -26395,7 +28545,17 @@
       "sacBunts": 2,
       "sacFlies": 1
     },
-    "career": {}
+    "career": {},
+    "team": "Kansas City Royals",
+    "era": 2.74,
+    "whip": 1.41,
+    "strikeouts": 30,
+    "walks": 22,
+    "innings_pitched": 46.0,
+    "games_started": 2,
+    "wins": 3,
+    "losses": 2,
+    "last_updated": "2025-08-08T22:08:27.302550"
   },
   "628317": {
     "id": "628317",
@@ -26663,7 +28823,17 @@
       "sacBunts": 1,
       "sacFlies": 0
     },
-    "career": {}
+    "career": {},
+    "team": "New York Mets",
+    "era": 3.52,
+    "whip": 0.96,
+    "strikeouts": 25,
+    "walks": 4,
+    "innings_pitched": 23.0,
+    "games_started": 4,
+    "wins": 1,
+    "losses": 1,
+    "last_updated": "2025-08-08T22:08:38.777398"
   },
   "573009": {
     "id": "573009",
@@ -26998,7 +29168,17 @@
       "sacBunts": 1,
       "sacFlies": 0
     },
-    "career": {}
+    "career": {},
+    "team": "Baltimore Orioles",
+    "era": 7.56,
+    "whip": 1.8,
+    "strikeouts": 11,
+    "walks": 5,
+    "innings_pitched": 8.1,
+    "games_started": 0,
+    "wins": 1,
+    "losses": 0,
+    "last_updated": "2025-08-08T22:08:00.208384"
   },
   "663436": {
     "id": "663436",
@@ -27065,7 +29245,17 @@
       "sacBunts": 0,
       "sacFlies": 2
     },
-    "career": {}
+    "career": {},
+    "team": "Chicago White Sox",
+    "era": 4.11,
+    "whip": 1.29,
+    "strikeouts": 68,
+    "walks": 28,
+    "innings_pitched": 96.1,
+    "games_started": 16,
+    "wins": 3,
+    "losses": 9,
+    "last_updated": "2025-08-08T22:07:39.965666"
   },
   "679885": {
     "id": "679885",
@@ -27199,7 +29389,17 @@
       "sacBunts": 3,
       "sacFlies": 5
     },
-    "career": {}
+    "career": {},
+    "team": "Cincinnati Reds",
+    "era": 4.66,
+    "whip": 1.21,
+    "strikeouts": 93,
+    "walks": 31,
+    "innings_pitched": 129.1,
+    "games_started": 22,
+    "wins": 9,
+    "losses": 9,
+    "last_updated": "2025-08-08T22:08:11.328416"
   },
   "664208": {
     "id": "664208",
@@ -27266,7 +29466,17 @@
       "sacBunts": 1,
       "sacFlies": 1
     },
-    "career": {}
+    "career": {},
+    "team": "Texas Rangers",
+    "era": 2.18,
+    "whip": 1.09,
+    "strikeouts": 51,
+    "walks": 16,
+    "innings_pitched": 41.1,
+    "games_started": 0,
+    "wins": 1,
+    "losses": 3,
+    "last_updated": "2025-08-08T22:07:24.792910"
   },
   "673513": {
     "id": "673513",
@@ -27333,7 +29543,17 @@
       "sacBunts": 1,
       "sacFlies": 4
     },
-    "career": {}
+    "career": {},
+    "team": "San Diego Padres",
+    "era": 5.18,
+    "whip": 1.44,
+    "strikeouts": 43,
+    "walks": 21,
+    "innings_pitched": 41.2,
+    "games_started": 0,
+    "wins": 2,
+    "losses": 1,
+    "last_updated": "2025-08-08T22:07:07.549556"
   },
   "805673": {
     "id": "805673",
@@ -27400,7 +29620,17 @@
       "sacBunts": 1,
       "sacFlies": 1
     },
-    "career": {}
+    "career": {},
+    "team": "Minnesota Twins",
+    "era": 5.17,
+    "whip": 1.38,
+    "strikeouts": 48,
+    "walks": 10,
+    "innings_pitched": 38.1,
+    "games_started": 8,
+    "wins": 3,
+    "losses": 3,
+    "last_updated": "2025-08-08T22:07:31.999303"
   },
   "676755": {
     "id": "676755",
@@ -27467,7 +29697,17 @@
       "sacBunts": 1,
       "sacFlies": 0
     },
-    "career": {}
+    "career": {},
+    "team": "Pittsburgh Pirates",
+    "era": 2.36,
+    "whip": 1.09,
+    "strikeouts": 31,
+    "walks": 10,
+    "innings_pitched": 26.2,
+    "games_started": 0,
+    "wins": 3,
+    "losses": 1,
+    "last_updated": "2025-08-08T22:07:02.856014"
   },
   "571927": {
     "id": "571927",
@@ -27534,7 +29774,17 @@
       "sacBunts": 1,
       "sacFlies": 1
     },
-    "career": {}
+    "career": {},
+    "team": "Boston Red Sox",
+    "era": 3.32,
+    "whip": 1.18,
+    "strikeouts": 49,
+    "walks": 11,
+    "innings_pitched": 57.0,
+    "games_started": 2,
+    "wins": 5,
+    "losses": 2,
+    "last_updated": "2025-08-08T22:08:05.698332"
   },
   "554431": {
     "id": "554431",
@@ -27668,7 +29918,17 @@
       "sacBunts": 2,
       "sacFlies": 2
     },
-    "career": {}
+    "career": {},
+    "team": "Boston Red Sox",
+    "era": 4.93,
+    "whip": 1.37,
+    "strikeouts": 101,
+    "walks": 44,
+    "innings_pitched": 107.2,
+    "games_started": 19,
+    "wins": 6,
+    "losses": 8,
+    "last_updated": "2025-08-08T22:08:03.870733"
   },
   "641835": {
     "id": "641835",
@@ -28338,7 +30598,17 @@
       "sacBunts": 2,
       "sacFlies": 0
     },
-    "career": {}
+    "career": {},
+    "team": "St. Louis Cardinals",
+    "era": 4.4,
+    "whip": 1.22,
+    "strikeouts": 26,
+    "walks": 7,
+    "innings_pitched": 45.0,
+    "games_started": 7,
+    "wins": 4,
+    "losses": 2,
+    "last_updated": "2025-08-08T22:07:16.915899"
   },
   "663474": {
     "id": "663474",
@@ -28472,7 +30742,17 @@
       "sacBunts": 0,
       "sacFlies": 4
     },
-    "career": {}
+    "career": {},
+    "team": "Milwaukee Brewers",
+    "era": 2.74,
+    "whip": 0.91,
+    "strikeouts": 37,
+    "walks": 8,
+    "innings_pitched": 42.2,
+    "games_started": 0,
+    "wins": 2,
+    "losses": 3,
+    "last_updated": "2025-08-08T22:07:51.206515"
   },
   "682989": {
     "id": "682989",
@@ -28606,7 +30886,17 @@
       "sacBunts": 0,
       "sacFlies": 3
     },
-    "career": {}
+    "career": {},
+    "team": "Milwaukee Brewers",
+    "era": 2.25,
+    "whip": 1.08,
+    "strikeouts": 47,
+    "walks": 15,
+    "innings_pitched": 40.0,
+    "games_started": 0,
+    "wins": 3,
+    "losses": 2,
+    "last_updated": "2025-08-08T22:07:52.196655"
   },
   "656731": {
     "id": "656731",
@@ -28740,7 +31030,17 @@
       "sacBunts": 1,
       "sacFlies": 1
     },
-    "career": {}
+    "career": {},
+    "team": "Colorado Rockies",
+    "era": 4.05,
+    "whip": 1.18,
+    "strikeouts": 43,
+    "walks": 13,
+    "innings_pitched": 40.0,
+    "games_started": 0,
+    "wins": 1,
+    "losses": 0,
+    "last_updated": "2025-08-08T22:08:17.848577"
   },
   "675512": {
     "id": "675512",
@@ -28807,7 +31107,17 @@
       "sacBunts": 0,
       "sacFlies": 1
     },
-    "career": {}
+    "career": {},
+    "team": "Detroit Tigers",
+    "era": 3.63,
+    "whip": 1.04,
+    "strikeouts": 15,
+    "walks": 4,
+    "innings_pitched": 17.1,
+    "games_started": 2,
+    "wins": 2,
+    "losses": 1,
+    "last_updated": "2025-08-08T22:08:22.006752"
   },
   "691441": {
     "id": "691441",
@@ -29075,7 +31385,17 @@
       "sacBunts": 0,
       "sacFlies": 1
     },
-    "career": {}
+    "career": {},
+    "team": "Cincinnati Reds",
+    "era": 3.57,
+    "whip": 1.47,
+    "strikeouts": 19,
+    "walks": 12,
+    "innings_pitched": 17.2,
+    "games_started": 0,
+    "wins": 1,
+    "losses": 0,
+    "last_updated": "2025-08-08T22:08:11.069875"
   },
   "676974": {
     "id": "676974",
@@ -29209,7 +31529,17 @@
       "sacBunts": 1,
       "sacFlies": 5
     },
-    "career": {}
+    "career": {},
+    "team": "St. Louis Cardinals",
+    "era": 5.11,
+    "whip": 1.32,
+    "strikeouts": 76,
+    "walks": 24,
+    "innings_pitched": 111.0,
+    "games_started": 22,
+    "wins": 6,
+    "losses": 9,
+    "last_updated": "2025-08-08T22:07:17.143206"
   },
   "489119": {
     "id": "489119",
@@ -29477,7 +31807,17 @@
       "sacBunts": 2,
       "sacFlies": 1
     },
-    "career": {}
+    "career": {},
+    "team": "San Diego Padres",
+    "era": 3.92,
+    "whip": 1.06,
+    "strikeouts": 65,
+    "walks": 20,
+    "innings_pitched": 41.1,
+    "games_started": 0,
+    "wins": 1,
+    "losses": 2,
+    "last_updated": "2025-08-08T22:07:05.783754"
   },
   "676272": {
     "id": "676272",
@@ -29611,7 +31951,17 @@
       "sacBunts": 0,
       "sacFlies": 3
     },
-    "career": {}
+    "career": {},
+    "team": "Milwaukee Brewers",
+    "era": 1.98,
+    "whip": 0.96,
+    "strikeouts": 40,
+    "walks": 11,
+    "innings_pitched": 36.1,
+    "games_started": 0,
+    "wins": 3,
+    "losses": 3,
+    "last_updated": "2025-08-08T22:07:51.726762"
   },
   "571948": {
     "id": "571948",
@@ -29678,7 +32028,17 @@
       "sacBunts": 1,
       "sacFlies": 3
     },
-    "career": {}
+    "career": {},
+    "team": "Texas Rangers",
+    "era": 2.24,
+    "whip": 1.07,
+    "strikeouts": 49,
+    "walks": 16,
+    "innings_pitched": 56.1,
+    "games_started": 0,
+    "wins": 1,
+    "losses": 2,
+    "last_updated": "2025-08-08T22:07:22.823128"
   },
   "621345": {
     "id": "621345",
@@ -29946,7 +32306,17 @@
       "sacBunts": 1,
       "sacFlies": 4
     },
-    "career": {}
+    "career": {},
+    "team": "Detroit Tigers",
+    "era": 3.5,
+    "whip": 1.29,
+    "strikeouts": 88,
+    "walks": 26,
+    "innings_pitched": 100.1,
+    "games_started": 19,
+    "wins": 10,
+    "losses": 4,
+    "last_updated": "2025-08-08T22:08:19.860637"
   },
   "669387": {
     "id": "669387",
@@ -30013,7 +32383,17 @@
       "sacBunts": 2,
       "sacFlies": 0
     },
-    "career": {}
+    "career": {},
+    "team": "Pittsburgh Pirates",
+    "era": 4.11,
+    "whip": 1.4,
+    "strikeouts": 57,
+    "walks": 18,
+    "innings_pitched": 70.0,
+    "games_started": 9,
+    "wins": 2,
+    "losses": 6,
+    "last_updated": "2025-08-08T22:07:02.202028"
   },
   "683627": {
     "id": "683627",
@@ -30080,7 +32460,17 @@
       "sacBunts": 0,
       "sacFlies": 1
     },
-    "career": {}
+    "career": {},
+    "team": "Colorado Rockies",
+    "era": 9.22,
+    "whip": 1.68,
+    "strikeouts": 8,
+    "walks": 1,
+    "innings_pitched": 13.2,
+    "games_started": 1,
+    "wins": 0,
+    "losses": 1,
+    "last_updated": "2025-08-08T22:08:16.512174"
   },
   "594580": {
     "id": "594580",
@@ -30147,7 +32537,17 @@
       "sacBunts": 1,
       "sacFlies": 0
     },
-    "career": {}
+    "career": {},
+    "team": "Cincinnati Reds",
+    "era": 6.94,
+    "whip": 1.54,
+    "strikeouts": 13,
+    "walks": 7,
+    "innings_pitched": 11.2,
+    "games_started": 0,
+    "wins": 1,
+    "losses": 0,
+    "last_updated": "2025-08-08T22:08:11.838979"
   },
   "593423": {
     "id": "593423",
@@ -30214,7 +32614,17 @@
       "sacBunts": 1,
       "sacFlies": 1
     },
-    "career": {}
+    "career": {},
+    "team": "New York Mets",
+    "era": 6.68,
+    "whip": 1.54,
+    "strikeouts": 29,
+    "walks": 10,
+    "innings_pitched": 33.2,
+    "games_started": 7,
+    "wins": 3,
+    "losses": 2,
+    "last_updated": "2025-08-08T22:08:37.203134"
   },
   "672456": {
     "id": "672456",
@@ -30348,7 +32758,17 @@
       "sacBunts": 0,
       "sacFlies": 1
     },
-    "career": {}
+    "career": {},
+    "team": "Detroit Tigers",
+    "era": 5.72,
+    "whip": 1.42,
+    "strikeouts": 39,
+    "walks": 24,
+    "innings_pitched": 39.1,
+    "games_started": 0,
+    "wins": 0,
+    "losses": 1,
+    "last_updated": "2025-08-08T22:08:21.347772"
   },
   "801216": {
     "id": "801216",
@@ -30549,7 +32969,17 @@
       "sacBunts": 2,
       "sacFlies": 2
     },
-    "career": {}
+    "career": {},
+    "team": "Tampa Bay Rays",
+    "era": 5.19,
+    "whip": 1.59,
+    "strikeouts": 46,
+    "walks": 21,
+    "innings_pitched": 34.2,
+    "games_started": 0,
+    "wins": 1,
+    "losses": 2,
+    "last_updated": "2025-08-08T22:07:20.960653"
   },
   "806960": {
     "id": "806960",
@@ -30616,7 +33046,17 @@
       "sacBunts": 0,
       "sacFlies": 1
     },
-    "career": {}
+    "career": {},
+    "team": "Athletics",
+    "era": 4.5,
+    "whip": 2.0,
+    "strikeouts": 0,
+    "walks": 1,
+    "innings_pitched": 2.0,
+    "games_started": 0,
+    "wins": 0,
+    "losses": 0,
+    "last_updated": "2025-08-08T22:06:59.599068"
   },
   "670970": {
     "id": "670970",
@@ -30683,7 +33123,17 @@
       "sacBunts": 4,
       "sacFlies": 1
     },
-    "career": {}
+    "career": {},
+    "team": "San Diego Padres",
+    "era": 2.05,
+    "whip": 0.84,
+    "strikeouts": 51,
+    "walks": 10,
+    "innings_pitched": 52.2,
+    "games_started": 0,
+    "wins": 9,
+    "losses": 4,
+    "last_updated": "2025-08-08T22:07:04.657865"
   },
   "664294": {
     "id": "664294",
@@ -30750,7 +33200,17 @@
       "sacBunts": 0,
       "sacFlies": 0
     },
-    "career": {}
+    "career": {},
+    "team": "Pittsburgh Pirates",
+    "era": 0.0,
+    "whip": 0.6,
+    "strikeouts": 6,
+    "walks": 1,
+    "innings_pitched": 3.1,
+    "games_started": 0,
+    "wins": 1,
+    "losses": 0,
+    "last_updated": "2025-08-08T22:07:02.411755"
   },
   "688158": {
     "id": "688158",
@@ -30817,7 +33277,17 @@
       "sacBunts": 0,
       "sacFlies": 0
     },
-    "career": {}
+    "career": {},
+    "team": "San Diego Padres",
+    "era": 1.8,
+    "whip": 1.1,
+    "strikeouts": 29,
+    "walks": 11,
+    "innings_pitched": 30.0,
+    "games_started": 1,
+    "wins": 1,
+    "losses": 1,
+    "last_updated": "2025-08-08T22:07:04.885012"
   },
   "669212": {
     "id": "669212",
@@ -31018,7 +33488,17 @@
       "sacBunts": 2,
       "sacFlies": 6
     },
-    "career": {}
+    "career": {},
+    "team": "Detroit Tigers",
+    "era": 5.2,
+    "whip": 1.52,
+    "strikeouts": 107,
+    "walks": 49,
+    "innings_pitched": 107.1,
+    "games_started": 18,
+    "wins": 7,
+    "losses": 9,
+    "last_updated": "2025-08-08T22:08:20.155694"
   },
   "662253": {
     "id": "662253",
@@ -31085,7 +33565,17 @@
       "sacBunts": 1,
       "sacFlies": 2
     },
-    "career": {}
+    "career": {},
+    "team": "Seattle Mariners",
+    "era": 1.4,
+    "whip": 0.96,
+    "strikeouts": 57,
+    "walks": 21,
+    "innings_pitched": 45.0,
+    "games_started": 0,
+    "wins": 3,
+    "losses": 1,
+    "last_updated": "2025-08-08T22:07:08.131570"
   },
   "682610": {
     "id": "682610",
@@ -31152,7 +33642,17 @@
       "sacBunts": 1,
       "sacFlies": 1
     },
-    "career": {}
+    "career": {},
+    "team": "St. Louis Cardinals",
+    "era": 8.22,
+    "whip": 1.57,
+    "strikeouts": 9,
+    "walks": 5,
+    "innings_pitched": 7.2,
+    "games_started": 0,
+    "wins": 0,
+    "losses": 0,
+    "last_updated": "2025-08-08T22:07:17.653656"
   },
   "668716": {
     "id": "668716",
@@ -31353,7 +33853,17 @@
       "sacBunts": 0,
       "sacFlies": 0
     },
-    "career": {}
+    "career": {},
+    "team": "Boston Red Sox",
+    "era": 2.25,
+    "whip": 0.8,
+    "strikeouts": 18,
+    "walks": 5,
+    "innings_pitched": 20.0,
+    "games_started": 0,
+    "wins": 2,
+    "losses": 0,
+    "last_updated": "2025-08-08T22:08:03.734003"
   },
   "668964": {
     "id": "668964",
@@ -31420,7 +33930,17 @@
       "sacBunts": 0,
       "sacFlies": 1
     },
-    "career": {}
+    "career": {},
+    "team": "Milwaukee Brewers",
+    "era": 4.3,
+    "whip": 1.61,
+    "strikeouts": 19,
+    "walks": 10,
+    "innings_pitched": 23.0,
+    "games_started": 5,
+    "wins": 1,
+    "losses": 1,
+    "last_updated": "2025-08-08T22:07:51.954519"
   },
   "667297": {
     "id": "667297",
@@ -31487,7 +34007,17 @@
       "sacBunts": 0,
       "sacFlies": 1
     },
-    "career": {}
+    "career": {},
+    "team": "Toronto Blue Jays",
+    "era": 0.84,
+    "whip": 0.47,
+    "strikeouts": 10,
+    "walks": 2,
+    "innings_pitched": 10.2,
+    "games_started": 0,
+    "wins": 0,
+    "losses": 0,
+    "last_updated": "2025-08-08T22:07:28.417019"
   },
   "669459": {
     "id": "669459",
@@ -31621,7 +34151,17 @@
       "sacBunts": 0,
       "sacFlies": 1
     },
-    "career": {}
+    "career": {},
+    "team": "Arizona Diamondbacks",
+    "era": 3.2,
+    "whip": 1.05,
+    "strikeouts": 89,
+    "walks": 30,
+    "innings_pitched": 101.1,
+    "games_started": 14,
+    "wins": 6,
+    "losses": 3,
+    "last_updated": "2025-08-08T22:07:58.942186"
   },
   "593576": {
     "id": "593576",
@@ -31688,7 +34228,17 @@
       "sacBunts": 2,
       "sacFlies": 1
     },
-    "career": {}
+    "career": {},
+    "team": "Houston Astros",
+    "era": 5.88,
+    "whip": 1.62,
+    "strikeouts": 35,
+    "walks": 16,
+    "innings_pitched": 26.0,
+    "games_started": 0,
+    "wins": 3,
+    "losses": 2,
+    "last_updated": "2025-08-08T22:08:24.505281"
   },
   "656794": {
     "id": "656794",
@@ -31755,7 +34305,17 @@
       "sacBunts": 2,
       "sacFlies": 2
     },
-    "career": {}
+    "career": {},
+    "team": "Athletics",
+    "era": 3.12,
+    "whip": 1.43,
+    "strikeouts": 78,
+    "walks": 27,
+    "innings_pitched": 75.0,
+    "games_started": 5,
+    "wins": 2,
+    "losses": 5,
+    "last_updated": "2025-08-08T22:07:00.624414"
   },
   "693312": {
     "id": "693312",
@@ -31822,7 +34382,17 @@
       "sacBunts": 0,
       "sacFlies": 1
     },
-    "career": {}
+    "career": {},
+    "team": "Pittsburgh Pirates",
+    "era": 5.79,
+    "whip": 1.55,
+    "strikeouts": 16,
+    "walks": 11,
+    "innings_pitched": 18.2,
+    "games_started": 0,
+    "wins": 1,
+    "losses": 0,
+    "last_updated": "2025-08-08T22:07:03.064468"
   },
   "680951": {
     "id": "680951",
@@ -32157,7 +34727,17 @@
       "sacBunts": 0,
       "sacFlies": 0
     },
-    "career": {}
+    "career": {},
+    "team": "St. Louis Cardinals",
+    "era": 1.78,
+    "whip": 1.15,
+    "strikeouts": 29,
+    "walks": 14,
+    "innings_pitched": 30.1,
+    "games_started": 0,
+    "wins": 1,
+    "losses": 0,
+    "last_updated": "2025-08-08T22:07:17.393491"
   },
   "641927": {
     "id": "641927",
@@ -32224,7 +34804,17 @@
       "sacBunts": 1,
       "sacFlies": 5
     },
-    "career": {}
+    "career": {},
+    "team": "Minnesota Twins",
+    "era": 5.38,
+    "whip": 1.41,
+    "strikeouts": 78,
+    "walks": 23,
+    "innings_pitched": 97.0,
+    "games_started": 18,
+    "wins": 4,
+    "losses": 6,
+    "last_updated": "2025-08-08T22:07:29.247383"
   },
   "829272": {
     "id": "829272",
@@ -32291,7 +34881,17 @@
       "sacBunts": 0,
       "sacFlies": 0
     },
-    "career": {}
+    "career": {},
+    "team": "Washington Nationals",
+    "era": 7.36,
+    "whip": 1.73,
+    "strikeouts": 7,
+    "walks": 3,
+    "innings_pitched": 11.0,
+    "games_started": 2,
+    "wins": 0,
+    "losses": 1,
+    "last_updated": "2025-08-08T22:08:35.790834"
   },
   "701487": {
     "id": "701487",
@@ -32358,7 +34958,17 @@
       "sacBunts": 0,
       "sacFlies": 0
     },
-    "career": {}
+    "career": {},
+    "team": "Minnesota Twins",
+    "era": 9.35,
+    "whip": 1.73,
+    "strikeouts": 9,
+    "walks": 2,
+    "innings_pitched": 8.2,
+    "games_started": 2,
+    "wins": 0,
+    "losses": 2,
+    "last_updated": "2025-08-08T22:07:31.284606"
   },
   "595345": {
     "id": "595345",
@@ -32425,7 +35035,17 @@
       "sacBunts": 3,
       "sacFlies": 3
     },
-    "career": {}
+    "career": {},
+    "team": "Houston Astros",
+    "era": 2.98,
+    "whip": 0.8,
+    "strikeouts": 61,
+    "walks": 11,
+    "innings_pitched": 51.1,
+    "games_started": 1,
+    "wins": 1,
+    "losses": 2,
+    "last_updated": "2025-08-08T22:08:25.823204"
   },
   "681857": {
     "id": "681857",
@@ -32559,7 +35179,17 @@
       "sacBunts": 0,
       "sacFlies": 1
     },
-    "career": {}
+    "career": {},
+    "team": "Houston Astros",
+    "era": 4.72,
+    "whip": 1.25,
+    "strikeouts": 34,
+    "walks": 18,
+    "innings_pitched": 34.1,
+    "games_started": 0,
+    "wins": 2,
+    "losses": 1,
+    "last_updated": "2025-08-08T22:08:25.340133"
   },
   "682847": {
     "id": "682847",
@@ -33028,7 +35658,17 @@
       "sacBunts": 2,
       "sacFlies": 8
     },
-    "career": {}
+    "career": {},
+    "team": "Detroit Tigers",
+    "era": 4.91,
+    "whip": 1.25,
+    "strikeouts": 88,
+    "walks": 27,
+    "innings_pitched": 121.0,
+    "games_started": 23,
+    "wins": 4,
+    "losses": 10,
+    "last_updated": "2025-08-08T22:08:20.428030"
   },
   "641941": {
     "id": "641941",
@@ -33095,7 +35735,17 @@
       "sacBunts": 0,
       "sacFlies": 2
     },
-    "career": {}
+    "career": {},
+    "team": "Cincinnati Reds",
+    "era": 2.98,
+    "whip": 0.91,
+    "strikeouts": 57,
+    "walks": 16,
+    "innings_pitched": 48.1,
+    "games_started": 0,
+    "wins": 2,
+    "losses": 4,
+    "last_updated": "2025-08-08T22:08:10.633524"
   },
   "694037": {
     "id": "694037",
@@ -33162,7 +35812,17 @@
       "sacBunts": 0,
       "sacFlies": 1
     },
-    "career": {}
+    "career": {},
+    "team": "Chicago Cubs",
+    "era": 1.73,
+    "whip": 0.94,
+    "strikeouts": 45,
+    "walks": 11,
+    "innings_pitched": 41.2,
+    "games_started": 0,
+    "wins": 1,
+    "losses": 2,
+    "last_updated": "2025-08-08T22:08:07.853980"
   },
   "669449": {
     "id": "669449",
@@ -33296,7 +35956,17 @@
       "sacBunts": 1,
       "sacFlies": 1
     },
-    "career": {}
+    "career": {},
+    "team": "St. Louis Cardinals",
+    "era": 4.57,
+    "whip": 1.32,
+    "strikeouts": 80,
+    "walks": 40,
+    "innings_pitched": 122.0,
+    "games_started": 22,
+    "wins": 6,
+    "losses": 8,
+    "last_updated": "2025-08-08T22:07:15.332029"
   },
   "687223": {
     "id": "687223",
@@ -33430,7 +36100,17 @@
       "sacBunts": 1,
       "sacFlies": 8
     },
-    "career": {}
+    "career": {},
+    "team": "Washington Nationals",
+    "era": 5.43,
+    "whip": 1.48,
+    "strikeouts": 81,
+    "walks": 46,
+    "innings_pitched": 122.2,
+    "games_started": 23,
+    "wins": 7,
+    "losses": 12,
+    "last_updated": "2025-08-08T22:08:35.113576"
   },
   "694477": {
     "id": "694477",
@@ -33631,7 +36311,17 @@
       "sacBunts": 0,
       "sacFlies": 3
     },
-    "career": {}
+    "career": {},
+    "team": "Chicago Cubs",
+    "era": 9.2,
+    "whip": 2.18,
+    "strikeouts": 7,
+    "walks": 10,
+    "innings_pitched": 14.2,
+    "games_started": 0,
+    "wins": 0,
+    "losses": 1,
+    "last_updated": "2025-08-08T22:08:08.410543"
   },
   "665625": {
     "id": "665625",
@@ -33765,7 +36455,17 @@
       "sacBunts": 1,
       "sacFlies": 2
     },
-    "career": {}
+    "career": {},
+    "team": "Tampa Bay Rays",
+    "era": 3.77,
+    "whip": 1.18,
+    "strikeouts": 134,
+    "walks": 47,
+    "innings_pitched": 136.0,
+    "games_started": 24,
+    "wins": 7,
+    "losses": 9,
+    "last_updated": "2025-08-08T22:07:21.434502"
   },
   "642547": {
     "id": "642547",
@@ -33832,7 +36532,17 @@
       "sacBunts": 3,
       "sacFlies": 1
     },
-    "career": {}
+    "career": {},
+    "team": "Milwaukee Brewers",
+    "era": 3.03,
+    "whip": 1.14,
+    "strikeouts": 141,
+    "walks": 49,
+    "innings_pitched": 130.2,
+    "games_started": 24,
+    "wins": 13,
+    "losses": 5,
+    "last_updated": "2025-08-08T22:07:50.257335"
   },
   "678821": {
     "id": "678821",
@@ -33966,7 +36676,17 @@
       "sacBunts": 2,
       "sacFlies": 1
     },
-    "career": {}
+    "career": {},
+    "team": "San Diego Padres",
+    "era": 3.1,
+    "whip": 1.32,
+    "strikeouts": 44,
+    "walks": 23,
+    "innings_pitched": 52.1,
+    "games_started": 0,
+    "wins": 5,
+    "losses": 1,
+    "last_updated": "2025-08-08T22:07:07.078077"
   },
   "622780": {
     "id": "622780",
@@ -34167,7 +36887,17 @@
       "sacBunts": 0,
       "sacFlies": 1
     },
-    "career": {}
+    "career": {},
+    "team": "Miami Marlins",
+    "era": 3.25,
+    "whip": 1.01,
+    "strikeouts": 52,
+    "walks": 20,
+    "innings_pitched": 55.1,
+    "games_started": 11,
+    "wins": 4,
+    "losses": 3,
+    "last_updated": "2025-08-08T22:07:43.654545"
   },
   "527048": {
     "id": "527048",
@@ -34301,7 +37031,17 @@
       "sacBunts": 0,
       "sacFlies": 1
     },
-    "career": {}
+    "career": {},
+    "team": "Athletics",
+    "era": 3.97,
+    "whip": 1.15,
+    "strikeouts": 23,
+    "walks": 10,
+    "innings_pitched": 22.2,
+    "games_started": 1,
+    "wins": 0,
+    "losses": 2,
+    "last_updated": "2025-08-08T22:06:58.426452"
   },
   "656848": {
     "id": "656848",
@@ -34435,7 +37175,17 @@
       "sacBunts": 2,
       "sacFlies": 0
     },
-    "career": {}
+    "career": {},
+    "team": "New York Mets",
+    "era": 2.98,
+    "whip": 1.23,
+    "strikeouts": 112,
+    "walks": 45,
+    "innings_pitched": 133.0,
+    "games_started": 22,
+    "wins": 7,
+    "losses": 5,
+    "last_updated": "2025-08-08T22:08:36.713850"
   },
   "695534": {
     "id": "695534",
@@ -34569,7 +37319,17 @@
       "sacBunts": 1,
       "sacFlies": 2
     },
-    "career": {}
+    "career": {},
+    "team": "Arizona Diamondbacks",
+    "era": 5.02,
+    "whip": 1.31,
+    "strikeouts": 102,
+    "walks": 28,
+    "innings_pitched": 122.0,
+    "games_started": 23,
+    "wins": 11,
+    "losses": 7,
+    "last_updated": "2025-08-08T22:07:56.992266"
   },
   "683175": {
     "id": "683175",
@@ -34770,7 +37530,17 @@
       "sacBunts": 0,
       "sacFlies": 0
     },
-    "career": {}
+    "career": {},
+    "team": "Miami Marlins",
+    "era": 3.18,
+    "whip": 1.22,
+    "strikeouts": 37,
+    "walks": 16,
+    "innings_pitched": 56.2,
+    "games_started": 0,
+    "wins": 1,
+    "losses": 0,
+    "last_updated": "2025-08-08T22:07:45.345414"
   },
   "663455": {
     "id": "663455",
@@ -34837,7 +37607,17 @@
       "sacBunts": 0,
       "sacFlies": 0
     },
-    "career": {}
+    "career": {},
+    "team": "Washington Nationals",
+    "era": 2.35,
+    "whip": 1.04,
+    "strikeouts": 9,
+    "walks": 3,
+    "innings_pitched": 7.2,
+    "games_started": 0,
+    "wins": 2,
+    "losses": 0,
+    "last_updated": "2025-08-08T22:08:34.704772"
   },
   "673820": {
     "id": "673820",
@@ -35038,7 +37818,17 @@
       "sacBunts": 2,
       "sacFlies": 3
     },
-    "career": {}
+    "career": {},
+    "team": "San Diego Padres",
+    "era": 2.96,
+    "whip": 0.96,
+    "strikeouts": 139,
+    "walks": 35,
+    "innings_pitched": 133.2,
+    "games_started": 23,
+    "wins": 11,
+    "losses": 3,
+    "last_updated": "2025-08-08T22:07:06.272452"
   },
   "621363": {
     "id": "621363",
@@ -35172,7 +37962,17 @@
       "sacBunts": 0,
       "sacFlies": 1
     },
-    "career": {}
+    "career": {},
+    "team": "Chicago Cubs",
+    "era": 1.97,
+    "whip": 1.06,
+    "strikeouts": 35,
+    "walks": 12,
+    "innings_pitched": 32.0,
+    "games_started": 3,
+    "wins": 2,
+    "losses": 1,
+    "last_updated": "2025-08-08T22:08:08.060510"
   },
   "647315": {
     "id": "647315",
@@ -35373,7 +38173,17 @@
       "sacBunts": 0,
       "sacFlies": 0
     },
-    "career": {}
+    "career": {},
+    "team": "Washington Nationals",
+    "era": 5.4,
+    "whip": 2.4,
+    "strikeouts": 2,
+    "walks": 0,
+    "innings_pitched": 1.2,
+    "games_started": 0,
+    "wins": 0,
+    "losses": 0,
+    "last_updated": "2025-08-08T22:08:35.593510"
   },
   "700249": {
     "id": "700249",
@@ -35440,7 +38250,17 @@
       "sacBunts": 0,
       "sacFlies": 3
     },
-    "career": {}
+    "career": {},
+    "team": "Baltimore Orioles",
+    "era": 5.25,
+    "whip": 1.45,
+    "strikeouts": 75,
+    "walks": 24,
+    "innings_pitched": 70.1,
+    "games_started": 13,
+    "wins": 2,
+    "losses": 6,
+    "last_updated": "2025-08-08T22:07:59.931150"
   },
   "519151": {
     "id": "519151",
@@ -35574,7 +38394,17 @@
       "sacBunts": 1,
       "sacFlies": 1
     },
-    "career": {}
+    "career": {},
+    "team": "Milwaukee Brewers",
+    "era": 3.15,
+    "whip": 1.19,
+    "strikeouts": 93,
+    "walks": 38,
+    "innings_pitched": 114.1,
+    "games_started": 16,
+    "wins": 11,
+    "losses": 2,
+    "last_updated": "2025-08-08T22:07:51.448487"
   },
   "640462": {
     "id": "640462",
@@ -35708,7 +38538,17 @@
       "sacBunts": 0,
       "sacFlies": 1
     },
-    "career": {}
+    "career": {},
+    "team": "Miami Marlins",
+    "era": 5.21,
+    "whip": 1.37,
+    "strikeouts": 79,
+    "walks": 29,
+    "innings_pitched": 102.0,
+    "games_started": 22,
+    "wins": 4,
+    "losses": 9,
+    "last_updated": "2025-08-08T22:07:42.936356"
   },
   "650671": {
     "id": "650671",
@@ -35842,7 +38682,17 @@
       "sacBunts": 1,
       "sacFlies": 1
     },
-    "career": {}
+    "career": {},
+    "team": "Milwaukee Brewers",
+    "era": 3.57,
+    "whip": 1.34,
+    "strikeouts": 66,
+    "walks": 35,
+    "innings_pitched": 93.1,
+    "games_started": 17,
+    "wins": 9,
+    "losses": 4,
+    "last_updated": "2025-08-08T22:07:50.977571"
   },
   "666142": {
     "id": "666142",
@@ -36043,7 +38893,17 @@
       "sacBunts": 0,
       "sacFlies": 0
     },
-    "career": {}
+    "career": {},
+    "team": "New York Mets",
+    "era": 0.0,
+    "whip": 0.91,
+    "strikeouts": 7,
+    "walks": 3,
+    "innings_pitched": 7.2,
+    "games_started": 0,
+    "wins": 1,
+    "losses": 0,
+    "last_updated": "2025-08-08T22:08:36.262060"
   },
   "541640": {
     "id": "541640",
@@ -36110,7 +38970,17 @@
       "sacBunts": 0,
       "sacFlies": 0
     },
-    "career": {}
+    "career": {},
+    "team": "Minnesota Twins",
+    "era": 3.38,
+    "whip": 1.13,
+    "strikeouts": 1,
+    "walks": 0,
+    "innings_pitched": 2.2,
+    "games_started": 0,
+    "wins": 0,
+    "losses": 0,
+    "last_updated": "2025-08-08T22:07:29.900519"
   },
   "670990": {
     "id": "670990",
@@ -36177,7 +39047,17 @@
       "sacBunts": 0,
       "sacFlies": 0
     },
-    "career": {}
+    "career": {},
+    "team": "Pittsburgh Pirates",
+    "era": 3.95,
+    "whip": 1.24,
+    "strikeouts": 19,
+    "walks": 5,
+    "innings_pitched": 13.2,
+    "games_started": 0,
+    "wins": 1,
+    "losses": 0,
+    "last_updated": "2025-08-08T22:07:04.114472"
   },
   "660604": {
     "id": "660604",
@@ -36244,7 +39124,17 @@
       "sacBunts": 0,
       "sacFlies": 0
     },
-    "career": {}
+    "career": {},
+    "team": "Philadelphia Phillies",
+    "era": 2.45,
+    "whip": 1.45,
+    "strikeouts": 8,
+    "walks": 6,
+    "innings_pitched": 11.0,
+    "games_started": 0,
+    "wins": 0,
+    "losses": 0,
+    "last_updated": "2025-08-08T22:07:32.634529"
   },
   "656876": {
     "id": "656876",
@@ -36311,7 +39201,17 @@
       "sacBunts": 0,
       "sacFlies": 1
     },
-    "career": {}
+    "career": {},
+    "team": "Tampa Bay Rays",
+    "era": 2.66,
+    "whip": 1.0,
+    "strikeouts": 97,
+    "walks": 25,
+    "innings_pitched": 111.2,
+    "games_started": 23,
+    "wins": 9,
+    "losses": 5,
+    "last_updated": "2025-08-08T22:07:19.310744"
   },
   "592662": {
     "id": "592662",
@@ -36378,7 +39278,17 @@
       "sacBunts": 1,
       "sacFlies": 4
     },
-    "career": {}
+    "career": {},
+    "team": "San Francisco Giants",
+    "era": 2.85,
+    "whip": 1.13,
+    "strikeouts": 148,
+    "walks": 55,
+    "innings_pitched": 142.0,
+    "games_started": 24,
+    "wins": 9,
+    "losses": 5,
+    "last_updated": "2025-08-08T22:07:13.819328"
   },
   "607067": {
     "id": "607067",
@@ -36445,7 +39355,17 @@
       "sacBunts": 3,
       "sacFlies": 4
     },
-    "career": {}
+    "career": {},
+    "team": "Chicago Cubs",
+    "era": 4.23,
+    "whip": 1.32,
+    "strikeouts": 79,
+    "walks": 29,
+    "innings_pitched": 110.2,
+    "games_started": 19,
+    "wins": 8,
+    "losses": 5,
+    "last_updated": "2025-08-08T22:08:07.602608"
   },
   "669308": {
     "id": "669308",
@@ -36512,7 +39432,17 @@
       "sacBunts": 0,
       "sacFlies": 0
     },
-    "career": {}
+    "career": {},
+    "team": "San Diego Padres",
+    "era": 3.97,
+    "whip": 1.06,
+    "strikeouts": 22,
+    "walks": 8,
+    "innings_pitched": 22.2,
+    "games_started": 1,
+    "wins": 0,
+    "losses": 1,
+    "last_updated": "2025-08-08T22:07:06.841368"
   },
   "687377": {
     "id": "687377",
@@ -36579,7 +39509,17 @@
       "sacBunts": 0,
       "sacFlies": 1
     },
-    "career": {}
+    "career": {},
+    "team": "Washington Nationals",
+    "era": 5.91,
+    "whip": 1.22,
+    "strikeouts": 10,
+    "walks": 5,
+    "innings_pitched": 10.2,
+    "games_started": 0,
+    "wins": 0,
+    "losses": 0,
+    "last_updated": "2025-08-08T22:08:35.344781"
   },
   "670950": {
     "id": "670950",
@@ -37048,7 +39988,17 @@
       "sacBunts": 2,
       "sacFlies": 2
     },
-    "career": {}
+    "career": {},
+    "team": "New York Yankees",
+    "era": 3.35,
+    "whip": 1.1,
+    "strikeouts": 159,
+    "walks": 56,
+    "innings_pitched": 139.2,
+    "games_started": 24,
+    "wins": 11,
+    "losses": 7,
+    "last_updated": "2025-08-08T22:07:46.726783"
   },
   "699134": {
     "id": "699134",
@@ -37249,7 +40199,17 @@
       "sacBunts": 4,
       "sacFlies": 4
     },
-    "career": {}
+    "career": {},
+    "team": "Arizona Diamondbacks",
+    "era": 5.53,
+    "whip": 1.66,
+    "strikeouts": 103,
+    "walks": 37,
+    "innings_pitched": 97.2,
+    "games_started": 19,
+    "wins": 4,
+    "losses": 7,
+    "last_updated": "2025-08-08T22:07:57.468054"
   },
   "660730": {
     "id": "660730",
@@ -37450,7 +40410,17 @@
       "sacBunts": 0,
       "sacFlies": 1
     },
-    "career": {}
+    "career": {},
+    "team": "San Francisco Giants",
+    "era": 1.51,
+    "whip": 0.86,
+    "strikeouts": 64,
+    "walks": 11,
+    "innings_pitched": 47.2,
+    "games_started": 0,
+    "wins": 3,
+    "losses": 3,
+    "last_updated": "2025-08-08T22:07:13.598127"
   },
   "684320": {
     "id": "684320",
@@ -37517,7 +40487,17 @@
       "sacBunts": 0,
       "sacFlies": 1
     },
-    "career": {}
+    "career": {},
+    "team": "Toronto Blue Jays",
+    "era": 2.45,
+    "whip": 0.98,
+    "strikeouts": 49,
+    "walks": 20,
+    "innings_pitched": 55.0,
+    "games_started": 1,
+    "wins": 2,
+    "losses": 0,
+    "last_updated": "2025-08-08T22:07:28.698014"
   },
   "573124": {
     "id": "573124",
@@ -37584,7 +40564,17 @@
       "sacBunts": 1,
       "sacFlies": 3
     },
-    "career": {}
+    "career": {},
+    "team": "Chicago Cubs",
+    "era": 2.29,
+    "whip": 1.39,
+    "strikeouts": 37,
+    "walks": 19,
+    "innings_pitched": 35.1,
+    "games_started": 0,
+    "wins": 2,
+    "losses": 2,
+    "last_updated": "2025-08-08T22:08:09.150708"
   },
   "669432": {
     "id": "669432",
@@ -37651,7 +40641,17 @@
       "sacBunts": 0,
       "sacFlies": 1
     },
-    "career": {}
+    "career": {},
+    "team": "Baltimore Orioles",
+    "era": 1.44,
+    "whip": 0.83,
+    "strikeouts": 54,
+    "walks": 15,
+    "innings_pitched": 62.1,
+    "games_started": 10,
+    "wins": 5,
+    "losses": 2,
+    "last_updated": "2025-08-08T22:08:02.300774"
   },
   "643511": {
     "id": "643511",
@@ -37718,7 +40718,17 @@
       "sacBunts": 0,
       "sacFlies": 0
     },
-    "career": {}
+    "career": {},
+    "team": "New York Mets",
+    "era": 1.83,
+    "whip": 0.91,
+    "strikeouts": 39,
+    "walks": 5,
+    "innings_pitched": 54.0,
+    "games_started": 0,
+    "wins": 4,
+    "losses": 4,
+    "last_updated": "2025-08-08T22:08:39.021111"
   },
   "669020": {
     "id": "669020",
@@ -37785,7 +40795,17 @@
       "sacBunts": 1,
       "sacFlies": 2
     },
-    "career": {}
+    "career": {},
+    "team": "Colorado Rockies",
+    "era": 7.27,
+    "whip": 1.76,
+    "strikeouts": 18,
+    "walks": 16,
+    "innings_pitched": 34.2,
+    "games_started": 1,
+    "wins": 0,
+    "losses": 0,
+    "last_updated": "2025-08-08T22:08:18.557107"
   },
   "605447": {
     "id": "605447",
@@ -37852,7 +40872,17 @@
       "sacBunts": 0,
       "sacFlies": 3
     },
-    "career": {}
+    "career": {},
+    "team": "Philadelphia Phillies",
+    "era": 6.64,
+    "whip": 1.35,
+    "strikeouts": 41,
+    "walks": 15,
+    "innings_pitched": 39.1,
+    "games_started": 0,
+    "wins": 1,
+    "losses": 4,
+    "last_updated": "2025-08-08T22:07:33.672096"
   },
   "668941": {
     "id": "668941",
@@ -37919,7 +40949,17 @@
       "sacBunts": 3,
       "sacFlies": 2
     },
-    "career": {}
+    "career": {},
+    "team": "St. Louis Cardinals",
+    "era": 2.04,
+    "whip": 1.21,
+    "strikeouts": 38,
+    "walks": 17,
+    "innings_pitched": 39.2,
+    "games_started": 0,
+    "wins": 4,
+    "losses": 3,
+    "last_updated": "2025-08-08T22:07:15.908273"
   },
   "605452": {
     "id": "605452",
@@ -37986,7 +41026,17 @@
       "sacBunts": 1,
       "sacFlies": 3
     },
-    "career": {}
+    "career": {},
+    "team": "Philadelphia Phillies",
+    "era": 5.16,
+    "whip": 1.5,
+    "strikeouts": 34,
+    "walks": 16,
+    "innings_pitched": 45.1,
+    "games_started": 1,
+    "wins": 2,
+    "losses": 1,
+    "last_updated": "2025-08-08T22:07:33.435320"
   },
   "694738": {
     "id": "694738",
@@ -38254,7 +41304,17 @@
       "sacBunts": 1,
       "sacFlies": 5
     },
-    "career": {}
+    "career": {},
+    "team": "Washington Nationals",
+    "era": 6.19,
+    "whip": 1.57,
+    "strikeouts": 47,
+    "walks": 19,
+    "innings_pitched": 52.1,
+    "games_started": 0,
+    "wins": 1,
+    "losses": 1,
+    "last_updated": "2025-08-08T22:08:34.139695"
   },
   "657746": {
     "id": "657746",
@@ -38321,7 +41381,17 @@
       "sacBunts": 1,
       "sacFlies": 1
     },
-    "career": {}
+    "career": {},
+    "team": "Minnesota Twins",
+    "era": 2.79,
+    "whip": 0.92,
+    "strikeouts": 146,
+    "walks": 25,
+    "innings_pitched": 132.1,
+    "games_started": 22,
+    "wins": 11,
+    "losses": 5,
+    "last_updated": "2025-08-08T22:07:30.072605"
   },
   "685314": {
     "id": "685314",
@@ -38388,7 +41458,17 @@
       "sacBunts": 0,
       "sacFlies": 0
     },
-    "career": {}
+    "career": {},
+    "team": "Arizona Diamondbacks",
+    "era": 0.87,
+    "whip": 1.06,
+    "strikeouts": 8,
+    "walks": 4,
+    "innings_pitched": 10.1,
+    "games_started": 0,
+    "wins": 0,
+    "losses": 0,
+    "last_updated": "2025-08-08T22:07:56.538261"
   },
   "681870": {
     "id": "681870",
@@ -38455,7 +41535,17 @@
       "sacBunts": 0,
       "sacFlies": 0
     },
-    "career": {}
+    "career": {},
+    "team": "Cleveland Guardians",
+    "era": 1.23,
+    "whip": 1.02,
+    "strikeouts": 23,
+    "walks": 7,
+    "innings_pitched": 14.2,
+    "games_started": 0,
+    "wins": 0,
+    "losses": 0,
+    "last_updated": "2025-08-08T22:08:13.589880"
   },
   "674285": {
     "id": "674285",
@@ -38656,7 +41746,17 @@
       "sacBunts": 2,
       "sacFlies": 0
     },
-    "career": {}
+    "career": {},
+    "team": "Philadelphia Phillies",
+    "era": 2.36,
+    "whip": 1.08,
+    "strikeouts": 151,
+    "walks": 35,
+    "innings_pitched": 144.2,
+    "games_started": 23,
+    "wins": 10,
+    "losses": 3,
+    "last_updated": "2025-08-08T22:07:32.751903"
   },
   "676742": {
     "id": "676742",
@@ -38723,7 +41823,17 @@
       "sacBunts": 0,
       "sacFlies": 0
     },
-    "career": {}
+    "career": {},
+    "team": "Pittsburgh Pirates",
+    "era": 0.0,
+    "whip": 0.67,
+    "strikeouts": 2,
+    "walks": 1,
+    "innings_pitched": 3.0,
+    "games_started": 0,
+    "wins": 0,
+    "losses": 0,
+    "last_updated": "2025-08-08T22:07:01.944698"
   },
   "680704": {
     "id": "680704",
@@ -38924,7 +42034,17 @@
       "sacBunts": 2,
       "sacFlies": 3
     },
-    "career": {}
+    "career": {},
+    "team": "Minnesota Twins",
+    "era": 4.17,
+    "whip": 1.23,
+    "strikeouts": 41,
+    "walks": 13,
+    "innings_pitched": 49.2,
+    "games_started": 3,
+    "wins": 3,
+    "losses": 3,
+    "last_updated": "2025-08-08T22:07:29.698732"
   },
   "642701": {
     "id": "642701",
@@ -38991,7 +42111,17 @@
       "sacBunts": 0,
       "sacFlies": 4
     },
-    "career": {}
+    "career": {},
+    "team": "Pittsburgh Pirates",
+    "era": 2.52,
+    "whip": 0.92,
+    "strikeouts": 40,
+    "walks": 11,
+    "innings_pitched": 50.0,
+    "games_started": 0,
+    "wins": 3,
+    "losses": 4,
+    "last_updated": "2025-08-08T22:07:02.629243"
   },
   "663574": {
     "id": "663574",
@@ -39058,7 +42188,17 @@
       "sacBunts": 0,
       "sacFlies": 1
     },
-    "career": {}
+    "career": {},
+    "team": "Cincinnati Reds",
+    "era": 2.85,
+    "whip": 1.08,
+    "strikeouts": 53,
+    "walks": 18,
+    "innings_pitched": 53.2,
+    "games_started": 0,
+    "wins": 1,
+    "losses": 4,
+    "last_updated": "2025-08-08T22:08:12.346845"
   },
   "666619": {
     "id": "666619",
@@ -39393,7 +42533,17 @@
       "sacBunts": 0,
       "sacFlies": 1
     },
-    "career": {}
+    "career": {},
+    "team": "Toronto Blue Jays",
+    "era": 4.03,
+    "whip": 1.03,
+    "strikeouts": 46,
+    "walks": 9,
+    "innings_pitched": 44.2,
+    "games_started": 9,
+    "wins": 2,
+    "losses": 1,
+    "last_updated": "2025-08-08T22:07:27.968331"
   },
   "693645": {
     "id": "693645",
@@ -39460,7 +42610,17 @@
       "sacBunts": 0,
       "sacFlies": 0
     },
-    "career": {}
+    "career": {},
+    "team": "New York Yankees",
+    "era": 4.38,
+    "whip": 1.66,
+    "strikeouts": 24,
+    "walks": 12,
+    "innings_pitched": 24.2,
+    "games_started": 5,
+    "wins": 1,
+    "losses": 2,
+    "last_updated": "2025-08-08T22:07:46.210881"
   },
   "657376": {
     "id": "657376",
@@ -39594,7 +42754,17 @@
       "sacBunts": 1,
       "sacFlies": 0
     },
-    "career": {}
+    "career": {},
+    "team": "Kansas City Royals",
+    "era": 3.63,
+    "whip": 1.34,
+    "strikeouts": 48,
+    "walks": 17,
+    "innings_pitched": 44.2,
+    "games_started": 0,
+    "wins": 2,
+    "losses": 2,
+    "last_updated": "2025-08-08T22:08:27.806034"
   },
   "687606": {
     "id": "687606",
@@ -40130,7 +43300,17 @@
       "sacBunts": 0,
       "sacFlies": 0
     },
-    "career": {}
+    "career": {},
+    "team": "New York Mets",
+    "era": 2.3,
+    "whip": 1.24,
+    "strikeouts": 88,
+    "walks": 47,
+    "innings_pitched": 94.0,
+    "games_started": 18,
+    "wins": 7,
+    "losses": 4,
+    "last_updated": "2025-08-08T22:08:37.828422"
   },
   "622608": {
     "id": "622608",
@@ -40264,7 +43444,17 @@
       "sacBunts": 2,
       "sacFlies": 6
     },
-    "career": {}
+    "career": {},
+    "team": "Athletics",
+    "era": 4.82,
+    "whip": 1.34,
+    "strikeouts": 103,
+    "walks": 44,
+    "innings_pitched": 136.1,
+    "games_started": 24,
+    "wins": 6,
+    "losses": 11,
+    "last_updated": "2025-08-08T22:06:59.876145"
   },
   "623149": {
     "id": "623149",
@@ -40398,7 +43588,17 @@
       "sacBunts": 0,
       "sacFlies": 0
     },
-    "career": {}
+    "career": {},
+    "team": "San Francisco Giants",
+    "era": 4.91,
+    "whip": 1.55,
+    "strikeouts": 11,
+    "walks": 4,
+    "innings_pitched": 11.0,
+    "games_started": 0,
+    "wins": 0,
+    "losses": 1,
+    "last_updated": "2025-08-08T22:07:11.515142"
   },
   "693855": {
     "id": "693855",
@@ -40465,7 +43665,17 @@
       "sacBunts": 0,
       "sacFlies": 0
     },
-    "career": {}
+    "career": {},
+    "team": "Tampa Bay Rays",
+    "era": 1.2,
+    "whip": 0.8,
+    "strikeouts": 16,
+    "walks": 3,
+    "innings_pitched": 15.0,
+    "games_started": 0,
+    "wins": 1,
+    "losses": 0,
+    "last_updated": "2025-08-08T22:07:20.280326"
   },
   "686218": {
     "id": "686218",
@@ -40532,7 +43742,17 @@
       "sacBunts": 0,
       "sacFlies": 2
     },
-    "career": {}
+    "career": {},
+    "team": "Los Angeles Dodgers",
+    "era": 3.0,
+    "whip": 1.2,
+    "strikeouts": 31,
+    "walks": 11,
+    "innings_pitched": 30.0,
+    "games_started": 5,
+    "wins": 3,
+    "losses": 2,
+    "last_updated": "2025-08-08T22:08:31.855726"
   },
   "663767": {
     "id": "663767",
@@ -40733,7 +43953,17 @@
       "sacBunts": 0,
       "sacFlies": 0
     },
-    "career": {}
+    "career": {},
+    "team": "Miami Marlins",
+    "era": 6.89,
+    "whip": 1.6,
+    "strikeouts": 20,
+    "walks": 11,
+    "innings_pitched": 15.2,
+    "games_started": 0,
+    "wins": 2,
+    "losses": 1,
+    "last_updated": "2025-08-08T22:07:44.357678"
   },
   "608371": {
     "id": "608371",
@@ -40867,7 +44097,17 @@
       "sacBunts": 2,
       "sacFlies": 5
     },
-    "career": {}
+    "career": {},
+    "team": "Cincinnati Reds",
+    "era": 4.53,
+    "whip": 1.35,
+    "strikeouts": 113,
+    "walks": 48,
+    "innings_pitched": 119.1,
+    "games_started": 23,
+    "wins": 9,
+    "losses": 9,
+    "last_updated": "2025-08-08T22:08:10.000725"
   },
   "681895": {
     "id": "681895",
@@ -41001,7 +44241,17 @@
       "sacBunts": 0,
       "sacFlies": 0
     },
-    "career": {}
+    "career": {},
+    "team": "Pittsburgh Pirates",
+    "era": 1.94,
+    "whip": 0.93,
+    "strikeouts": 162,
+    "walks": 34,
+    "innings_pitched": 144.0,
+    "games_started": 24,
+    "wins": 7,
+    "losses": 8,
+    "last_updated": "2025-08-08T22:07:03.622545"
   },
   "669373": {
     "id": "669373",
@@ -41068,7 +44318,17 @@
       "sacBunts": 1,
       "sacFlies": 2
     },
-    "career": {}
+    "career": {},
+    "team": "Detroit Tigers",
+    "era": 2.35,
+    "whip": 0.86,
+    "strikeouts": 187,
+    "walks": 21,
+    "innings_pitched": 145.1,
+    "games_started": 23,
+    "wins": 11,
+    "losses": 3,
+    "last_updated": "2025-08-08T22:08:21.492438"
   },
   "686580": {
     "id": "686580",
@@ -41202,7 +44462,17 @@
       "sacBunts": 1,
       "sacFlies": 2
     },
-    "career": {}
+    "career": {},
+    "team": "Cleveland Guardians",
+    "era": 2.81,
+    "whip": 1.15,
+    "strikeouts": 71,
+    "walks": 18,
+    "innings_pitched": 51.1,
+    "games_started": 0,
+    "wins": 4,
+    "losses": 4,
+    "last_updated": "2025-08-08T22:08:13.153500"
   },
   "681916": {
     "id": "681916",
@@ -41336,7 +44606,17 @@
       "sacBunts": 1,
       "sacFlies": 2
     },
-    "career": {}
+    "career": {},
+    "team": "Chicago White Sox",
+    "era": 4.22,
+    "whip": 1.29,
+    "strikeouts": 93,
+    "walks": 42,
+    "innings_pitched": 96.0,
+    "games_started": 20,
+    "wins": 3,
+    "losses": 7,
+    "last_updated": "2025-08-08T22:07:41.131016"
   },
   "700363": {
     "id": "700363",
@@ -41470,7 +44750,17 @@
       "sacBunts": 0,
       "sacFlies": 1
     },
-    "career": {}
+    "career": {},
+    "team": "Los Angeles Dodgers",
+    "era": 3.21,
+    "whip": 1.64,
+    "strikeouts": 12,
+    "walks": 8,
+    "innings_pitched": 14.0,
+    "games_started": 3,
+    "wins": 1,
+    "losses": 1,
+    "last_updated": "2025-08-08T22:08:30.955650"
   },
   "676092": {
     "id": "676092",
@@ -41604,7 +44894,17 @@
       "sacBunts": 0,
       "sacFlies": 0
     },
-    "career": {}
+    "career": {},
+    "team": "Miami Marlins",
+    "era": 7.97,
+    "whip": 1.77,
+    "strikeouts": 21,
+    "walks": 11,
+    "innings_pitched": 20.1,
+    "games_started": 0,
+    "wins": 1,
+    "losses": 0,
+    "last_updated": "2025-08-08T22:07:43.888063"
   },
   "667755": {
     "id": "667755",
@@ -41671,7 +44971,17 @@
       "sacBunts": 4,
       "sacFlies": 2
     },
-    "career": {}
+    "career": {},
+    "team": "Los Angeles Angels",
+    "era": 4.01,
+    "whip": 1.4,
+    "strikeouts": 119,
+    "walks": 61,
+    "innings_pitched": 137.0,
+    "games_started": 24,
+    "wins": 7,
+    "losses": 9,
+    "last_updated": "2025-08-08T22:07:53.879015"
   },
   "647336": {
     "id": "647336",
@@ -41805,7 +45115,17 @@
       "sacBunts": 1,
       "sacFlies": 2
     },
-    "career": {}
+    "career": {},
+    "team": "New York Mets",
+    "era": 3.54,
+    "whip": 1.28,
+    "strikeouts": 50,
+    "walks": 19,
+    "innings_pitched": 40.2,
+    "games_started": 0,
+    "wins": 0,
+    "losses": 3,
+    "last_updated": "2025-08-08T22:08:37.419964"
   },
   "656986": {
     "id": "656986",
@@ -41872,7 +45192,17 @@
       "sacBunts": 1,
       "sacFlies": 2
     },
-    "career": {}
+    "career": {},
+    "team": "Houston Astros",
+    "era": 2.49,
+    "whip": 0.98,
+    "strikeouts": 53,
+    "walks": 13,
+    "innings_pitched": 47.0,
+    "games_started": 0,
+    "wins": 5,
+    "losses": 1,
+    "last_updated": "2025-08-08T22:08:23.041596"
   },
   "642100": {
     "id": "642100",
@@ -41939,7 +45269,17 @@
       "sacBunts": 0,
       "sacFlies": 2
     },
-    "career": {}
+    "career": {},
+    "team": "Seattle Mariners",
+    "era": 2.25,
+    "whip": 0.91,
+    "strikeouts": 59,
+    "walks": 10,
+    "innings_pitched": 44.0,
+    "games_started": 0,
+    "wins": 2,
+    "losses": 1,
+    "last_updated": "2025-08-08T22:07:09.574826"
   },
   "687765": {
     "id": "687765",
@@ -42140,7 +45480,17 @@
       "sacBunts": 1,
       "sacFlies": 5
     },
-    "career": {}
+    "career": {},
+    "team": "Athletics",
+    "era": 3.89,
+    "whip": 1.12,
+    "strikeouts": 107,
+    "walks": 40,
+    "innings_pitched": 132.0,
+    "games_started": 22,
+    "wins": 10,
+    "losses": 7,
+    "last_updated": "2025-08-08T22:06:59.049428"
   },
   "592773": {
     "id": "592773",
@@ -42207,7 +45557,17 @@
       "sacBunts": 0,
       "sacFlies": 1
     },
-    "career": {}
+    "career": {},
+    "team": "New York Mets",
+    "era": 4.95,
+    "whip": 1.53,
+    "strikeouts": 44,
+    "walks": 21,
+    "innings_pitched": 40.0,
+    "games_started": 0,
+    "wins": 2,
+    "losses": 5,
+    "last_updated": "2025-08-08T22:08:38.549342"
   },
   "657006": {
     "id": "657006",
@@ -42408,7 +45768,17 @@
       "sacBunts": 0,
       "sacFlies": 3
     },
-    "career": {}
+    "career": {},
+    "team": "Athletics",
+    "era": 4.19,
+    "whip": 1.19,
+    "strikeouts": 42,
+    "walks": 17,
+    "innings_pitched": 43.0,
+    "games_started": 1,
+    "wins": 3,
+    "losses": 3,
+    "last_updated": "2025-08-08T22:06:59.336007"
   },
   "592779": {
     "id": "592779",
@@ -42475,7 +45845,17 @@
       "sacBunts": 1,
       "sacFlies": 0
     },
-    "career": {}
+    "career": {},
+    "team": "Los Angeles Dodgers",
+    "era": 2.7,
+    "whip": 1.2,
+    "strikeouts": 43,
+    "walks": 12,
+    "innings_pitched": 36.2,
+    "games_started": 0,
+    "wins": 2,
+    "losses": 2,
+    "last_updated": "2025-08-08T22:08:31.453009"
   },
   "476594": {
     "id": "476594",
@@ -42609,7 +45989,17 @@
       "sacBunts": 2,
       "sacFlies": 4
     },
-    "career": {}
+    "career": {},
+    "team": "Philadelphia Phillies",
+    "era": 3.2,
+    "whip": 1.13,
+    "strikeouts": 53,
+    "walks": 15,
+    "innings_pitched": 45.0,
+    "games_started": 0,
+    "wins": 1,
+    "losses": 3,
+    "last_updated": "2025-08-08T22:07:33.908726"
   },
   "608717": {
     "id": "608717",
@@ -42877,7 +46267,17 @@
       "sacBunts": 1,
       "sacFlies": 3
     },
-    "career": {}
+    "career": {},
+    "team": "Atlanta Braves",
+    "era": 4.04,
+    "whip": 1.3,
+    "strikeouts": 98,
+    "walks": 33,
+    "innings_pitched": 82.1,
+    "games_started": 15,
+    "wins": 5,
+    "losses": 9,
+    "last_updated": "2025-08-08T22:07:38.347586"
   },
   "573186": {
     "id": "573186",
@@ -43011,7 +46411,17 @@
       "sacBunts": 0,
       "sacFlies": 1
     },
-    "career": {}
+    "career": {},
+    "team": "Baltimore Orioles",
+    "era": 1.93,
+    "whip": 1.18,
+    "strikeouts": 6,
+    "walks": 4,
+    "innings_pitched": 9.1,
+    "games_started": 0,
+    "wins": 0,
+    "losses": 0,
+    "last_updated": "2025-08-08T22:08:01.202786"
   },
   "544150": {
     "id": "544150",
@@ -43212,7 +46622,17 @@
       "sacBunts": 1,
       "sacFlies": 1
     },
-    "career": {}
+    "career": {},
+    "team": "Philadelphia Phillies",
+    "era": 2.94,
+    "whip": 1.15,
+    "strikeouts": 98,
+    "walks": 27,
+    "innings_pitched": 107.0,
+    "games_started": 17,
+    "wins": 8,
+    "losses": 5,
+    "last_updated": "2025-08-08T22:07:34.566577"
   },
   "663158": {
     "id": "663158",
@@ -43279,7 +46699,17 @@
       "sacBunts": 1,
       "sacFlies": 1
     },
-    "career": {}
+    "career": {},
+    "team": "San Diego Padres",
+    "era": 3.17,
+    "whip": 0.99,
+    "strikeouts": 49,
+    "walks": 13,
+    "innings_pitched": 48.1,
+    "games_started": 0,
+    "wins": 4,
+    "losses": 4,
+    "last_updated": "2025-08-08T22:07:06.582608"
   },
   "593833": {
     "id": "593833",
@@ -43413,7 +46843,17 @@
       "sacBunts": 0,
       "sacFlies": 3
     },
-    "career": {}
+    "career": {},
+    "team": "Baltimore Orioles",
+    "era": 4.24,
+    "whip": 1.31,
+    "strikeouts": 80,
+    "walks": 31,
+    "innings_pitched": 121.0,
+    "games_started": 22,
+    "wins": 9,
+    "losses": 5,
+    "last_updated": "2025-08-08T22:08:02.070017"
   },
   "642121": {
     "id": "642121",
@@ -43547,7 +46987,17 @@
       "sacBunts": 1,
       "sacFlies": 1
     },
-    "career": {}
+    "career": {},
+    "team": "Cincinnati Reds",
+    "era": 3.64,
+    "whip": 1.14,
+    "strikeouts": 39,
+    "walks": 15,
+    "innings_pitched": 54.1,
+    "games_started": 3,
+    "wins": 1,
+    "losses": 2,
+    "last_updated": "2025-08-08T22:08:10.237654"
   },
   "694335": {
     "id": "694335",
@@ -43614,7 +47064,17 @@
       "sacBunts": 0,
       "sacFlies": 3
     },
-    "career": {}
+    "career": {},
+    "team": "St. Louis Cardinals",
+    "era": 2.67,
+    "whip": 0.83,
+    "strikeouts": 33,
+    "walks": 9,
+    "innings_pitched": 33.2,
+    "games_started": 0,
+    "wins": 1,
+    "losses": 0,
+    "last_updated": "2025-08-08T22:07:16.401579"
   },
   "657024": {
     "id": "657024",
@@ -43949,7 +47409,17 @@
       "sacBunts": 0,
       "sacFlies": 2
     },
-    "career": {}
+    "career": {},
+    "team": "Chicago White Sox",
+    "era": 4.09,
+    "whip": 1.27,
+    "strikeouts": 29,
+    "walks": 9,
+    "innings_pitched": 22.0,
+    "games_started": 2,
+    "wins": 0,
+    "losses": 2,
+    "last_updated": "2025-08-08T22:07:40.246944"
   },
   "700187": {
     "id": "700187",
@@ -44083,7 +47553,17 @@
       "sacBunts": 0,
       "sacFlies": 0
     },
-    "career": {}
+    "career": {},
+    "team": "San Francisco Giants",
+    "era": 8.44,
+    "whip": 1.5,
+    "strikeouts": 6,
+    "walks": 3,
+    "innings_pitched": 5.1,
+    "games_started": 1,
+    "wins": 0,
+    "losses": 1,
+    "last_updated": "2025-08-08T22:07:12.850965"
   },
   "573204": {
     "id": "573204",
@@ -44150,7 +47630,17 @@
       "sacBunts": 0,
       "sacFlies": 2
     },
-    "career": {}
+    "career": {},
+    "team": "Chicago Cubs",
+    "era": 2.34,
+    "whip": 0.87,
+    "strikeouts": 40,
+    "walks": 12,
+    "innings_pitched": 42.1,
+    "games_started": 0,
+    "wins": 2,
+    "losses": 3,
+    "last_updated": "2025-08-08T22:08:07.327101"
   },
   "671162": {
     "id": "671162",
@@ -44686,7 +48176,17 @@
       "sacBunts": 0,
       "sacFlies": 0
     },
-    "career": {}
+    "career": {},
+    "team": "Minnesota Twins",
+    "era": 5.4,
+    "whip": 1.0,
+    "strikeouts": 2,
+    "walks": 1,
+    "innings_pitched": 5.0,
+    "games_started": 0,
+    "wins": 0,
+    "losses": 0,
+    "last_updated": "2025-08-08T22:07:31.076227"
   },
   "623437": {
     "id": "623437",
@@ -44753,7 +48253,17 @@
       "sacBunts": 2,
       "sacFlies": 2
     },
-    "career": {}
+    "career": {},
+    "team": "Minnesota Twins",
+    "era": 3.86,
+    "whip": 1.33,
+    "strikeouts": 41,
+    "walks": 12,
+    "innings_pitched": 46.2,
+    "games_started": 1,
+    "wins": 1,
+    "losses": 3,
+    "last_updated": "2025-08-08T22:07:30.543657"
   },
   "657053": {
     "id": "657053",
@@ -44887,7 +48397,17 @@
       "sacBunts": 0,
       "sacFlies": 0
     },
-    "career": {}
+    "career": {},
+    "team": "Los Angeles Dodgers",
+    "era": 3.72,
+    "whip": 2.07,
+    "strikeouts": 15,
+    "walks": 7,
+    "innings_pitched": 9.2,
+    "games_started": 0,
+    "wins": 0,
+    "losses": 2,
+    "last_updated": "2025-08-08T22:08:31.211265"
   },
   "642152": {
     "id": "642152",
@@ -45088,7 +48608,17 @@
       "sacBunts": 0,
       "sacFlies": 1
     },
-    "career": {}
+    "career": {},
+    "team": "Tampa Bay Rays",
+    "era": 4.27,
+    "whip": 1.22,
+    "strikeouts": 73,
+    "walks": 19,
+    "innings_pitched": 52.2,
+    "games_started": 0,
+    "wins": 7,
+    "losses": 2,
+    "last_updated": "2025-08-08T22:07:19.523826"
   },
   "570632": {
     "id": "570632",
@@ -45155,7 +48685,17 @@
       "sacBunts": 0,
       "sacFlies": 0
     },
-    "career": {}
+    "career": {},
+    "team": "Minnesota Twins",
+    "era": 5.24,
+    "whip": 1.52,
+    "strikeouts": 13,
+    "walks": 6,
+    "innings_pitched": 22.1,
+    "games_started": 3,
+    "wins": 0,
+    "losses": 0,
+    "last_updated": "2025-08-08T22:07:30.307199"
   },
   "682842": {
     "id": "682842",
@@ -45222,7 +48762,17 @@
       "sacBunts": 2,
       "sacFlies": 0
     },
-    "career": {}
+    "career": {},
+    "team": "Milwaukee Brewers",
+    "era": 1.95,
+    "whip": 1.1,
+    "strikeouts": 66,
+    "walks": 22,
+    "innings_pitched": 55.1,
+    "games_started": 0,
+    "wins": 2,
+    "losses": 1,
+    "last_updated": "2025-08-08T22:07:49.653361"
   },
   "664285": {
     "id": "664285",
@@ -45289,7 +48839,17 @@
       "sacBunts": 3,
       "sacFlies": 3
     },
-    "career": {}
+    "career": {},
+    "team": "Houston Astros",
+    "era": 2.83,
+    "whip": 1.12,
+    "strikeouts": 144,
+    "walks": 45,
+    "innings_pitched": 140.0,
+    "games_started": 22,
+    "wins": 11,
+    "losses": 5,
+    "last_updated": "2025-08-08T22:08:24.242394"
   },
   "701121": {
     "id": "701121",
@@ -45423,7 +48983,17 @@
       "sacBunts": 2,
       "sacFlies": 1
     },
-    "career": {}
+    "career": {},
+    "team": "Seattle Mariners",
+    "era": 3.81,
+    "whip": 1.38,
+    "strikeouts": 38,
+    "walks": 20,
+    "innings_pitched": 54.1,
+    "games_started": 0,
+    "wins": 3,
+    "losses": 5,
+    "last_updated": "2025-08-08T22:07:08.838693"
   },
   "686973": {
     "id": "686973",
@@ -45490,7 +49060,17 @@
       "sacBunts": 3,
       "sacFlies": 1
     },
-    "career": {}
+    "career": {},
+    "team": "Toronto Blue Jays",
+    "era": 2.08,
+    "whip": 1.1,
+    "strikeouts": 50,
+    "walks": 14,
+    "innings_pitched": 52.0,
+    "games_started": 0,
+    "wins": 3,
+    "losses": 3,
+    "last_updated": "2025-08-08T22:07:27.556391"
   },
   "678024": {
     "id": "678024",
@@ -45557,7 +49137,17 @@
       "sacBunts": 0,
       "sacFlies": 0
     },
-    "career": {}
+    "career": {},
+    "team": "Chicago White Sox",
+    "era": 2.38,
+    "whip": 1.24,
+    "strikeouts": 57,
+    "walks": 41,
+    "innings_pitched": 75.2,
+    "games_started": 3,
+    "wins": 5,
+    "losses": 3,
+    "last_updated": "2025-08-08T22:07:40.688368"
   },
   "681190": {
     "id": "681190",
@@ -45758,7 +49348,17 @@
       "sacBunts": 0,
       "sacFlies": 5
     },
-    "career": {}
+    "career": {},
+    "team": "San Francisco Giants",
+    "era": 4.29,
+    "whip": 1.45,
+    "strikeouts": 81,
+    "walks": 35,
+    "innings_pitched": 94.1,
+    "games_started": 19,
+    "wins": 1,
+    "losses": 8,
+    "last_updated": "2025-08-08T22:07:12.570658"
   },
   "681911": {
     "id": "681911",
@@ -45825,7 +49425,17 @@
       "sacBunts": 0,
       "sacFlies": 2
     },
-    "career": {}
+    "career": {},
+    "team": "Los Angeles Dodgers",
+    "era": 2.47,
+    "whip": 0.93,
+    "strikeouts": 64,
+    "walks": 14,
+    "innings_pitched": 47.1,
+    "games_started": 0,
+    "wins": 2,
+    "losses": 1,
+    "last_updated": "2025-08-08T22:08:30.038861"
   },
   "676684": {
     "id": "676684",
@@ -45892,7 +49502,17 @@
       "sacBunts": 0,
       "sacFlies": 1
     },
-    "career": {}
+    "career": {},
+    "team": "Detroit Tigers",
+    "era": 2.79,
+    "whip": 1.1,
+    "strikeouts": 54,
+    "walks": 15,
+    "innings_pitched": 48.1,
+    "games_started": 0,
+    "wins": 5,
+    "losses": 2,
+    "last_updated": "2025-08-08T22:08:22.451870"
   },
   "680767": {
     "id": "680767",
@@ -45959,7 +49579,17 @@
       "sacBunts": 0,
       "sacFlies": 1
     },
-    "career": {}
+    "career": {},
+    "team": "Colorado Rockies",
+    "era": 4.01,
+    "whip": 1.63,
+    "strikeouts": 35,
+    "walks": 21,
+    "innings_pitched": 33.2,
+    "games_started": 0,
+    "wins": 3,
+    "losses": 3,
+    "last_updated": "2025-08-08T22:08:19.073201"
   },
   "608379": {
     "id": "608379",
@@ -46026,7 +49656,17 @@
       "sacBunts": 3,
       "sacFlies": 4
     },
-    "career": {}
+    "career": {},
+    "team": "Kansas City Royals",
+    "era": 3.36,
+    "whip": 1.15,
+    "strikeouts": 98,
+    "walks": 35,
+    "innings_pitched": 131.1,
+    "games_started": 23,
+    "wins": 6,
+    "losses": 9,
+    "last_updated": "2025-08-08T22:08:28.305851"
   },
   "663399": {
     "id": "663399",
@@ -46361,7 +50001,17 @@
       "sacBunts": 1,
       "sacFlies": 1
     },
-    "career": {}
+    "career": {},
+    "team": "San Francisco Giants",
+    "era": 4.05,
+    "whip": 1.16,
+    "strikeouts": 46,
+    "walks": 14,
+    "innings_pitched": 46.2,
+    "games_started": 0,
+    "wins": 4,
+    "losses": 4,
+    "last_updated": "2025-08-08T22:07:14.035407"
   },
   "592836": {
     "id": "592836",
@@ -46428,7 +50078,17 @@
       "sacBunts": 1,
       "sacFlies": 1
     },
-    "career": {}
+    "career": {},
+    "team": "Philadelphia Phillies",
+    "era": 3.53,
+    "whip": 1.3,
+    "strikeouts": 60,
+    "walks": 25,
+    "innings_pitched": 79.0,
+    "games_started": 13,
+    "wins": 4,
+    "losses": 5,
+    "last_updated": "2025-08-08T22:07:34.807990"
   },
   "687888": {
     "id": "687888",
@@ -46696,7 +50356,17 @@
       "sacBunts": 1,
       "sacFlies": 4
     },
-    "career": {}
+    "career": {},
+    "team": "New York Yankees",
+    "era": 4.44,
+    "whip": 1.42,
+    "strikeouts": 133,
+    "walks": 54,
+    "innings_pitched": 115.2,
+    "games_started": 24,
+    "wins": 6,
+    "losses": 5,
+    "last_updated": "2025-08-08T22:07:48.634914"
   },
   "677960": {
     "id": "677960",
@@ -46830,7 +50500,17 @@
       "sacBunts": 0,
       "sacFlies": 2
     },
-    "career": {}
+    "career": {},
+    "team": "New York Yankees",
+    "era": 2.82,
+    "whip": 0.85,
+    "strikeouts": 46,
+    "walks": 13,
+    "innings_pitched": 44.2,
+    "games_started": 0,
+    "wins": 2,
+    "losses": 3,
+    "last_updated": "2025-08-08T22:07:47.699396"
   },
   "657097": {
     "id": "657097",
@@ -46964,7 +50644,17 @@
       "sacBunts": 4,
       "sacFlies": 4
     },
-    "career": {}
+    "career": {},
+    "team": "San Francisco Giants",
+    "era": 3.24,
+    "whip": 1.25,
+    "strikeouts": 165,
+    "walks": 34,
+    "innings_pitched": 147.1,
+    "games_started": 24,
+    "wins": 10,
+    "losses": 8,
+    "last_updated": "2025-08-08T22:07:13.090160"
   },
   "607179": {
     "id": "607179",
@@ -47098,7 +50788,17 @@
       "sacBunts": 1,
       "sacFlies": 0
     },
-    "career": {}
+    "career": {},
+    "team": "Boston Red Sox",
+    "era": 2.81,
+    "whip": 1.17,
+    "strikeouts": 36,
+    "walks": 16,
+    "innings_pitched": 48.0,
+    "games_started": 0,
+    "wins": 4,
+    "losses": 3,
+    "last_updated": "2025-08-08T22:08:04.534764"
   },
   "666214": {
     "id": "666214",
@@ -47165,7 +50865,17 @@
       "sacBunts": 0,
       "sacFlies": 3
     },
-    "career": {}
+    "career": {},
+    "team": "Atlanta Braves",
+    "era": 5.34,
+    "whip": 1.45,
+    "strikeouts": 52,
+    "walks": 27,
+    "innings_pitched": 57.1,
+    "games_started": 4,
+    "wins": 2,
+    "losses": 3,
+    "last_updated": "2025-08-08T22:07:37.707505"
   },
   "669713": {
     "id": "669713",
@@ -47299,7 +51009,17 @@
       "sacBunts": 0,
       "sacFlies": 2
     },
-    "career": {}
+    "career": {},
+    "team": "Philadelphia Phillies",
+    "era": 2.64,
+    "whip": 0.92,
+    "strikeouts": 182,
+    "walks": 28,
+    "innings_pitched": 139.2,
+    "games_started": 22,
+    "wins": 9,
+    "losses": 5,
+    "last_updated": "2025-08-08T22:07:35.274887"
   },
   "687931": {
     "id": "687931",
@@ -47366,7 +51086,17 @@
       "sacBunts": 0,
       "sacFlies": 0
     },
-    "career": {}
+    "career": {},
+    "team": "San Francisco Giants",
+    "era": 4.35,
+    "whip": 1.16,
+    "strikeouts": 7,
+    "walks": 4,
+    "innings_pitched": 10.1,
+    "games_started": 2,
+    "wins": 1,
+    "losses": 0,
+    "last_updated": "2025-08-08T22:07:11.786389"
   },
   "669391": {
     "id": "669391",
@@ -47567,7 +51297,17 @@
       "sacBunts": 0,
       "sacFlies": 2
     },
-    "career": {}
+    "career": {},
+    "team": "Boston Red Sox",
+    "era": 2.91,
+    "whip": 1.12,
+    "strikeouts": 66,
+    "walks": 20,
+    "innings_pitched": 52.2,
+    "games_started": 0,
+    "wins": 5,
+    "losses": 1,
+    "last_updated": "2025-08-08T22:08:04.314380"
   },
   "696136": {
     "id": "696136",
@@ -47768,7 +51508,17 @@
       "sacBunts": 1,
       "sacFlies": 1
     },
-    "career": {}
+    "career": {},
+    "team": "New York Yankees",
+    "era": 5.73,
+    "whip": 1.23,
+    "strikeouts": 56,
+    "walks": 19,
+    "innings_pitched": 44.0,
+    "games_started": 0,
+    "wins": 3,
+    "losses": 5,
+    "last_updated": "2025-08-08T22:07:47.173383"
   },
   "668909": {
     "id": "668909",
@@ -47835,7 +51585,17 @@
       "sacBunts": 1,
       "sacFlies": 2
     },
-    "career": {}
+    "career": {},
+    "team": "Cleveland Guardians",
+    "era": 3.17,
+    "whip": 1.3,
+    "strikeouts": 123,
+    "walks": 66,
+    "innings_pitched": 125.0,
+    "games_started": 23,
+    "wins": 7,
+    "losses": 4,
+    "last_updated": "2025-08-08T22:08:13.847644"
   },
   "592866": {
     "id": "592866",
@@ -48036,7 +51796,17 @@
       "sacBunts": 1,
       "sacFlies": 1
     },
-    "career": {}
+    "career": {},
+    "team": "Boston Red Sox",
+    "era": 2.83,
+    "whip": 1.37,
+    "strikeouts": 41,
+    "walks": 14,
+    "innings_pitched": 35.0,
+    "games_started": 0,
+    "wins": 3,
+    "losses": 1,
+    "last_updated": "2025-08-08T22:08:05.221447"
   },
   "621051": {
     "id": "621051",
@@ -48103,7 +51873,17 @@
       "sacBunts": 0,
       "sacFlies": 5
     },
-    "career": {}
+    "career": {},
+    "team": "Chicago White Sox",
+    "era": 2.93,
+    "whip": 1.35,
+    "strikeouts": 37,
+    "walks": 19,
+    "innings_pitched": 40.0,
+    "games_started": 0,
+    "wins": 2,
+    "losses": 1,
+    "last_updated": "2025-08-08T22:07:41.349209"
   },
   "642216": {
     "id": "642216",
@@ -48304,7 +52084,17 @@
       "sacBunts": 2,
       "sacFlies": 0
     },
-    "career": {}
+    "career": {},
+    "team": "Texas Rangers",
+    "era": 1.07,
+    "whip": 1.03,
+    "strikeouts": 19,
+    "walks": 12,
+    "innings_pitched": 25.1,
+    "games_started": 0,
+    "wins": 0,
+    "losses": 1,
+    "last_updated": "2025-08-08T22:07:22.219594"
   },
   "664991": {
     "id": "664991",
@@ -48371,7 +52161,17 @@
       "sacBunts": 0,
       "sacFlies": 0
     },
-    "career": {}
+    "career": {},
+    "team": "Baltimore Orioles",
+    "era": 7.82,
+    "whip": 2.05,
+    "strikeouts": 16,
+    "walks": 9,
+    "innings_pitched": 12.2,
+    "games_started": 0,
+    "wins": 2,
+    "losses": 0,
+    "last_updated": "2025-08-08T22:08:00.985249"
   },
   "693433": {
     "id": "693433",
@@ -48438,7 +52238,17 @@
       "sacBunts": 3,
       "sacFlies": 3
     },
-    "career": {}
+    "career": {},
+    "team": "Seattle Mariners",
+    "era": 3.02,
+    "whip": 0.94,
+    "strikeouts": 136,
+    "walks": 25,
+    "innings_pitched": 140.0,
+    "games_started": 22,
+    "wins": 9,
+    "losses": 6,
+    "last_updated": "2025-08-08T22:07:08.387981"
   },
   "663765": {
     "id": "663765",
@@ -48505,7 +52315,17 @@
       "sacBunts": 2,
       "sacFlies": 1
     },
-    "career": {}
+    "career": {},
+    "team": "Arizona Diamondbacks",
+    "era": 6.19,
+    "whip": 2.06,
+    "strikeouts": 8,
+    "walks": 5,
+    "innings_pitched": 16.0,
+    "games_started": 0,
+    "wins": 0,
+    "losses": 2,
+    "last_updated": "2025-08-08T22:07:57.702777"
   },
   "605540": {
     "id": "605540",
@@ -48572,7 +52392,17 @@
       "sacBunts": 0,
       "sacFlies": 0
     },
-    "career": {}
+    "career": {},
+    "team": "Milwaukee Brewers",
+    "era": 2.29,
+    "whip": 0.65,
+    "strikeouts": 45,
+    "walks": 6,
+    "innings_pitched": 35.1,
+    "games_started": 6,
+    "wins": 4,
+    "losses": 0,
+    "last_updated": "2025-08-08T22:07:49.771859"
   },
   "680573": {
     "id": "680573",
@@ -48706,7 +52536,17 @@
       "sacBunts": 2,
       "sacFlies": 3
     },
-    "career": {}
+    "career": {},
+    "team": "Los Angeles Dodgers",
+    "era": 3.94,
+    "whip": 1.19,
+    "strikeouts": 50,
+    "walks": 12,
+    "innings_pitched": 48.0,
+    "games_started": 2,
+    "wins": 4,
+    "losses": 3,
+    "last_updated": "2025-08-08T22:08:32.389356"
   },
   "691094": {
     "id": "691094",
@@ -48840,7 +52680,17 @@
       "sacBunts": 2,
       "sacFlies": 1
     },
-    "career": {}
+    "career": {},
+    "team": "Los Angeles Dodgers",
+    "era": 2.51,
+    "whip": 1.04,
+    "strikeouts": 139,
+    "walks": 39,
+    "innings_pitched": 122.0,
+    "games_started": 22,
+    "wins": 10,
+    "losses": 7,
+    "last_updated": "2025-08-08T22:08:32.699059"
   },
   "642232": {
     "id": "642232",
@@ -49108,7 +52958,17 @@
       "sacBunts": 2,
       "sacFlies": 1
     },
-    "career": {}
+    "career": {},
+    "team": "Baltimore Orioles",
+    "era": 5.88,
+    "whip": 1.67,
+    "strikeouts": 38,
+    "walks": 18,
+    "innings_pitched": 41.1,
+    "games_started": 9,
+    "wins": 0,
+    "losses": 5,
+    "last_updated": "2025-08-08T22:07:59.694005"
   },
   "664849": {
     "id": "664849",
@@ -49309,7 +53169,17 @@
       "sacBunts": 0,
       "sacFlies": 0
     },
-    "career": {}
+    "career": {},
+    "team": "Los Angeles Angels",
+    "era": 5.31,
+    "whip": 1.49,
+    "strikeouts": 55,
+    "walks": 25,
+    "innings_pitched": 42.1,
+    "games_started": 1,
+    "wins": 6,
+    "losses": 4,
+    "last_updated": "2025-08-08T22:07:55.101486"
   },
   "672582": {
     "id": "672582",
@@ -49376,7 +53246,17 @@
       "sacBunts": 2,
       "sacFlies": 0
     },
-    "career": {}
+    "career": {},
+    "team": "Kansas City Royals",
+    "era": 4.11,
+    "whip": 1.37,
+    "strikeouts": 43,
+    "walks": 15,
+    "innings_pitched": 46.0,
+    "games_started": 2,
+    "wins": 3,
+    "losses": 1,
+    "last_updated": "2025-08-08T22:08:26.488549"
   },
   "676604": {
     "id": "676604",

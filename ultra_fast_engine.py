@@ -70,9 +70,13 @@ class UltraFastSimEngine:
         self.advantage_multipliers = np.linspace(0.85, 1.15, 21)  # -1.0 to +1.0 strength diff
     
     def _load_team_strengths_fast(self) -> Dict[str, float]:
-        """Fast team strength loading with caching"""
+        """Fast team strength loading with caching and auto-refresh"""
         try:
             cache_file = os.path.join(os.path.dirname(__file__), 'team_strength_cache.json')
+            
+            # Check if we need to refresh team strength data
+            self._auto_refresh_team_data_if_needed()
+            
             if os.path.exists(cache_file):
                 with open(cache_file, 'r') as f:
                     return json.load(f)
@@ -89,8 +93,11 @@ class UltraFastSimEngine:
         return strengths
     
     def _load_pitcher_stats(self) -> Dict[str, Dict]:
-        """Load pitcher stats for quality adjustments"""
+        """Load pitcher stats for quality adjustments with auto-refresh"""
         try:
+            # Check if we need to refresh pitcher data
+            self._auto_refresh_pitcher_data_if_needed()
+            
             pitcher_file = os.path.join(os.path.dirname(__file__), 'pitcher_stats_2025_and_career.json')
             if os.path.exists(pitcher_file):
                 with open(pitcher_file, 'r') as f:
@@ -202,6 +209,66 @@ class UltraFastSimEngine:
                 
         except Exception as e:
             print(f"⚠️ Auto-refresh failed: {e}")
+    
+    def _auto_refresh_team_data_if_needed(self):
+        """Auto-refresh team strength data if it's stale"""
+        try:
+            import time
+            
+            cache_file = os.path.join(os.path.dirname(__file__), 'team_strength_cache.json')
+            
+            # Check if file needs refresh (older than 12 hours)
+            needs_refresh = True
+            if os.path.exists(cache_file):
+                file_age = time.time() - os.path.getmtime(cache_file)
+                if file_age < 12 * 3600:  # 12 hours
+                    needs_refresh = False
+            
+            if needs_refresh:
+                print("🔄 Auto-refreshing team strength data...")
+                
+                # Import and run the auto-updater
+                try:
+                    from auto_update_mlb_data import MLBDataAutoUpdater
+                    updater = MLBDataAutoUpdater()
+                    updater.update_team_strength_cache()
+                except ImportError:
+                    print("⚠️ Auto-updater module not available")
+                except Exception as e:
+                    print(f"⚠️ Team data auto-refresh failed: {e}")
+                    
+        except Exception as e:
+            print(f"⚠️ Team data refresh check failed: {e}")
+    
+    def _auto_refresh_pitcher_data_if_needed(self):
+        """Auto-refresh pitcher stats if they're stale"""
+        try:
+            import time
+            
+            pitcher_file = os.path.join(os.path.dirname(__file__), 'pitcher_stats_2025_and_career.json')
+            
+            # Check if file needs refresh (older than 24 hours)
+            needs_refresh = True
+            if os.path.exists(pitcher_file):
+                file_age = time.time() - os.path.getmtime(pitcher_file)
+                if file_age < 24 * 3600:  # 24 hours
+                    needs_refresh = False
+            
+            if needs_refresh:
+                print("🔄 Auto-refreshing pitcher stats...")
+                
+                # Import and run the auto-updater
+                try:
+                    from auto_update_mlb_data import MLBDataAutoUpdater
+                    updater = MLBDataAutoUpdater()
+                    updater.update_pitcher_stats()
+                except ImportError:
+                    print("⚠️ Auto-updater module not available")
+                except Exception as e:
+                    print(f"⚠️ Pitcher data auto-refresh failed: {e}")
+                    
+        except Exception as e:
+            print(f"⚠️ Pitcher data refresh check failed: {e}")
     
     def get_pitcher_quality_factor(self, pitcher_name: str) -> float:
         """
