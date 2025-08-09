@@ -748,7 +748,7 @@ HTML_TEMPLATE = """
                 <div class="stats-grid">
                     <div class="stat-box">
                         <div class="stat-label">Win Probability</div>
-                        <div class="stat-value">🏠 ${(p.home_win_prob * 100).toFixed(1)}% | ✈️ ${(p.away_win_prob * 100).toFixed(1)}%</div>
+                        <div class="stat-value">🏠 ${(p.home_win_probability * 100).toFixed(1)}% | ✈️ ${(p.away_win_probability * 100).toFixed(1)}%</div>
                     </div>
                     <div class="stat-box">
                         <div class="stat-label">Predicted Score</div>

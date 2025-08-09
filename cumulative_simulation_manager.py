@@ -54,12 +54,12 @@ class CumulativeGameData:
         """Calculate home team win probability"""
         if self.total_simulations == 0:
             return 0.5
-        return self.home_wins / self.total_simulations
+        return round(self.home_wins / self.total_simulations, 4)
     
     @property
     def away_win_probability(self) -> float:
         """Calculate away team win probability"""
-        return 1.0 - self.home_win_probability
+        return round(1.0 - self.home_win_probability, 4)
     
     @property
     def average_home_runs(self) -> float:
