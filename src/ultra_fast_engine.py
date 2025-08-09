@@ -487,7 +487,7 @@ class UltraFastSimEngine:
         
         # OPTIMIZED Poisson parameters for balanced performance
         # Base lambda fine-tuned for consistent 8-9 run average with good variance
-        base_lambda = 3.8  # Slightly increased for better scoring balance
+        base_lambda = 4.2  # Tuned to hit 8.86 MLB average target
         
         # Apply team and pitcher multipliers with EXTREME variance
         away_lambda = base_lambda * away_mult
