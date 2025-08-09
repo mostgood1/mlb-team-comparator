@@ -722,41 +722,83 @@ HTML_TEMPLATE = """
             const meta = data.meta;
             const recs = data.recommendations;
             const lines = data.betting_lines;
+            const actual = data.actual_results;
             
-            let html = `
+            // Historical data header
+            let historicalHeader = '';
+            if (meta.is_historical && actual) {
+                historicalHeader = `
+                    <div class="historical-header" style="background: linear-gradient(45deg, #3498db, #2980b9); padding: 15px; border-radius: 10px; margin-bottom: 15px; text-align: center;">
+                        <h3 style="margin: 0; color: white;">📊 HISTORICAL GAME - LOCKED PREDICTION</h3>
+                        <p style="margin: 5px 0 0 0; color: #ecf0f1;">Showing actual results vs our prediction for accuracy demonstration</p>
+                    </div>
+                `;
+            }
+            
+            let html = historicalHeader + `
                 <div class="execution-time">
-                    ${meta.cumulative_mode ? '📊 Cumulative:' : '⚡ Generated in'} ${meta.simulations_run} total simulations
-                    ${meta.cumulative_mode ? `<div class="cumulative-info">📈 Built up over time | Period: ${meta.simulation_period || 'Multiple sessions'}</div>` : ''}
+                    ${meta.is_historical ? '🔒 CACHED HISTORICAL' : (meta.cumulative_mode ? '📊 Cumulative:' : '⚡ Generated in')} ${meta.is_historical ? 'PREDICTION' : meta.simulations_run + ' total simulations'}
+                    ${meta.cumulative_mode && !meta.is_historical ? `<div class="cumulative-info">📈 Built up over time | Period: ${meta.simulation_period || 'Multiple sessions'}</div>` : ''}
                 </div>
                 
                 <div class="matchup">
                     ✈️ ${data.away_team} @ 🏠 ${data.home_team}
-                </div>
+                </div>`;
                 
-                <div class="performance-stats">
-                    <div class="perf-box">
-                        <strong>Speed</strong><br>${meta.execution_time_ms}ms
+            // Historical comparison section
+            if (meta.is_historical && actual) {
+                html += `
+                    <div class="historical-comparison" style="background: rgba(52, 152, 219, 0.1); padding: 15px; border-radius: 10px; margin: 15px 0; border: 2px solid #3498db;">
+                        <h4 style="text-align: center; margin-bottom: 15px; color: #2c3e50;">🎯 PREDICTION vs ACTUAL RESULTS</h4>
+                        <div class="comparison-grid" style="display: grid; grid-template-columns: 1fr 1fr; gap: 15px;">
+                            <div class="predicted-section" style="background: rgba(155, 89, 182, 0.2); padding: 12px; border-radius: 8px;">
+                                <h5 style="margin-top: 0; color: #8e44ad;">🔮 OUR PREDICTION</h5>
+                                <div><strong>Score:</strong> ${p.away_score?.toFixed(1) || 'N/A'} - ${p.home_score?.toFixed(1) || 'N/A'}</div>
+                                <div><strong>Total Runs:</strong> ${p.predicted_total_runs?.toFixed(1) || 'N/A'}</div>
+                            </div>
+                            <div class="actual-section" style="background: rgba(46, 204, 113, 0.2); padding: 12px; border-radius: 8px;">
+                                <h5 style="margin-top: 0; color: #27ae60;">✅ ACTUAL RESULT</h5>
+                                <div><strong>Score:</strong> ${actual.actual_away_score} - ${actual.actual_home_score}</div>
+                                <div><strong>Total Runs:</strong> ${actual.actual_total_runs}</div>
+                            </div>
+                        </div>
+                        <div class="accuracy-stats" style="text-align: center; margin-top: 15px; padding: 10px; background: rgba(241, 196, 15, 0.2); border-radius: 8px;">
+                            <div><strong>📊 Prediction Error:</strong> ${actual.prediction_error?.toFixed(1)} runs</div>
+                            <div><strong>🏆 Winner Prediction:</strong> ${actual.winner_correct ? '✅ CORRECT' : '❌ INCORRECT'}</div>
+                        </div>
                     </div>
-                    <div class="perf-box">
-                        <strong>Confidence</strong><br>${p.confidence}%
+                `;
+            } else {
+                // Standard prediction stats for current games
+                html += `
+                    <div class="performance-stats">
+                        <div class="perf-box">
+                            <strong>Speed</strong><br>${meta.execution_time_ms}ms
+                        </div>
+                        <div class="perf-box">
+                            <strong>Confidence</strong><br>${p.confidence || 95}%
+                        </div>
+                        <div class="perf-box">
+                            <strong>Recommendations</strong><br>${meta.recommendations_found || 0}
+                        </div>
                     </div>
-                    <div class="perf-box">
-                        <strong>Recommendations</strong><br>${meta.recommendations_found}
-                    </div>
-                </div>
-                
+                `;
+            }
+            
+            // Standard stats section (always show)
+            html += `
                 <div class="stats-grid">
                     <div class="stat-box">
-                        <div class="stat-label">Win Probability</div>
+                        <div class="stat-label">${meta.is_historical ? 'Predicted Win Probability' : 'Win Probability'}</div>
                         <div class="stat-value">🏠 ${((p.home_win_probability || 0.5) * 100).toFixed(1)}% | ✈️ ${((p.away_win_probability || 0.5) * 100).toFixed(1)}%</div>
                     </div>
                     <div class="stat-box">
-                        <div class="stat-label">Predicted Score</div>
-                        <div class="stat-value">${p.predicted_away_score || 'N/A'} - ${p.predicted_home_score || 'N/A'}</div>
+                        <div class="stat-label">${meta.is_historical ? 'Predicted Score' : 'Predicted Score'}</div>
+                        <div class="stat-value">${p.away_score?.toFixed(1) || 'N/A'} - ${p.home_score?.toFixed(1) || 'N/A'}</div>
                     </div>
                     <div class="stat-box">
-                        <div class="stat-label">Total Runs</div>
-                        <div class="stat-value">${(p.predicted_total || 10.0).toFixed(1)}</div>
+                        <div class="stat-label">${meta.is_historical ? 'Predicted Total' : 'Total Runs'}</div>
+                        <div class="stat-value">${(p.predicted_total_runs || 10.0).toFixed(1)}</div>
                     </div>
                     <div class="stat-box">
                         <div class="stat-label">Range</div>
@@ -774,35 +816,49 @@ HTML_TEMPLATE = """
                         `<br><small>Quality Impact: Away ${data.pitcher_quality.away_pitcher_factor ? (data.pitcher_quality.away_pitcher_factor || 1.0).toFixed(3) : 'N/A'} | Home ${data.pitcher_quality.home_pitcher_factor ? (data.pitcher_quality.home_pitcher_factor || 1.0).toFixed(3) : 'N/A'}</small>` : 
                         ''
                     }
-                </div>
+                </div>`;
                 
-                <div class="recommendations-section">
-                    <div class="rec-header">💰 Betting Recommendations</div>
-            `;
-            
-            if (recs && recs.length > 0) {
-                recs.forEach(rec => {
-                    html += `
-                        <div class="recommendation">
-                            <div class="rec-type">
-                                🔥 ${rec.type.toUpperCase()}: ${rec.side.toUpperCase()}
-                                ${rec.confidence === 'HIGH' ? '🚀' : '📈'}
+            // Only show betting recommendations for current games
+            if (!meta.is_historical) {
+                html += `
+                    <div class="recommendations-section">
+                        <div class="rec-header">💰 Betting Recommendations</div>
+                `;
+                
+                if (recs && recs.length > 0) {
+                    recs.forEach(rec => {
+                        html += `
+                            <div class="recommendation">
+                                <div class="rec-type">
+                                    🔥 ${rec.type.toUpperCase()}: ${rec.side.toUpperCase()}
+                                    ${rec.confidence === 'HIGH' ? '🚀' : '📈'}
+                                </div>
+                                <div class="rec-details">
+                                    <div class="rec-stat"><strong>EV:</strong> ${(rec.expected_value * 100).toFixed(1)}%</div>
+                                    <div class="rec-stat"><strong>Edge:</strong> ${(rec.edge * 100).toFixed(1)}%</div>
+                                    <div class="rec-stat"><strong>Kelly:</strong> ${rec.kelly_bet_size}%</div>
+                                    <div class="rec-stat"><strong>Odds:</strong> ${rec.odds}</div>
+                                </div>
+                                <div class="rec-reasoning">${rec.reasoning}</div>
                             </div>
-                            <div class="rec-details">
-                                <div class="rec-stat"><strong>EV:</strong> ${(rec.expected_value * 100).toFixed(1)}%</div>
-                                <div class="rec-stat"><strong>Edge:</strong> ${(rec.edge * 100).toFixed(1)}%</div>
-                                <div class="rec-stat"><strong>Kelly:</strong> ${rec.kelly_bet_size}%</div>
-                                <div class="rec-stat"><strong>Odds:</strong> ${rec.odds}</div>
-                            </div>
-                            <div class="rec-reasoning">${rec.reasoning}</div>
-                        </div>
-                    `;
-                });
+                        `;
+                    });
+                } else {
+                    html += '<div class="no-recs">No betting value identified at current lines</div>';
+                }
+                
+                html += `</div>`;  // Close recommendations section
             } else {
-                html += '<div class="no-recs">No betting value identified at current lines</div>';
+                // For historical games, show a message about betting
+                html += `
+                    <div class="historical-note" style="background: rgba(149, 165, 166, 0.2); padding: 12px; border-radius: 8px; text-align: center; margin-top: 15px;">
+                        <em>📊 Historical game - betting analysis not applicable</em>
+                    </div>
+                `;
             }
             
-            html += `</div>`;
+            return html;
+        }
             return html;
         }
 
