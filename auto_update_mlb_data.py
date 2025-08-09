@@ -10,12 +10,14 @@ import os
 from datetime import datetime, timedelta
 from typing import Dict, List
 import time
+from auto_update_betting_lines import BettingLinesAutoUpdater
 
 class MLBDataAutoUpdater:
     
     def __init__(self):
         self.current_season = 2025
         self.base_url = "https://statsapi.mlb.com/api/v1"
+        self.betting_updater = BettingLinesAutoUpdater()
         
     def should_update_data(self, filename: str, max_age_hours: int = 24) -> bool:
         """Check if data file needs updating based on age"""
@@ -246,14 +248,29 @@ class MLBDataAutoUpdater:
         except Exception as e:
             print(f"❌ Error saving pitcher stats: {e}")
             return False
+    
+    def update_betting_lines(self) -> bool:
+        """Update betting lines using the integrated betting lines updater"""
+        try:
+            # Check if betting lines need updating (every 3 hours)
+            if not self.betting_updater.should_update_betting_lines(max_age_hours=3):
+                print("✅ Betting lines are fresh - skipping update")
+                return True
+            
+            # Update betting lines
+            return self.betting_updater.update_betting_lines()
+            
+        except Exception as e:
+            print(f"❌ Error updating betting lines: {e}")
+            return False
 
     def update_all_data(self) -> bool:
-        """Update all MLB data files"""
+        """Update all MLB data files including betting lines"""
         print("🚀 AUTO-UPDATING MLB DATA")
         print("=" * 40)
         
         success_count = 0
-        total_updates = 2
+        total_updates = 3  # Added betting lines
         
         # Update team strengths
         if self.update_team_strength_cache():
@@ -261,6 +278,10 @@ class MLBDataAutoUpdater:
         
         # Update pitcher stats
         if self.update_pitcher_stats():
+            success_count += 1
+        
+        # Update betting lines (new)
+        if self.update_betting_lines():
             success_count += 1
         
         print("\n" + "=" * 40)

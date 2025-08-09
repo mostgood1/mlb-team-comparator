@@ -668,7 +668,7 @@ class FastPredictionEngine:
         self.betting_analyzer = SmartBettingAnalyzer()
         
     def get_fast_prediction(self, away_team: str, home_team: str, 
-                          sim_count: int = 250) -> Dict:
+                          sim_count: int = 250, game_date: str = None) -> Dict:
         """
         Generate complete prediction with recommendations in <200ms
         """
@@ -695,8 +695,8 @@ class FastPredictionEngine:
         away_ci = (np.percentile(away_scores, 10), np.percentile(away_scores, 90))
         total_ci = (np.percentile(total_runs, 10), np.percentile(total_runs, 90))
         
-        # Generate betting lines (can be replaced with real lines)
-        betting_lines = self._get_sample_lines(away_team, home_team, home_win_prob)
+        # Get real betting lines (with fallback to sample lines)
+        betting_lines = self._get_real_or_sample_lines(away_team, home_team, home_win_prob, game_date or datetime.now().strftime('%Y-%m-%d'))
         
         # Fast betting analysis
         ml_recs = self.betting_analyzer.analyze_moneyline_value(
@@ -762,6 +762,61 @@ class FastPredictionEngine:
             'spread_home': -1.5 if home_win_prob > 0.55 else 1.5,
             'spread_odds': -110
         }
+    
+    def _get_real_or_sample_lines(self, away_team: str, home_team: str, home_win_prob: float, game_date: str) -> Dict:
+        """Get real betting lines if available, otherwise generate sample lines"""
+        try:
+            # Try to load real betting lines
+            if os.path.exists('mlb_betting_lines.json'):
+                with open('mlb_betting_lines.json', 'r') as f:
+                    betting_data = json.load(f)
+                
+                # Look for lines for this game on this date
+                matchup_key = f"{away_team}_at_{home_team}"
+                if game_date in betting_data and matchup_key in betting_data[game_date]:
+                    real_lines = betting_data[game_date][matchup_key]
+                    
+                    # Convert real lines to our format
+                    lines = {
+                        'home_ml': None,
+                        'away_ml': None,
+                        'total_line': 8.5,
+                        'over_odds': -110,
+                        'under_odds': -110,
+                        'spread_home': -1.5 if home_win_prob > 0.55 else 1.5,
+                        'spread_odds': -110
+                    }
+                    
+                    # Extract moneyline
+                    if real_lines.get('moneyline'):
+                        ml = real_lines['moneyline']
+                        lines['home_ml'] = ml.get(home_team)
+                        lines['away_ml'] = ml.get(away_team)
+                    
+                    # Extract total
+                    if real_lines.get('total') and real_lines['total']:
+                        total_data = real_lines['total'][0] if isinstance(real_lines['total'], list) else real_lines['total']
+                        if isinstance(total_data, dict) and 'point' in total_data:
+                            lines['total_line'] = total_data['point']
+                            lines['over_odds'] = total_data.get('price', -110)
+                            
+                        # Find under odds
+                        if isinstance(real_lines['total'], list) and len(real_lines['total']) > 1:
+                            under_data = real_lines['total'][1]
+                            if isinstance(under_data, dict) and under_data.get('name') == 'Under':
+                                lines['under_odds'] = under_data.get('price', -110)
+                    
+                    # If we have real moneyline odds, use them
+                    if lines['home_ml'] is not None and lines['away_ml'] is not None:
+                        print(f"✅ Using real betting lines for {away_team} @ {home_team}")
+                        return lines
+        
+        except Exception as e:
+            print(f"⚠️ Could not load real betting lines: {e}")
+        
+        # Fallback to sample lines
+        print(f"📊 Using sample betting lines for {away_team} @ {home_team}")
+        return self._get_sample_lines(away_team, home_team, home_win_prob)
 
 def test_speed_and_recommendations():
     """Test the speed and recommendation quality"""
