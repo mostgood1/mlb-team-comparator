@@ -903,12 +903,29 @@ def get_betting_lines_for_teams(away_team, home_team, game_date):
         print(f"Warning: Could not load betting lines: {e}")
         return {}
 
-def get_pitcher_info_for_teams(away_team, home_team):
+def get_pitcher_info_for_teams(away_team, home_team, game_date=None):
     """Get pitcher information and quality factors for a matchup"""
     try:
-        # Load pitcher data from ProjectedStarters.json
-        with open('ProjectedStarters.json', 'r') as f:
-            pitcher_data = json.load(f)
+        pitcher_data = {}
+        
+        # Try date-aware storage first (for historical accuracy)
+        if game_date:
+            try:
+                with open('ProjectedStarters_DateAware.json', 'r') as f:
+                    date_aware_data = json.load(f)
+                
+                if game_date in date_aware_data:
+                    pitcher_data = date_aware_data[game_date]
+                    print(f"✅ Using date-aware pitcher data for {game_date}")
+                else:
+                    print(f"⚠️  No date-aware data for {game_date}, falling back to current data")
+            except:
+                print("⚠️  Could not load date-aware pitcher data, using current data")
+        
+        # Fallback to current ProjectedStarters.json
+        if not pitcher_data:
+            with open('ProjectedStarters.json', 'r') as f:
+                pitcher_data = json.load(f)
         
         # Look for this matchup in various formats
         possible_keys = [
@@ -941,7 +958,8 @@ def get_pitcher_info_for_teams(away_team, home_team):
                 'home_pitcher_name': home_pitcher,
                 'away_pitcher_factor': 1.0,  # Default neutral factor
                 'home_pitcher_factor': 1.0,  # Default neutral factor
-                'pitcher_matchup_info': f"{away_pitcher} vs {home_pitcher}"
+                'pitcher_matchup_info': f"{away_pitcher} vs {home_pitcher}",
+                'data_source': f"Date-aware: {game_date}" if game_date and game_date in date_aware_data else "Current data"
             }
         else:
             return {
@@ -949,7 +967,8 @@ def get_pitcher_info_for_teams(away_team, home_team):
                 'home_pitcher_name': 'TBD', 
                 'away_pitcher_factor': 1.0,
                 'home_pitcher_factor': 1.0,
-                'pitcher_matchup_info': 'Pitchers TBD'
+                'pitcher_matchup_info': 'Pitchers TBD',
+                'data_source': 'No data available'
             }
             
     except Exception as e:
@@ -959,7 +978,8 @@ def get_pitcher_info_for_teams(away_team, home_team):
             'home_pitcher_name': 'TBD',
             'away_pitcher_factor': 1.0,
             'home_pitcher_factor': 1.0,
-            'pitcher_matchup_info': 'Pitchers TBD'
+            'pitcher_matchup_info': 'Pitchers TBD',
+            'data_source': f'Error: {e}'
         }
 
 @app.route('/api/fast-predictions')
@@ -1052,7 +1072,7 @@ def get_fast_predictions():
                     )
                     
                     # Get pitcher information for this matchup
-                    pitcher_info = get_pitcher_info_for_teams(away, home)
+                    pitcher_info = get_pitcher_info_for_teams(away, home, selected_date)
                     
                     # Get betting lines for this matchup
                     betting_lines = get_betting_lines_for_teams(away, home, selected_date)
