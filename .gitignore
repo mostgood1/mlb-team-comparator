@@ -1,0 +1,18 @@
+# Clean deployment repository - only essential files for GitHub Pages
+
+# OS files
+.DS_Store
+Thumbs.db
+
+# IDE files
+.vscode/
+.idea/
+*.swp
+*.swo
+
+# Logs
+*.log
+
+# Keep docs folder for GitHub Pages
+# Keep .github folder for Actions
+# All large data files are excluded from this clean repository

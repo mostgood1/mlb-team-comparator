@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>⚡ Ultra-Fast MLB Predictions</title>
+    <style>
+        body { 
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+            margin: 0; padding: 20px; background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white; min-height: 100vh;
+        }
+        .container { max-width: 1400px; margin: 0 auto; }
+        .header { text-align: center; margin-bottom: 30px; }
+        .header h1 { font-size: 2.8em; margin: 0; text-shadow: 2px 2px 4px rgba(0,0,0,0.3); }
+        .speed-banner {
+            background: linear-gradient(45deg, #ff6b6b, #ee5a24);
+            padding: 15px 25px; border-radius: 50px; display: inline-block;
+            font-weight: 600; font-size: 1.1em; margin: 20px 0;
+            box-shadow: 0 8px 25px rgba(0,0,0,0.2);
+            animation: pulse 2s infinite;
+        }
+        @keyframes pulse {
+            0% { transform: scale(1); }
+            50% { transform: scale(1.05); }
+            100% { transform: scale(1); }
+        }
+        .main-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 30px; margin-bottom: 30px; }
+        .prediction-card {
+            background: rgba(255,255,255,0.1); backdrop-filter: blur(10px);
+            border-radius: 20px; padding: 30px; box-shadow: 0 15px 35px rgba(0,0,0,0.1);
+            border: 1px solid rgba(255,255,255,0.2);
+        }
+        .team-selector {
+            margin: 20px 0;
+        }
+        .team-selector label {
+            display: block; margin-bottom: 8px; font-weight: 600; font-size: 1.1em;
+        }
+        .team-selector select {
+            width: 100%; padding: 15px; border-radius: 15px; border: none;
+            background: rgba(255,255,255,0.9); color: #333; font-size: 1.1em;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+        }
+        .predict-btn {
+            background: linear-gradient(45deg, #4ecdc4, #26d0ce);
+            color: white; padding: 18px 40px; border: none; border-radius: 50px;
+            font-size: 1.2em; font-weight: 600; cursor: pointer;
+            box-shadow: 0 10px 25px rgba(0,0,0,0.2);
+            transition: all 0.3s ease; width: 100%; margin: 20px 0;
+        }
+        .predict-btn:hover {
+            transform: translateY(-3px); box-shadow: 0 15px 35px rgba(0,0,0,0.3);
+        }
+        .predict-btn:disabled {
+            background: #ccc; cursor: not-allowed; transform: none;
+        }
+        .results {
+            background: rgba(255,255,255,0.15); border-radius: 15px; padding: 25px;
+            margin: 20px 0; border: 1px solid rgba(255,255,255,0.2);
+        }
+        .score-display {
+            text-align: center; font-size: 2.5em; font-weight: 700;
+            margin: 20px 0; text-shadow: 2px 2px 4px rgba(0,0,0,0.3);
+        }
+        .loading {
+            text-align: center; padding: 40px;
+        }
+        .spinner {
+            border: 4px solid rgba(255,255,255,0.3);
+            border-top: 4px solid white;
+            border-radius: 50%; width: 40px; height: 40px;
+            animation: spin 1s linear infinite; margin: 0 auto 20px;
+        }
+        @keyframes spin {
+            0% { transform: rotate(0deg); }
+            100% { transform: rotate(360deg); }
+        }
+        .scenario-section {
+            margin-top: 30px; background: rgba(255,255,255,0.1);
+            border-radius: 15px; padding: 25px;
+        }
+        .scenario-btn {
+            background: linear-gradient(45deg, #fd79a8, #fdcb6e);
+            color: white; padding: 12px 25px; border: none; border-radius: 25px;
+            font-size: 1em; font-weight: 600; cursor: pointer; margin-right: 10px;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.2); transition: all 0.3s ease;
+        }
+        .scenario-btn:hover {
+            transform: translateY(-2px); box-shadow: 0 8px 20px rgba(0,0,0,0.3);
+        }
+        .scenario-results {
+            margin-top: 20px; display: grid; grid-template-columns: 1fr 1fr 1fr; gap: 15px;
+        }
+        .scenario-card {
+            background: rgba(255,255,255,0.1); border-radius: 10px; padding: 15px;
+            text-align: center; border: 1px solid rgba(255,255,255,0.2);
+        }
+        @media (max-width: 768px) {
+            .main-grid { grid-template-columns: 1fr; }
+            .scenario-results { grid-template-columns: 1fr; }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <h1>⚡ Ultra-Fast MLB Predictions</h1>
+            <div class="speed-banner">
+                🚀 Enhanced Predictability with Scenario Analysis • Sub-30ms Predictions
+            </div>
+        </div>
+
+        <div class="main-grid">
+            <div class="prediction-card">
+                <h2>🏟️ Team Matchup</h2>
+                
+                <div class="team-selector">
+                    <label for="awayTeam">Away Team:</label>
+                    <select id="awayTeam">
+                        <option value="">Select Away Team</option>
+                    </select>
+                </div>
+
+                <div class="team-selector">
+                    <label for="homeTeam">Home Team:</label>
+                    <select id="homeTeam">
+                        <option value="">Select Home Team</option>
+                    </select>
+                </div>
+
+                <button class="predict-btn" onclick="makePrediction()" id="predictBtn">
+                    🎯 Generate Prediction
+                </button>
+
+                <button class="scenario-btn" onclick="runScenarioAnalysis()" id="scenarioBtn" style="display: none;">
+                    📊 Scenario Analysis
+                </button>
+            </div>
+
+            <div class="prediction-card">
+                <h2>📊 Prediction Results</h2>
+                <div id="predictionResults">
+                    <p style="text-align: center; opacity: 0.7; margin: 40px 0;">
+                        Select teams and click "Generate Prediction" to see results
+                    </p>
+                </div>
+            </div>
+        </div>
+
+        <div class="scenario-section" id="scenarioSection" style="display: none;">
+            <h2>🎲 Enhanced Predictability Analysis</h2>
+            <div id="scenarioResults"></div>
+        </div>
+    </div>
+
+    <script src="js/mlb-teams.js"></script>
+    <script src="js/prediction-engine.js"></script>
+    <script src="js/app.js"></script>
+</body>
+</html>
