@@ -344,7 +344,7 @@ HTML_TEMPLATE = """
                 
                 // Calculate detailed analytics
                 const predictions = data.predictions;
-                const totalScores = predictions.map(p => p.predictions.predicted_total_runs);
+                const totalScores = predictions.map(p => p.predictions.predicted_total);
                 const awayScores = predictions.map(p => p.predictions.predicted_away_score);
                 const homeScores = predictions.map(p => p.predictions.predicted_home_score);
                 
@@ -354,8 +354,8 @@ HTML_TEMPLATE = """
                 const stdDev = Math.sqrt(totalScores.reduce((sq, n) => sq + Math.pow(n - avgTotal, 2), 0) / totalScores.length);
                 
                 // Categorize games
-                const highScoring = predictions.filter(p => p.predictions.predicted_total_runs >= 10);
-                const lowScoring = predictions.filter(p => p.predictions.predicted_total_runs <= 6);
+                const highScoring = predictions.filter(p => p.predictions.predicted_total >= 10);
+                const lowScoring = predictions.filter(p => p.predictions.predicted_total <= 6);
                 const closeGames = predictions.filter(p => Math.abs(p.predictions.predicted_away_score - p.predictions.predicted_home_score) <= 1);
                 const blowouts = predictions.filter(p => Math.abs(p.predictions.predicted_away_score - p.predictions.predicted_home_score) >= 3);
                 
@@ -421,7 +421,7 @@ HTML_TEMPLATE = """
                     html += `
                         <div style="background: rgba(255, 193, 7, 0.15); padding: 12px; border-radius: 8px; margin-bottom: 10px;">
                             <strong>🔥 Highest-Scoring Game:</strong> ${highScoring[0].away_team} @ ${highScoring[0].home_team} 
-                            (${highScoring[0].predictions.predicted_total_runs} runs)
+                            (${highScoring[0].predictions.predicted_total.toFixed(1)} runs)
                             ${highScoring[0].pitcher_quality ? 
                                 `<br><small>Pitchers: ${highScoring[0].pitcher_quality.away_pitcher_name || 'TBD'} vs ${highScoring[0].pitcher_quality.home_pitcher_name || 'TBD'}</small>` : 
                                 ''
@@ -434,7 +434,7 @@ HTML_TEMPLATE = """
                     html += `
                         <div style="background: rgba(108, 117, 125, 0.15); padding: 12px; border-radius: 8px; margin-bottom: 10px;">
                             <strong>🛡️ Lowest-Scoring Game:</strong> ${lowScoring[0].away_team} @ ${lowScoring[0].home_team} 
-                            (${lowScoring[0].predictions.predicted_total_runs} runs)
+                            (${lowScoring[0].predictions.predicted_total.toFixed(1)} runs)
                             ${lowScoring[0].pitcher_quality ? 
                                 `<br><small>Pitchers: ${lowScoring[0].pitcher_quality.away_pitcher_name || 'TBD'} vs ${lowScoring[0].pitcher_quality.home_pitcher_name || 'TBD'}</small>` : 
                                 ''
@@ -756,11 +756,11 @@ HTML_TEMPLATE = """
                     </div>
                     <div class="stat-box">
                         <div class="stat-label">Total Runs</div>
-                        <div class="stat-value">${p.predicted_total_runs}</div>
+                        <div class="stat-value">${p.predicted_total.toFixed(1)}</div>
                     </div>
                     <div class="stat-box">
                         <div class="stat-label">Range</div>
-                        <div class="stat-value">${p.total_runs_range[0]} - ${p.total_runs_range[1]}</div>
+                        <div class="stat-value">${p.total_runs_range ? `${p.total_runs_range[0]} - ${p.total_runs_range[1]}` : 'N/A'}</div>
                     </div>
                 </div>
                 
