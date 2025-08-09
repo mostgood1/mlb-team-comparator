@@ -1,0 +1,67 @@
+{
+  "2025-08-07": {
+    "Cincinnati Reds_at_Pittsburgh Pirates": {
+      "moneyline": {
+        "Pittsburgh Pirates": -106,
+        "Cincinnati Reds": 93
+      },
+      "runline": [
+        {
+          "team": "Pittsburgh Pirates",
+          "point": 1.5,
+          "price": -153
+        },
+        {
+          "team": "Cincinnati Reds",
+          "point": -1.5,
+          "price": 126
+        }
+      ],
+      "total": [
+        {
+          "name": "Over",
+          "point": 9.1,
+          "price": -106
+        },
+        {
+          "name": "Under",
+          "point": 9.1,
+          "price": -111
+        }
+      ]
+    }
+  },
+  "2025-08-01": {
+    "Cincinnati Reds_at_Pittsburgh Pirates": {
+      "moneyline": {
+        "Pittsburgh Pirates": -106,
+        "Cincinnati Reds": 93
+      },
+      "runline": [
+        {
+          "team": "Pittsburgh Pirates",
+          "point": 1.5,
+          "price": -145
+        },
+        {
+          "team": "Cincinnati Reds",
+          "point": -1.5,
+          "price": 130
+        }
+      ],
+      "total": [
+        {
+          "name": "Over",
+          "point": 7.7,
+          "price": -105
+        },
+        {
+          "name": "Under",
+          "point": 7.7,
+          "price": -106
+        }
+      ]
+    }
+  },
+  "2025-08-06": {}
+}

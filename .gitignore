@@ -21,13 +21,12 @@
 !src/mlb_betting_lines.json
 !src/park_factors.json
 !src/injury_availability.json
+!src/historical_betting_lines_lookup.py
+!src/historical_betting_lines_cache.json
 
 # Allow clean deployment package
 !mlb-clean-minimal/
 !mlb-clean-minimal/**
-
-# Block all large data files explicitly (even if somehow added)
-src/**/*.json
 !src/ProjectedStarters.json
 !src/mlb_betting_lines.json
 !src/park_factors.json
