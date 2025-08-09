@@ -765,9 +765,9 @@ def get_fast_predictions():
                 real_games = [
                     {'away_team': 'Yankees', 'home_team': 'Red Sox'},
                     {'away_team': 'Dodgers', 'home_team': 'Giants'},
+                    {'away_team': 'Cubs', 'home_team': 'Cardinals'},
                     {'away_team': 'Astros', 'home_team': 'Angels'},
-                    {'away_team': 'Braves', 'home_team': 'Mets'},
-                    {'away_team': 'Cardinals', 'home_team': 'Cubs'}
+                    {'away_team': 'Phillies', 'home_team': 'Mets'}
                 ]
             
             # Convert to (away, home) tuples and limit to first 10 games for speed
@@ -802,9 +802,9 @@ def get_fast_predictions():
             # Fallback to sample games if no real games found
             if not games:
                 games = [
-                    ("Athletics", "Nationals"),  # Known to be in ProjectedStarters.json
-                    ("Giants", "Pirates"),       # Also in the file
-                    ("Astros", "Marlins")        # Also in the file
+                    ("Yankees", "Red Sox"),      # Classic rivalry
+                    ("Dodgers", "Giants"),       # West coast rivalry
+                    ("Cubs", "Cardinals")        # Central rivalry
                 ]
             
             predictions = []
@@ -875,7 +875,7 @@ def debug_pitcher():
             
             # Test specific lookups with detailed format checking
             test_results = []
-            test_games = [("Athletics", "Nationals"), ("Giants", "Pirates"), ("Astros", "Marlins")]
+            test_games = [("Yankees", "Red Sox"), ("Dodgers", "Giants"), ("Cubs", "Cardinals")]
             
             for away, home in test_games:
                 # Check what full names resolve to
