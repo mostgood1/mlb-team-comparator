@@ -21,7 +21,7 @@
     "away_team": "Baltimore Orioles",
     "home_team": "Philadelphia Phillies",
     "away_starter": "Cade Povich",
-    "home_starter": "Jes\u00c3\u00bas Luzardo"
+    "home_starter": "JesÃºs Luzardo"
   },
   "Kansas City Royals at Boston Red Sox": {
     "away_team": "Kansas City Royals",
@@ -141,14 +141,14 @@
     "Toronto Blue Jays at Colorado Rockies": {
       "away_team": "Toronto Blue Jays",
       "home_team": "Colorado Rockies",
-      "away_starter": "Jos\u00c3\u00a9 Berr\u00c3\u00ados",
+      "away_starter": "JosÃ© BerrÃ­os",
       "home_starter": "Anthony Molina"
     },
     "Tampa Bay Rays at Los Angeles Angels": {
       "away_team": "Tampa Bay Rays",
       "home_team": "Los Angeles Angels",
       "away_starter": "Ryan Pepiot",
-      "home_starter": "Jos\u00c3\u00a9 Soriano"
+      "home_starter": "JosÃ© Soriano"
     },
     "San Diego Padres at Arizona Diamondbacks": {
       "away_team": "San Diego Padres",
@@ -180,7 +180,7 @@
       "away_team": "Baltimore Orioles",
       "home_team": "Philadelphia Phillies",
       "away_starter": "Trevor Rogers",
-      "home_starter": "Ranger Su\u00c3\u00a1rez"
+      "home_starter": "Ranger SuÃ¡rez"
     },
     "Cleveland Guardians at New York Mets": {
       "away_team": "Cleveland Guardians",
@@ -203,7 +203,7 @@
     "New York Yankees at Texas Rangers": {
       "away_team": "New York Yankees",
       "home_team": "Texas Rangers",
-      "away_starter": "Carlos Rod\u00c3\u00b3n",
+      "away_starter": "Carlos RodÃ³n",
       "home_starter": "Jack Leiter"
     },
     "Toronto Blue Jays at Colorado Rockies": {
@@ -283,7 +283,7 @@
     "Miami Marlins at Atlanta Braves": {
       "away_team": "Miami Marlins",
       "home_team": "Atlanta Braves",
-      "away_starter": "Eury P\u00c3\u00a9rez",
+      "away_starter": "Eury PÃ©rez",
       "home_starter": "Carlos Carrasco"
     }
   },
@@ -327,7 +327,7 @@
     "Philadelphia Phillies at Texas Rangers": {
       "away_team": "Philadelphia Phillies",
       "home_team": "Texas Rangers",
-      "away_starter": "Cristopher S\u00e1nchez",
+      "away_starter": "Cristopher Sánchez",
       "home_starter": "Merrill Kelly"
     },
     "Kansas City Royals at Minnesota Twins": {
