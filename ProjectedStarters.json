@@ -1,382 +1,182 @@
 {
-  "San Francisco Giants at Pittsburgh Pirates": {
-    "away_team": "San Francisco Giants",
-    "home_team": "Pittsburgh Pirates",
-    "away_starter": "Justin Verlander",
-    "home_starter": "Johan Oviedo"
-  },
-  "Minnesota Twins at Detroit Tigers": {
-    "away_team": "Minnesota Twins",
-    "home_team": "Detroit Tigers",
-    "away_starter": null,
-    "home_starter": "Casey Mize"
-  },
-  "Houston Astros at Miami Marlins": {
-    "away_team": "Houston Astros",
-    "home_team": "Miami Marlins",
-    "away_starter": "Jason Alexander",
-    "home_starter": "Sandy Alcantara"
-  },
-  "Baltimore Orioles at Philadelphia Phillies": {
-    "away_team": "Baltimore Orioles",
-    "home_team": "Philadelphia Phillies",
-    "away_starter": "Cade Povich",
-    "home_starter": "JesÃºs Luzardo"
-  },
-  "Kansas City Royals at Boston Red Sox": {
-    "away_team": "Kansas City Royals",
-    "home_team": "Boston Red Sox",
-    "away_starter": "Bailey Falter",
-    "home_starter": "Brayan Bello"
-  },
-  "Cleveland Guardians at New York Mets": {
-    "away_team": "Cleveland Guardians",
-    "home_team": "New York Mets",
-    "away_starter": "Slade Cecconi",
-    "home_starter": "Sean Manaea"
-  },
-  "Milwaukee Brewers at Atlanta Braves": {
-    "away_team": "Milwaukee Brewers",
+  "Miami Marlins at Atlanta Braves": {
+    "away_team": "Miami Marlins",
     "home_team": "Atlanta Braves",
-    "away_starter": "Quinn Priester",
-    "home_starter": "Erick Fedde"
+    "away_starter": "Sandy Alcantara",
+    "home_starter": "Erick Fedde",
+    "date": "2025-08-09",
+    "last_updated": "2025-08-09T00:05:37.343188"
   },
-  "Cincinnati Reds at Chicago Cubs": {
+  "Houston Astros at New York Yankees": {
+    "away_team": "Houston Astros",
+    "home_team": "New York Yankees",
+    "away_starter": "Framber Valdez",
+    "home_starter": "Luis Gil",
+    "date": "2025-08-09",
+    "last_updated": "2025-08-09T00:05:37.343188"
+  },
+  "Washington Nationals at San Francisco Giants": {
+    "away_team": "Washington Nationals",
+    "home_team": "San Francisco Giants",
+    "away_starter": "Brad Lord",
+    "home_starter": "Carson Whisenhunt",
+    "date": "2025-08-09",
+    "last_updated": "2025-08-09T00:05:37.343188"
+  },
+  "Los Angeles Angels at Detroit Tigers": {
+    "away_team": "Los Angeles Angels",
+    "home_team": "Detroit Tigers",
+    "away_starter": "Yusei Kikuchi",
+    "home_starter": "Charlie Morton",
+    "date": "2025-08-09",
+    "last_updated": "2025-08-09T00:05:37.343188"
+  },
+  "Cincinnati Reds at Pittsburgh Pirates": {
     "away_team": "Cincinnati Reds",
-    "home_team": "Chicago Cubs",
-    "away_starter": "Nick Lodolo",
-    "home_starter": "Michael Soroka"
+    "home_team": "Pittsburgh Pirates",
+    "away_starter": "Nick Martinez",
+    "home_starter": "Braxton Ashcraft",
+    "date": "2025-08-09",
+    "last_updated": "2025-08-09T00:05:37.343188"
   },
-  "New York Yankees at Texas Rangers": {
-    "away_team": "New York Yankees",
+  "Athletics at Baltimore Orioles": {
+    "away_team": "Athletics",
+    "home_team": "Baltimore Orioles",
+    "away_starter": "Jack Perkins",
+    "home_starter": "Brandon Young",
+    "date": "2025-08-09",
+    "last_updated": "2025-08-09T00:05:37.343188"
+  },
+  "Kansas City Royals at Minnesota Twins": {
+    "away_team": "Kansas City Royals",
+    "home_team": "Minnesota Twins",
+    "away_starter": "Noah Cameron",
+    "home_starter": "Bailey Ober",
+    "date": "2025-08-09",
+    "last_updated": "2025-08-09T00:05:37.343188"
+  },
+  "Cleveland Guardians at Chicago White Sox": {
+    "away_team": "Cleveland Guardians",
+    "home_team": "Chicago White Sox",
+    "away_starter": "Joey Cantillo",
+    "home_starter": "Sean Burke",
+    "date": "2025-08-09",
+    "last_updated": "2025-08-09T00:05:37.343188"
+  },
+  "New York Mets at Milwaukee Brewers": {
+    "away_team": "New York Mets",
+    "home_team": "Milwaukee Brewers",
+    "away_starter": null,
+    "home_starter": "Tobias Myers",
+    "date": "2025-08-09",
+    "last_updated": "2025-08-09T00:05:37.343188"
+  },
+  "Chicago Cubs at St. Louis Cardinals": {
+    "away_team": "Chicago Cubs",
+    "home_team": "St. Louis Cardinals",
+    "away_starter": "Colin Rea",
+    "home_starter": "Andre Pallante",
+    "date": "2025-08-09",
+    "last_updated": "2025-08-09T00:05:37.343188"
+  },
+  "Philadelphia Phillies at Texas Rangers": {
+    "away_team": "Philadelphia Phillies",
     "home_team": "Texas Rangers",
-    "away_starter": "Max Fried",
-    "home_starter": "Patrick Corbin"
+    "away_starter": "Jes\u00c3\u00bas Luzardo",
+    "home_starter": "Jacob deGrom",
+    "date": "2025-08-09",
+    "last_updated": "2025-08-09T00:05:37.343188"
   },
-  "Toronto Blue Jays at Colorado Rockies": {
-    "away_team": "Toronto Blue Jays",
-    "home_team": "Colorado Rockies",
-    "away_starter": "Eric Lauer",
-    "home_starter": "Tanner Gordon"
-  },
-  "Tampa Bay Rays at Los Angeles Angels": {
-    "away_team": "Tampa Bay Rays",
-    "home_team": "Los Angeles Angels",
-    "away_starter": "Adrian Houser",
-    "home_starter": "Yusei Kikuchi"
-  },
-  "San Diego Padres at Arizona Diamondbacks": {
-    "away_team": "San Diego Padres",
-    "home_team": "Arizona Diamondbacks",
-    "away_starter": "JP Sears",
-    "home_starter": "Brandon Pfaadt"
-  },
-  "St. Louis Cardinals at Los Angeles Dodgers": {
-    "away_team": "St. Louis Cardinals",
-    "home_team": "Los Angeles Dodgers",
-    "away_starter": "Sonny Gray",
-    "home_starter": "Tyler Glasnow"
-  },
-  "2025-08-05": {
-    "San Francisco Giants at Pittsburgh Pirates": {
-      "away_team": "San Francisco Giants",
-      "home_team": "Pittsburgh Pirates",
-      "away_starter": "Logan Webb",
-      "home_starter": "Mike Burrows"
-    },
-    "Minnesota Twins at Detroit Tigers": {
-      "away_team": "Minnesota Twins",
-      "home_team": "Detroit Tigers",
-      "away_starter": "Zebby Matthews",
-      "home_starter": "Chris Paddack"
-    },
-    "Houston Astros at Miami Marlins": {
-      "away_team": "Houston Astros",
-      "home_team": "Miami Marlins",
-      "away_starter": "Steven Okert",
-      "home_starter": "Cal Quantrill"
-    },
-    "Athletics at Washington Nationals": {
-      "away_team": "Athletics",
-      "home_team": "Washington Nationals",
-      "away_starter": "Luis Severino",
-      "home_starter": "MacKenzie Gore"
-    },
-    "Baltimore Orioles at Philadelphia Phillies": {
-      "away_team": "Baltimore Orioles",
-      "home_team": "Philadelphia Phillies",
-      "away_starter": "Dean Kremer",
-      "home_starter": "Taijuan Walker"
-    },
-    "Kansas City Royals at Boston Red Sox": {
-      "away_team": "Kansas City Royals",
-      "home_team": "Boston Red Sox",
-      "away_starter": "Ryan Bergert",
-      "home_starter": "Garrett Crochet"
-    },
-    "Cleveland Guardians at New York Mets": {
-      "away_team": "Cleveland Guardians",
-      "home_team": "New York Mets",
-      "away_starter": "Logan Allen",
-      "home_starter": "Clay Holmes"
-    },
-    "Milwaukee Brewers at Atlanta Braves": {
-      "away_team": "Milwaukee Brewers",
-      "home_team": "Atlanta Braves",
-      "away_starter": "Freddy Peralta",
-      "home_starter": "Joey Wentz"
-    },
-    "Cincinnati Reds at Chicago Cubs": {
-      "away_team": "Cincinnati Reds",
-      "home_team": "Chicago Cubs",
-      "away_starter": "Zack Littell",
-      "home_starter": "Shota Imanaga"
-    },
-    "New York Yankees at Texas Rangers": {
-      "away_team": "New York Yankees",
-      "home_team": "Texas Rangers",
-      "away_starter": "Will Warren",
-      "home_starter": "Nathan Eovaldi"
-    },
-    "Toronto Blue Jays at Colorado Rockies": {
-      "away_team": "Toronto Blue Jays",
-      "home_team": "Colorado Rockies",
-      "away_starter": "JosÃ© BerrÃ­os",
-      "home_starter": "Anthony Molina"
-    },
-    "Tampa Bay Rays at Los Angeles Angels": {
-      "away_team": "Tampa Bay Rays",
-      "home_team": "Los Angeles Angels",
-      "away_starter": "Ryan Pepiot",
-      "home_starter": "JosÃ© Soriano"
-    },
-    "San Diego Padres at Arizona Diamondbacks": {
-      "away_team": "San Diego Padres",
-      "home_team": "Arizona Diamondbacks",
-      "away_starter": "Yu Darvish",
-      "home_starter": "Ryne Nelson"
-    },
-    "Chicago White Sox at Seattle Mariners": {
-      "away_team": "Chicago White Sox",
-      "home_team": "Seattle Mariners",
-      "away_starter": "Davis Martin",
-      "home_starter": "Bryan Woo"
-    },
-    "St. Louis Cardinals at Los Angeles Dodgers": {
-      "away_team": "St. Louis Cardinals",
-      "home_team": "Los Angeles Dodgers",
-      "away_starter": "Miles Mikolas",
-      "home_starter": "Emmet Sheehan"
-    }
-  },
-  "2025-08-06": {
-    "San Francisco Giants at Pittsburgh Pirates": {
-      "away_team": "San Francisco Giants",
-      "home_team": "Pittsburgh Pirates",
-      "away_starter": "Robbie Ray",
-      "home_starter": "Andrew Heaney"
-    },
-    "Baltimore Orioles at Philadelphia Phillies": {
-      "away_team": "Baltimore Orioles",
-      "home_team": "Philadelphia Phillies",
-      "away_starter": "Trevor Rogers",
-      "home_starter": "Ranger SuÃ¡rez"
-    },
-    "Cleveland Guardians at New York Mets": {
-      "away_team": "Cleveland Guardians",
-      "home_team": "New York Mets",
-      "away_starter": "Gavin Williams",
-      "home_starter": "David Peterson"
-    },
-    "Minnesota Twins at Detroit Tigers": {
-      "away_team": "Minnesota Twins",
-      "home_team": "Detroit Tigers",
-      "away_starter": "Pierson Ohl",
-      "home_starter": "Jack Flaherty"
-    },
-    "Cincinnati Reds at Chicago Cubs": {
-      "away_team": "Cincinnati Reds",
-      "home_team": "Chicago Cubs",
-      "away_starter": "Andrew Abbott",
-      "home_starter": "Cade Horton"
-    },
-    "New York Yankees at Texas Rangers": {
-      "away_team": "New York Yankees",
-      "home_team": "Texas Rangers",
-      "away_starter": "Carlos RodÃ³n",
-      "home_starter": "Jack Leiter"
-    },
-    "Toronto Blue Jays at Colorado Rockies": {
-      "away_team": "Toronto Blue Jays",
-      "home_team": "Colorado Rockies",
-      "away_starter": "Kevin Gausman",
-      "home_starter": "Kyle Freeland"
-    },
-    "Tampa Bay Rays at Los Angeles Angels": {
-      "away_team": "Tampa Bay Rays",
-      "home_team": "Los Angeles Angels",
-      "away_starter": "Shane Baz",
-      "home_starter": "Tyler Anderson"
-    },
-    "St. Louis Cardinals at Los Angeles Dodgers": {
-      "away_team": "St. Louis Cardinals",
-      "home_team": "Los Angeles Dodgers",
-      "away_starter": "Matthew Liberatore",
-      "home_starter": "Shohei Ohtani"
-    },
-    "Houston Astros at Miami Marlins": {
-      "away_team": "Houston Astros",
-      "home_team": "Miami Marlins",
-      "away_starter": "Spencer Arrighetti",
-      "home_starter": "Janson Junk"
-    },
-    "Athletics at Washington Nationals": {
-      "away_team": "Athletics",
-      "home_team": "Washington Nationals",
-      "away_starter": "Jeffrey Springs",
-      "home_starter": "Cade Cavalli"
-    },
-    "Kansas City Royals at Boston Red Sox": {
-      "away_team": "Kansas City Royals",
-      "home_team": "Boston Red Sox",
-      "away_starter": "Michael Wacha",
-      "home_starter": "Dustin May"
-    },
-    "Milwaukee Brewers at Atlanta Braves": {
-      "away_team": "Milwaukee Brewers",
-      "home_team": "Atlanta Braves",
-      "away_starter": "Jose Quintana",
-      "home_starter": "Spencer Strider"
-    },
-    "San Diego Padres at Arizona Diamondbacks": {
-      "away_team": "San Diego Padres",
-      "home_team": "Arizona Diamondbacks",
-      "away_starter": "Nestor Cortes",
-      "home_starter": "Anthony DeSclafani"
-    },
-    "Chicago White Sox at Seattle Mariners": {
-      "away_team": "Chicago White Sox",
-      "home_team": "Seattle Mariners",
-      "away_starter": "Jonathan Cannon",
-      "home_starter": "George Kirby"
-    }
-  },
-  "2025-08-07": {
-    "Athletics at Washington Nationals": {
-      "away_team": "Athletics",
-      "home_team": "Washington Nationals",
-      "away_starter": "Jacob Lopez",
-      "home_starter": "Mitchell Parker"
-    },
-    "Chicago White Sox at Seattle Mariners": {
-      "away_team": "Chicago White Sox",
-      "home_team": "Seattle Mariners",
-      "away_starter": "Shane Smith",
-      "home_starter": "Logan Gilbert"
-    },
-    "Cincinnati Reds at Pittsburgh Pirates": {
-      "away_team": "Cincinnati Reds",
-      "home_team": "Pittsburgh Pirates",
-      "away_starter": "Brady Singer",
-      "home_starter": "Paul Skenes"
-    },
+  "2025-08-09": {
     "Miami Marlins at Atlanta Braves": {
       "away_team": "Miami Marlins",
       "home_team": "Atlanta Braves",
-      "away_starter": "Eury PÃ©rez",
-      "home_starter": "Carlos Carrasco"
-    }
-  },
-  "2025-08-08": {
-    "Cincinnati Reds at Pittsburgh Pirates": {
-      "away_team": "Cincinnati Reds",
-      "home_team": "Pittsburgh Pirates",
-      "away_starter": "Chase Burns",
-      "home_starter": "Mitch Keller"
-    },
-    "Athletics at Baltimore Orioles": {
-      "away_team": "Athletics",
-      "home_team": "Baltimore Orioles",
-      "away_starter": "J.T. Ginn",
-      "home_starter": "Tomoyuki Sugano"
+      "away_starter": "Sandy Alcantara",
+      "home_starter": "Erick Fedde"
     },
     "Houston Astros at New York Yankees": {
       "away_team": "Houston Astros",
       "home_team": "New York Yankees",
-      "away_starter": "Hunter Brown",
-      "home_starter": "Cam Schlittler"
-    },
-    "Los Angeles Angels at Detroit Tigers": {
-      "away_team": "Los Angeles Angels",
-      "home_team": "Detroit Tigers",
-      "away_starter": "Kyle Hendricks",
-      "home_starter": "Tarik Skubal"
-    },
-    "Miami Marlins at Atlanta Braves": {
-      "away_team": "Miami Marlins",
-      "home_team": "Atlanta Braves",
-      "away_starter": "Edward Cabrera",
-      "home_starter": "Bryce Elder"
-    },
-    "Cleveland Guardians at Chicago White Sox": {
-      "away_team": "Cleveland Guardians",
-      "home_team": "Chicago White Sox",
-      "away_starter": "Tanner Bibee",
-      "home_starter": "Aaron Civale"
-    },
-    "Philadelphia Phillies at Texas Rangers": {
-      "away_team": "Philadelphia Phillies",
-      "home_team": "Texas Rangers",
-      "away_starter": "Cristopher Sánchez",
-      "home_starter": "Merrill Kelly"
-    },
-    "Kansas City Royals at Minnesota Twins": {
-      "away_team": "Kansas City Royals",
-      "home_team": "Minnesota Twins",
-      "away_starter": "Seth Lugo",
-      "home_starter": "Joe Ryan"
-    },
-    "New York Mets at Milwaukee Brewers": {
-      "away_team": "New York Mets",
-      "home_team": "Milwaukee Brewers",
-      "away_starter": "Kodai Senga",
-      "home_starter": "Brandon Woodruff"
-    },
-    "Chicago Cubs at St. Louis Cardinals": {
-      "away_team": "Chicago Cubs",
-      "home_team": "St. Louis Cardinals",
-      "away_starter": "Matthew Boyd",
-      "home_starter": "Michael McGreevy"
-    },
-    "Colorado Rockies at Arizona Diamondbacks": {
-      "away_team": "Colorado Rockies",
-      "home_team": "Arizona Diamondbacks",
-      "away_starter": "Austin Gomber",
-      "home_starter": "Zac Gallen"
-    },
-    "Boston Red Sox at San Diego Padres": {
-      "away_team": "Boston Red Sox",
-      "home_team": "San Diego Padres",
-      "away_starter": "Walker Buehler",
-      "home_starter": "Nick Pivetta"
-    },
-    "Tampa Bay Rays at Seattle Mariners": {
-      "away_team": "Tampa Bay Rays",
-      "home_team": "Seattle Mariners",
-      "away_starter": "Drew Rasmussen",
-      "home_starter": "Luis Castillo"
-    },
-    "Toronto Blue Jays at Los Angeles Dodgers": {
-      "away_team": "Toronto Blue Jays",
-      "home_team": "Los Angeles Dodgers",
-      "away_starter": "Max Scherzer",
-      "home_starter": "Clayton Kershaw"
+      "away_starter": "Framber Valdez",
+      "home_starter": "Luis Gil"
     },
     "Washington Nationals at San Francisco Giants": {
       "away_team": "Washington Nationals",
       "home_team": "San Francisco Giants",
-      "away_starter": "Jake Irvin",
-      "home_starter": "Matt Gage"
+      "away_starter": "Brad Lord",
+      "home_starter": "Carson Whisenhunt"
+    },
+    "Los Angeles Angels at Detroit Tigers": {
+      "away_team": "Los Angeles Angels",
+      "home_team": "Detroit Tigers",
+      "away_starter": "Yusei Kikuchi",
+      "home_starter": "Charlie Morton"
+    },
+    "Cincinnati Reds at Pittsburgh Pirates": {
+      "away_team": "Cincinnati Reds",
+      "home_team": "Pittsburgh Pirates",
+      "away_starter": "Nick Martinez",
+      "home_starter": "Braxton Ashcraft"
+    },
+    "Athletics at Baltimore Orioles": {
+      "away_team": "Athletics",
+      "home_team": "Baltimore Orioles",
+      "away_starter": "Jack Perkins",
+      "home_starter": "Brandon Young"
+    },
+    "Kansas City Royals at Minnesota Twins": {
+      "away_team": "Kansas City Royals",
+      "home_team": "Minnesota Twins",
+      "away_starter": "Noah Cameron",
+      "home_starter": "Bailey Ober"
+    },
+    "Cleveland Guardians at Chicago White Sox": {
+      "away_team": "Cleveland Guardians",
+      "home_team": "Chicago White Sox",
+      "away_starter": "Joey Cantillo",
+      "home_starter": "Sean Burke"
+    },
+    "New York Mets at Milwaukee Brewers": {
+      "away_team": "New York Mets",
+      "home_team": "Milwaukee Brewers",
+      "away_starter": null,
+      "home_starter": "Tobias Myers"
+    },
+    "Chicago Cubs at St. Louis Cardinals": {
+      "away_team": "Chicago Cubs",
+      "home_team": "St. Louis Cardinals",
+      "away_starter": "Colin Rea",
+      "home_starter": "Andre Pallante"
+    },
+    "Philadelphia Phillies at Texas Rangers": {
+      "away_team": "Philadelphia Phillies",
+      "home_team": "Texas Rangers",
+      "away_starter": "Jes\u00fas Luzardo",
+      "home_starter": "Jacob deGrom"
+    },
+    "Colorado Rockies at Arizona Diamondbacks": {
+      "away_team": "Colorado Rockies",
+      "home_team": "Arizona Diamondbacks",
+      "away_starter": "Bradley Blalock",
+      "home_starter": "Eduardo Rodriguez"
+    },
+    "Boston Red Sox at San Diego Padres": {
+      "away_team": "Boston Red Sox",
+      "home_team": "San Diego Padres",
+      "away_starter": "Lucas Giolito",
+      "home_starter": "Michael King"
+    },
+    "Toronto Blue Jays at Los Angeles Dodgers": {
+      "away_team": "Toronto Blue Jays",
+      "home_team": "Los Angeles Dodgers",
+      "away_starter": "Chris Bassitt",
+      "home_starter": "Blake Snell"
+    },
+    "Tampa Bay Rays at Seattle Mariners": {
+      "away_team": "Tampa Bay Rays",
+      "home_team": "Seattle Mariners",
+      "away_starter": "Joe Boyle",
+      "home_starter": "Logan Evans"
     }
   }
 }

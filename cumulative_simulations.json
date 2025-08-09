@@ -193,5 +193,18 @@
     "first_simulation": "2025-08-09T00:13:28.735433",
     "last_simulation": "2025-08-09T00:13:28.735433",
     "confidence_level": 50.0
+  },
+  "2025-08-09_WSN_vs_NYM": {
+    "away_team": "WSN",
+    "home_team": "NYM",
+    "date": "2025-08-09",
+    "total_simulations": 10000,
+    "away_wins": 5341,
+    "home_wins": 4659,
+    "total_away_runs": 60607,
+    "total_home_runs": 62265,
+    "first_simulation": "2025-08-09T00:26:00.383306",
+    "last_simulation": "2025-08-09T00:26:00.383306",
+    "confidence_level": 95.0
   }
 }
