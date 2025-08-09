@@ -16,6 +16,11 @@
 !src/TodaysGames.py
 !src/__init__.py
 
+# Allow auto-refresh modules for live data updates
+!src/auto_update_mlb_data.py
+!src/auto_refresh_starters.py
+!src/auto_update_betting_lines.py
+
 # Allow only essential small data files (<1MB)
 !src/ProjectedStarters.json
 !src/mlb_betting_lines.json
