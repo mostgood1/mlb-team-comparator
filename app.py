@@ -748,15 +748,15 @@ HTML_TEMPLATE = """
                 <div class="stats-grid">
                     <div class="stat-box">
                         <div class="stat-label">Win Probability</div>
-                        <div class="stat-value">🏠 ${(p.home_win_probability * 100).toFixed(1)}% | ✈️ ${(p.away_win_probability * 100).toFixed(1)}%</div>
+                        <div class="stat-value">🏠 ${((p.home_win_probability || 0.5) * 100).toFixed(1)}% | ✈️ ${((p.away_win_probability || 0.5) * 100).toFixed(1)}%</div>
                     </div>
                     <div class="stat-box">
                         <div class="stat-label">Predicted Score</div>
-                        <div class="stat-value">${p.predicted_away_score} - ${p.predicted_home_score}</div>
+                        <div class="stat-value">${p.predicted_away_score || 'N/A'} - ${p.predicted_home_score || 'N/A'}</div>
                     </div>
                     <div class="stat-box">
                         <div class="stat-label">Total Runs</div>
-                        <div class="stat-value">${p.predicted_total.toFixed(1)}</div>
+                        <div class="stat-value">${(p.predicted_total || 10.0).toFixed(1)}</div>
                     </div>
                     <div class="stat-box">
                         <div class="stat-label">Range</div>
@@ -771,7 +771,7 @@ HTML_TEMPLATE = """
                         'Starting pitchers TBD'
                     }
                     ${data.pitcher_quality && (data.pitcher_quality.away_pitcher_factor || data.pitcher_quality.home_pitcher_factor) ? 
-                        `<br><small>Quality Impact: Away ${data.pitcher_quality.away_pitcher_factor ? data.pitcher_quality.away_pitcher_factor.toFixed(3) : 'N/A'} | Home ${data.pitcher_quality.home_pitcher_factor ? data.pitcher_quality.home_pitcher_factor.toFixed(3) : 'N/A'}</small>` : 
+                        `<br><small>Quality Impact: Away ${data.pitcher_quality.away_pitcher_factor ? (data.pitcher_quality.away_pitcher_factor || 1.0).toFixed(3) : 'N/A'} | Home ${data.pitcher_quality.home_pitcher_factor ? (data.pitcher_quality.home_pitcher_factor || 1.0).toFixed(3) : 'N/A'}</small>` : 
                         ''
                     }
                 </div>
@@ -1065,6 +1065,26 @@ def get_fast_predictions():
                     # Get direct prediction from our tuned engine
                     prediction = engine.get_fast_prediction(away, home, sim_count=1500)
                     
+                    # Convert response format for frontend compatibility
+                    if 'predictions' in prediction:
+                        pred_data = prediction['predictions']
+                        
+                        # Ensure JavaScript-compatible field names
+                        if 'home_win_prob' in pred_data and 'home_win_probability' not in pred_data:
+                            pred_data['home_win_probability'] = pred_data['home_win_prob']
+                        if 'away_win_prob' in pred_data and 'away_win_probability' not in pred_data:
+                            pred_data['away_win_probability'] = pred_data['away_win_prob']
+                        if 'predicted_total_runs' in pred_data and 'predicted_total' not in pred_data:
+                            pred_data['predicted_total'] = pred_data['predicted_total_runs']
+                        
+                        # Ensure all required fields exist with safe defaults
+                        pred_data.setdefault('home_win_probability', 0.5)
+                        pred_data.setdefault('away_win_probability', 0.5)
+                        pred_data.setdefault('predicted_home_score', 5.0)
+                        pred_data.setdefault('predicted_away_score', 5.0)
+                        pred_data.setdefault('predicted_total', 10.0)
+                        pred_data.setdefault('confidence', 50)
+                    
                     # Ensure the prediction has the correct format
                     if 'pitcher_quality' not in prediction:
                         prediction['pitcher_quality'] = {
@@ -1073,6 +1093,12 @@ def get_fast_predictions():
                             'away_pitcher_factor': 1.000,
                             'home_pitcher_factor': 1.000
                         }
+                    
+                    # Ensure pitcher factors are numbers for toFixed()
+                    if 'pitcher_quality' in prediction:
+                        pq = prediction['pitcher_quality']
+                        pq['away_pitcher_factor'] = float(pq.get('away_pitcher_factor', 1.0))
+                        pq['home_pitcher_factor'] = float(pq.get('home_pitcher_factor', 1.0))
                     
                     predictions.append(prediction)
                     
