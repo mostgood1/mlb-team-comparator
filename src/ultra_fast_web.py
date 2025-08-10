@@ -146,12 +146,12 @@ HTML_TEMPLATE = """
         </div>
         
         <div class="speed-banner">
-            🚀 NOW USING REAL GAMES: Today's actual MLB matchups with verified pitcher impacts!
+            🚀 LOADING TODAY'S GAMES: Live MLB matchups with real pitcher impacts! (Historical demo available)
         </div>
         
         <div class="controls">
             <div style="display: flex; justify-content: center; gap: 15px; flex-wrap: wrap; margin-bottom: 15px;">
-                <input type="date" id="game-date" style="padding: 12px; border-radius: 8px; border: 1px solid #ddd; font-size: 1em;" value="2025-08-08" />
+                <input type="date" id="game-date" style="padding: 12px; border-radius: 8px; border: 1px solid #ddd; font-size: 1em;" />
                 <button onclick="loadGamesForDate()">📅 Load Games for Date</button>
             </div>
             <div style="display: flex; justify-content: center; gap: 15px; flex-wrap: wrap;">
@@ -159,6 +159,7 @@ HTML_TEMPLATE = """
                 <button onclick="speedTest()">⚡ Speed Test</button>
                 <button onclick="showMultipleGames()">📊 Detailed Analysis</button>
                 <button onclick="testRecommendations()">💰 Test Recommendations</button>
+                <button onclick="loadHistoricalDemo()" style="background: linear-gradient(45deg, #ffc107, #e0a800);">📚 Historical Demo (Aug 8)</button>
             </div>
         </div>
         
@@ -189,13 +190,19 @@ HTML_TEMPLATE = """
                 console.error('loadTodaysRealGames error:', error);
                 document.getElementById('predictions-container').innerHTML = 
                     `<div class="prediction-card">
-                        <h3>❌ Error Loading Games</h3>
+                        <h3>❌ No Games Available Today</h3>
                         <p><strong>Error:</strong> ${error.message}</p>
-                        <p><strong>Suggestion:</strong> Try selecting August 8, 2025 from the date picker above - that date has complete historical data.</p>
-                        <button onclick="document.getElementById('game-date').value='2025-08-08'; loadGamesForDate();" 
-                                style="margin-top: 10px; padding: 8px 16px; background: #007bff; color: white; border: none; border-radius: 4px;">
-                            📅 Load August 8 Games
-                        </button>
+                        <p><strong>Suggestion:</strong> Try our historical accuracy demonstration with August 8, 2025 data - that date has complete MLB games with actual results.</p>
+                        <div style="margin-top: 15px; display: flex; gap: 10px; justify-content: center; flex-wrap: wrap;">
+                            <button onclick="loadHistoricalDemo();" 
+                                    style="margin-top: 10px; padding: 8px 16px; background: #ffc107; color: black; border: none; border-radius: 4px; font-weight: bold;">
+                                📚 View Historical Demo (Aug 8)
+                            </button>
+                            <button onclick="document.getElementById('game-date').value='2025-08-08'; loadGamesForDate();" 
+                                    style="margin-top: 10px; padding: 8px 16px; background: #007bff; color: white; border: none; border-radius: 4px;">
+                                📅 Load August 8 Games
+                            </button>
+                        </div>
                     </div>`;
             }
         }
@@ -604,11 +611,21 @@ HTML_TEMPLATE = """
             }
         }
         
-        // Auto-load historical games on page load (Aug 8 has complete data)
-        window.onload = () => {
-            // Set the date to August 8, 2025 (our complete historical date)
+        function loadHistoricalDemo() {
+            // Load August 8, 2025 historical games for accuracy demonstration
             document.getElementById('game-date').value = '2025-08-08';
             loadGamesForDate();
+        }
+        
+        // Auto-load today's games on page load
+        window.onload = () => {
+            // Set the date to today (August 9, 2025)
+            const today = new Date();
+            const todayString = today.toISOString().split('T')[0];
+            document.getElementById('game-date').value = todayString;
+            
+            // Try to load today's games first
+            loadTodaysRealGames();
         };
     </script>
 </body>
