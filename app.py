@@ -41,13 +41,13 @@ if ULTRA_FAST_AVAILABLE:
 else:
     print("❌ No prediction engine available")
 
-# Enhanced HTML template with real-time features - WORKING VERSION FROM ultra_fast_web.py
+# Enhanced HTML template with real-time features - OPTIMIZED v2.1 (base_runs=4.3, chaos=0.42)
 HTML_TEMPLATE = """
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">>
     <title>⚡ Ultra-Fast MLB Predictions - REAL GAMES</title>
     <style>
         body { 
@@ -157,7 +157,7 @@ HTML_TEMPLATE = """
     </style>
 </head>
 <body>
-    <div class="speed-indicator">⚡ ULTRA-FAST v2.4</div>
+    <div class="speed-indicator">⚡ ULTRA-FAST v2.2</div>
     <div class="mode-indicator" id="mode-indicator">🔄 AUTO-MODE</div>
     
     <div class="container">
@@ -1006,6 +1006,21 @@ def speed_test():
             
     except Exception as e:
         return jsonify({'error': f'Error in speed test: {str(e)}'})
+
+@app.route('/api/version')
+def get_version():
+    """Get deployment version info"""
+    return jsonify({
+        'version': 'OPTIMIZED v2.2',
+        'parameters': {
+            'base_runs_per_team': 4.3,
+            'chaos_factor': 0.42,
+            'chaos_bounds': [0.75, 1.25],
+            'team_multiplier_bounds': [0.6, 1.4]
+        },
+        'deployment_time': datetime.now().isoformat(),
+        'features': ['Ultra-fast predictions', 'Balanced parameters', 'Real MLB data', 'Controlled variance']
+    })
 
 @app.route('/api/status')
 def get_status():

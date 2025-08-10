@@ -74,7 +74,7 @@
     "games_started": 20,
     "wins": 8,
     "losses": 2,
-    "last_updated": "2025-08-08T22:08:09.717397"
+    "last_updated": "2025-08-10T11:48:58.792607"
   },
   "690953": {
     "id": "690953",
@@ -218,7 +218,7 @@
     "games_started": 0,
     "wins": 3,
     "losses": 3,
-    "last_updated": "2025-08-08T22:08:23.321357"
+    "last_updated": "2025-08-10T11:49:13.584265"
   },
   "592094": {
     "id": "592094",
@@ -287,15 +287,15 @@
     },
     "career": {},
     "team": "San Diego Padres",
-    "era": 1.78,
+    "era": 1.75,
     "whip": 1.2,
-    "strikeouts": 60,
-    "walks": 24,
-    "innings_pitched": 55.2,
+    "strikeouts": 61,
+    "walks": 25,
+    "innings_pitched": 56.2,
     "games_started": 0,
-    "wins": 6,
+    "wins": 7,
     "losses": 3,
-    "last_updated": "2025-08-08T22:07:05.358597"
+    "last_updated": "2025-08-10T11:46:10.584406"
   },
   "701519": {
     "id": "701519",
@@ -372,7 +372,7 @@
     "games_started": 1,
     "wins": 1,
     "losses": 1,
-    "last_updated": "2025-08-08T22:07:31.752497"
+    "last_updated": "2025-08-10T11:47:46.791676"
   },
   "686654": {
     "id": "686654",
@@ -583,7 +583,7 @@
     "games_started": 3,
     "wins": 3,
     "losses": 1,
-    "last_updated": "2025-08-08T22:08:01.447793"
+    "last_updated": "2025-08-10T11:48:49.705246"
   },
   "660896": {
     "id": "660896",
@@ -719,15 +719,15 @@
     },
     "career": {},
     "team": "Miami Marlins",
-    "era": 6.44,
-    "whip": 1.42,
-    "strikeouts": 86,
-    "walks": 43,
-    "innings_pitched": 116.0,
-    "games_started": 22,
+    "era": 6.55,
+    "whip": 1.45,
+    "strikeouts": 90,
+    "walks": 47,
+    "innings_pitched": 121.0,
+    "games_started": 23,
     "wins": 6,
-    "losses": 10,
-    "last_updated": "2025-08-08T22:07:45.106802"
+    "losses": 11,
+    "last_updated": "2025-08-10T11:48:31.188714"
   },
   "691951": {
     "id": "691951",
@@ -871,7 +871,7 @@
     "games_started": 4,
     "wins": 2,
     "losses": 1,
-    "last_updated": "2025-08-08T22:08:24.903179"
+    "last_updated": "2025-08-10T11:49:15.347638"
   },
   "518397": {
     "id": "518397",
@@ -1015,7 +1015,7 @@
     "games_started": 5,
     "wins": 4,
     "losses": 10,
-    "last_updated": "2025-08-08T22:07:41.641478"
+    "last_updated": "2025-08-10T11:48:20.207957"
   },
   "663465": {
     "id": "663465",
@@ -1092,7 +1092,7 @@
     "games_started": 2,
     "wins": 2,
     "losses": 1,
-    "last_updated": "2025-08-08T22:08:14.871638"
+    "last_updated": "2025-08-10T11:49:04.365971"
   },
   "671106": {
     "id": "671106",
@@ -1169,7 +1169,7 @@
     "games_started": 21,
     "wins": 7,
     "losses": 9,
-    "last_updated": "2025-08-08T22:08:15.100390"
+    "last_updated": "2025-08-10T11:49:04.610955"
   },
   "656186": {
     "id": "656186",
@@ -1313,7 +1313,7 @@
     "games_started": 0,
     "wins": 0,
     "losses": 0,
-    "last_updated": "2025-08-08T22:06:58.067506"
+    "last_updated": "2025-08-10T11:45:56.077077"
   },
   "621237": {
     "id": "621237",
@@ -1457,7 +1457,7 @@
     "games_started": 0,
     "wins": 2,
     "losses": 3,
-    "last_updated": "2025-08-08T22:07:50.535174"
+    "last_updated": "2025-08-10T11:48:37.438106"
   },
   "666120": {
     "id": "666120",
@@ -1593,15 +1593,15 @@
     },
     "career": {},
     "team": "Colorado Rockies",
-    "era": 12.27,
-    "whip": 1.91,
-    "strikeouts": 2,
+    "era": 9.64,
+    "whip": 1.71,
+    "strikeouts": 3,
     "walks": 0,
-    "innings_pitched": 3.2,
+    "innings_pitched": 4.2,
     "games_started": 0,
     "wins": 0,
     "losses": 0,
-    "last_updated": "2025-08-08T22:08:18.342879"
+    "last_updated": "2025-08-10T11:49:08.513066"
   },
   "641312": {
     "id": "641312",
@@ -1745,7 +1745,7 @@
     "games_started": 23,
     "wins": 2,
     "losses": 7,
-    "last_updated": "2025-08-08T22:07:55.340349"
+    "last_updated": "2025-08-10T11:48:42.770313"
   },
   "678215": {
     "id": "678215",
@@ -1881,15 +1881,15 @@
     },
     "career": {},
     "team": "Texas Rangers",
-    "era": 2.9,
-    "whip": 0.89,
-    "strikeouts": 51,
+    "era": 2.81,
+    "whip": 0.86,
+    "strikeouts": 53,
     "walks": 16,
-    "innings_pitched": 49.2,
+    "innings_pitched": 51.1,
     "games_started": 2,
     "wins": 4,
     "losses": 3,
-    "last_updated": "2025-08-08T22:07:25.405253"
+    "last_updated": "2025-08-10T11:47:21.987084"
   },
   "681293": {
     "id": "681293",
@@ -1966,7 +1966,7 @@
     "games_started": 3,
     "wins": 1,
     "losses": 2,
-    "last_updated": "2025-08-08T22:08:25.579839"
+    "last_updated": "2025-08-10T11:49:16.178677"
   },
   "676879": {
     "id": "676879",
@@ -2035,15 +2035,15 @@
     },
     "career": {},
     "team": "Milwaukee Brewers",
-    "era": 2.02,
+    "era": 2.17,
     "whip": 1.21,
-    "strikeouts": 38,
+    "strikeouts": 39,
     "walks": 15,
-    "innings_pitched": 35.2,
+    "innings_pitched": 37.1,
     "games_started": 0,
     "wins": 2,
     "losses": 1,
-    "last_updated": "2025-08-08T22:07:49.391781"
+    "last_updated": "2025-08-10T11:48:36.107341"
   },
   "677952": {
     "id": "677952",
@@ -2112,15 +2112,15 @@
     },
     "career": {},
     "team": "Pittsburgh Pirates",
-    "era": 3.24,
-    "whip": 1.38,
-    "strikeouts": 28,
-    "walks": 12,
-    "innings_pitched": 33.1,
-    "games_started": 1,
+    "era": 3.19,
+    "whip": 1.36,
+    "strikeouts": 33,
+    "walks": 13,
+    "innings_pitched": 36.2,
+    "games_started": 2,
     "wins": 3,
     "losses": 2,
-    "last_updated": "2025-08-08T22:07:01.723559"
+    "last_updated": "2025-08-10T11:46:01.485544"
   },
   "668933": {
     "id": "668933",
@@ -2197,7 +2197,7 @@
     "games_started": 0,
     "wins": 6,
     "losses": 4,
-    "last_updated": "2025-08-08T22:08:10.851558"
+    "last_updated": "2025-08-10T11:49:00.064087"
   },
   "669199": {
     "id": "669199",
@@ -2274,7 +2274,7 @@
     "games_started": 0,
     "wins": 5,
     "losses": 0,
-    "last_updated": "2025-08-08T22:07:44.604967"
+    "last_updated": "2025-08-10T11:48:30.631410"
   },
   "696147": {
     "id": "696147",
@@ -2410,15 +2410,15 @@
     },
     "career": {},
     "team": "Arizona Diamondbacks",
-    "era": 4.7,
-    "whip": 1.43,
-    "strikeouts": 17,
+    "era": 4.41,
+    "whip": 1.41,
+    "strikeouts": 18,
     "walks": 3,
-    "innings_pitched": 15.1,
+    "innings_pitched": 16.1,
     "games_started": 0,
     "wins": 0,
     "losses": 2,
-    "last_updated": "2025-08-08T22:07:58.687646"
+    "last_updated": "2025-08-10T11:48:46.358722"
   },
   "641329": {
     "id": "641329",
@@ -2495,7 +2495,7 @@
     "games_started": 0,
     "wins": 3,
     "losses": 4,
-    "last_updated": "2025-08-08T22:07:19.106458"
+    "last_updated": "2025-08-10T11:47:02.432747"
   },
   "607455": {
     "id": "607455",
@@ -2564,15 +2564,15 @@
     },
     "career": {},
     "team": "Los Angeles Dodgers",
-    "era": 3.55,
-    "whip": 1.22,
-    "strikeouts": 45,
+    "era": 3.51,
+    "whip": 1.23,
+    "strikeouts": 46,
     "walks": 23,
-    "innings_pitched": 50.2,
+    "innings_pitched": 51.1,
     "games_started": 0,
     "wins": 5,
     "losses": 1,
-    "last_updated": "2025-08-08T22:08:30.486975"
+    "last_updated": "2025-08-10T11:49:21.677938"
   },
   "621383": {
     "id": "621383",
@@ -2641,15 +2641,15 @@
     },
     "career": {},
     "team": "Philadelphia Phillies",
-    "era": 3.28,
+    "era": 3.22,
     "whip": 0.97,
     "strikeouts": 48,
     "walks": 8,
-    "innings_pitched": 49.1,
+    "innings_pitched": 50.1,
     "games_started": 1,
     "wins": 3,
     "losses": 2,
-    "last_updated": "2025-08-08T22:07:35.052709"
+    "last_updated": "2025-08-10T11:47:59.826808"
   },
   "605130": {
     "id": "605130",
@@ -2726,7 +2726,7 @@
     "games_started": 0,
     "wins": 5,
     "losses": 0,
-    "last_updated": "2025-08-08T22:08:12.088983"
+    "last_updated": "2025-08-10T11:49:01.396601"
   },
   "606930": {
     "id": "606930",
@@ -2862,15 +2862,15 @@
     },
     "career": {},
     "team": "Toronto Blue Jays",
-    "era": 4.12,
-    "whip": 1.31,
-    "strikeouts": 126,
-    "walks": 33,
-    "innings_pitched": 129.0,
-    "games_started": 23,
+    "era": 4.17,
+    "whip": 1.32,
+    "strikeouts": 128,
+    "walks": 35,
+    "innings_pitched": 133.2,
+    "games_started": 24,
     "wins": 11,
-    "losses": 5,
-    "last_updated": "2025-08-08T22:07:26.370544"
+    "losses": 6,
+    "last_updated": "2025-08-10T11:47:27.371076"
   },
   "642585": {
     "id": "642585",
@@ -3014,7 +3014,7 @@
     "games_started": 23,
     "wins": 8,
     "losses": 8,
-    "last_updated": "2025-08-08T22:07:21.690639"
+    "last_updated": "2025-08-10T11:47:13.845992"
   },
   "660825": {
     "id": "660825",
@@ -3083,15 +3083,15 @@
     },
     "career": {},
     "team": "Seattle Mariners",
-    "era": 2.93,
-    "whip": 1.08,
-    "strikeouts": 56,
+    "era": 2.87,
+    "whip": 1.06,
+    "strikeouts": 58,
     "walks": 25,
-    "innings_pitched": 58.1,
+    "innings_pitched": 59.2,
     "games_started": 0,
     "wins": 5,
     "losses": 0,
-    "last_updated": "2025-08-08T22:07:09.337281"
+    "last_updated": "2025-08-10T11:46:23.431970"
   },
   "663941": {
     "id": "663941",
@@ -3160,15 +3160,15 @@
     },
     "career": {},
     "team": "San Francisco Giants",
-    "era": 5.6,
-    "whip": 1.17,
+    "era": 5.4,
+    "whip": 1.13,
     "strikeouts": 16,
     "walks": 10,
-    "innings_pitched": 27.1,
+    "innings_pitched": 28.1,
     "games_started": 0,
     "wins": 1,
     "losses": 0,
-    "last_updated": "2025-08-08T22:07:14.520201"
+    "last_updated": "2025-08-10T11:46:47.330567"
   },
   "670280": {
     "id": "670280",
@@ -3237,15 +3237,15 @@
     },
     "career": {},
     "team": "New York Yankees",
-    "era": 2.55,
-    "whip": 1.16,
-    "strikeouts": 59,
-    "walks": 12,
-    "innings_pitched": 42.1,
+    "era": 2.45,
+    "whip": 1.14,
+    "strikeouts": 61,
+    "walks": 13,
+    "innings_pitched": 44.0,
     "games_started": 0,
-    "wins": 2,
+    "wins": 3,
     "losses": 5,
-    "last_updated": "2025-08-08T22:07:46.955692"
+    "last_updated": "2025-08-10T11:48:33.637619"
   },
   "656222": {
     "id": "656222",
@@ -3322,7 +3322,7 @@
     "games_started": 0,
     "wins": 2,
     "losses": 1,
-    "last_updated": "2025-08-08T22:07:57.968780"
+    "last_updated": "2025-08-10T11:48:45.216054"
   },
   "690925": {
     "id": "690925",
@@ -3399,7 +3399,7 @@
     "games_started": 0,
     "wins": 0,
     "losses": 1,
-    "last_updated": "2025-08-08T22:08:33.709820"
+    "last_updated": "2025-08-10T11:49:25.418469"
   },
   "678394": {
     "id": "678394",
@@ -3476,7 +3476,7 @@
     "games_started": 19,
     "wins": 8,
     "losses": 5,
-    "last_updated": "2025-08-08T22:08:03.514558"
+    "last_updated": "2025-08-10T11:48:51.798096"
   },
   "678368": {
     "id": "678368",
@@ -3545,15 +3545,15 @@
     },
     "career": {},
     "team": "Miami Marlins",
-    "era": 3.47,
-    "whip": 1.22,
+    "era": 3.78,
+    "whip": 1.27,
     "strikeouts": 42,
-    "walks": 17,
-    "innings_pitched": 62.1,
+    "walks": 19,
+    "innings_pitched": 64.1,
     "games_started": 5,
     "wins": 1,
     "losses": 3,
-    "last_updated": "2025-08-08T22:07:45.561157"
+    "last_updated": "2025-08-10T11:48:31.945131"
   },
   "669622": {
     "id": "669622",
@@ -3707,7 +3707,7 @@
     "games_started": 8,
     "wins": 1,
     "losses": 1,
-    "last_updated": "2025-08-08T22:08:28.838391"
+    "last_updated": "2025-08-10T11:49:19.383540"
   },
   "657514": {
     "id": "657514",
@@ -3851,7 +3851,7 @@
     "games_started": 24,
     "wins": 8,
     "losses": 4,
-    "last_updated": "2025-08-08T22:07:27.115536"
+    "last_updated": "2025-08-10T11:47:28.084579"
   },
   "676440": {
     "id": "676440",
@@ -3928,7 +3928,7 @@
     "games_started": 23,
     "wins": 8,
     "losses": 9,
-    "last_updated": "2025-08-08T22:08:15.948704"
+    "last_updated": "2025-08-10T11:49:05.725802"
   },
   "674370": {
     "id": "674370",
@@ -4005,7 +4005,7 @@
     "games_started": 9,
     "wins": 2,
     "losses": 4,
-    "last_updated": "2025-08-08T22:07:00.378422"
+    "last_updated": "2025-08-10T11:45:59.671873"
   },
   "685801": {
     "id": "685801",
@@ -4283,7 +4283,7 @@
     "games_started": 0,
     "wins": 2,
     "losses": 3,
-    "last_updated": "2025-08-08T22:07:14.268975"
+    "last_updated": "2025-08-10T11:46:46.241575"
   },
   "696131": {
     "id": "696131",
@@ -4486,15 +4486,15 @@
     },
     "career": {},
     "team": "Colorado Rockies",
-    "era": 7.68,
-    "whip": 1.66,
-    "strikeouts": 18,
-    "walks": 11,
-    "innings_pitched": 38.2,
-    "games_started": 7,
+    "era": 7.89,
+    "whip": 1.71,
+    "strikeouts": 22,
+    "walks": 14,
+    "innings_pitched": 43.1,
+    "games_started": 8,
     "wins": 1,
     "losses": 3,
-    "last_updated": "2025-08-08T22:08:16.903989"
+    "last_updated": "2025-08-10T11:49:06.866027"
   },
   "669854": {
     "id": "669854",
@@ -4829,7 +4829,17 @@
       "sacBunts": 0,
       "sacFlies": 2
     },
-    "career": {}
+    "career": {},
+    "team": "Chicago White Sox",
+    "era": 5.11,
+    "whip": 1.42,
+    "strikeouts": 27,
+    "walks": 14,
+    "innings_pitched": 24.2,
+    "games_started": 0,
+    "wins": 1,
+    "losses": 4,
+    "last_updated": "2025-08-10T11:48:10.957548"
   },
   "621366": {
     "id": "621366",
@@ -4898,15 +4908,15 @@
     },
     "career": {},
     "team": "Pittsburgh Pirates",
-    "era": 4.71,
-    "whip": 1.15,
+    "era": 4.6,
+    "whip": 1.16,
     "strikeouts": 26,
-    "walks": 11,
-    "innings_pitched": 28.2,
+    "walks": 12,
+    "innings_pitched": 29.1,
     "games_started": 0,
     "wins": 1,
     "losses": 3,
-    "last_updated": "2025-08-08T22:07:03.859485"
+    "last_updated": "2025-08-10T11:46:07.989773"
   },
   "676961": {
     "id": "676961",
@@ -5050,7 +5060,7 @@
     "games_started": 0,
     "wins": 0,
     "losses": 0,
-    "last_updated": "2025-08-08T22:06:57.847776"
+    "last_updated": "2025-08-10T11:45:55.812227"
   },
   "680742": {
     "id": "680742",
@@ -5261,7 +5271,7 @@
     "games_started": 23,
     "wins": 11,
     "losses": 5,
-    "last_updated": "2025-08-08T22:08:08.187058"
+    "last_updated": "2025-08-10T11:48:57.231112"
   },
   "671212": {
     "id": "671212",
@@ -5330,15 +5340,15 @@
     },
     "career": {},
     "team": "Tampa Bay Rays",
-    "era": 2.3,
-    "whip": 0.88,
-    "strikeouts": 26,
-    "walks": 11,
-    "innings_pitched": 27.1,
-    "games_started": 3,
+    "era": 3.82,
+    "whip": 1.08,
+    "strikeouts": 31,
+    "walks": 16,
+    "innings_pitched": 30.2,
+    "games_started": 4,
     "wins": 1,
-    "losses": 1,
-    "last_updated": "2025-08-08T22:07:20.547745"
+    "losses": 2,
+    "last_updated": "2025-08-10T11:47:09.611459"
   },
   "671737": {
     "id": "671737",
@@ -5474,15 +5484,15 @@
     },
     "career": {},
     "team": "Seattle Mariners",
-    "era": 1.24,
-    "whip": 1.17,
-    "strikeouts": 31,
+    "era": 1.2,
+    "whip": 1.13,
+    "strikeouts": 34,
     "walks": 12,
-    "innings_pitched": 29.0,
+    "innings_pitched": 30.0,
     "games_started": 0,
     "wins": 1,
     "losses": 0,
-    "last_updated": "2025-08-08T22:07:11.023381"
+    "last_updated": "2025-08-10T11:46:34.739173"
   },
   "518489": {
     "id": "518489",
@@ -5559,7 +5569,7 @@
     "games_started": 1,
     "wins": 0,
     "losses": 1,
-    "last_updated": "2025-08-08T22:08:08.641461"
+    "last_updated": "2025-08-10T11:48:57.863378"
   },
   "623211": {
     "id": "623211",
@@ -5904,7 +5914,7 @@
     "games_started": 0,
     "wins": 2,
     "losses": 1,
-    "last_updated": "2025-08-08T22:07:53.445830"
+    "last_updated": "2025-08-10T11:48:40.699251"
   },
   "676962": {
     "id": "676962",
@@ -5981,7 +5991,7 @@
     "games_started": 15,
     "wins": 5,
     "losses": 7,
-    "last_updated": "2025-08-08T22:08:06.646463"
+    "last_updated": "2025-08-10T11:48:55.365158"
   },
   "686613": {
     "id": "686613",
@@ -6058,7 +6068,7 @@
     "games_started": 23,
     "wins": 9,
     "losses": 5,
-    "last_updated": "2025-08-08T22:08:24.648448"
+    "last_updated": "2025-08-10T11:49:15.065954"
   },
   "664141": {
     "id": "664141",
@@ -6395,15 +6405,15 @@
     },
     "career": {},
     "team": "Boston Red Sox",
-    "era": 5.47,
-    "whip": 1.58,
+    "era": 5.4,
+    "whip": 1.56,
     "strikeouts": 75,
     "walks": 46,
-    "innings_pitched": 98.2,
+    "innings_pitched": 100.0,
     "games_started": 20,
-    "wins": 6,
+    "wins": 7,
     "losses": 6,
-    "last_updated": "2025-08-08T22:08:05.847175"
+    "last_updated": "2025-08-10T11:48:54.487518"
   },
   "607481": {
     "id": "607481",
@@ -6472,15 +6482,15 @@
     },
     "career": {},
     "team": "Atlanta Braves",
-    "era": 4.21,
+    "era": 4.25,
     "whip": 1.32,
-    "strikeouts": 46,
+    "strikeouts": 47,
     "walks": 16,
-    "innings_pitched": 47.0,
+    "innings_pitched": 48.2,
     "games_started": 2,
     "wins": 1,
     "losses": 2,
-    "last_updated": "2025-08-08T22:07:35.835124"
+    "last_updated": "2025-08-10T11:48:02.007427"
   },
   "595897": {
     "id": "595897",
@@ -6614,7 +6624,17 @@
       "sacBunts": 0,
       "sacFlies": 0
     },
-    "career": {}
+    "career": {},
+    "team": "Arizona Diamondbacks",
+    "era": 3.68,
+    "whip": 1.5,
+    "strikeouts": 10,
+    "walks": 3,
+    "innings_pitched": 7.1,
+    "games_started": 0,
+    "wins": 0,
+    "losses": 0,
+    "last_updated": "2025-08-10T11:48:45.832537"
   },
   "656271": {
     "id": "656271",
@@ -6683,15 +6703,15 @@
     },
     "career": {},
     "team": "Los Angeles Angels",
-    "era": 3.0,
+    "era": 2.94,
     "whip": 1.29,
-    "strikeouts": 40,
-    "walks": 17,
-    "innings_pitched": 48.0,
+    "strikeouts": 41,
+    "walks": 18,
+    "innings_pitched": 49.0,
     "games_started": 1,
     "wins": 5,
     "losses": 1,
-    "last_updated": "2025-08-08T22:07:52.964476"
+    "last_updated": "2025-08-10T11:48:40.107344"
   },
   "680732": {
     "id": "680732",
@@ -6760,15 +6780,15 @@
     },
     "career": {},
     "team": "Chicago White Sox",
-    "era": 4.23,
-    "whip": 1.41,
-    "strikeouts": 100,
-    "walks": 50,
-    "innings_pitched": 110.2,
-    "games_started": 18,
+    "era": 4.26,
+    "whip": 1.44,
+    "strikeouts": 107,
+    "walks": 53,
+    "innings_pitched": 114.0,
+    "games_started": 19,
     "wins": 4,
-    "losses": 8,
-    "last_updated": "2025-08-08T22:07:40.909997"
+    "losses": 9,
+    "last_updated": "2025-08-10T11:48:17.440885"
   },
   "669203": {
     "id": "669203",
@@ -6912,7 +6932,7 @@
     "games_started": 8,
     "wins": 0,
     "losses": 3,
-    "last_updated": "2025-08-08T22:08:10.411666"
+    "last_updated": "2025-08-10T11:48:59.565425"
   },
   "621114": {
     "id": "621114",
@@ -7056,7 +7076,7 @@
     "games_started": 13,
     "wins": 1,
     "losses": 4,
-    "last_updated": "2025-08-08T22:07:03.291355"
+    "last_updated": "2025-08-10T11:46:07.105821"
   },
   "676130": {
     "id": "676130",
@@ -7125,15 +7145,15 @@
     },
     "career": {},
     "team": "San Francisco Giants",
-    "era": 3.4,
-    "whip": 1.33,
-    "strikeouts": 44,
-    "walks": 23,
-    "innings_pitched": 50.1,
+    "era": 3.33,
+    "whip": 1.32,
+    "strikeouts": 46,
+    "walks": 24,
+    "innings_pitched": 51.1,
     "games_started": 0,
     "wins": 3,
     "losses": 2,
-    "last_updated": "2025-08-08T22:07:12.304323"
+    "last_updated": "2025-08-10T11:46:39.238868"
   },
   "665795": {
     "id": "665795",
@@ -7210,7 +7230,7 @@
     "games_started": 20,
     "wins": 6,
     "losses": 5,
-    "last_updated": "2025-08-08T22:07:43.353036"
+    "last_updated": "2025-08-10T11:48:26.120199"
   },
   "650893": {
     "id": "650893",
@@ -7346,15 +7366,15 @@
     },
     "career": {},
     "team": "Kansas City Royals",
-    "era": 2.68,
-    "whip": 1.01,
-    "strikeouts": 72,
-    "walks": 24,
-    "innings_pitched": 87.1,
-    "games_started": 15,
-    "wins": 5,
+    "era": 2.52,
+    "whip": 1.03,
+    "strikeouts": 76,
+    "walks": 26,
+    "innings_pitched": 93.0,
+    "games_started": 16,
+    "wins": 6,
     "losses": 5,
-    "last_updated": "2025-08-08T22:08:28.598940"
+    "last_updated": "2025-08-10T11:49:19.207855"
   },
   "663462": {
     "id": "663462",
@@ -7423,15 +7443,15 @@
     },
     "career": {},
     "team": "Boston Red Sox",
-    "era": 6.75,
-    "whip": 1.75,
+    "era": 5.4,
+    "whip": 1.4,
     "strikeouts": 2,
     "walks": 0,
-    "innings_pitched": 4.0,
+    "innings_pitched": 5.0,
     "games_started": 0,
     "wins": 0,
     "losses": 0,
-    "last_updated": "2025-08-08T22:08:04.769405"
+    "last_updated": "2025-08-10T11:48:53.176907"
   },
   "656288": {
     "id": "656288",
@@ -7642,7 +7662,7 @@
     "games_started": 0,
     "wins": 1,
     "losses": 6,
-    "last_updated": "2025-08-08T22:08:02.783641"
+    "last_updated": "2025-08-10T11:48:51.016567"
   },
   "676282": {
     "id": "676282",
@@ -7711,15 +7731,15 @@
     },
     "career": {},
     "team": "Cleveland Guardians",
-    "era": 4.37,
-    "whip": 1.44,
-    "strikeouts": 72,
-    "walks": 30,
-    "innings_pitched": 55.2,
-    "games_started": 6,
-    "wins": 2,
+    "era": 4.11,
+    "whip": 1.4,
+    "strikeouts": 75,
+    "walks": 32,
+    "innings_pitched": 61.1,
+    "games_started": 7,
+    "wins": 3,
     "losses": 2,
-    "last_updated": "2025-08-08T22:08:14.597808"
+    "last_updated": "2025-08-10T11:49:04.117100"
   },
   "471911": {
     "id": "471911",
@@ -7796,7 +7816,7 @@
     "games_started": 8,
     "wins": 2,
     "losses": 2,
-    "last_updated": "2025-08-08T22:07:36.431993"
+    "last_updated": "2025-08-10T11:48:03.845620"
   },
   "692024": {
     "id": "692024",
@@ -7932,15 +7952,15 @@
     },
     "career": {},
     "team": "Los Angeles Dodgers",
-    "era": 4.92,
-    "whip": 1.27,
-    "strikeouts": 61,
+    "era": 4.83,
+    "whip": 1.26,
+    "strikeouts": 63,
     "walks": 16,
-    "innings_pitched": 67.2,
+    "innings_pitched": 69.0,
     "games_started": 3,
     "wins": 7,
     "losses": 4,
-    "last_updated": "2025-08-08T22:08:30.737359"
+    "last_updated": "2025-08-10T11:49:21.948319"
   },
   "680604": {
     "id": "680604",
@@ -8143,15 +8163,15 @@
     },
     "career": {},
     "team": "Seattle Mariners",
-    "era": 3.21,
+    "era": 3.19,
     "whip": 1.19,
-    "strikeouts": 119,
+    "strikeouts": 120,
     "walks": 37,
-    "innings_pitched": 137.1,
+    "innings_pitched": 138.1,
     "games_started": 24,
     "wins": 8,
     "losses": 6,
-    "last_updated": "2025-08-08T22:07:10.788338"
+    "last_updated": "2025-08-10T11:46:32.947494"
   },
   "622379": {
     "id": "622379",
@@ -8362,7 +8382,7 @@
     "games_started": 1,
     "wins": 0,
     "losses": 0,
-    "last_updated": "2025-08-08T22:08:33.483800"
+    "last_updated": "2025-08-10T11:49:25.150861"
   },
   "656302": {
     "id": "656302",
@@ -8439,7 +8459,7 @@
     "games_started": 23,
     "wins": 4,
     "losses": 10,
-    "last_updated": "2025-08-08T22:07:05.135830"
+    "last_updated": "2025-08-10T11:46:09.948039"
   },
   "677944": {
     "id": "677944",
@@ -8516,7 +8536,7 @@
     "games_started": 14,
     "wins": 5,
     "losses": 4,
-    "last_updated": "2025-08-08T22:08:15.802361"
+    "last_updated": "2025-08-10T11:49:05.424545"
   },
   "605177": {
     "id": "605177",
@@ -8593,7 +8613,7 @@
     "games_started": 0,
     "wins": 1,
     "losses": 1,
-    "last_updated": "2025-08-08T22:07:52.724839"
+    "last_updated": "2025-08-10T11:48:39.863345"
   },
   "547973": {
     "id": "547973",
@@ -8662,15 +8682,15 @@
     },
     "career": {},
     "team": "Boston Red Sox",
-    "era": 1.21,
-    "whip": 0.76,
+    "era": 1.18,
+    "whip": 0.74,
     "strikeouts": 65,
     "walks": 13,
-    "innings_pitched": 44.2,
+    "innings_pitched": 45.2,
     "games_started": 0,
     "wins": 3,
     "losses": 2,
-    "last_updated": "2025-08-08T22:08:03.314564"
+    "last_updated": "2025-08-10T11:48:51.631899"
   },
   "683409": {
     "id": "683409",
@@ -8881,7 +8901,7 @@
     "games_started": 15,
     "wins": 3,
     "losses": 7,
-    "last_updated": "2025-08-08T22:07:39.271002"
+    "last_updated": "2025-08-10T11:48:10.112773"
   },
   "664199": {
     "id": "664199",
@@ -8958,7 +8978,7 @@
     "games_started": 0,
     "wins": 1,
     "losses": 1,
-    "last_updated": "2025-08-08T22:08:29.456121"
+    "last_updated": "2025-08-10T11:49:20.485016"
   },
   "661403": {
     "id": "661403",
@@ -9094,15 +9114,15 @@
     },
     "career": {},
     "team": "Tampa Bay Rays",
-    "era": 2.2,
-    "whip": 1.02,
+    "era": 2.14,
+    "whip": 1.0,
     "strikeouts": 53,
     "walks": 13,
-    "innings_pitched": 41.0,
+    "innings_pitched": 42.0,
     "games_started": 0,
     "wins": 1,
     "losses": 4,
-    "last_updated": "2025-08-08T22:07:19.822912"
+    "last_updated": "2025-08-10T11:47:05.853175"
   },
   "605182": {
     "id": "605182",
@@ -9313,7 +9333,7 @@
     "games_started": 21,
     "wins": 6,
     "losses": 7,
-    "last_updated": "2025-08-08T22:07:24.471605"
+    "last_updated": "2025-08-10T11:47:19.898263"
   },
   "641482": {
     "id": "641482",
@@ -9390,7 +9410,7 @@
     "games_started": 3,
     "wins": 1,
     "losses": 1,
-    "last_updated": "2025-08-08T22:07:06.067521"
+    "last_updated": "2025-08-10T11:46:12.686372"
   },
   "676680": {
     "id": "676680",
@@ -9526,15 +9546,15 @@
     },
     "career": {},
     "team": "Texas Rangers",
-    "era": 1.06,
-    "whip": 1.0,
-    "strikeouts": 35,
-    "walks": 12,
-    "innings_pitched": 34.0,
+    "era": 1.04,
+    "whip": 1.04,
+    "strikeouts": 36,
+    "walks": 13,
+    "innings_pitched": 34.2,
     "games_started": 1,
     "wins": 2,
     "losses": 0,
-    "last_updated": "2025-08-08T22:07:22.473164"
+    "last_updated": "2025-08-10T11:47:14.840365"
   },
   "680735": {
     "id": "680735",
@@ -9603,15 +9623,15 @@
     },
     "career": {},
     "team": "Atlanta Braves",
-    "era": 3.38,
-    "whip": 1.31,
-    "strikeouts": 13,
+    "era": 3.09,
+    "whip": 1.2,
+    "strikeouts": 15,
     "walks": 3,
-    "innings_pitched": 10.2,
+    "innings_pitched": 11.2,
     "games_started": 1,
     "wins": 0,
     "losses": 0,
-    "last_updated": "2025-08-08T22:07:36.048913"
+    "last_updated": "2025-08-10T11:48:02.262268"
   },
   "681867": {
     "id": "681867",
@@ -9755,7 +9775,7 @@
     "games_started": 23,
     "wins": 13,
     "losses": 4,
-    "last_updated": "2025-08-08T22:08:04.095048"
+    "last_updated": "2025-08-10T11:48:52.399815"
   },
   "518585": {
     "id": "518585",
@@ -10100,7 +10120,7 @@
     "games_started": 0,
     "wins": 1,
     "losses": 0,
-    "last_updated": "2025-08-08T22:07:58.218680"
+    "last_updated": "2025-08-10T11:48:45.481757"
   },
   "681168": {
     "id": "681168",
@@ -10177,7 +10197,7 @@
     "games_started": 0,
     "wins": 1,
     "losses": 0,
-    "last_updated": "2025-08-08T22:07:23.810342"
+    "last_updated": "2025-08-10T11:47:18.985131"
   },
   "702674": {
     "id": "702674",
@@ -10380,15 +10400,15 @@
     },
     "career": {},
     "team": "Colorado Rockies",
-    "era": 3.6,
-    "whip": 1.2,
+    "era": 2.84,
+    "whip": 1.11,
     "strikeouts": 3,
-    "walks": 1,
-    "innings_pitched": 5.0,
+    "walks": 2,
+    "innings_pitched": 6.1,
     "games_started": 0,
     "wins": 1,
     "losses": 0,
-    "last_updated": "2025-08-08T22:08:17.141749"
+    "last_updated": "2025-08-10T11:49:07.117214"
   },
   "690382": {
     "id": "690382",
@@ -10532,7 +10552,7 @@
     "games_started": 6,
     "wins": 1,
     "losses": 3,
-    "last_updated": "2025-08-08T22:07:07.304215"
+    "last_updated": "2025-08-10T11:46:15.187769"
   },
   "663562": {
     "id": "663562",
@@ -10735,15 +10755,15 @@
     },
     "career": {},
     "team": "Texas Rangers",
-    "era": 2.8,
-    "whip": 0.94,
-    "strikeouts": 135,
-    "walks": 29,
-    "innings_pitched": 128.2,
-    "games_started": 22,
+    "era": 2.86,
+    "whip": 0.95,
+    "strikeouts": 143,
+    "walks": 30,
+    "innings_pitched": 135.1,
+    "games_started": 23,
     "wins": 10,
-    "losses": 4,
-    "last_updated": "2025-08-08T22:07:23.334547"
+    "losses": 5,
+    "last_updated": "2025-08-10T11:47:17.296793"
   },
   "660853": {
     "id": "660853",
@@ -10820,7 +10840,7 @@
     "games_started": 0,
     "wins": 3,
     "losses": 3,
-    "last_updated": "2025-08-08T22:08:24.016737"
+    "last_updated": "2025-08-10T11:49:14.305987"
   },
   "660787": {
     "id": "660787",
@@ -10897,7 +10917,7 @@
     "games_started": 0,
     "wins": 0,
     "losses": 0,
-    "last_updated": "2025-08-08T22:07:48.867663"
+    "last_updated": "2025-08-10T11:48:35.574012"
   },
   "543101": {
     "id": "543101",
@@ -10974,7 +10994,7 @@
     "games_started": 3,
     "wins": 1,
     "losses": 2,
-    "last_updated": "2025-08-08T22:07:56.773162"
+    "last_updated": "2025-08-10T11:48:44.177509"
   },
   "672282": {
     "id": "672282",
@@ -11051,7 +11071,7 @@
     "games_started": 0,
     "wins": 3,
     "losses": 3,
-    "last_updated": "2025-08-08T22:07:54.863158"
+    "last_updated": "2025-08-10T11:48:42.319961"
   },
   "606965": {
     "id": "606965",
@@ -11187,15 +11207,15 @@
     },
     "career": {},
     "team": "Los Angeles Dodgers",
-    "era": 8.49,
-    "whip": 1.46,
-    "strikeouts": 7,
-    "walks": 6,
-    "innings_pitched": 11.2,
+    "era": 7.82,
+    "whip": 1.5,
+    "strikeouts": 8,
+    "walks": 7,
+    "innings_pitched": 12.2,
     "games_started": 0,
     "wins": 1,
     "losses": 0,
-    "last_updated": "2025-08-08T22:08:30.265310"
+    "last_updated": "2025-08-10T11:49:21.406883"
   },
   "621242": {
     "id": "621242",
@@ -11272,7 +11292,7 @@
     "games_started": 0,
     "wins": 5,
     "losses": 1,
-    "last_updated": "2025-08-08T22:08:36.998861"
+    "last_updated": "2025-08-10T11:49:29.347753"
   },
   "646242": {
     "id": "646242",
@@ -11753,15 +11773,15 @@
     },
     "career": {},
     "team": "Toronto Blue Jays",
-    "era": 3.6,
-    "whip": 1.31,
-    "strikeouts": 58,
-    "walks": 25,
-    "innings_pitched": 45.0,
+    "era": 3.94,
+    "whip": 1.38,
+    "strikeouts": 60,
+    "walks": 27,
+    "innings_pitched": 45.2,
     "games_started": 0,
     "wins": 2,
     "losses": 4,
-    "last_updated": "2025-08-08T22:07:28.195839"
+    "last_updated": "2025-08-10T11:47:32.585509"
   },
   "666808": {
     "id": "666808",
@@ -11830,15 +11850,15 @@
     },
     "career": {},
     "team": "New York Yankees",
-    "era": 3.04,
-    "whip": 1.23,
-    "strikeouts": 52,
-    "walks": 26,
-    "innings_pitched": 50.1,
+    "era": 3.2,
+    "whip": 1.28,
+    "strikeouts": 53,
+    "walks": 28,
+    "innings_pitched": 50.2,
     "games_started": 0,
     "wins": 4,
     "losses": 3,
-    "last_updated": "2025-08-08T22:07:46.475401"
+    "last_updated": "2025-08-10T11:48:33.118722"
   },
   "676263": {
     "id": "676263",
@@ -11907,15 +11927,15 @@
     },
     "career": {},
     "team": "Los Angeles Dodgers",
-    "era": 2.93,
-    "whip": 1.12,
-    "strikeouts": 52,
+    "era": 2.98,
+    "whip": 1.1,
+    "strikeouts": 54,
     "walks": 20,
-    "innings_pitched": 55.1,
+    "innings_pitched": 57.1,
     "games_started": 5,
     "wins": 2,
     "losses": 2,
-    "last_updated": "2025-08-08T22:08:32.087584"
+    "last_updated": "2025-08-10T11:49:23.355004"
   },
   "681869": {
     "id": "681869",
@@ -12185,15 +12205,15 @@
     },
     "career": {},
     "team": "Philadelphia Phillies",
-    "era": 1.93,
-    "whip": 1.13,
-    "strikeouts": 54,
+    "era": 1.89,
+    "whip": 1.11,
+    "strikeouts": 55,
     "walks": 18,
-    "innings_pitched": 51.1,
+    "innings_pitched": 52.1,
     "games_started": 0,
     "wins": 6,
     "losses": 4,
-    "last_updated": "2025-08-08T22:07:33.203647"
+    "last_updated": "2025-08-10T11:47:50.317248"
   },
   "671109": {
     "id": "671109",
@@ -12538,7 +12558,7 @@
     "games_started": 3,
     "wins": 2,
     "losses": 3,
-    "last_updated": "2025-08-08T22:07:39.483619"
+    "last_updated": "2025-08-10T11:48:10.477892"
   },
   "693821": {
     "id": "693821",
@@ -12615,7 +12635,7 @@
     "games_started": 19,
     "wins": 4,
     "losses": 9,
-    "last_updated": "2025-08-08T22:07:36.194278"
+    "last_updated": "2025-08-10T11:48:02.665485"
   },
   "686642": {
     "id": "686642",
@@ -12751,15 +12771,15 @@
     },
     "career": {},
     "team": "Tampa Bay Rays",
-    "era": 3.86,
-    "whip": 1.19,
+    "era": 4.01,
+    "whip": 1.22,
     "strikeouts": 32,
-    "walks": 7,
-    "innings_pitched": 32.2,
+    "walks": 8,
+    "innings_pitched": 33.2,
     "games_started": 0,
     "wins": 0,
     "losses": 1,
-    "last_updated": "2025-08-08T22:07:20.750611"
+    "last_updated": "2025-08-10T11:47:11.224236"
   },
   "608650": {
     "id": "608650",
@@ -12836,7 +12856,7 @@
     "games_started": 2,
     "wins": 1,
     "losses": 1,
-    "last_updated": "2025-08-08T22:08:00.751790"
+    "last_updated": "2025-08-10T11:48:48.801603"
   },
   "663671": {
     "id": "663671",
@@ -12905,15 +12925,15 @@
     },
     "career": {},
     "team": "Cleveland Guardians",
-    "era": 2.01,
-    "whip": 0.94,
+    "era": 1.96,
+    "whip": 0.91,
     "strikeouts": 20,
     "walks": 9,
-    "innings_pitched": 22.1,
+    "innings_pitched": 23.0,
     "games_started": 0,
     "wins": 2,
     "losses": 0,
-    "last_updated": "2025-08-08T22:08:15.587204"
+    "last_updated": "2025-08-10T11:49:05.153926"
   },
   "543135": {
     "id": "543135",
@@ -12990,7 +13010,7 @@
     "games_started": 19,
     "wins": 10,
     "losses": 3,
-    "last_updated": "2025-08-08T22:07:24.254213"
+    "last_updated": "2025-08-10T11:47:19.632982"
   },
   "668674": {
     "id": "668674",
@@ -13059,15 +13079,15 @@
     },
     "career": {},
     "team": "Kansas City Royals",
-    "era": 2.49,
-    "whip": 1.15,
-    "strikeouts": 38,
+    "era": 2.44,
+    "whip": 1.13,
+    "strikeouts": 39,
     "walks": 15,
-    "innings_pitched": 47.0,
+    "innings_pitched": 48.0,
     "games_started": 0,
     "wins": 4,
     "losses": 3,
-    "last_updated": "2025-08-08T22:08:28.057059"
+    "last_updated": "2025-08-10T11:49:18.584113"
   },
   "683155": {
     "id": "683155",
@@ -13203,15 +13223,15 @@
     },
     "career": {},
     "team": "Kansas City Royals",
-    "era": 2.59,
-    "whip": 1.15,
-    "strikeouts": 40,
+    "era": 2.54,
+    "whip": 1.13,
+    "strikeouts": 42,
     "walks": 17,
-    "innings_pitched": 48.2,
+    "innings_pitched": 49.2,
     "games_started": 0,
     "wins": 4,
     "losses": 3,
-    "last_updated": "2025-08-08T22:08:27.034747"
+    "last_updated": "2025-08-10T11:49:17.619874"
   },
   "669093": {
     "id": "669093",
@@ -13280,15 +13300,15 @@
     },
     "career": {},
     "team": "San Diego Padres",
-    "era": 2.61,
-    "whip": 1.03,
-    "strikeouts": 73,
+    "era": 2.52,
+    "whip": 0.99,
+    "strikeouts": 78,
     "walks": 17,
-    "innings_pitched": 51.2,
+    "innings_pitched": 53.2,
     "games_started": 0,
     "wins": 4,
     "losses": 4,
-    "last_updated": "2025-08-08T22:07:05.571042"
+    "last_updated": "2025-08-10T11:46:11.710796"
   },
   "681751": {
     "id": "681751",
@@ -13424,15 +13444,15 @@
     },
     "career": {},
     "team": "Seattle Mariners",
-    "era": 4.3,
-    "whip": 1.41,
-    "strikeouts": 53,
-    "walks": 23,
-    "innings_pitched": 69.0,
-    "games_started": 13,
-    "wins": 5,
+    "era": 4.36,
+    "whip": 1.39,
+    "strikeouts": 57,
+    "walks": 26,
+    "innings_pitched": 74.1,
+    "games_started": 14,
+    "wins": 6,
     "losses": 4,
-    "last_updated": "2025-08-08T22:07:10.292590"
+    "last_updated": "2025-08-10T11:46:30.095527"
   },
   "664126": {
     "id": "664126",
@@ -13509,7 +13529,7 @@
     "games_started": 0,
     "wins": 4,
     "losses": 3,
-    "last_updated": "2025-08-08T22:07:21.200420"
+    "last_updated": "2025-08-10T11:47:13.184979"
   },
   "663559": {
     "id": "663559",
@@ -13586,7 +13606,7 @@
     "games_started": 23,
     "wins": 7,
     "losses": 6,
-    "last_updated": "2025-08-08T22:08:26.781823"
+    "last_updated": "2025-08-10T11:49:17.335550"
   },
   "676534": {
     "id": "676534",
@@ -13663,7 +13683,7 @@
     "games_started": 0,
     "wins": 3,
     "losses": 2,
-    "last_updated": "2025-08-08T22:07:43.182382"
+    "last_updated": "2025-08-10T11:48:25.206017"
   },
   "607200": {
     "id": "607200",
@@ -13732,15 +13752,15 @@
     },
     "career": {},
     "team": "Atlanta Braves",
-    "era": 5.32,
-    "whip": 1.48,
-    "strikeouts": 66,
-    "walks": 51,
-    "innings_pitched": 111.2,
-    "games_started": 22,
-    "wins": 3,
+    "era": 5.4,
+    "whip": 1.49,
+    "strikeouts": 70,
+    "walks": 55,
+    "innings_pitched": 116.2,
+    "games_started": 23,
+    "wins": 4,
     "losses": 12,
-    "last_updated": "2025-08-08T22:07:37.463700"
+    "last_updated": "2025-08-10T11:48:05.939682"
   },
   "663372": {
     "id": "663372",
@@ -13876,15 +13896,15 @@
     },
     "career": {},
     "team": "Seattle Mariners",
-    "era": 3.47,
-    "whip": 1.05,
-    "strikeouts": 35,
+    "era": 3.61,
+    "whip": 1.06,
+    "strikeouts": 36,
     "walks": 14,
-    "innings_pitched": 46.2,
+    "innings_pitched": 47.1,
     "games_started": 0,
     "wins": 2,
     "losses": 2,
-    "last_updated": "2025-08-08T22:07:08.617707"
+    "last_updated": "2025-08-10T11:46:20.044789"
   },
   "621053": {
     "id": "621053",
@@ -13961,7 +13981,7 @@
     "games_started": 0,
     "wins": 2,
     "losses": 2,
-    "last_updated": "2025-08-08T22:07:00.852040"
+    "last_updated": "2025-08-10T11:46:00.619761"
   },
   "820862": {
     "id": "820862",
@@ -14164,15 +14184,15 @@
     },
     "career": {},
     "team": "St. Louis Cardinals",
-    "era": 12.6,
-    "whip": 2.4,
-    "strikeouts": 7,
+    "era": 10.38,
+    "whip": 2.0,
+    "strikeouts": 11,
     "walks": 7,
-    "innings_pitched": 10.0,
+    "innings_pitched": 13.0,
     "games_started": 0,
     "wins": 0,
     "losses": 2,
-    "last_updated": "2025-08-08T22:07:17.882405"
+    "last_updated": "2025-08-10T11:46:58.132040"
   },
   "678606": {
     "id": "678606",
@@ -14241,15 +14261,15 @@
     },
     "career": {},
     "team": "Washington Nationals",
-    "era": 4.94,
+    "era": 4.79,
     "whip": 1.24,
-    "strikeouts": 47,
+    "strikeouts": 48,
     "walks": 12,
-    "innings_pitched": 54.2,
+    "innings_pitched": 56.1,
     "games_started": 0,
     "wins": 3,
     "losses": 3,
-    "last_updated": "2025-08-08T22:08:34.487198"
+    "last_updated": "2025-08-10T11:49:26.399013"
   },
   "701581": {
     "id": "701581",
@@ -14393,7 +14413,7 @@
     "games_started": 0,
     "wins": 3,
     "losses": 2,
-    "last_updated": "2025-08-08T22:08:15.348032"
+    "last_updated": "2025-08-10T11:49:04.898830"
   },
   "656420": {
     "id": "656420",
@@ -14537,7 +14557,7 @@
     "games_started": 0,
     "wins": 1,
     "losses": 4,
-    "last_updated": "2025-08-08T22:08:21.102315"
+    "last_updated": "2025-08-10T11:49:11.188835"
   },
   "680755": {
     "id": "680755",
@@ -14606,15 +14626,15 @@
     },
     "career": {},
     "team": "Toronto Blue Jays",
-    "era": 2.36,
-    "whip": 0.93,
-    "strikeouts": 44,
+    "era": 2.27,
+    "whip": 0.9,
+    "strikeouts": 47,
     "walks": 9,
-    "innings_pitched": 34.1,
+    "innings_pitched": 35.2,
     "games_started": 1,
     "wins": 4,
     "losses": 0,
-    "last_updated": "2025-08-08T22:07:25.900679"
+    "last_updated": "2025-08-10T11:47:25.029356"
   },
   "690916": {
     "id": "690916",
@@ -14758,7 +14778,7 @@
     "games_started": 23,
     "wins": 6,
     "losses": 11,
-    "last_updated": "2025-08-08T22:08:20.889634"
+    "last_updated": "2025-08-10T11:49:10.916526"
   },
   "623167": {
     "id": "623167",
@@ -14894,15 +14914,15 @@
     },
     "career": {},
     "team": "Toronto Blue Jays",
-    "era": 5.36,
-    "whip": 1.26,
-    "strikeouts": 43,
+    "era": 5.23,
+    "whip": 1.23,
+    "strikeouts": 44,
     "walks": 18,
-    "innings_pitched": 42.0,
+    "innings_pitched": 43.0,
     "games_started": 0,
     "wins": 4,
     "losses": 2,
-    "last_updated": "2025-08-08T22:07:27.807956"
+    "last_updated": "2025-08-10T11:47:30.842643"
   },
   "670102": {
     "id": "670102",
@@ -15046,7 +15066,7 @@
     "games_started": 21,
     "wins": 2,
     "losses": 12,
-    "last_updated": "2025-08-08T22:08:18.108562"
+    "last_updated": "2025-08-10T11:49:08.242831"
   },
   "673965": {
     "id": "673965",
@@ -15190,7 +15210,7 @@
     "games_started": 23,
     "wins": 12,
     "losses": 4,
-    "last_updated": "2025-08-08T22:07:48.200631"
+    "last_updated": "2025-08-10T11:48:34.817815"
   },
   "800311": {
     "id": "800311",
@@ -15334,7 +15354,7 @@
     "games_started": 0,
     "wins": 0,
     "losses": 0,
-    "last_updated": "2025-08-08T22:07:53.212467"
+    "last_updated": "2025-08-10T11:48:40.417109"
   },
   "605242": {
     "id": "605242",
@@ -15478,7 +15498,7 @@
     "games_started": 0,
     "wins": 2,
     "losses": 1,
-    "last_updated": "2025-08-08T22:07:30.791038"
+    "last_updated": "2025-08-10T11:47:42.196578"
   },
   "683769": {
     "id": "683769",
@@ -15547,15 +15567,15 @@
     },
     "career": {},
     "team": "Cleveland Guardians",
-    "era": 3.61,
-    "whip": 1.31,
-    "strikeouts": 54,
-    "walks": 16,
-    "innings_pitched": 47.1,
+    "era": 3.56,
+    "whip": 1.33,
+    "strikeouts": 55,
+    "walks": 18,
+    "innings_pitched": 48.0,
     "games_started": 0,
     "wins": 1,
     "losses": 1,
-    "last_updated": "2025-08-08T22:08:14.109388"
+    "last_updated": "2025-08-10T11:49:03.667113"
   },
   "657424": {
     "id": "657424",
@@ -15626,13 +15646,13 @@
     "team": "San Francisco Giants",
     "era": 0.0,
     "whip": 1.0,
-    "strikeouts": 12,
+    "strikeouts": 13,
     "walks": 5,
-    "innings_pitched": 16.0,
+    "innings_pitched": 18.0,
     "games_started": 2,
     "wins": 0,
     "losses": 0,
-    "last_updated": "2025-08-08T22:07:13.341918"
+    "last_updated": "2025-08-10T11:46:43.301154"
   },
   "668678": {
     "id": "668678",
@@ -15701,15 +15721,15 @@
     },
     "career": {},
     "team": "Arizona Diamondbacks",
-    "era": 5.32,
-    "whip": 1.36,
+    "era": 5.31,
+    "whip": 1.35,
     "strikeouts": 130,
     "walks": 50,
-    "innings_pitched": 138.2,
+    "innings_pitched": 139.0,
     "games_started": 24,
-    "wins": 8,
+    "wins": 9,
     "losses": 12,
-    "last_updated": "2025-08-08T22:07:59.117998"
+    "last_updated": "2025-08-10T11:48:46.835027"
   },
   "642520": {
     "id": "642520",
@@ -15920,7 +15940,7 @@
     "games_started": 0,
     "wins": 0,
     "losses": 0,
-    "last_updated": "2025-08-08T22:08:01.848835"
+    "last_updated": "2025-08-10T11:48:49.957977"
   },
   "472610": {
     "id": "472610",
@@ -15989,15 +16009,15 @@
     },
     "career": {},
     "team": "Los Angeles Angels",
-    "era": 4.05,
-    "whip": 1.5,
-    "strikeouts": 34,
+    "era": 3.95,
+    "whip": 1.46,
+    "strikeouts": 36,
     "walks": 18,
-    "innings_pitched": 40.0,
+    "innings_pitched": 41.0,
     "games_started": 0,
     "wins": 2,
     "losses": 0,
-    "last_updated": "2025-08-08T22:07:54.632036"
+    "last_updated": "2025-08-10T11:48:42.044945"
   },
   "676395": {
     "id": "676395",
@@ -16074,7 +16094,7 @@
     "games_started": 0,
     "wins": 1,
     "losses": 7,
-    "last_updated": "2025-08-08T22:07:25.149242"
+    "last_updated": "2025-08-10T11:47:20.830332"
   },
   "554340": {
     "id": "554340",
@@ -16210,15 +16230,15 @@
     },
     "career": {},
     "team": "New York Mets",
-    "era": 2.51,
-    "whip": 1.16,
-    "strikeouts": 54,
+    "era": 2.45,
+    "whip": 1.13,
+    "strikeouts": 56,
     "walks": 22,
-    "innings_pitched": 46.2,
-    "games_started": 0,
+    "innings_pitched": 47.2,
+    "games_started": 1,
     "wins": 3,
     "losses": 4,
-    "last_updated": "2025-08-08T22:08:38.035986"
+    "last_updated": "2025-08-10T11:49:30.732534"
   },
   "621057": {
     "id": "621057",
@@ -16362,7 +16382,7 @@
     "games_started": 23,
     "wins": 8,
     "losses": 8,
-    "last_updated": "2025-08-08T22:07:27.333956"
+    "last_updated": "2025-08-10T11:47:28.486148"
   },
   "801434": {
     "id": "801434",
@@ -16632,15 +16652,15 @@
     },
     "career": {},
     "team": "New York Yankees",
-    "era": 13.5,
-    "whip": 2.7,
-    "strikeouts": 3,
-    "walks": 4,
-    "innings_pitched": 3.1,
-    "games_started": 1,
+    "era": 7.27,
+    "whip": 1.85,
+    "strikeouts": 10,
+    "walks": 5,
+    "innings_pitched": 8.2,
+    "games_started": 2,
     "wins": 0,
     "losses": 1,
-    "last_updated": "2025-08-08T22:07:47.415063"
+    "last_updated": "2025-08-10T11:48:34.125503"
   },
   "669302": {
     "id": "669302",
@@ -16717,7 +16737,7 @@
     "games_started": 16,
     "wins": 3,
     "losses": 4,
-    "last_updated": "2025-08-08T22:07:10.535057"
+    "last_updated": "2025-08-10T11:46:31.337390"
   },
   "656457": {
     "id": "656457",
@@ -16786,15 +16806,15 @@
     },
     "career": {},
     "team": "Chicago White Sox",
-    "era": 2.86,
+    "era": 2.72,
     "whip": 1.1,
     "strikeouts": 32,
-    "walks": 17,
-    "innings_pitched": 34.2,
+    "walks": 19,
+    "innings_pitched": 36.1,
     "games_started": 3,
     "wins": 4,
     "losses": 1,
-    "last_updated": "2025-08-08T22:07:41.892885"
+    "last_updated": "2025-08-10T11:48:20.931517"
   },
   "670810": {
     "id": "670810",
@@ -17072,7 +17092,7 @@
     "games_started": 8,
     "wins": 2,
     "losses": 4,
-    "last_updated": "2025-08-08T22:06:58.207473"
+    "last_updated": "2025-08-10T11:45:57.316136"
   },
   "608337": {
     "id": "608337",
@@ -17141,15 +17161,15 @@
     },
     "career": {},
     "team": "Boston Red Sox",
-    "era": 3.57,
-    "whip": 1.19,
-    "strikeouts": 81,
-    "walks": 27,
-    "innings_pitched": 95.2,
-    "games_started": 17,
+    "era": 3.77,
+    "whip": 1.25,
+    "strikeouts": 82,
+    "walks": 33,
+    "innings_pitched": 100.1,
+    "games_started": 18,
     "wins": 8,
     "losses": 2,
-    "last_updated": "2025-08-08T22:08:05.452683"
+    "last_updated": "2025-08-10T11:48:54.006753"
   },
   "687830": {
     "id": "687830",
@@ -17293,7 +17313,7 @@
     "games_started": 10,
     "wins": 1,
     "losses": 1,
-    "last_updated": "2025-08-08T22:08:32.555134"
+    "last_updated": "2025-08-10T11:49:23.978082"
   },
   "596295": {
     "id": "596295",
@@ -17362,15 +17382,15 @@
     },
     "career": {},
     "team": "Colorado Rockies",
-    "era": 6.66,
-    "whip": 1.6,
+    "era": 6.52,
+    "whip": 1.57,
     "strikeouts": 30,
     "walks": 14,
-    "innings_pitched": 48.2,
+    "innings_pitched": 49.2,
     "games_started": 10,
     "wins": 0,
-    "losses": 5,
-    "last_updated": "2025-08-08T22:08:16.671542"
+    "losses": 6,
+    "last_updated": "2025-08-10T11:49:06.577554"
   },
   "672782": {
     "id": "672782",
@@ -17658,7 +17678,7 @@
     "games_started": 13,
     "wins": 4,
     "losses": 4,
-    "last_updated": "2025-08-08T22:08:23.763743"
+    "last_updated": "2025-08-10T11:49:14.092129"
   },
   "685299": {
     "id": "685299",
@@ -17735,7 +17755,7 @@
     "games_started": 6,
     "wins": 2,
     "losses": 4,
-    "last_updated": "2025-08-08T22:08:18.789258"
+    "last_updated": "2025-08-10T11:49:08.923084"
   },
   "669022": {
     "id": "669022",
@@ -17812,7 +17832,7 @@
     "games_started": 23,
     "wins": 4,
     "losses": 12,
-    "last_updated": "2025-08-08T22:08:34.930312"
+    "last_updated": "2025-08-10T11:49:26.937776"
   },
   "700669": {
     "id": "700669",
@@ -17881,15 +17901,15 @@
     },
     "career": {},
     "team": "St. Louis Cardinals",
-    "era": 5.65,
-    "whip": 1.15,
+    "era": 5.81,
+    "whip": 1.23,
     "strikeouts": 26,
-    "walks": 6,
-    "innings_pitched": 28.2,
+    "walks": 7,
+    "innings_pitched": 31.0,
     "games_started": 0,
     "wins": 3,
     "losses": 0,
-    "last_updated": "2025-08-08T22:07:15.655392"
+    "last_updated": "2025-08-10T11:46:50.361920"
   },
   "701552": {
     "id": "701552",
@@ -17966,7 +17986,7 @@
     "games_started": 0,
     "wins": 1,
     "losses": 0,
-    "last_updated": "2025-08-08T22:07:15.100882"
+    "last_updated": "2025-08-10T11:46:49.104934"
   },
   "608665": {
     "id": "608665",
@@ -18035,15 +18055,15 @@
     },
     "career": {},
     "team": "Arizona Diamondbacks",
-    "era": 6.32,
-    "whip": 1.91,
-    "strikeouts": 8,
+    "era": 5.94,
+    "whip": 1.86,
+    "strikeouts": 9,
     "walks": 11,
-    "innings_pitched": 15.2,
+    "innings_pitched": 16.2,
     "games_started": 0,
     "wins": 1,
     "losses": 0,
-    "last_updated": "2025-08-08T22:07:58.450090"
+    "last_updated": "2025-08-10T11:48:46.098239"
   },
   "592351": {
     "id": "592351",
@@ -18120,7 +18140,7 @@
     "games_started": 0,
     "wins": 1,
     "losses": 1,
-    "last_updated": "2025-08-08T22:07:23.567938"
+    "last_updated": "2025-08-10T11:47:18.717337"
   },
   "543243": {
     "id": "543243",
@@ -18197,7 +18217,7 @@
     "games_started": 23,
     "wins": 10,
     "losses": 5,
-    "last_updated": "2025-08-08T22:07:18.103840"
+    "last_updated": "2025-08-10T11:46:58.489367"
   },
   "643338": {
     "id": "643338",
@@ -18609,7 +18629,7 @@
     "games_started": 0,
     "wins": 6,
     "losses": 2,
-    "last_updated": "2025-08-08T22:08:25.118231"
+    "last_updated": "2025-08-10T11:49:15.615997"
   },
   "663795": {
     "id": "663795",
@@ -18678,15 +18698,15 @@
     },
     "career": {},
     "team": "New York Mets",
-    "era": 4.4,
-    "whip": 1.19,
-    "strikeouts": 14,
+    "era": 4.11,
+    "whip": 1.11,
+    "strikeouts": 15,
     "walks": 1,
-    "innings_pitched": 14.1,
+    "innings_pitched": 15.1,
     "games_started": 1,
     "wins": 0,
     "losses": 1,
-    "last_updated": "2025-08-08T22:08:37.689360"
+    "last_updated": "2025-08-10T11:49:30.136195"
   },
   "534910": {
     "id": "534910",
@@ -18830,7 +18850,7 @@
     "games_started": 3,
     "wins": 1,
     "losses": 0,
-    "last_updated": "2025-08-08T22:07:50.010990"
+    "last_updated": "2025-08-10T11:48:36.885074"
   },
   "678020": {
     "id": "678020",
@@ -19232,7 +19252,17 @@
       "sacBunts": 0,
       "sacFlies": 2
     },
-    "career": {}
+    "career": {},
+    "team": "Athletics",
+    "era": 4.25,
+    "whip": 1.63,
+    "strikeouts": 47,
+    "walks": 25,
+    "innings_pitched": 42.1,
+    "games_started": 0,
+    "wins": 1,
+    "losses": 1,
+    "last_updated": "2025-08-10T11:45:57.037925"
   },
   "690986": {
     "id": "690986",
@@ -19503,14 +19533,14 @@
     "career": {},
     "team": "Kansas City Royals",
     "era": 0.0,
-    "whip": 0.52,
-    "strikeouts": 10,
+    "whip": 0.66,
+    "strikeouts": 11,
     "walks": 1,
-    "innings_pitched": 9.2,
+    "innings_pitched": 10.2,
     "games_started": 0,
     "wins": 1,
     "losses": 0,
-    "last_updated": "2025-08-08T22:08:27.565179"
+    "last_updated": "2025-08-10T11:49:18.115816"
   },
   "641672": {
     "id": "641672",
@@ -19587,7 +19617,7 @@
     "games_started": 0,
     "wins": 1,
     "losses": 0,
-    "last_updated": "2025-08-08T22:07:31.502741"
+    "last_updated": "2025-08-10T11:47:45.238714"
   },
   "687396": {
     "id": "687396",
@@ -19664,7 +19694,7 @@
     "games_started": 0,
     "wins": 0,
     "losses": 0,
-    "last_updated": "2025-08-08T22:07:46.072155"
+    "last_updated": "2025-08-10T11:48:32.525245"
   },
   "571760": {
     "id": "571760",
@@ -19741,7 +19771,7 @@
     "games_started": 22,
     "wins": 5,
     "losses": 9,
-    "last_updated": "2025-08-08T22:07:01.442235"
+    "last_updated": "2025-08-10T11:46:01.238163"
   },
   "664854": {
     "id": "664854",
@@ -19810,15 +19840,15 @@
     },
     "career": {},
     "team": "New York Mets",
-    "era": 2.77,
-    "whip": 1.36,
+    "era": 3.2,
+    "whip": 1.4,
     "strikeouts": 46,
     "walks": 15,
-    "innings_pitched": 39.0,
+    "innings_pitched": 39.1,
     "games_started": 0,
     "wins": 3,
     "losses": 2,
-    "last_updated": "2025-08-08T22:08:38.312389"
+    "last_updated": "2025-08-10T11:49:31.070755"
   },
   "701656": {
     "id": "701656",
@@ -19962,7 +19992,7 @@
     "games_started": 22,
     "wins": 6,
     "losses": 8,
-    "last_updated": "2025-08-08T22:07:54.399554"
+    "last_updated": "2025-08-10T11:48:41.752638"
   },
   "521230": {
     "id": "521230",
@@ -20173,7 +20203,7 @@
     "games_started": 0,
     "wins": 6,
     "losses": 1,
-    "last_updated": "2025-08-08T22:07:44.863054"
+    "last_updated": "2025-08-10T11:48:30.873822"
   },
   "669371": {
     "id": "669371",
@@ -20242,15 +20272,15 @@
     },
     "career": {},
     "team": "Washington Nationals",
-    "era": 3.76,
-    "whip": 1.35,
-    "strikeouts": 39,
-    "walks": 21,
-    "innings_pitched": 40.2,
+    "era": 3.95,
+    "whip": 1.41,
+    "strikeouts": 40,
+    "walks": 22,
+    "innings_pitched": 41.0,
     "games_started": 0,
     "wins": 1,
     "losses": 1,
-    "last_updated": "2025-08-08T22:08:33.908494"
+    "last_updated": "2025-08-10T11:49:25.689352"
   },
   "674072": {
     "id": "674072",
@@ -20386,15 +20416,15 @@
     },
     "career": {},
     "team": "Colorado Rockies",
-    "era": 2.82,
-    "whip": 1.27,
-    "strikeouts": 50,
+    "era": 2.9,
+    "whip": 1.29,
+    "strikeouts": 51,
     "walks": 19,
-    "innings_pitched": 60.2,
+    "innings_pitched": 62.0,
     "games_started": 0,
     "wins": 0,
-    "losses": 1,
-    "last_updated": "2025-08-08T22:08:17.611193"
+    "losses": 2,
+    "last_updated": "2025-08-10T11:49:07.727304"
   },
   "643361": {
     "id": "643361",
@@ -20538,7 +20568,7 @@
     "games_started": 0,
     "wins": 1,
     "losses": 0,
-    "last_updated": "2025-08-08T22:08:13.371435"
+    "last_updated": "2025-08-10T11:49:02.870180"
   },
   "678226": {
     "id": "678226",
@@ -20607,15 +20637,15 @@
     },
     "career": {},
     "team": "Atlanta Braves",
-    "era": 2.18,
-    "whip": 1.36,
-    "strikeouts": 31,
-    "walks": 27,
-    "innings_pitched": 33.0,
+    "era": 2.43,
+    "whip": 1.44,
+    "strikeouts": 32,
+    "walks": 28,
+    "innings_pitched": 33.1,
     "games_started": 0,
     "wins": 4,
     "losses": 2,
-    "last_updated": "2025-08-08T22:07:36.657488"
+    "last_updated": "2025-08-10T11:48:04.506985"
   },
   "663321": {
     "id": "663321",
@@ -20818,15 +20848,15 @@
     },
     "career": {},
     "team": "Detroit Tigers",
-    "era": 6.75,
-    "whip": 0.75,
-    "strikeouts": 1,
-    "walks": 0,
-    "innings_pitched": 1.1,
+    "era": 6.0,
+    "whip": 1.0,
+    "strikeouts": 3,
+    "walks": 1,
+    "innings_pitched": 3.0,
     "games_started": 0,
     "wins": 0,
     "losses": 0,
-    "last_updated": "2025-08-08T22:08:20.657900"
+    "last_updated": "2025-08-10T11:49:10.673830"
   },
   "663855": {
     "id": "663855",
@@ -20895,15 +20925,15 @@
     },
     "career": {},
     "team": "Boston Red Sox",
-    "era": 6.41,
-    "whip": 1.59,
-    "strikeouts": 51,
-    "walks": 26,
-    "innings_pitched": 59.0,
+    "era": 6.23,
+    "whip": 1.57,
+    "strikeouts": 53,
+    "walks": 27,
+    "innings_pitched": 60.2,
     "games_started": 9,
     "wins": 1,
     "losses": 7,
-    "last_updated": "2025-08-08T22:08:05.020584"
+    "last_updated": "2025-08-10T11:48:53.413529"
   },
   "677955": {
     "id": "677955",
@@ -20980,7 +21010,7 @@
     "games_started": 0,
     "wins": 1,
     "losses": 0,
-    "last_updated": "2025-08-08T22:08:17.370658"
+    "last_updated": "2025-08-10T11:49:07.369228"
   },
   "448179": {
     "id": "448179",
@@ -21124,7 +21154,7 @@
     "games_started": 0,
     "wins": 4,
     "losses": 3,
-    "last_updated": "2025-08-08T22:07:48.411033"
+    "last_updated": "2025-08-10T11:48:35.047876"
   },
   "682274": {
     "id": "682274",
@@ -21193,15 +21223,15 @@
     },
     "career": {},
     "team": "Baltimore Orioles",
-    "era": 4.05,
-    "whip": 0.75,
-    "strikeouts": 4,
-    "walks": 0,
-    "innings_pitched": 6.2,
+    "era": 4.32,
+    "whip": 1.08,
+    "strikeouts": 6,
+    "walks": 1,
+    "innings_pitched": 8.1,
     "games_started": 0,
     "wins": 0,
     "losses": 0,
-    "last_updated": "2025-08-08T22:08:02.538466"
+    "last_updated": "2025-08-10T11:48:50.761465"
   },
   "663546": {
     "id": "663546",
@@ -21479,7 +21509,7 @@
     "games_started": 0,
     "wins": 6,
     "losses": 4,
-    "last_updated": "2025-08-08T22:07:26.876985"
+    "last_updated": "2025-08-10T11:47:27.835556"
   },
   "694851": {
     "id": "694851",
@@ -21548,15 +21578,15 @@
     },
     "career": {},
     "team": "Arizona Diamondbacks",
-    "era": 2.84,
-    "whip": 1.89,
-    "strikeouts": 7,
+    "era": 2.45,
+    "whip": 1.64,
+    "strikeouts": 8,
     "walks": 5,
-    "innings_pitched": 6.1,
+    "innings_pitched": 7.1,
     "games_started": 0,
-    "wins": 0,
+    "wins": 1,
     "losses": 0,
-    "last_updated": "2025-08-08T22:07:56.311862"
+    "last_updated": "2025-08-10T11:48:43.655377"
   },
   "680684": {
     "id": "680684",
@@ -21901,7 +21931,7 @@
     "games_started": 23,
     "wins": 9,
     "losses": 6,
-    "last_updated": "2025-08-08T22:08:36.475065"
+    "last_updated": "2025-08-10T11:49:28.816002"
   },
   "656550": {
     "id": "656550",
@@ -22037,15 +22067,15 @@
     },
     "career": {},
     "team": "Detroit Tigers",
-    "era": 3.97,
-    "whip": 1.08,
+    "era": 3.88,
+    "whip": 1.05,
     "strikeouts": 47,
     "walks": 10,
-    "innings_pitched": 56.2,
+    "innings_pitched": 58.0,
     "games_started": 5,
     "wins": 5,
     "losses": 3,
-    "last_updated": "2025-08-08T22:08:22.247275"
+    "last_updated": "2025-08-10T11:49:12.422990"
   },
   "690544": {
     "id": "690544",
@@ -22189,7 +22219,7 @@
     "games_started": 14,
     "wins": 6,
     "losses": 3,
-    "last_updated": "2025-08-08T22:08:07.085085"
+    "last_updated": "2025-08-10T11:48:55.982224"
   },
   "656557": {
     "id": "656557",
@@ -22333,7 +22363,7 @@
     "games_started": 12,
     "wins": 6,
     "losses": 3,
-    "last_updated": "2025-08-08T22:07:18.790606"
+    "last_updated": "2025-08-10T11:47:01.368441"
   },
   "663542": {
     "id": "663542",
@@ -22487,7 +22517,7 @@
     "games_started": 4,
     "wins": 3,
     "losses": 3,
-    "last_updated": "2025-08-08T22:08:19.632447"
+    "last_updated": "2025-08-10T11:49:09.717286"
   },
   "628452": {
     "id": "628452",
@@ -22556,15 +22586,15 @@
     },
     "career": {},
     "team": "Atlanta Braves",
-    "era": 4.44,
-    "whip": 1.14,
-    "strikeouts": 52,
+    "era": 4.34,
+    "whip": 1.11,
+    "strikeouts": 53,
     "walks": 10,
-    "innings_pitched": 46.2,
+    "innings_pitched": 47.2,
     "games_started": 0,
     "wins": 4,
     "losses": 6,
-    "last_updated": "2025-08-08T22:07:38.119717"
+    "last_updated": "2025-08-10T11:48:08.136917"
   },
   "684007": {
     "id": "684007",
@@ -22641,7 +22671,7 @@
     "games_started": 16,
     "wins": 8,
     "losses": 4,
-    "last_updated": "2025-08-08T22:08:08.901713"
+    "last_updated": "2025-08-10T11:48:57.997290"
   },
   "663623": {
     "id": "663623",
@@ -22710,15 +22740,15 @@
     },
     "career": {},
     "team": "Washington Nationals",
-    "era": 4.92,
-    "whip": 1.35,
+    "era": 4.9,
+    "whip": 1.34,
     "strikeouts": 91,
     "walks": 43,
-    "innings_pitched": 133.2,
+    "innings_pitched": 136.0,
     "games_started": 24,
     "wins": 8,
-    "losses": 6,
-    "last_updated": "2025-08-08T22:08:34.244736"
+    "losses": 7,
+    "last_updated": "2025-08-10T11:49:26.166343"
   },
   "592426": {
     "id": "592426",
@@ -22988,15 +23018,15 @@
     },
     "career": {},
     "team": "Los Angeles Angels",
-    "era": 2.79,
-    "whip": 1.07,
-    "strikeouts": 40,
+    "era": 2.72,
+    "whip": 1.05,
+    "strikeouts": 42,
     "walks": 13,
-    "innings_pitched": 42.0,
+    "innings_pitched": 43.0,
     "games_started": 0,
     "wins": 4,
     "losses": 2,
-    "last_updated": "2025-08-08T22:07:54.232039"
+    "last_updated": "2025-08-10T11:48:41.464975"
   },
   "686826": {
     "id": "686826",
@@ -23132,15 +23162,15 @@
     },
     "career": {},
     "team": "Tampa Bay Rays",
-    "era": 4.47,
-    "whip": 1.3,
-    "strikeouts": 75,
+    "era": 4.93,
+    "whip": 1.34,
+    "strikeouts": 76,
     "walks": 15,
-    "innings_pitched": 48.1,
+    "innings_pitched": 49.1,
     "games_started": 0,
     "wins": 1,
-    "losses": 5,
-    "last_updated": "2025-08-08T22:07:20.041009"
+    "losses": 6,
+    "last_updated": "2025-08-10T11:47:06.133135"
   },
   "695549": {
     "id": "695549",
@@ -23276,15 +23306,15 @@
     },
     "career": {},
     "team": "Atlanta Braves",
-    "era": 2.36,
+    "era": 2.3,
     "whip": 1.0,
     "strikeouts": 44,
     "walks": 10,
-    "innings_pitched": 42.0,
+    "innings_pitched": 43.0,
     "games_started": 0,
     "wins": 3,
     "losses": 3,
-    "last_updated": "2025-08-08T22:07:37.901497"
+    "last_updated": "2025-08-10T11:48:07.124417"
   },
   "696270": {
     "id": "696270",
@@ -23562,7 +23592,7 @@
     "games_started": 0,
     "wins": 3,
     "losses": 1,
-    "last_updated": "2025-08-08T22:08:14.388881"
+    "last_updated": "2025-08-10T11:49:03.871562"
   },
   "676083": {
     "id": "676083",
@@ -23639,7 +23669,7 @@
     "games_started": 9,
     "wins": 6,
     "losses": 2,
-    "last_updated": "2025-08-08T22:07:44.155761"
+    "last_updated": "2025-08-10T11:48:29.316344"
   },
   "592454": {
     "id": "592454",
@@ -23716,7 +23746,7 @@
     "games_started": 0,
     "wins": 1,
     "losses": 3,
-    "last_updated": "2025-08-08T22:08:21.736650"
+    "last_updated": "2025-08-10T11:49:11.923555"
   },
   "641745": {
     "id": "641745",
@@ -23793,7 +23823,7 @@
     "games_started": 1,
     "wins": 3,
     "losses": 1,
-    "last_updated": "2025-08-08T22:08:06.865904"
+    "last_updated": "2025-08-10T11:48:55.668056"
   },
   "656605": {
     "id": "656605",
@@ -23870,7 +23900,7 @@
     "games_started": 24,
     "wins": 5,
     "losses": 10,
-    "last_updated": "2025-08-08T22:07:03.412476"
+    "last_updated": "2025-08-10T11:46:07.384391"
   },
   "543391": {
     "id": "543391",
@@ -24023,8 +24053,8 @@
     "innings_pitched": 138.2,
     "games_started": 24,
     "wins": 9,
-    "losses": 6,
-    "last_updated": "2025-08-08T22:07:24.025551"
+    "losses": 7,
+    "last_updated": "2025-08-10T11:47:19.319802"
   },
   "687330": {
     "id": "687330",
@@ -24160,15 +24190,15 @@
     },
     "career": {},
     "team": "Athletics",
-    "era": 1.77,
-    "whip": 1.28,
-    "strikeouts": 14,
+    "era": 1.61,
+    "whip": 1.16,
+    "strikeouts": 15,
     "walks": 9,
-    "innings_pitched": 20.1,
+    "innings_pitched": 22.1,
     "games_started": 0,
     "wins": 2,
     "losses": 1,
-    "last_updated": "2025-08-08T22:07:00.134292"
+    "last_updated": "2025-08-10T11:45:59.421960"
   },
   "677161": {
     "id": "677161",
@@ -24379,7 +24409,7 @@
     "games_started": 0,
     "wins": 6,
     "losses": 4,
-    "last_updated": "2025-08-08T22:07:34.350112"
+    "last_updated": "2025-08-10T11:47:55.819731"
   },
   "477132": {
     "id": "477132",
@@ -24448,15 +24478,15 @@
     },
     "career": {},
     "team": "Los Angeles Dodgers",
-    "era": 3.23,
+    "era": 3.14,
     "whip": 1.26,
-    "strikeouts": 45,
-    "walks": 18,
-    "innings_pitched": 69.2,
+    "strikeouts": 46,
+    "walks": 19,
+    "innings_pitched": 71.2,
     "games_started": 14,
-    "wins": 5,
+    "wins": 6,
     "losses": 2,
-    "last_updated": "2025-08-08T22:08:31.603852"
+    "last_updated": "2025-08-10T11:49:22.780165"
   },
   "579328": {
     "id": "579328",
@@ -24525,15 +24555,15 @@
     },
     "career": {},
     "team": "Los Angeles Angels",
-    "era": 3.22,
-    "whip": 1.4,
-    "strikeouts": 139,
-    "walks": 56,
-    "innings_pitched": 134.0,
-    "games_started": 24,
-    "wins": 5,
+    "era": 3.37,
+    "whip": 1.42,
+    "strikeouts": 146,
+    "walks": 58,
+    "innings_pitched": 139.0,
+    "games_started": 25,
+    "wins": 6,
     "losses": 7,
-    "last_updated": "2025-08-08T22:07:55.600647"
+    "last_updated": "2025-08-10T11:48:43.009589"
   },
   "518886": {
     "id": "518886",
@@ -24669,15 +24699,15 @@
     },
     "career": {},
     "team": "Houston Astros",
-    "era": 3.04,
+    "era": 3.17,
     "whip": 1.16,
     "strikeouts": 52,
     "walks": 9,
-    "innings_pitched": 47.1,
+    "innings_pitched": 48.1,
     "games_started": 0,
     "wins": 3,
-    "losses": 2,
-    "last_updated": "2025-08-08T22:08:23.554572"
+    "losses": 3,
+    "last_updated": "2025-08-10T11:49:13.828918"
   },
   "667463": {
     "id": "667463",
@@ -24811,7 +24841,17 @@
       "sacBunts": 0,
       "sacFlies": 1
     },
-    "career": {}
+    "career": {},
+    "team": "San Diego Padres",
+    "era": 2.81,
+    "whip": 1.09,
+    "strikeouts": 65,
+    "walks": 19,
+    "innings_pitched": 57.2,
+    "games_started": 11,
+    "wins": 4,
+    "losses": 2,
+    "last_updated": "2025-08-10T11:46:12.375907"
   },
   "641755": {
     "id": "641755",
@@ -24880,15 +24920,15 @@
     },
     "career": {},
     "team": "Atlanta Braves",
-    "era": 5.54,
-    "whip": 1.49,
-    "strikeouts": 55,
+    "era": 5.44,
+    "whip": 1.46,
+    "strikeouts": 56,
     "walks": 31,
-    "innings_pitched": 50.1,
+    "innings_pitched": 51.1,
     "games_started": 0,
     "wins": 1,
     "losses": 3,
-    "last_updated": "2025-08-08T22:07:38.765481"
+    "last_updated": "2025-08-10T11:48:09.223892"
   },
   "669923": {
     "id": "669923",
@@ -24965,7 +25005,7 @@
     "games_started": 14,
     "wins": 7,
     "losses": 5,
-    "last_updated": "2025-08-08T22:07:09.808695"
+    "last_updated": "2025-08-10T11:46:27.969918"
   },
   "552640": {
     "id": "552640",
@@ -25042,7 +25082,7 @@
     "games_started": 0,
     "wins": 2,
     "losses": 3,
-    "last_updated": "2025-08-08T22:08:06.405524"
+    "last_updated": "2025-08-10T11:48:55.120668"
   },
   "694361": {
     "id": "694361",
@@ -25253,7 +25293,7 @@
     "games_started": 21,
     "wins": 3,
     "losses": 9,
-    "last_updated": "2025-08-08T22:07:53.644285"
+    "last_updated": "2025-08-10T11:48:40.945127"
   },
   "657649": {
     "id": "657649",
@@ -25322,15 +25362,15 @@
     },
     "career": {},
     "team": "Milwaukee Brewers",
-    "era": 3.52,
+    "era": 3.45,
     "whip": 1.3,
-    "strikeouts": 42,
-    "walks": 15,
-    "innings_pitched": 46.0,
+    "strikeouts": 43,
+    "walks": 16,
+    "innings_pitched": 47.0,
     "games_started": 0,
-    "wins": 3,
+    "wins": 4,
     "losses": 1,
-    "last_updated": "2025-08-08T22:07:50.770118"
+    "last_updated": "2025-08-10T11:48:37.714209"
   },
   "663568": {
     "id": "663568",
@@ -25541,7 +25581,7 @@
     "games_started": 0,
     "wins": 2,
     "losses": 0,
-    "last_updated": "2025-08-08T22:07:10.033160"
+    "last_updated": "2025-08-10T11:46:29.161316"
   },
   "668820": {
     "id": "668820",
@@ -25685,7 +25725,7 @@
     "games_started": 22,
     "wins": 8,
     "losses": 8,
-    "last_updated": "2025-08-08T22:08:00.505342"
+    "last_updated": "2025-08-10T11:48:48.567008"
   },
   "621139": {
     "id": "621139",
@@ -25762,7 +25802,7 @@
     "games_started": 0,
     "wins": 0,
     "losses": 0,
-    "last_updated": "2025-08-08T22:07:29.471693"
+    "last_updated": "2025-08-10T11:47:35.250385"
   },
   "640454": {
     "id": "640454",
@@ -26174,7 +26214,7 @@
     "games_started": 12,
     "wins": 7,
     "losses": 2,
-    "last_updated": "2025-08-08T22:07:26.601168"
+    "last_updated": "2025-08-10T11:47:27.592194"
   },
   "596271": {
     "id": "596271",
@@ -26377,15 +26417,15 @@
     },
     "career": {},
     "team": "Philadelphia Phillies",
-    "era": 4.73,
-    "whip": 1.28,
+    "era": 4.55,
+    "whip": 1.27,
     "strikeouts": 19,
-    "walks": 8,
-    "innings_pitched": 26.2,
+    "walks": 9,
+    "innings_pitched": 27.2,
     "games_started": 0,
     "wins": 1,
     "losses": 1,
-    "last_updated": "2025-08-08T22:07:34.126088"
+    "last_updated": "2025-08-10T11:47:54.965903"
   },
   "681517": {
     "id": "681517",
@@ -26462,7 +26502,7 @@
     "games_started": 0,
     "wins": 2,
     "losses": 1,
-    "last_updated": "2025-08-08T22:07:16.156230"
+    "last_updated": "2025-08-10T11:46:52.420510"
   },
   "673929": {
     "id": "673929",
@@ -26531,15 +26571,15 @@
     },
     "career": {},
     "team": "Chicago White Sox",
-    "era": 4.19,
-    "whip": 1.44,
-    "strikeouts": 52,
+    "era": 4.09,
+    "whip": 1.41,
+    "strikeouts": 54,
     "walks": 23,
-    "innings_pitched": 43.0,
+    "innings_pitched": 44.0,
     "games_started": 1,
     "wins": 4,
     "losses": 6,
-    "last_updated": "2025-08-08T22:07:40.466842"
+    "last_updated": "2025-08-10T11:48:15.406804"
   },
   "600917": {
     "id": "600917",
@@ -26742,15 +26782,15 @@
     },
     "career": {},
     "team": "Atlanta Braves",
-    "era": 3.04,
-    "whip": 0.97,
+    "era": 2.98,
+    "whip": 0.95,
     "strikeouts": 55,
     "walks": 12,
-    "innings_pitched": 50.1,
+    "innings_pitched": 51.1,
     "games_started": 0,
     "wins": 1,
     "losses": 3,
-    "last_updated": "2025-08-08T22:07:37.222073"
+    "last_updated": "2025-08-10T11:48:04.935145"
   },
   "668984": {
     "id": "668984",
@@ -26827,7 +26867,7 @@
     "games_started": 1,
     "wins": 4,
     "losses": 6,
-    "last_updated": "2025-08-08T22:07:09.089670"
+    "last_updated": "2025-08-10T11:46:22.759598"
   },
   "683004": {
     "id": "683004",
@@ -26904,7 +26944,7 @@
     "games_started": 20,
     "wins": 7,
     "losses": 6,
-    "last_updated": "2025-08-08T22:07:23.081097"
+    "last_updated": "2025-08-10T11:47:16.888290"
   },
   "643410": {
     "id": "643410",
@@ -26973,15 +27013,15 @@
     },
     "career": {},
     "team": "New York Yankees",
-    "era": 4.29,
-    "whip": 1.51,
+    "era": 4.21,
+    "whip": 1.49,
     "strikeouts": 46,
     "walks": 12,
-    "innings_pitched": 35.2,
+    "innings_pitched": 36.1,
     "games_started": 0,
     "wins": 5,
     "losses": 6,
-    "last_updated": "2025-08-08T22:07:47.922435"
+    "last_updated": "2025-08-10T11:48:34.557563"
   },
   "669461": {
     "id": "669461",
@@ -27058,7 +27098,7 @@
     "games_started": 21,
     "wins": 6,
     "losses": 9,
-    "last_updated": "2025-08-08T22:07:16.660930"
+    "last_updated": "2025-08-10T11:46:54.620415"
   },
   "641793": {
     "id": "641793",
@@ -27135,7 +27175,7 @@
     "games_started": 23,
     "wins": 9,
     "losses": 8,
-    "last_updated": "2025-08-08T22:08:12.595638"
+    "last_updated": "2025-08-10T11:49:01.926550"
   },
   "663893": {
     "id": "663893",
@@ -27204,15 +27244,15 @@
     },
     "career": {},
     "team": "Toronto Blue Jays",
-    "era": 2.7,
-    "whip": 1.28,
+    "era": 3.24,
+    "whip": 1.34,
     "strikeouts": 73,
-    "walks": 30,
+    "walks": 32,
     "innings_pitched": 50.0,
     "games_started": 0,
     "wins": 4,
     "losses": 1,
-    "last_updated": "2025-08-08T22:07:26.123850"
+    "last_updated": "2025-08-10T11:47:26.175089"
   },
   "669193": {
     "id": "669193",
@@ -27624,7 +27664,7 @@
     "games_started": 0,
     "wins": 1,
     "losses": 2,
-    "last_updated": "2025-08-08T22:08:29.049229"
+    "last_updated": "2025-08-10T11:49:19.695324"
   },
   "682052": {
     "id": "682052",
@@ -27701,7 +27741,7 @@
     "games_started": 14,
     "wins": 5,
     "losses": 6,
-    "last_updated": "2025-08-08T22:06:58.766250"
+    "last_updated": "2025-08-10T11:45:57.829983"
   },
   "605347": {
     "id": "605347",
@@ -27971,15 +28011,15 @@
     },
     "career": {},
     "team": "Washington Nationals",
-    "era": 3.42,
-    "whip": 1.23,
-    "strikeouts": 65,
-    "walks": 26,
-    "innings_pitched": 79.0,
-    "games_started": 9,
-    "wins": 2,
+    "era": 3.28,
+    "whip": 1.21,
+    "strikeouts": 70,
+    "walks": 28,
+    "innings_pitched": 85.0,
+    "games_started": 10,
+    "wins": 3,
     "losses": 6,
-    "last_updated": "2025-08-08T22:08:33.227506"
+    "last_updated": "2025-08-10T11:49:24.868249"
   },
   "547179": {
     "id": "547179",
@@ -28316,15 +28356,15 @@
     },
     "career": {},
     "team": "San Francisco Giants",
-    "era": 2.41,
+    "era": 2.29,
     "whip": 1.02,
     "strikeouts": 18,
     "walks": 3,
-    "innings_pitched": 18.2,
+    "innings_pitched": 19.2,
     "games_started": 0,
     "wins": 0,
     "losses": 1,
-    "last_updated": "2025-08-08T22:07:12.035804"
+    "last_updated": "2025-08-10T11:46:37.553443"
   },
   "607625": {
     "id": "607625",
@@ -28401,7 +28441,7 @@
     "games_started": 22,
     "wins": 8,
     "losses": 6,
-    "last_updated": "2025-08-08T22:08:29.210778"
+    "last_updated": "2025-08-10T11:49:20.207888"
   },
   "666200": {
     "id": "666200",
@@ -28470,15 +28510,15 @@
     },
     "career": {},
     "team": "Philadelphia Phillies",
-    "era": 4.32,
+    "era": 4.2,
     "whip": 1.35,
-    "strikeouts": 147,
-    "walks": 44,
-    "innings_pitched": 127.0,
-    "games_started": 23,
-    "wins": 10,
+    "strikeouts": 151,
+    "walks": 45,
+    "innings_pitched": 133.0,
+    "games_started": 24,
+    "wins": 11,
     "losses": 5,
-    "last_updated": "2025-08-08T22:07:32.980333"
+    "last_updated": "2025-08-10T11:47:50.006479"
   },
   "663738": {
     "id": "663738",
@@ -28555,7 +28595,7 @@
     "games_started": 2,
     "wins": 3,
     "losses": 2,
-    "last_updated": "2025-08-08T22:08:27.302550"
+    "last_updated": "2025-08-10T11:49:17.863485"
   },
   "628317": {
     "id": "628317",
@@ -28833,7 +28873,7 @@
     "games_started": 4,
     "wins": 1,
     "losses": 1,
-    "last_updated": "2025-08-08T22:08:38.777398"
+    "last_updated": "2025-08-10T11:49:31.611217"
   },
   "573009": {
     "id": "573009",
@@ -29170,15 +29210,15 @@
     },
     "career": {},
     "team": "Baltimore Orioles",
-    "era": 7.56,
-    "whip": 1.8,
-    "strikeouts": 11,
-    "walks": 5,
-    "innings_pitched": 8.1,
+    "era": 7.45,
+    "whip": 1.86,
+    "strikeouts": 13,
+    "walks": 6,
+    "innings_pitched": 9.2,
     "games_started": 0,
     "wins": 1,
     "losses": 0,
-    "last_updated": "2025-08-08T22:08:00.208384"
+    "last_updated": "2025-08-10T11:48:48.268338"
   },
   "663436": {
     "id": "663436",
@@ -29255,7 +29295,7 @@
     "games_started": 16,
     "wins": 3,
     "losses": 9,
-    "last_updated": "2025-08-08T22:07:39.965666"
+    "last_updated": "2025-08-10T11:48:12.012344"
   },
   "679885": {
     "id": "679885",
@@ -29391,15 +29431,15 @@
     },
     "career": {},
     "team": "Cincinnati Reds",
-    "era": 4.66,
-    "whip": 1.21,
-    "strikeouts": 93,
-    "walks": 31,
-    "innings_pitched": 129.1,
-    "games_started": 22,
-    "wins": 9,
+    "era": 4.49,
+    "whip": 1.19,
+    "strikeouts": 97,
+    "walks": 33,
+    "innings_pitched": 136.1,
+    "games_started": 23,
+    "wins": 10,
     "losses": 9,
-    "last_updated": "2025-08-08T22:08:11.328416"
+    "last_updated": "2025-08-10T11:49:00.568838"
   },
   "664208": {
     "id": "664208",
@@ -29476,7 +29516,7 @@
     "games_started": 0,
     "wins": 1,
     "losses": 3,
-    "last_updated": "2025-08-08T22:07:24.792910"
+    "last_updated": "2025-08-10T11:47:20.486108"
   },
   "673513": {
     "id": "673513",
@@ -29545,15 +29585,15 @@
     },
     "career": {},
     "team": "San Diego Padres",
-    "era": 5.18,
+    "era": 5.02,
     "whip": 1.44,
-    "strikeouts": 43,
+    "strikeouts": 44,
     "walks": 21,
-    "innings_pitched": 41.2,
+    "innings_pitched": 43.0,
     "games_started": 0,
     "wins": 2,
     "losses": 1,
-    "last_updated": "2025-08-08T22:07:07.549556"
+    "last_updated": "2025-08-10T11:46:15.859583"
   },
   "805673": {
     "id": "805673",
@@ -29630,7 +29670,7 @@
     "games_started": 8,
     "wins": 3,
     "losses": 3,
-    "last_updated": "2025-08-08T22:07:31.999303"
+    "last_updated": "2025-08-10T11:47:47.369160"
   },
   "676755": {
     "id": "676755",
@@ -29699,15 +29739,15 @@
     },
     "career": {},
     "team": "Pittsburgh Pirates",
-    "era": 2.36,
-    "whip": 1.09,
-    "strikeouts": 31,
+    "era": 2.28,
+    "whip": 1.05,
+    "strikeouts": 33,
     "walks": 10,
-    "innings_pitched": 26.2,
+    "innings_pitched": 27.2,
     "games_started": 0,
     "wins": 3,
     "losses": 1,
-    "last_updated": "2025-08-08T22:07:02.856014"
+    "last_updated": "2025-08-10T11:46:05.059962"
   },
   "571927": {
     "id": "571927",
@@ -29776,15 +29816,15 @@
     },
     "career": {},
     "team": "Boston Red Sox",
-    "era": 3.32,
-    "whip": 1.18,
-    "strikeouts": 49,
+    "era": 3.22,
+    "whip": 1.16,
+    "strikeouts": 50,
     "walks": 11,
-    "innings_pitched": 57.0,
+    "innings_pitched": 58.2,
     "games_started": 2,
     "wins": 5,
     "losses": 2,
-    "last_updated": "2025-08-08T22:08:05.698332"
+    "last_updated": "2025-08-10T11:48:54.310470"
   },
   "554431": {
     "id": "554431",
@@ -29928,7 +29968,7 @@
     "games_started": 19,
     "wins": 6,
     "losses": 8,
-    "last_updated": "2025-08-08T22:08:03.870733"
+    "last_updated": "2025-08-10T11:48:52.163512"
   },
   "641835": {
     "id": "641835",
@@ -30608,7 +30648,7 @@
     "games_started": 7,
     "wins": 4,
     "losses": 2,
-    "last_updated": "2025-08-08T22:07:16.915899"
+    "last_updated": "2025-08-10T11:46:55.719428"
   },
   "663474": {
     "id": "663474",
@@ -30752,7 +30792,7 @@
     "games_started": 0,
     "wins": 2,
     "losses": 3,
-    "last_updated": "2025-08-08T22:07:51.206515"
+    "last_updated": "2025-08-10T11:48:38.264445"
   },
   "682989": {
     "id": "682989",
@@ -30888,15 +30928,15 @@
     },
     "career": {},
     "team": "Milwaukee Brewers",
-    "era": 2.25,
-    "whip": 1.08,
-    "strikeouts": 47,
+    "era": 2.2,
+    "whip": 1.07,
+    "strikeouts": 49,
     "walks": 15,
-    "innings_pitched": 40.0,
+    "innings_pitched": 41.0,
     "games_started": 0,
     "wins": 3,
     "losses": 2,
-    "last_updated": "2025-08-08T22:07:52.196655"
+    "last_updated": "2025-08-10T11:48:39.280555"
   },
   "656731": {
     "id": "656731",
@@ -31032,15 +31072,15 @@
     },
     "career": {},
     "team": "Colorado Rockies",
-    "era": 4.05,
-    "whip": 1.18,
-    "strikeouts": 43,
+    "era": 3.86,
+    "whip": 1.14,
+    "strikeouts": 46,
     "walks": 13,
-    "innings_pitched": 40.0,
+    "innings_pitched": 42.0,
     "games_started": 0,
     "wins": 1,
     "losses": 0,
-    "last_updated": "2025-08-08T22:08:17.848577"
+    "last_updated": "2025-08-10T11:49:07.975290"
   },
   "675512": {
     "id": "675512",
@@ -31117,7 +31157,7 @@
     "games_started": 2,
     "wins": 2,
     "losses": 1,
-    "last_updated": "2025-08-08T22:08:22.006752"
+    "last_updated": "2025-08-10T11:49:12.174543"
   },
   "691441": {
     "id": "691441",
@@ -31395,7 +31435,7 @@
     "games_started": 0,
     "wins": 1,
     "losses": 0,
-    "last_updated": "2025-08-08T22:08:11.069875"
+    "last_updated": "2025-08-10T11:49:00.330933"
   },
   "676974": {
     "id": "676974",
@@ -31539,7 +31579,7 @@
     "games_started": 22,
     "wins": 6,
     "losses": 9,
-    "last_updated": "2025-08-08T22:07:17.143206"
+    "last_updated": "2025-08-10T11:46:55.947917"
   },
   "489119": {
     "id": "489119",
@@ -31809,15 +31849,15 @@
     },
     "career": {},
     "team": "San Diego Padres",
-    "era": 3.92,
-    "whip": 1.06,
-    "strikeouts": 65,
+    "era": 3.8,
+    "whip": 1.05,
+    "strikeouts": 68,
     "walks": 20,
-    "innings_pitched": 41.1,
+    "innings_pitched": 42.2,
     "games_started": 0,
     "wins": 1,
     "losses": 2,
-    "last_updated": "2025-08-08T22:07:05.783754"
+    "last_updated": "2025-08-10T11:46:12.071845"
   },
   "676272": {
     "id": "676272",
@@ -31953,15 +31993,15 @@
     },
     "career": {},
     "team": "Milwaukee Brewers",
-    "era": 1.98,
-    "whip": 0.96,
-    "strikeouts": 40,
+    "era": 1.93,
+    "whip": 0.94,
+    "strikeouts": 41,
     "walks": 11,
-    "innings_pitched": 36.1,
+    "innings_pitched": 37.1,
     "games_started": 0,
     "wins": 3,
     "losses": 3,
-    "last_updated": "2025-08-08T22:07:51.726762"
+    "last_updated": "2025-08-10T11:48:38.783657"
   },
   "571948": {
     "id": "571948",
@@ -32038,7 +32078,7 @@
     "games_started": 0,
     "wins": 1,
     "losses": 2,
-    "last_updated": "2025-08-08T22:07:22.823128"
+    "last_updated": "2025-08-10T11:47:16.007392"
   },
   "621345": {
     "id": "621345",
@@ -32316,7 +32356,7 @@
     "games_started": 19,
     "wins": 10,
     "losses": 4,
-    "last_updated": "2025-08-08T22:08:19.860637"
+    "last_updated": "2025-08-10T11:49:09.941797"
   },
   "669387": {
     "id": "669387",
@@ -32385,15 +32425,15 @@
     },
     "career": {},
     "team": "Pittsburgh Pirates",
-    "era": 4.11,
-    "whip": 1.4,
-    "strikeouts": 57,
+    "era": 4.07,
+    "whip": 1.38,
+    "strikeouts": 60,
     "walks": 18,
-    "innings_pitched": 70.0,
+    "innings_pitched": 73.0,
     "games_started": 9,
     "wins": 2,
-    "losses": 6,
-    "last_updated": "2025-08-08T22:07:02.202028"
+    "losses": 7,
+    "last_updated": "2025-08-10T11:46:02.931061"
   },
   "683627": {
     "id": "683627",
@@ -32470,7 +32510,7 @@
     "games_started": 1,
     "wins": 0,
     "losses": 1,
-    "last_updated": "2025-08-08T22:08:16.512174"
+    "last_updated": "2025-08-10T11:49:06.295483"
   },
   "594580": {
     "id": "594580",
@@ -32547,7 +32587,7 @@
     "games_started": 0,
     "wins": 1,
     "losses": 0,
-    "last_updated": "2025-08-08T22:08:11.838979"
+    "last_updated": "2025-08-10T11:49:01.113425"
   },
   "593423": {
     "id": "593423",
@@ -32616,15 +32656,15 @@
     },
     "career": {},
     "team": "New York Mets",
-    "era": 6.68,
-    "whip": 1.54,
-    "strikeouts": 29,
-    "walks": 10,
-    "innings_pitched": 33.2,
+    "era": 6.38,
+    "whip": 1.55,
+    "strikeouts": 32,
+    "walks": 12,
+    "innings_pitched": 36.2,
     "games_started": 7,
     "wins": 3,
     "losses": 2,
-    "last_updated": "2025-08-08T22:08:37.203134"
+    "last_updated": "2025-08-10T11:49:29.624366"
   },
   "672456": {
     "id": "672456",
@@ -32760,15 +32800,15 @@
     },
     "career": {},
     "team": "Detroit Tigers",
-    "era": 5.72,
-    "whip": 1.42,
-    "strikeouts": 39,
+    "era": 5.49,
+    "whip": 1.39,
+    "strikeouts": 40,
     "walks": 24,
-    "innings_pitched": 39.1,
+    "innings_pitched": 41.0,
     "games_started": 0,
     "wins": 0,
     "losses": 1,
-    "last_updated": "2025-08-08T22:08:21.347772"
+    "last_updated": "2025-08-10T11:49:11.420173"
   },
   "801216": {
     "id": "801216",
@@ -32971,15 +33011,15 @@
     },
     "career": {},
     "team": "Tampa Bay Rays",
-    "era": 5.19,
-    "whip": 1.59,
-    "strikeouts": 46,
+    "era": 4.95,
+    "whip": 1.54,
+    "strikeouts": 49,
     "walks": 21,
-    "innings_pitched": 34.2,
+    "innings_pitched": 36.1,
     "games_started": 0,
     "wins": 1,
     "losses": 2,
-    "last_updated": "2025-08-08T22:07:20.960653"
+    "last_updated": "2025-08-10T11:47:12.689588"
   },
   "806960": {
     "id": "806960",
@@ -33056,7 +33096,7 @@
     "games_started": 0,
     "wins": 0,
     "losses": 0,
-    "last_updated": "2025-08-08T22:06:59.599068"
+    "last_updated": "2025-08-10T11:45:59.166880"
   },
   "670970": {
     "id": "670970",
@@ -33125,15 +33165,15 @@
     },
     "career": {},
     "team": "San Diego Padres",
-    "era": 2.05,
+    "era": 2.03,
     "whip": 0.84,
-    "strikeouts": 51,
+    "strikeouts": 53,
     "walks": 10,
-    "innings_pitched": 52.2,
+    "innings_pitched": 53.1,
     "games_started": 0,
     "wins": 9,
     "losses": 4,
-    "last_updated": "2025-08-08T22:07:04.657865"
+    "last_updated": "2025-08-10T11:46:09.492749"
   },
   "664294": {
     "id": "664294",
@@ -33210,7 +33250,7 @@
     "games_started": 0,
     "wins": 1,
     "losses": 0,
-    "last_updated": "2025-08-08T22:07:02.411755"
+    "last_updated": "2025-08-10T11:46:03.186669"
   },
   "688158": {
     "id": "688158",
@@ -33287,7 +33327,7 @@
     "games_started": 1,
     "wins": 1,
     "losses": 1,
-    "last_updated": "2025-08-08T22:07:04.885012"
+    "last_updated": "2025-08-10T11:46:09.772880"
   },
   "669212": {
     "id": "669212",
@@ -33490,15 +33530,15 @@
     },
     "career": {},
     "team": "Detroit Tigers",
-    "era": 5.2,
-    "whip": 1.52,
-    "strikeouts": 107,
-    "walks": 49,
-    "innings_pitched": 107.1,
-    "games_started": 18,
+    "era": 5.48,
+    "whip": 1.53,
+    "strikeouts": 117,
+    "walks": 50,
+    "innings_pitched": 111.2,
+    "games_started": 19,
     "wins": 7,
-    "losses": 9,
-    "last_updated": "2025-08-08T22:08:20.155694"
+    "losses": 10,
+    "last_updated": "2025-08-10T11:49:10.165053"
   },
   "662253": {
     "id": "662253",
@@ -33567,15 +33607,15 @@
     },
     "career": {},
     "team": "Seattle Mariners",
-    "era": 1.4,
-    "whip": 0.96,
-    "strikeouts": 57,
-    "walks": 21,
-    "innings_pitched": 45.0,
+    "era": 1.37,
+    "whip": 0.98,
+    "strikeouts": 59,
+    "walks": 22,
+    "innings_pitched": 46.0,
     "games_started": 0,
     "wins": 3,
     "losses": 1,
-    "last_updated": "2025-08-08T22:07:08.131570"
+    "last_updated": "2025-08-10T11:46:17.939315"
   },
   "682610": {
     "id": "682610",
@@ -33644,15 +33684,15 @@
     },
     "career": {},
     "team": "St. Louis Cardinals",
-    "era": 8.22,
-    "whip": 1.57,
-    "strikeouts": 9,
-    "walks": 5,
-    "innings_pitched": 7.2,
+    "era": 6.52,
+    "whip": 1.34,
+    "strikeouts": 11,
+    "walks": 6,
+    "innings_pitched": 9.2,
     "games_started": 0,
     "wins": 0,
     "losses": 0,
-    "last_updated": "2025-08-08T22:07:17.653656"
+    "last_updated": "2025-08-10T11:46:56.655162"
   },
   "668716": {
     "id": "668716",
@@ -33855,15 +33895,15 @@
     },
     "career": {},
     "team": "Boston Red Sox",
-    "era": 2.25,
-    "whip": 0.8,
+    "era": 3.1,
+    "whip": 1.03,
     "strikeouts": 18,
-    "walks": 5,
-    "innings_pitched": 20.0,
+    "walks": 9,
+    "innings_pitched": 20.1,
     "games_started": 0,
     "wins": 2,
     "losses": 0,
-    "last_updated": "2025-08-08T22:08:03.734003"
+    "last_updated": "2025-08-10T11:48:52.047412"
   },
   "668964": {
     "id": "668964",
@@ -33932,15 +33972,15 @@
     },
     "career": {},
     "team": "Milwaukee Brewers",
-    "era": 4.3,
-    "whip": 1.61,
-    "strikeouts": 19,
-    "walks": 10,
-    "innings_pitched": 23.0,
-    "games_started": 5,
+    "era": 4.78,
+    "whip": 1.67,
+    "strikeouts": 23,
+    "walks": 12,
+    "innings_pitched": 26.1,
+    "games_started": 6,
     "wins": 1,
     "losses": 1,
-    "last_updated": "2025-08-08T22:07:51.954519"
+    "last_updated": "2025-08-10T11:48:39.039535"
   },
   "667297": {
     "id": "667297",
@@ -34009,15 +34049,15 @@
     },
     "career": {},
     "team": "Toronto Blue Jays",
-    "era": 0.84,
-    "whip": 0.47,
-    "strikeouts": 10,
+    "era": 0.77,
+    "whip": 0.43,
+    "strikeouts": 11,
     "walks": 2,
-    "innings_pitched": 10.2,
+    "innings_pitched": 11.2,
     "games_started": 0,
     "wins": 0,
     "losses": 0,
-    "last_updated": "2025-08-08T22:07:28.417019"
+    "last_updated": "2025-08-10T11:47:33.103163"
   },
   "669459": {
     "id": "669459",
@@ -34161,7 +34201,7 @@
     "games_started": 14,
     "wins": 6,
     "losses": 3,
-    "last_updated": "2025-08-08T22:07:58.942186"
+    "last_updated": "2025-08-10T11:48:46.600182"
   },
   "593576": {
     "id": "593576",
@@ -34238,7 +34278,7 @@
     "games_started": 0,
     "wins": 3,
     "losses": 2,
-    "last_updated": "2025-08-08T22:08:24.505281"
+    "last_updated": "2025-08-10T11:49:14.792119"
   },
   "656794": {
     "id": "656794",
@@ -34315,7 +34355,7 @@
     "games_started": 5,
     "wins": 2,
     "losses": 5,
-    "last_updated": "2025-08-08T22:07:00.624414"
+    "last_updated": "2025-08-10T11:46:00.345886"
   },
   "693312": {
     "id": "693312",
@@ -34392,7 +34432,7 @@
     "games_started": 0,
     "wins": 1,
     "losses": 0,
-    "last_updated": "2025-08-08T22:07:03.064468"
+    "last_updated": "2025-08-10T11:46:06.271243"
   },
   "680951": {
     "id": "680951",
@@ -34737,7 +34777,7 @@
     "games_started": 0,
     "wins": 1,
     "losses": 0,
-    "last_updated": "2025-08-08T22:07:17.393491"
+    "last_updated": "2025-08-10T11:46:56.267942"
   },
   "641927": {
     "id": "641927",
@@ -34806,15 +34846,15 @@
     },
     "career": {},
     "team": "Minnesota Twins",
-    "era": 5.38,
-    "whip": 1.41,
-    "strikeouts": 78,
-    "walks": 23,
-    "innings_pitched": 97.0,
-    "games_started": 18,
+    "era": 5.16,
+    "whip": 1.38,
+    "strikeouts": 82,
+    "walks": 24,
+    "innings_pitched": 103.0,
+    "games_started": 19,
     "wins": 4,
-    "losses": 6,
-    "last_updated": "2025-08-08T22:07:29.247383"
+    "losses": 7,
+    "last_updated": "2025-08-10T11:47:34.809400"
   },
   "829272": {
     "id": "829272",
@@ -34883,15 +34923,15 @@
     },
     "career": {},
     "team": "Washington Nationals",
-    "era": 7.36,
+    "era": 6.75,
     "whip": 1.73,
-    "strikeouts": 7,
-    "walks": 3,
-    "innings_pitched": 11.0,
+    "strikeouts": 8,
+    "walks": 5,
+    "innings_pitched": 13.1,
     "games_started": 2,
     "wins": 0,
     "losses": 1,
-    "last_updated": "2025-08-08T22:08:35.790834"
+    "last_updated": "2025-08-10T11:49:27.976179"
   },
   "701487": {
     "id": "701487",
@@ -34968,7 +35008,7 @@
     "games_started": 2,
     "wins": 0,
     "losses": 2,
-    "last_updated": "2025-08-08T22:07:31.284606"
+    "last_updated": "2025-08-10T11:47:44.007837"
   },
   "595345": {
     "id": "595345",
@@ -35045,7 +35085,7 @@
     "games_started": 1,
     "wins": 1,
     "losses": 2,
-    "last_updated": "2025-08-08T22:08:25.823204"
+    "last_updated": "2025-08-10T11:49:16.434666"
   },
   "681857": {
     "id": "681857",
@@ -35181,15 +35221,15 @@
     },
     "career": {},
     "team": "Houston Astros",
-    "era": 4.72,
-    "whip": 1.25,
-    "strikeouts": 34,
+    "era": 4.54,
+    "whip": 1.21,
+    "strikeouts": 35,
     "walks": 18,
-    "innings_pitched": 34.1,
+    "innings_pitched": 35.2,
     "games_started": 0,
     "wins": 2,
     "losses": 1,
-    "last_updated": "2025-08-08T22:08:25.340133"
+    "last_updated": "2025-08-10T11:49:15.914666"
   },
   "682847": {
     "id": "682847",
@@ -35668,7 +35708,7 @@
     "games_started": 23,
     "wins": 4,
     "losses": 10,
-    "last_updated": "2025-08-08T22:08:20.428030"
+    "last_updated": "2025-08-10T11:49:10.419439"
   },
   "641941": {
     "id": "641941",
@@ -35737,15 +35777,15 @@
     },
     "career": {},
     "team": "Cincinnati Reds",
-    "era": 2.98,
+    "era": 2.92,
     "whip": 0.91,
     "strikeouts": 57,
-    "walks": 16,
-    "innings_pitched": 48.1,
+    "walks": 17,
+    "innings_pitched": 49.1,
     "games_started": 0,
     "wins": 2,
     "losses": 4,
-    "last_updated": "2025-08-08T22:08:10.633524"
+    "last_updated": "2025-08-10T11:48:59.832181"
   },
   "694037": {
     "id": "694037",
@@ -35822,7 +35862,7 @@
     "games_started": 0,
     "wins": 1,
     "losses": 2,
-    "last_updated": "2025-08-08T22:08:07.853980"
+    "last_updated": "2025-08-10T11:48:56.730633"
   },
   "669449": {
     "id": "669449",
@@ -35958,15 +35998,15 @@
     },
     "career": {},
     "team": "St. Louis Cardinals",
-    "era": 4.57,
-    "whip": 1.32,
+    "era": 4.95,
+    "whip": 1.37,
     "strikeouts": 80,
-    "walks": 40,
-    "innings_pitched": 122.0,
-    "games_started": 22,
+    "walks": 41,
+    "innings_pitched": 123.2,
+    "games_started": 23,
     "wins": 6,
-    "losses": 8,
-    "last_updated": "2025-08-08T22:07:15.332029"
+    "losses": 9,
+    "last_updated": "2025-08-10T11:46:49.393226"
   },
   "687223": {
     "id": "687223",
@@ -36110,7 +36150,7 @@
     "games_started": 23,
     "wins": 7,
     "losses": 12,
-    "last_updated": "2025-08-08T22:08:35.113576"
+    "last_updated": "2025-08-10T11:49:27.202362"
   },
   "694477": {
     "id": "694477",
@@ -36321,7 +36361,7 @@
     "games_started": 0,
     "wins": 0,
     "losses": 1,
-    "last_updated": "2025-08-08T22:08:08.410543"
+    "last_updated": "2025-08-10T11:48:57.590789"
   },
   "665625": {
     "id": "665625",
@@ -36388,7 +36428,17 @@
       "sacBunts": 0,
       "sacFlies": 0
     },
-    "career": {}
+    "career": {},
+    "team": "Chicago White Sox",
+    "era": 4.91,
+    "whip": 1.64,
+    "strikeouts": 5,
+    "walks": 4,
+    "innings_pitched": 7.1,
+    "games_started": 0,
+    "wins": 0,
+    "losses": 0,
+    "last_updated": "2025-08-10T11:48:13.702608"
   },
   "686752": {
     "id": "686752",
@@ -36465,7 +36515,7 @@
     "games_started": 24,
     "wins": 7,
     "losses": 9,
-    "last_updated": "2025-08-08T22:07:21.434502"
+    "last_updated": "2025-08-10T11:47:13.516817"
   },
   "642547": {
     "id": "642547",
@@ -36542,7 +36592,7 @@
     "games_started": 24,
     "wins": 13,
     "losses": 5,
-    "last_updated": "2025-08-08T22:07:50.257335"
+    "last_updated": "2025-08-10T11:48:37.189145"
   },
   "678821": {
     "id": "678821",
@@ -36678,15 +36728,15 @@
     },
     "career": {},
     "team": "San Diego Padres",
-    "era": 3.1,
-    "whip": 1.32,
-    "strikeouts": 44,
-    "walks": 23,
-    "innings_pitched": 52.1,
+    "era": 3.15,
+    "whip": 1.33,
+    "strikeouts": 45,
+    "walks": 25,
+    "innings_pitched": 54.1,
     "games_started": 0,
     "wins": 5,
     "losses": 1,
-    "last_updated": "2025-08-08T22:07:07.078077"
+    "last_updated": "2025-08-10T11:46:14.795922"
   },
   "622780": {
     "id": "622780",
@@ -36897,7 +36947,7 @@
     "games_started": 11,
     "wins": 4,
     "losses": 3,
-    "last_updated": "2025-08-08T22:07:43.654545"
+    "last_updated": "2025-08-10T11:48:27.290514"
   },
   "527048": {
     "id": "527048",
@@ -37033,15 +37083,15 @@
     },
     "career": {},
     "team": "Athletics",
-    "era": 3.97,
-    "whip": 1.15,
-    "strikeouts": 23,
-    "walks": 10,
-    "innings_pitched": 22.2,
-    "games_started": 1,
-    "wins": 0,
+    "era": 4.08,
+    "whip": 1.05,
+    "strikeouts": 28,
+    "walks": 11,
+    "innings_pitched": 28.2,
+    "games_started": 2,
+    "wins": 1,
     "losses": 2,
-    "last_updated": "2025-08-08T22:06:58.426452"
+    "last_updated": "2025-08-10T11:45:57.550660"
   },
   "656848": {
     "id": "656848",
@@ -37185,7 +37235,7 @@
     "games_started": 22,
     "wins": 7,
     "losses": 5,
-    "last_updated": "2025-08-08T22:08:36.713850"
+    "last_updated": "2025-08-10T11:49:29.089122"
   },
   "695534": {
     "id": "695534",
@@ -37329,7 +37379,7 @@
     "games_started": 23,
     "wins": 11,
     "losses": 7,
-    "last_updated": "2025-08-08T22:07:56.992266"
+    "last_updated": "2025-08-10T11:48:44.431244"
   },
   "683175": {
     "id": "683175",
@@ -37540,7 +37590,7 @@
     "games_started": 0,
     "wins": 1,
     "losses": 0,
-    "last_updated": "2025-08-08T22:07:45.345414"
+    "last_updated": "2025-08-10T11:48:31.471188"
   },
   "663455": {
     "id": "663455",
@@ -37609,15 +37659,15 @@
     },
     "career": {},
     "team": "Washington Nationals",
-    "era": 2.35,
-    "whip": 1.04,
-    "strikeouts": 9,
+    "era": 2.08,
+    "whip": 0.92,
+    "strikeouts": 10,
     "walks": 3,
-    "innings_pitched": 7.2,
+    "innings_pitched": 8.2,
     "games_started": 0,
     "wins": 2,
     "losses": 0,
-    "last_updated": "2025-08-08T22:08:34.704772"
+    "last_updated": "2025-08-10T11:49:26.682417"
   },
   "673820": {
     "id": "673820",
@@ -37820,15 +37870,15 @@
     },
     "career": {},
     "team": "San Diego Padres",
-    "era": 2.96,
+    "era": 2.94,
     "whip": 0.96,
     "strikeouts": 139,
     "walks": 35,
-    "innings_pitched": 133.2,
+    "innings_pitched": 134.2,
     "games_started": 23,
     "wins": 11,
-    "losses": 3,
-    "last_updated": "2025-08-08T22:07:06.272452"
+    "losses": 4,
+    "last_updated": "2025-08-10T11:46:13.510768"
   },
   "621363": {
     "id": "621363",
@@ -37964,15 +38014,15 @@
     },
     "career": {},
     "team": "Chicago Cubs",
-    "era": 1.97,
-    "whip": 1.06,
-    "strikeouts": 35,
-    "walks": 12,
-    "innings_pitched": 32.0,
+    "era": 1.91,
+    "whip": 1.12,
+    "strikeouts": 36,
+    "walks": 13,
+    "innings_pitched": 33.0,
     "games_started": 3,
     "wins": 2,
     "losses": 1,
-    "last_updated": "2025-08-08T22:08:08.060510"
+    "last_updated": "2025-08-10T11:48:56.957139"
   },
   "647315": {
     "id": "647315",
@@ -38183,7 +38233,7 @@
     "games_started": 0,
     "wins": 0,
     "losses": 0,
-    "last_updated": "2025-08-08T22:08:35.593510"
+    "last_updated": "2025-08-10T11:49:27.704328"
   },
   "700249": {
     "id": "700249",
@@ -38260,7 +38310,7 @@
     "games_started": 13,
     "wins": 2,
     "losses": 6,
-    "last_updated": "2025-08-08T22:07:59.931150"
+    "last_updated": "2025-08-10T11:48:47.768314"
   },
   "519151": {
     "id": "519151",
@@ -38404,7 +38454,7 @@
     "games_started": 16,
     "wins": 11,
     "losses": 2,
-    "last_updated": "2025-08-08T22:07:51.448487"
+    "last_updated": "2025-08-10T11:48:38.497836"
   },
   "640462": {
     "id": "640462",
@@ -38548,7 +38598,7 @@
     "games_started": 22,
     "wins": 4,
     "losses": 9,
-    "last_updated": "2025-08-08T22:07:42.936356"
+    "last_updated": "2025-08-10T11:48:24.228839"
   },
   "650671": {
     "id": "650671",
@@ -38692,7 +38742,7 @@
     "games_started": 17,
     "wins": 9,
     "losses": 4,
-    "last_updated": "2025-08-08T22:07:50.977571"
+    "last_updated": "2025-08-10T11:48:37.979159"
   },
   "666142": {
     "id": "666142",
@@ -38903,7 +38953,7 @@
     "games_started": 0,
     "wins": 1,
     "losses": 0,
-    "last_updated": "2025-08-08T22:08:36.262060"
+    "last_updated": "2025-08-10T11:49:28.567289"
   },
   "541640": {
     "id": "541640",
@@ -38972,15 +39022,15 @@
     },
     "career": {},
     "team": "Minnesota Twins",
-    "era": 3.38,
-    "whip": 1.13,
+    "era": 4.91,
+    "whip": 1.64,
     "strikeouts": 1,
-    "walks": 0,
-    "innings_pitched": 2.2,
+    "walks": 1,
+    "innings_pitched": 3.2,
     "games_started": 0,
     "wins": 0,
     "losses": 0,
-    "last_updated": "2025-08-08T22:07:29.900519"
+    "last_updated": "2025-08-10T11:47:36.366285"
   },
   "670990": {
     "id": "670990",
@@ -39057,7 +39107,7 @@
     "games_started": 0,
     "wins": 1,
     "losses": 0,
-    "last_updated": "2025-08-08T22:07:04.114472"
+    "last_updated": "2025-08-10T11:46:08.292119"
   },
   "660604": {
     "id": "660604",
@@ -39211,7 +39261,7 @@
     "games_started": 23,
     "wins": 9,
     "losses": 5,
-    "last_updated": "2025-08-08T22:07:19.310744"
+    "last_updated": "2025-08-10T11:47:03.467195"
   },
   "592662": {
     "id": "592662",
@@ -39288,7 +39338,7 @@
     "games_started": 24,
     "wins": 9,
     "losses": 5,
-    "last_updated": "2025-08-08T22:07:13.819328"
+    "last_updated": "2025-08-10T11:46:43.980957"
   },
   "607067": {
     "id": "607067",
@@ -39357,15 +39407,15 @@
     },
     "career": {},
     "team": "Chicago Cubs",
-    "era": 4.23,
-    "whip": 1.32,
-    "strikeouts": 79,
-    "walks": 29,
-    "innings_pitched": 110.2,
-    "games_started": 19,
-    "wins": 8,
+    "era": 4.09,
+    "whip": 1.29,
+    "strikeouts": 85,
+    "walks": 31,
+    "innings_pitched": 116.2,
+    "games_started": 20,
+    "wins": 9,
     "losses": 5,
-    "last_updated": "2025-08-08T22:08:07.602608"
+    "last_updated": "2025-08-10T11:48:56.476259"
   },
   "669308": {
     "id": "669308",
@@ -39511,15 +39561,15 @@
     },
     "career": {},
     "team": "Washington Nationals",
-    "era": 5.91,
-    "whip": 1.22,
+    "era": 5.73,
+    "whip": 1.18,
     "strikeouts": 10,
     "walks": 5,
-    "innings_pitched": 10.2,
+    "innings_pitched": 11.0,
     "games_started": 0,
     "wins": 0,
     "losses": 0,
-    "last_updated": "2025-08-08T22:08:35.344781"
+    "last_updated": "2025-08-10T11:49:27.460032"
   },
   "670950": {
     "id": "670950",
@@ -39998,7 +40048,7 @@
     "games_started": 24,
     "wins": 11,
     "losses": 7,
-    "last_updated": "2025-08-08T22:07:46.726783"
+    "last_updated": "2025-08-10T11:48:33.358468"
   },
   "699134": {
     "id": "699134",
@@ -40201,15 +40251,15 @@
     },
     "career": {},
     "team": "Arizona Diamondbacks",
-    "era": 5.53,
-    "whip": 1.66,
-    "strikeouts": 103,
-    "walks": 37,
-    "innings_pitched": 97.2,
-    "games_started": 19,
+    "era": 5.68,
+    "whip": 1.68,
+    "strikeouts": 105,
+    "walks": 42,
+    "innings_pitched": 103.0,
+    "games_started": 20,
     "wins": 4,
     "losses": 7,
-    "last_updated": "2025-08-08T22:07:57.468054"
+    "last_updated": "2025-08-10T11:48:44.716999"
   },
   "660730": {
     "id": "660730",
@@ -40420,7 +40470,7 @@
     "games_started": 0,
     "wins": 3,
     "losses": 3,
-    "last_updated": "2025-08-08T22:07:13.598127"
+    "last_updated": "2025-08-10T11:46:43.719182"
   },
   "684320": {
     "id": "684320",
@@ -40489,15 +40539,15 @@
     },
     "career": {},
     "team": "Toronto Blue Jays",
-    "era": 2.45,
-    "whip": 0.98,
+    "era": 3.09,
+    "whip": 1.03,
     "strikeouts": 49,
-    "walks": 20,
-    "innings_pitched": 55.0,
+    "walks": 21,
+    "innings_pitched": 55.1,
     "games_started": 1,
     "wins": 2,
     "losses": 0,
-    "last_updated": "2025-08-08T22:07:28.698014"
+    "last_updated": "2025-08-10T11:47:33.359253"
   },
   "573124": {
     "id": "573124",
@@ -40566,15 +40616,15 @@
     },
     "career": {},
     "team": "Chicago Cubs",
-    "era": 2.29,
-    "whip": 1.39,
-    "strikeouts": 37,
-    "walks": 19,
-    "innings_pitched": 35.1,
+    "era": 2.23,
+    "whip": 1.4,
+    "strikeouts": 39,
+    "walks": 20,
+    "innings_pitched": 36.1,
     "games_started": 0,
     "wins": 2,
     "losses": 2,
-    "last_updated": "2025-08-08T22:08:09.150708"
+    "last_updated": "2025-08-10T11:48:58.216581"
   },
   "669432": {
     "id": "669432",
@@ -40651,7 +40701,7 @@
     "games_started": 10,
     "wins": 5,
     "losses": 2,
-    "last_updated": "2025-08-08T22:08:02.300774"
+    "last_updated": "2025-08-10T11:48:50.517239"
   },
   "643511": {
     "id": "643511",
@@ -40720,15 +40770,15 @@
     },
     "career": {},
     "team": "New York Mets",
-    "era": 1.83,
-    "whip": 0.91,
+    "era": 1.8,
+    "whip": 0.89,
     "strikeouts": 39,
     "walks": 5,
-    "innings_pitched": 54.0,
+    "innings_pitched": 55.0,
     "games_started": 0,
     "wins": 4,
     "losses": 4,
-    "last_updated": "2025-08-08T22:08:39.021111"
+    "last_updated": "2025-08-10T11:49:31.854316"
   },
   "669020": {
     "id": "669020",
@@ -40805,7 +40855,7 @@
     "games_started": 1,
     "wins": 0,
     "losses": 0,
-    "last_updated": "2025-08-08T22:08:18.557107"
+    "last_updated": "2025-08-10T11:49:08.765355"
   },
   "605447": {
     "id": "605447",
@@ -40882,7 +40932,7 @@
     "games_started": 0,
     "wins": 1,
     "losses": 4,
-    "last_updated": "2025-08-08T22:07:33.672096"
+    "last_updated": "2025-08-10T11:47:52.557567"
   },
   "668941": {
     "id": "668941",
@@ -40959,7 +41009,7 @@
     "games_started": 0,
     "wins": 4,
     "losses": 3,
-    "last_updated": "2025-08-08T22:07:15.908273"
+    "last_updated": "2025-08-10T11:46:51.290284"
   },
   "605452": {
     "id": "605452",
@@ -41036,7 +41086,7 @@
     "games_started": 1,
     "wins": 2,
     "losses": 1,
-    "last_updated": "2025-08-08T22:07:33.435320"
+    "last_updated": "2025-08-10T11:47:51.399817"
   },
   "694738": {
     "id": "694738",
@@ -41314,7 +41364,7 @@
     "games_started": 0,
     "wins": 1,
     "losses": 1,
-    "last_updated": "2025-08-08T22:08:34.139695"
+    "last_updated": "2025-08-10T11:49:25.908178"
   },
   "657746": {
     "id": "657746",
@@ -41391,7 +41441,7 @@
     "games_started": 22,
     "wins": 11,
     "losses": 5,
-    "last_updated": "2025-08-08T22:07:30.072605"
+    "last_updated": "2025-08-10T11:47:38.204507"
   },
   "685314": {
     "id": "685314",
@@ -41460,15 +41510,15 @@
     },
     "career": {},
     "team": "Arizona Diamondbacks",
-    "era": 0.87,
-    "whip": 1.06,
-    "strikeouts": 8,
+    "era": 0.73,
+    "whip": 1.05,
+    "strikeouts": 9,
     "walks": 4,
-    "innings_pitched": 10.1,
+    "innings_pitched": 12.1,
     "games_started": 0,
     "wins": 0,
     "losses": 0,
-    "last_updated": "2025-08-08T22:07:56.538261"
+    "last_updated": "2025-08-10T11:48:43.901832"
   },
   "681870": {
     "id": "681870",
@@ -41537,15 +41587,15 @@
     },
     "career": {},
     "team": "Cleveland Guardians",
-    "era": 1.23,
+    "era": 1.15,
     "whip": 1.02,
     "strikeouts": 23,
-    "walks": 7,
-    "innings_pitched": 14.2,
+    "walks": 8,
+    "innings_pitched": 15.2,
     "games_started": 0,
     "wins": 0,
     "losses": 0,
-    "last_updated": "2025-08-08T22:08:13.589880"
+    "last_updated": "2025-08-10T11:49:03.127856"
   },
   "674285": {
     "id": "674285",
@@ -41754,9 +41804,9 @@
     "walks": 35,
     "innings_pitched": 144.2,
     "games_started": 23,
-    "wins": 10,
+    "wins": 11,
     "losses": 3,
-    "last_updated": "2025-08-08T22:07:32.751903"
+    "last_updated": "2025-08-10T11:47:48.515945"
   },
   "676742": {
     "id": "676742",
@@ -41826,14 +41876,14 @@
     "career": {},
     "team": "Pittsburgh Pirates",
     "era": 0.0,
-    "whip": 0.67,
-    "strikeouts": 2,
+    "whip": 0.75,
+    "strikeouts": 3,
     "walks": 1,
-    "innings_pitched": 3.0,
+    "innings_pitched": 4.0,
     "games_started": 0,
     "wins": 0,
     "losses": 0,
-    "last_updated": "2025-08-08T22:07:01.944698"
+    "last_updated": "2025-08-10T11:46:02.502933"
   },
   "680704": {
     "id": "680704",
@@ -42044,7 +42094,7 @@
     "games_started": 3,
     "wins": 3,
     "losses": 3,
-    "last_updated": "2025-08-08T22:07:29.698732"
+    "last_updated": "2025-08-10T11:47:35.566264"
   },
   "642701": {
     "id": "642701",
@@ -42121,7 +42171,7 @@
     "games_started": 0,
     "wins": 3,
     "losses": 4,
-    "last_updated": "2025-08-08T22:07:02.629243"
+    "last_updated": "2025-08-10T11:46:04.251049"
   },
   "663574": {
     "id": "663574",
@@ -42190,15 +42240,15 @@
     },
     "career": {},
     "team": "Cincinnati Reds",
-    "era": 2.85,
+    "era": 2.8,
     "whip": 1.08,
     "strikeouts": 53,
-    "walks": 18,
-    "innings_pitched": 53.2,
+    "walks": 19,
+    "innings_pitched": 54.2,
     "games_started": 0,
     "wins": 1,
     "losses": 4,
-    "last_updated": "2025-08-08T22:08:12.346845"
+    "last_updated": "2025-08-10T11:49:01.678323"
   },
   "666619": {
     "id": "666619",
@@ -42535,15 +42585,15 @@
     },
     "career": {},
     "team": "Toronto Blue Jays",
-    "era": 4.03,
-    "whip": 1.03,
-    "strikeouts": 46,
-    "walks": 9,
-    "innings_pitched": 44.2,
+    "era": 4.21,
+    "whip": 1.11,
+    "strikeouts": 49,
+    "walks": 11,
+    "innings_pitched": 47.0,
     "games_started": 9,
     "wins": 2,
-    "losses": 1,
-    "last_updated": "2025-08-08T22:07:27.968331"
+    "losses": 2,
+    "last_updated": "2025-08-10T11:47:32.295257"
   },
   "693645": {
     "id": "693645",
@@ -42620,7 +42670,7 @@
     "games_started": 5,
     "wins": 1,
     "losses": 2,
-    "last_updated": "2025-08-08T22:07:46.210881"
+    "last_updated": "2025-08-10T11:48:32.831119"
   },
   "657376": {
     "id": "657376",
@@ -42764,7 +42814,7 @@
     "games_started": 0,
     "wins": 2,
     "losses": 2,
-    "last_updated": "2025-08-08T22:08:27.806034"
+    "last_updated": "2025-08-10T11:49:18.345436"
   },
   "687606": {
     "id": "687606",
@@ -43310,7 +43360,7 @@
     "games_started": 18,
     "wins": 7,
     "losses": 4,
-    "last_updated": "2025-08-08T22:08:37.828422"
+    "last_updated": "2025-08-10T11:49:30.427280"
   },
   "622608": {
     "id": "622608",
@@ -43590,15 +43640,15 @@
     },
     "career": {},
     "team": "San Francisco Giants",
-    "era": 4.91,
-    "whip": 1.55,
-    "strikeouts": 11,
+    "era": 4.5,
+    "whip": 1.5,
+    "strikeouts": 12,
     "walks": 4,
-    "innings_pitched": 11.0,
+    "innings_pitched": 14.0,
     "games_started": 0,
     "wins": 0,
     "losses": 1,
-    "last_updated": "2025-08-08T22:07:11.515142"
+    "last_updated": "2025-08-10T11:46:36.879679"
   },
   "693855": {
     "id": "693855",
@@ -43667,15 +43717,15 @@
     },
     "career": {},
     "team": "Tampa Bay Rays",
-    "era": 1.2,
-    "whip": 0.8,
-    "strikeouts": 16,
-    "walks": 3,
-    "innings_pitched": 15.0,
+    "era": 1.06,
+    "whip": 0.88,
+    "strikeouts": 18,
+    "walks": 5,
+    "innings_pitched": 17.0,
     "games_started": 0,
     "wins": 1,
     "losses": 0,
-    "last_updated": "2025-08-08T22:07:20.280326"
+    "last_updated": "2025-08-10T11:47:07.548072"
   },
   "686218": {
     "id": "686218",
@@ -43752,7 +43802,7 @@
     "games_started": 5,
     "wins": 3,
     "losses": 2,
-    "last_updated": "2025-08-08T22:08:31.855726"
+    "last_updated": "2025-08-10T11:49:23.058944"
   },
   "663767": {
     "id": "663767",
@@ -43955,15 +44005,15 @@
     },
     "career": {},
     "team": "Miami Marlins",
-    "era": 6.89,
-    "whip": 1.6,
-    "strikeouts": 20,
+    "era": 6.48,
+    "whip": 1.5,
+    "strikeouts": 22,
     "walks": 11,
-    "innings_pitched": 15.2,
+    "innings_pitched": 16.2,
     "games_started": 0,
     "wins": 2,
     "losses": 1,
-    "last_updated": "2025-08-08T22:07:44.357678"
+    "last_updated": "2025-08-10T11:48:29.824110"
   },
   "608371": {
     "id": "608371",
@@ -44107,7 +44157,7 @@
     "games_started": 23,
     "wins": 9,
     "losses": 9,
-    "last_updated": "2025-08-08T22:08:10.000725"
+    "last_updated": "2025-08-10T11:48:59.055524"
   },
   "681895": {
     "id": "681895",
@@ -44251,7 +44301,7 @@
     "games_started": 24,
     "wins": 7,
     "losses": 8,
-    "last_updated": "2025-08-08T22:07:03.622545"
+    "last_updated": "2025-08-10T11:46:07.692228"
   },
   "669373": {
     "id": "669373",
@@ -44328,7 +44378,7 @@
     "games_started": 23,
     "wins": 11,
     "losses": 3,
-    "last_updated": "2025-08-08T22:08:21.492438"
+    "last_updated": "2025-08-10T11:49:11.691676"
   },
   "686580": {
     "id": "686580",
@@ -44464,15 +44514,15 @@
     },
     "career": {},
     "team": "Cleveland Guardians",
-    "era": 2.81,
-    "whip": 1.15,
-    "strikeouts": 71,
+    "era": 2.75,
+    "whip": 1.13,
+    "strikeouts": 73,
     "walks": 18,
-    "innings_pitched": 51.1,
+    "innings_pitched": 52.1,
     "games_started": 0,
     "wins": 4,
     "losses": 4,
-    "last_updated": "2025-08-08T22:08:13.153500"
+    "last_updated": "2025-08-10T11:49:02.590686"
   },
   "681916": {
     "id": "681916",
@@ -44616,7 +44666,7 @@
     "games_started": 20,
     "wins": 3,
     "losses": 7,
-    "last_updated": "2025-08-08T22:07:41.131016"
+    "last_updated": "2025-08-10T11:48:18.380273"
   },
   "700363": {
     "id": "700363",
@@ -44752,15 +44802,15 @@
     },
     "career": {},
     "team": "Los Angeles Dodgers",
-    "era": 3.21,
-    "whip": 1.64,
-    "strikeouts": 12,
-    "walks": 8,
-    "innings_pitched": 14.0,
-    "games_started": 3,
-    "wins": 1,
+    "era": 2.37,
+    "whip": 1.53,
+    "strikeouts": 22,
+    "walks": 11,
+    "innings_pitched": 19.0,
+    "games_started": 4,
+    "wins": 2,
     "losses": 1,
-    "last_updated": "2025-08-08T22:08:30.955650"
+    "last_updated": "2025-08-10T11:49:22.124838"
   },
   "676092": {
     "id": "676092",
@@ -44896,15 +44946,15 @@
     },
     "career": {},
     "team": "Miami Marlins",
-    "era": 7.97,
-    "whip": 1.77,
-    "strikeouts": 21,
-    "walks": 11,
-    "innings_pitched": 20.1,
+    "era": 9.28,
+    "whip": 1.88,
+    "strikeouts": 22,
+    "walks": 12,
+    "innings_pitched": 21.1,
     "games_started": 0,
     "wins": 1,
     "losses": 0,
-    "last_updated": "2025-08-08T22:07:43.888063"
+    "last_updated": "2025-08-10T11:48:27.994934"
   },
   "667755": {
     "id": "667755",
@@ -44981,7 +45031,7 @@
     "games_started": 24,
     "wins": 7,
     "losses": 9,
-    "last_updated": "2025-08-08T22:07:53.879015"
+    "last_updated": "2025-08-10T11:48:41.222734"
   },
   "647336": {
     "id": "647336",
@@ -45117,15 +45167,15 @@
     },
     "career": {},
     "team": "New York Mets",
-    "era": 3.54,
-    "whip": 1.28,
+    "era": 3.46,
+    "whip": 1.25,
     "strikeouts": 50,
     "walks": 19,
-    "innings_pitched": 40.2,
+    "innings_pitched": 41.2,
     "games_started": 0,
     "wins": 0,
     "losses": 3,
-    "last_updated": "2025-08-08T22:08:37.419964"
+    "last_updated": "2025-08-10T11:49:29.875210"
   },
   "656986": {
     "id": "656986",
@@ -45202,7 +45252,7 @@
     "games_started": 0,
     "wins": 5,
     "losses": 1,
-    "last_updated": "2025-08-08T22:08:23.041596"
+    "last_updated": "2025-08-10T11:49:13.316045"
   },
   "642100": {
     "id": "642100",
@@ -45271,15 +45321,15 @@
     },
     "career": {},
     "team": "Seattle Mariners",
-    "era": 2.25,
-    "whip": 0.91,
+    "era": 2.22,
+    "whip": 0.9,
     "strikeouts": 59,
     "walks": 10,
-    "innings_pitched": 44.0,
+    "innings_pitched": 44.2,
     "games_started": 0,
     "wins": 2,
     "losses": 1,
-    "last_updated": "2025-08-08T22:07:09.574826"
+    "last_updated": "2025-08-10T11:46:25.223759"
   },
   "687765": {
     "id": "687765",
@@ -45490,7 +45540,7 @@
     "games_started": 22,
     "wins": 10,
     "losses": 7,
-    "last_updated": "2025-08-08T22:06:59.049428"
+    "last_updated": "2025-08-10T11:45:58.065847"
   },
   "592773": {
     "id": "592773",
@@ -45559,15 +45609,15 @@
     },
     "career": {},
     "team": "New York Mets",
-    "era": 4.95,
-    "whip": 1.53,
+    "era": 5.31,
+    "whip": 1.55,
     "strikeouts": 44,
     "walks": 21,
-    "innings_pitched": 40.0,
+    "innings_pitched": 40.2,
     "games_started": 0,
     "wins": 2,
-    "losses": 5,
-    "last_updated": "2025-08-08T22:08:38.549342"
+    "losses": 6,
+    "last_updated": "2025-08-10T11:49:31.322473"
   },
   "657006": {
     "id": "657006",
@@ -45778,7 +45828,7 @@
     "games_started": 1,
     "wins": 3,
     "losses": 3,
-    "last_updated": "2025-08-08T22:06:59.336007"
+    "last_updated": "2025-08-10T11:45:58.316332"
   },
   "592779": {
     "id": "592779",
@@ -45847,15 +45897,15 @@
     },
     "career": {},
     "team": "Los Angeles Dodgers",
-    "era": 2.7,
-    "whip": 1.2,
-    "strikeouts": 43,
-    "walks": 12,
-    "innings_pitched": 36.2,
+    "era": 2.63,
+    "whip": 1.19,
+    "strikeouts": 44,
+    "walks": 13,
+    "innings_pitched": 37.2,
     "games_started": 0,
     "wins": 2,
     "losses": 2,
-    "last_updated": "2025-08-08T22:08:31.453009"
+    "last_updated": "2025-08-10T11:49:22.627037"
   },
   "476594": {
     "id": "476594",
@@ -45991,15 +46041,15 @@
     },
     "career": {},
     "team": "Philadelphia Phillies",
-    "era": 3.2,
+    "era": 3.33,
     "whip": 1.13,
-    "strikeouts": 53,
+    "strikeouts": 54,
     "walks": 15,
-    "innings_pitched": 45.0,
+    "innings_pitched": 46.0,
     "games_started": 0,
     "wins": 1,
     "losses": 3,
-    "last_updated": "2025-08-08T22:07:33.908726"
+    "last_updated": "2025-08-10T11:47:53.595478"
   },
   "608717": {
     "id": "608717",
@@ -46277,7 +46327,7 @@
     "games_started": 15,
     "wins": 5,
     "losses": 9,
-    "last_updated": "2025-08-08T22:07:38.347586"
+    "last_updated": "2025-08-10T11:48:08.906851"
   },
   "573186": {
     "id": "573186",
@@ -46413,15 +46463,15 @@
     },
     "career": {},
     "team": "Baltimore Orioles",
-    "era": 1.93,
-    "whip": 1.18,
+    "era": 1.74,
+    "whip": 1.06,
     "strikeouts": 6,
     "walks": 4,
-    "innings_pitched": 9.1,
+    "innings_pitched": 10.1,
     "games_started": 0,
     "wins": 0,
     "losses": 0,
-    "last_updated": "2025-08-08T22:08:01.202786"
+    "last_updated": "2025-08-10T11:48:49.451650"
   },
   "544150": {
     "id": "544150",
@@ -46632,7 +46682,7 @@
     "games_started": 17,
     "wins": 8,
     "losses": 5,
-    "last_updated": "2025-08-08T22:07:34.566577"
+    "last_updated": "2025-08-10T11:47:56.331122"
   },
   "663158": {
     "id": "663158",
@@ -46701,15 +46751,15 @@
     },
     "career": {},
     "team": "San Diego Padres",
-    "era": 3.17,
-    "whip": 0.99,
-    "strikeouts": 49,
-    "walks": 13,
-    "innings_pitched": 48.1,
+    "era": 3.28,
+    "whip": 1.03,
+    "strikeouts": 51,
+    "walks": 14,
+    "innings_pitched": 49.1,
     "games_started": 0,
     "wins": 4,
     "losses": 4,
-    "last_updated": "2025-08-08T22:07:06.582608"
+    "last_updated": "2025-08-10T11:46:14.383000"
   },
   "593833": {
     "id": "593833",
@@ -46853,7 +46903,7 @@
     "games_started": 22,
     "wins": 9,
     "losses": 5,
-    "last_updated": "2025-08-08T22:08:02.070017"
+    "last_updated": "2025-08-10T11:48:50.208311"
   },
   "642121": {
     "id": "642121",
@@ -46997,7 +47047,7 @@
     "games_started": 3,
     "wins": 1,
     "losses": 2,
-    "last_updated": "2025-08-08T22:08:10.237654"
+    "last_updated": "2025-08-10T11:48:59.322540"
   },
   "694335": {
     "id": "694335",
@@ -47074,7 +47124,7 @@
     "games_started": 0,
     "wins": 1,
     "losses": 0,
-    "last_updated": "2025-08-08T22:07:16.401579"
+    "last_updated": "2025-08-10T11:46:53.739584"
   },
   "657024": {
     "id": "657024",
@@ -47419,7 +47469,7 @@
     "games_started": 2,
     "wins": 0,
     "losses": 2,
-    "last_updated": "2025-08-08T22:07:40.246944"
+    "last_updated": "2025-08-10T11:48:14.417826"
   },
   "700187": {
     "id": "700187",
@@ -47555,15 +47605,15 @@
     },
     "career": {},
     "team": "San Francisco Giants",
-    "era": 8.44,
-    "whip": 1.5,
-    "strikeouts": 6,
-    "walks": 3,
-    "innings_pitched": 5.1,
+    "era": 5.4,
+    "whip": 1.32,
+    "strikeouts": 8,
+    "walks": 4,
+    "innings_pitched": 8.1,
     "games_started": 1,
-    "wins": 0,
+    "wins": 1,
     "losses": 1,
-    "last_updated": "2025-08-08T22:07:12.850965"
+    "last_updated": "2025-08-10T11:46:42.179387"
   },
   "573204": {
     "id": "573204",
@@ -47632,15 +47682,15 @@
     },
     "career": {},
     "team": "Chicago Cubs",
-    "era": 2.34,
-    "whip": 0.87,
-    "strikeouts": 40,
+    "era": 2.28,
+    "whip": 0.88,
+    "strikeouts": 41,
     "walks": 12,
-    "innings_pitched": 42.1,
+    "innings_pitched": 43.1,
     "games_started": 0,
     "wins": 2,
     "losses": 3,
-    "last_updated": "2025-08-08T22:08:07.327101"
+    "last_updated": "2025-08-10T11:48:56.248953"
   },
   "671162": {
     "id": "671162",
@@ -48178,15 +48228,15 @@
     },
     "career": {},
     "team": "Minnesota Twins",
-    "era": 5.4,
+    "era": 4.5,
     "whip": 1.0,
     "strikeouts": 2,
-    "walks": 1,
-    "innings_pitched": 5.0,
+    "walks": 2,
+    "innings_pitched": 6.0,
     "games_started": 0,
     "wins": 0,
     "losses": 0,
-    "last_updated": "2025-08-08T22:07:31.076227"
+    "last_updated": "2025-08-10T11:47:43.477882"
   },
   "623437": {
     "id": "623437",
@@ -48255,15 +48305,15 @@
     },
     "career": {},
     "team": "Minnesota Twins",
-    "era": 3.86,
-    "whip": 1.33,
+    "era": 3.78,
+    "whip": 1.32,
     "strikeouts": 41,
     "walks": 12,
-    "innings_pitched": 46.2,
+    "innings_pitched": 47.2,
     "games_started": 1,
     "wins": 1,
     "losses": 3,
-    "last_updated": "2025-08-08T22:07:30.543657"
+    "last_updated": "2025-08-10T11:47:41.129673"
   },
   "657053": {
     "id": "657053",
@@ -48399,15 +48449,15 @@
     },
     "career": {},
     "team": "Los Angeles Dodgers",
-    "era": 3.72,
-    "whip": 2.07,
+    "era": 3.38,
+    "whip": 1.97,
     "strikeouts": 15,
     "walks": 7,
-    "innings_pitched": 9.2,
+    "innings_pitched": 10.2,
     "games_started": 0,
     "wins": 0,
     "losses": 2,
-    "last_updated": "2025-08-08T22:08:31.211265"
+    "last_updated": "2025-08-10T11:49:22.353555"
   },
   "642152": {
     "id": "642152",
@@ -48618,7 +48668,7 @@
     "games_started": 0,
     "wins": 7,
     "losses": 2,
-    "last_updated": "2025-08-08T22:07:19.523826"
+    "last_updated": "2025-08-10T11:47:04.610002"
   },
   "570632": {
     "id": "570632",
@@ -48695,7 +48745,7 @@
     "games_started": 3,
     "wins": 0,
     "losses": 0,
-    "last_updated": "2025-08-08T22:07:30.307199"
+    "last_updated": "2025-08-10T11:47:40.096740"
   },
   "682842": {
     "id": "682842",
@@ -48764,15 +48814,15 @@
     },
     "career": {},
     "team": "Milwaukee Brewers",
-    "era": 1.95,
-    "whip": 1.1,
-    "strikeouts": 66,
+    "era": 1.92,
+    "whip": 1.08,
+    "strikeouts": 69,
     "walks": 22,
-    "innings_pitched": 55.1,
+    "innings_pitched": 56.1,
     "games_started": 0,
     "wins": 2,
     "losses": 1,
-    "last_updated": "2025-08-08T22:07:49.653361"
+    "last_updated": "2025-08-10T11:48:36.331769"
   },
   "664285": {
     "id": "664285",
@@ -48841,15 +48891,15 @@
     },
     "career": {},
     "team": "Houston Astros",
-    "era": 2.83,
-    "whip": 1.12,
-    "strikeouts": 144,
-    "walks": 45,
-    "innings_pitched": 140.0,
-    "games_started": 22,
+    "era": 2.97,
+    "whip": 1.16,
+    "strikeouts": 145,
+    "walks": 49,
+    "innings_pitched": 145.2,
+    "games_started": 23,
     "wins": 11,
     "losses": 5,
-    "last_updated": "2025-08-08T22:08:24.242394"
+    "last_updated": "2025-08-10T11:49:14.549760"
   },
   "701121": {
     "id": "701121",
@@ -48985,15 +49035,15 @@
     },
     "career": {},
     "team": "Seattle Mariners",
-    "era": 3.81,
-    "whip": 1.38,
+    "era": 3.74,
+    "whip": 1.36,
     "strikeouts": 38,
     "walks": 20,
-    "innings_pitched": 54.1,
+    "innings_pitched": 55.1,
     "games_started": 0,
-    "wins": 3,
+    "wins": 4,
     "losses": 5,
-    "last_updated": "2025-08-08T22:07:08.838693"
+    "last_updated": "2025-08-10T11:46:22.236491"
   },
   "686973": {
     "id": "686973",
@@ -49062,15 +49112,15 @@
     },
     "career": {},
     "team": "Toronto Blue Jays",
-    "era": 2.08,
-    "whip": 1.1,
-    "strikeouts": 50,
-    "walks": 14,
-    "innings_pitched": 52.0,
+    "era": 2.04,
+    "whip": 1.09,
+    "strikeouts": 51,
+    "walks": 15,
+    "innings_pitched": 53.0,
     "games_started": 0,
     "wins": 3,
     "losses": 3,
-    "last_updated": "2025-08-08T22:07:27.556391"
+    "last_updated": "2025-08-10T11:47:29.686100"
   },
   "678024": {
     "id": "678024",
@@ -49147,7 +49197,7 @@
     "games_started": 3,
     "wins": 5,
     "losses": 3,
-    "last_updated": "2025-08-08T22:07:40.688368"
+    "last_updated": "2025-08-10T11:48:17.200073"
   },
   "681190": {
     "id": "681190",
@@ -49358,7 +49408,7 @@
     "games_started": 19,
     "wins": 1,
     "losses": 8,
-    "last_updated": "2025-08-08T22:07:12.570658"
+    "last_updated": "2025-08-10T11:46:41.048688"
   },
   "681911": {
     "id": "681911",
@@ -49435,7 +49485,7 @@
     "games_started": 0,
     "wins": 2,
     "losses": 1,
-    "last_updated": "2025-08-08T22:08:30.038861"
+    "last_updated": "2025-08-10T11:49:21.158865"
   },
   "676684": {
     "id": "676684",
@@ -49512,7 +49562,7 @@
     "games_started": 0,
     "wins": 5,
     "losses": 2,
-    "last_updated": "2025-08-08T22:08:22.451870"
+    "last_updated": "2025-08-10T11:49:12.701342"
   },
   "680767": {
     "id": "680767",
@@ -49589,7 +49639,7 @@
     "games_started": 0,
     "wins": 3,
     "losses": 3,
-    "last_updated": "2025-08-08T22:08:19.073201"
+    "last_updated": "2025-08-10T11:49:09.175916"
   },
   "608379": {
     "id": "608379",
@@ -49666,7 +49716,7 @@
     "games_started": 23,
     "wins": 6,
     "losses": 9,
-    "last_updated": "2025-08-08T22:08:28.305851"
+    "last_updated": "2025-08-10T11:49:18.896280"
   },
   "663399": {
     "id": "663399",
@@ -49800,7 +49850,17 @@
       "sacBunts": 0,
       "sacFlies": 1
     },
-    "career": {}
+    "career": {},
+    "team": "Atlanta Braves",
+    "era": 1.54,
+    "whip": 0.86,
+    "strikeouts": 10,
+    "walks": 3,
+    "innings_pitched": 11.2,
+    "games_started": 1,
+    "wins": 2,
+    "losses": 0,
+    "last_updated": "2025-08-10T11:48:06.308963"
   },
   "663362": {
     "id": "663362",
@@ -50011,7 +50071,7 @@
     "games_started": 0,
     "wins": 4,
     "losses": 4,
-    "last_updated": "2025-08-08T22:07:14.035407"
+    "last_updated": "2025-08-10T11:46:44.249283"
   },
   "592836": {
     "id": "592836",
@@ -50088,7 +50148,7 @@
     "games_started": 13,
     "wins": 4,
     "losses": 5,
-    "last_updated": "2025-08-08T22:07:34.807990"
+    "last_updated": "2025-08-10T11:47:58.441998"
   },
   "687888": {
     "id": "687888",
@@ -50366,7 +50426,7 @@
     "games_started": 24,
     "wins": 6,
     "losses": 5,
-    "last_updated": "2025-08-08T22:07:48.634914"
+    "last_updated": "2025-08-10T11:48:35.318458"
   },
   "677960": {
     "id": "677960",
@@ -50502,15 +50562,15 @@
     },
     "career": {},
     "team": "New York Yankees",
-    "era": 2.82,
-    "whip": 0.85,
-    "strikeouts": 46,
+    "era": 2.76,
+    "whip": 0.83,
+    "strikeouts": 47,
     "walks": 13,
-    "innings_pitched": 44.2,
+    "innings_pitched": 45.2,
     "games_started": 0,
     "wins": 2,
     "losses": 3,
-    "last_updated": "2025-08-08T22:07:47.699396"
+    "last_updated": "2025-08-10T11:48:34.349619"
   },
   "657097": {
     "id": "657097",
@@ -50654,7 +50714,7 @@
     "games_started": 24,
     "wins": 10,
     "losses": 8,
-    "last_updated": "2025-08-08T22:07:13.090160"
+    "last_updated": "2025-08-10T11:46:42.480283"
   },
   "607179": {
     "id": "607179",
@@ -50790,15 +50850,15 @@
     },
     "career": {},
     "team": "Boston Red Sox",
-    "era": 2.81,
-    "whip": 1.17,
-    "strikeouts": 36,
-    "walks": 16,
-    "innings_pitched": 48.0,
+    "era": 2.76,
+    "whip": 1.18,
+    "strikeouts": 37,
+    "walks": 17,
+    "innings_pitched": 49.0,
     "games_started": 0,
     "wins": 4,
     "losses": 3,
-    "last_updated": "2025-08-08T22:08:04.534764"
+    "last_updated": "2025-08-10T11:48:52.905559"
   },
   "666214": {
     "id": "666214",
@@ -50875,7 +50935,7 @@
     "games_started": 4,
     "wins": 2,
     "losses": 3,
-    "last_updated": "2025-08-08T22:07:37.707505"
+    "last_updated": "2025-08-10T11:48:06.773326"
   },
   "669713": {
     "id": "669713",
@@ -51019,7 +51079,7 @@
     "games_started": 22,
     "wins": 9,
     "losses": 5,
-    "last_updated": "2025-08-08T22:07:35.274887"
+    "last_updated": "2025-08-10T11:48:00.216788"
   },
   "687931": {
     "id": "687931",
@@ -51088,15 +51148,15 @@
     },
     "career": {},
     "team": "San Francisco Giants",
-    "era": 4.35,
-    "whip": 1.16,
-    "strikeouts": 7,
-    "walks": 4,
-    "innings_pitched": 10.1,
-    "games_started": 2,
+    "era": 5.02,
+    "whip": 1.4,
+    "strikeouts": 12,
+    "walks": 7,
+    "innings_pitched": 14.1,
+    "games_started": 3,
     "wins": 1,
-    "losses": 0,
-    "last_updated": "2025-08-08T22:07:11.786389"
+    "losses": 1,
+    "last_updated": "2025-08-10T11:46:37.157938"
   },
   "669391": {
     "id": "669391",
@@ -51299,15 +51359,15 @@
     },
     "career": {},
     "team": "Boston Red Sox",
-    "era": 2.91,
-    "whip": 1.12,
-    "strikeouts": 66,
-    "walks": 20,
-    "innings_pitched": 52.2,
+    "era": 2.87,
+    "whip": 1.14,
+    "strikeouts": 67,
+    "walks": 21,
+    "innings_pitched": 53.1,
     "games_started": 0,
     "wins": 5,
-    "losses": 1,
-    "last_updated": "2025-08-08T22:08:04.314380"
+    "losses": 2,
+    "last_updated": "2025-08-10T11:48:52.620147"
   },
   "696136": {
     "id": "696136",
@@ -51518,7 +51578,7 @@
     "games_started": 0,
     "wins": 3,
     "losses": 5,
-    "last_updated": "2025-08-08T22:07:47.173383"
+    "last_updated": "2025-08-10T11:48:33.875604"
   },
   "668909": {
     "id": "668909",
@@ -51595,7 +51655,7 @@
     "games_started": 23,
     "wins": 7,
     "losses": 4,
-    "last_updated": "2025-08-08T22:08:13.847644"
+    "last_updated": "2025-08-10T11:49:03.397707"
   },
   "592866": {
     "id": "592866",
@@ -51806,7 +51866,7 @@
     "games_started": 0,
     "wins": 3,
     "losses": 1,
-    "last_updated": "2025-08-08T22:08:05.221447"
+    "last_updated": "2025-08-10T11:48:53.734164"
   },
   "621051": {
     "id": "621051",
@@ -51883,7 +51943,7 @@
     "games_started": 0,
     "wins": 2,
     "losses": 1,
-    "last_updated": "2025-08-08T22:07:41.349209"
+    "last_updated": "2025-08-10T11:48:19.792783"
   },
   "642216": {
     "id": "642216",
@@ -52094,7 +52154,7 @@
     "games_started": 0,
     "wins": 0,
     "losses": 1,
-    "last_updated": "2025-08-08T22:07:22.219594"
+    "last_updated": "2025-08-10T11:47:14.579629"
   },
   "664991": {
     "id": "664991",
@@ -52163,15 +52223,15 @@
     },
     "career": {},
     "team": "Baltimore Orioles",
-    "era": 7.82,
-    "whip": 2.05,
-    "strikeouts": 16,
-    "walks": 9,
-    "innings_pitched": 12.2,
+    "era": 6.75,
+    "whip": 1.98,
+    "strikeouts": 19,
+    "walks": 10,
+    "innings_pitched": 14.2,
     "games_started": 0,
     "wins": 2,
     "losses": 0,
-    "last_updated": "2025-08-08T22:08:00.985249"
+    "last_updated": "2025-08-10T11:48:49.165322"
   },
   "693433": {
     "id": "693433",
@@ -52248,7 +52308,7 @@
     "games_started": 22,
     "wins": 9,
     "losses": 6,
-    "last_updated": "2025-08-08T22:07:08.387981"
+    "last_updated": "2025-08-10T11:46:18.859317"
   },
   "663765": {
     "id": "663765",
@@ -52325,7 +52385,7 @@
     "games_started": 0,
     "wins": 0,
     "losses": 2,
-    "last_updated": "2025-08-08T22:07:57.702777"
+    "last_updated": "2025-08-10T11:48:44.988896"
   },
   "605540": {
     "id": "605540",
@@ -52402,7 +52462,7 @@
     "games_started": 6,
     "wins": 4,
     "losses": 0,
-    "last_updated": "2025-08-08T22:07:49.771859"
+    "last_updated": "2025-08-10T11:48:36.598096"
   },
   "680573": {
     "id": "680573",
@@ -52546,7 +52606,7 @@
     "games_started": 2,
     "wins": 4,
     "losses": 3,
-    "last_updated": "2025-08-08T22:08:32.389356"
+    "last_updated": "2025-08-10T11:49:23.649986"
   },
   "691094": {
     "id": "691094",
@@ -52690,7 +52750,7 @@
     "games_started": 22,
     "wins": 10,
     "losses": 7,
-    "last_updated": "2025-08-08T22:08:32.699059"
+    "last_updated": "2025-08-10T11:49:24.237197"
   },
   "642232": {
     "id": "642232",
@@ -52960,15 +53020,15 @@
     },
     "career": {},
     "team": "Baltimore Orioles",
-    "era": 5.88,
-    "whip": 1.67,
-    "strikeouts": 38,
-    "walks": 18,
-    "innings_pitched": 41.1,
-    "games_started": 9,
+    "era": 6.7,
+    "whip": 1.74,
+    "strikeouts": 40,
+    "walks": 20,
+    "innings_pitched": 44.1,
+    "games_started": 10,
     "wins": 0,
-    "losses": 5,
-    "last_updated": "2025-08-08T22:07:59.694005"
+    "losses": 6,
+    "last_updated": "2025-08-10T11:48:47.468238"
   },
   "664849": {
     "id": "664849",
@@ -53171,15 +53231,15 @@
     },
     "career": {},
     "team": "Los Angeles Angels",
-    "era": 5.31,
-    "whip": 1.49,
-    "strikeouts": 55,
-    "walks": 25,
-    "innings_pitched": 42.1,
+    "era": 5.19,
+    "whip": 1.5,
+    "strikeouts": 57,
+    "walks": 26,
+    "innings_pitched": 43.1,
     "games_started": 1,
     "wins": 6,
     "losses": 4,
-    "last_updated": "2025-08-08T22:07:55.101486"
+    "last_updated": "2025-08-10T11:48:42.543125"
   },
   "672582": {
     "id": "672582",
@@ -53248,15 +53308,15 @@
     },
     "career": {},
     "team": "Kansas City Royals",
-    "era": 4.11,
-    "whip": 1.37,
-    "strikeouts": 43,
+    "era": 4.08,
+    "whip": 1.36,
+    "strikeouts": 44,
     "walks": 15,
-    "innings_pitched": 46.0,
+    "innings_pitched": 46.1,
     "games_started": 2,
     "wins": 3,
     "losses": 1,
-    "last_updated": "2025-08-08T22:08:26.488549"
+    "last_updated": "2025-08-10T11:49:17.039700"
   },
   "676604": {
     "id": "676604",
@@ -53323,7 +53383,17 @@
       "sacBunts": 0,
       "sacFlies": 1
     },
-    "career": {}
+    "career": {},
+    "team": "Miami Marlins",
+    "era": 6.0,
+    "whip": 1.0,
+    "strikeouts": 5,
+    "walks": 0,
+    "innings_pitched": 3.0,
+    "games_started": 0,
+    "wins": 0,
+    "losses": 0,
+    "last_updated": "2025-08-10T11:48:31.700483"
   },
   "691172": {
     "id": "691172",
