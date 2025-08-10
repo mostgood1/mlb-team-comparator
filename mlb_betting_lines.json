@@ -1,904 +1,904 @@
 {
-  "2025-08-08": {
-    "Boston Red Sox_at_San Diego Padres": {
+  "2025-08-10": {
+    "Kansas City Royals_at_Minnesota Twins": {
       "moneyline": {
-        "Boston Red Sox": 130,
-        "San Diego Padres": -154
+        "Kansas City Royals": -104,
+        "Minnesota Twins": -112
       },
       "runline": [
         {
-          "team": "Boston Red Sox",
-          "point": 1.5,
-          "price": -166
+          "team": "Kansas City Royals",
+          "point": -1.5,
+          "price": 146
         },
         {
-          "team": "San Diego Padres",
-          "point": -1.5,
-          "price": 138
+          "team": "Minnesota Twins",
+          "point": 1.5,
+          "price": -178
         }
       ],
       "total": [
         {
           "name": "Over",
-          "point": 8.0,
+          "point": 9.5,
           "price": 100
         },
         {
           "name": "Under",
-          "point": 8.0,
+          "point": 9.5,
           "price": -122
         }
       ]
     },
-    "Toronto Blue Jays_at_Los Angeles Dodgers": {
+    "Miami Marlins_at_Atlanta Braves": {
       "moneyline": {
-        "Los Angeles Dodgers": -166,
-        "Toronto Blue Jays": 140
+        "Atlanta Braves": -132,
+        "Miami Marlins": 112
       },
       "runline": [
         {
-          "team": "Los Angeles Dodgers",
+          "team": "Atlanta Braves",
           "point": -1.5,
-          "price": 122
+          "price": 152
         },
         {
-          "team": "Toronto Blue Jays",
+          "team": "Miami Marlins",
           "point": 1.5,
-          "price": -146
+          "price": -184
         }
       ],
       "total": [
         {
           "name": "Over",
           "point": 8.5,
-          "price": -110
+          "price": -102
         },
         {
           "name": "Under",
           "point": 8.5,
+          "price": -120
+        }
+      ]
+    },
+    "Oakland Athletics_at_Baltimore Orioles": {
+      "moneyline": {
+        "Baltimore Orioles": -118,
+        "Oakland Athletics": 100
+      },
+      "runline": [
+        {
+          "team": "Baltimore Orioles",
+          "point": 1.5,
+          "price": -192
+        },
+        {
+          "team": "Oakland Athletics",
+          "point": -1.5,
+          "price": 158
+        }
+      ],
+      "total": [
+        {
+          "name": "Over",
+          "point": 9.5,
+          "price": -110
+        },
+        {
+          "name": "Under",
+          "point": 9.5,
+          "price": -110
+        }
+      ]
+    },
+    "Cincinnati Reds_at_Pittsburgh Pirates": {
+      "moneyline": {
+        "Cincinnati Reds": -106,
+        "Pittsburgh Pirates": -110
+      },
+      "runline": [
+        {
+          "team": "Cincinnati Reds",
+          "point": -1.5,
+          "price": 155
+        },
+        {
+          "team": "Pittsburgh Pirates",
+          "point": 1.5,
+          "price": -192
+        }
+      ],
+      "total": [
+        {
+          "name": "Over",
+          "point": 8.5,
+          "price": 102
+        },
+        {
+          "name": "Under",
+          "point": 8.5,
+          "price": -124
+        }
+      ]
+    },
+    "Houston Astros_at_New York Yankees": {
+      "moneyline": {
+        "Houston Astros": 172,
+        "New York Yankees": -205
+      },
+      "runline": [
+        {
+          "team": "Houston Astros",
+          "point": 1.5,
+          "price": -111
+        },
+        {
+          "team": "New York Yankees",
+          "point": -1.5,
+          "price": -108
+        }
+      ],
+      "total": [
+        {
+          "name": "Over",
+          "point": 9.0,
+          "price": -118
+        },
+        {
+          "name": "Under",
+          "point": 9.0,
+          "price": -104
+        }
+      ]
+    },
+    "Los Angeles Angels_at_Detroit Tigers": {
+      "moneyline": {
+        "Detroit Tigers": -188,
+        "Los Angeles Angels": 158
+      },
+      "runline": [
+        {
+          "team": "Detroit Tigers",
+          "point": -1.5,
+          "price": 106
+        },
+        {
+          "team": "Los Angeles Angels",
+          "point": 1.5,
+          "price": -128
+        }
+      ],
+      "total": [
+        {
+          "name": "Over",
+          "point": 9.0,
+          "price": -118
+        },
+        {
+          "name": "Under",
+          "point": 9.0,
+          "price": -104
+        }
+      ]
+    },
+    "Cleveland Guardians_at_Chicago White Sox": {
+      "moneyline": {
+        "Chicago White Sox": 106,
+        "Cleveland Guardians": -124
+      },
+      "runline": [
+        {
+          "team": "Chicago White Sox",
+          "point": 1.5,
+          "price": -154
+        },
+        {
+          "team": "Cleveland Guardians",
+          "point": -1.5,
+          "price": 128
+        }
+      ],
+      "total": [
+        {
+          "name": "Over",
+          "point": 9.0,
+          "price": -102
+        },
+        {
+          "name": "Under",
+          "point": 9.0,
+          "price": -120
+        }
+      ]
+    },
+    "New York Mets_at_Milwaukee Brewers": {
+      "moneyline": {
+        "Milwaukee Brewers": -116,
+        "New York Mets": -102
+      },
+      "runline": [
+        {
+          "team": "Milwaukee Brewers",
+          "point": 1.5,
+          "price": -184
+        },
+        {
+          "team": "New York Mets",
+          "point": -1.5,
+          "price": 152
+        }
+      ],
+      "total": [
+        {
+          "name": "Over",
+          "point": 8.5,
+          "price": -102
+        },
+        {
+          "name": "Under",
+          "point": 8.5,
+          "price": -120
+        }
+      ]
+    },
+    "Philadelphia Phillies_at_Texas Rangers": {
+      "moneyline": {
+        "Philadelphia Phillies": -156,
+        "Texas Rangers": 132
+      },
+      "runline": [
+        {
+          "team": "Philadelphia Phillies",
+          "point": -1.5,
+          "price": 112
+        },
+        {
+          "team": "Texas Rangers",
+          "point": 1.5,
+          "price": -134
+        }
+      ],
+      "total": [
+        {
+          "name": "Over",
+          "point": 7.5,
+          "price": -110
+        },
+        {
+          "name": "Under",
+          "point": 7.5,
           "price": -110
         }
       ]
     },
     "Washington Nationals_at_San Francisco Giants": {
       "moneyline": {
-        "San Francisco Giants": -158,
-        "Washington Nationals": 134
+        "San Francisco Giants": -154,
+        "Washington Nationals": 130
       },
       "runline": [
         {
           "team": "San Francisco Giants",
           "point": -1.5,
-          "price": 128
+          "price": 134
         },
         {
           "team": "Washington Nationals",
           "point": 1.5,
-          "price": -154
+          "price": -162
         }
       ],
       "total": [
         {
           "name": "Over",
           "point": 8.0,
-          "price": -122
-        },
-        {
-          "name": "Under",
-          "point": 8.0,
-          "price": 100
-        }
-      ]
-    },
-    "Miami Marlins_at_Atlanta Braves": {
-      "moneyline": {
-        "Atlanta Braves": -104,
-        "Miami Marlins": -112
-      },
-      "runline": [
-        {
-          "team": "Atlanta Braves",
-          "point": 1.5,
-          "price": -188
-        },
-        {
-          "team": "Miami Marlins",
-          "point": -1.5,
-          "price": 155
-        }
-      ],
-      "total": [
-        {
-          "name": "Over",
-          "point": 8.5,
-          "price": -105
-        },
-        {
-          "name": "Under",
-          "point": 8.5,
-          "price": -115
-        }
-      ]
-    },
-    "Houston Astros_at_New York Yankees": {
-      "moneyline": {
-        "Houston Astros": -118,
-        "New York Yankees": 100
-      },
-      "runline": [
-        {
-          "team": "Houston Astros",
-          "point": -1.5,
-          "price": 140
-        },
-        {
-          "team": "New York Yankees",
-          "point": 1.5,
-          "price": -170
-        }
-      ],
-      "total": [
-        {
-          "name": "Over",
-          "point": 8.0,
-          "price": -110
-        },
-        {
-          "name": "Under",
-          "point": 8.0,
-          "price": -110
-        }
-      ]
-    },
-    "Los Angeles Angels_at_Detroit Tigers": {
-      "moneyline": {
-        "Detroit Tigers": -130,
-        "Los Angeles Angels": 110
-      },
-      "runline": [
-        {
-          "team": "Detroit Tigers",
-          "point": -1.5,
-          "price": 146
-        },
-        {
-          "team": "Los Angeles Angels",
-          "point": 1.5,
-          "price": -178
-        }
-      ],
-      "total": [
-        {
-          "name": "Over",
-          "point": 8.0,
-          "price": -122
-        },
-        {
-          "name": "Under",
-          "point": 8.0,
-          "price": 100
-        }
-      ]
-    },
-    "Cincinnati Reds_at_Pittsburgh Pirates": {
-      "moneyline": {
-        "Cincinnati Reds": -118,
-        "Pittsburgh Pirates": 100
-      },
-      "runline": [
-        {
-          "team": "Cincinnati Reds",
-          "point": -1.5,
-          "price": 146
-        },
-        {
-          "team": "Pittsburgh Pirates",
-          "point": 1.5,
-          "price": -176
-        }
-      ],
-      "total": [
-        {
-          "name": "Over",
-          "point": 8.5,
-          "price": -110
-        },
-        {
-          "name": "Under",
-          "point": 8.5,
-          "price": -110
-        }
-      ]
-    },
-    "Oakland Athletics_at_Baltimore Orioles": {
-      "moneyline": {
-        "Baltimore Orioles": -124,
-        "Oakland Athletics": 106
-      },
-      "runline": [
-        {
-          "team": "Baltimore Orioles",
-          "point": -1.5,
-          "price": 164
-        },
-        {
-          "team": "Oakland Athletics",
-          "point": 1.5,
-          "price": -200
-        }
-      ],
-      "total": [
-        {
-          "name": "Over",
-          "point": 10.0,
-          "price": -110
-        },
-        {
-          "name": "Under",
-          "point": 10.0,
-          "price": -110
-        }
-      ]
-    },
-    "Cleveland Guardians_at_Chicago White Sox": {
-      "moneyline": {
-        "Chicago White Sox": 116,
-        "Cleveland Guardians": -136
-      },
-      "runline": [
-        {
-          "team": "Chicago White Sox",
-          "point": 1.5,
-          "price": -146
-        },
-        {
-          "team": "Cleveland Guardians",
-          "point": -1.5,
-          "price": 122
-        }
-      ],
-      "total": [
-        {
-          "name": "Over",
-          "point": 8.5,
           "price": -115
         },
         {
           "name": "Under",
-          "point": 8.5,
+          "point": 8.0,
           "price": -105
-        }
-      ]
-    },
-    "Kansas City Royals_at_Minnesota Twins": {
-      "moneyline": {
-        "Kansas City Royals": -120,
-        "Minnesota Twins": 102
-      },
-      "runline": [
-        {
-          "team": "Kansas City Royals",
-          "point": -1.5,
-          "price": 142
-        },
-        {
-          "team": "Minnesota Twins",
-          "point": 1.5,
-          "price": -172
-        }
-      ],
-      "total": [
-        {
-          "name": "Over",
-          "point": 8.5,
-          "price": -110
-        },
-        {
-          "name": "Under",
-          "point": 8.5,
-          "price": -110
-        }
-      ]
-    },
-    "New York Mets_at_Milwaukee Brewers": {
-      "moneyline": {
-        "Milwaukee Brewers": 100,
-        "New York Mets": -118
-      },
-      "runline": [
-        {
-          "team": "Milwaukee Brewers",
-          "point": 1.5,
-          "price": -166
-        },
-        {
-          "team": "New York Mets",
-          "point": -1.5,
-          "price": 138
-        }
-      ],
-      "total": [
-        {
-          "name": "Over",
-          "point": 9.0,
-          "price": 100
-        },
-        {
-          "name": "Under",
-          "point": 9.0,
-          "price": -122
-        }
-      ]
-    },
-    "Chicago Cubs_at_St. Louis Cardinals": {
-      "moneyline": {
-        "Chicago Cubs": -108,
-        "St. Louis Cardinals": -108
-      },
-      "runline": [
-        {
-          "team": "Chicago Cubs",
-          "point": -1.5,
-          "price": 146
-        },
-        {
-          "team": "St. Louis Cardinals",
-          "point": 1.5,
-          "price": -178
-        }
-      ],
-      "total": [
-        {
-          "name": "Over",
-          "point": 9.0,
-          "price": -110
-        },
-        {
-          "name": "Under",
-          "point": 9.0,
-          "price": -110
-        }
-      ]
-    },
-    "Philadelphia Phillies_at_Texas Rangers": {
-      "moneyline": {
-        "Philadelphia Phillies": 116,
-        "Texas Rangers": -134
-      },
-      "runline": [
-        {
-          "team": "Philadelphia Phillies",
-          "point": 1.5,
-          "price": -194
-        },
-        {
-          "team": "Texas Rangers",
-          "point": -1.5,
-          "price": 160
-        }
-      ],
-      "total": [
-        {
-          "name": "Over",
-          "point": 7.5,
-          "price": 100
-        },
-        {
-          "name": "Under",
-          "point": 7.5,
-          "price": -122
         }
       ]
     },
     "Colorado Rockies_at_Arizona Diamondbacks": {
       "moneyline": {
-        "Arizona Diamondbacks": -215,
-        "Colorado Rockies": 180
+        "Arizona Diamondbacks": -255,
+        "Colorado Rockies": 210
       },
       "runline": [
         {
           "team": "Arizona Diamondbacks",
           "point": -1.5,
-          "price": -105
+          "price": -125
         },
         {
           "team": "Colorado Rockies",
           "point": 1.5,
-          "price": -113
+          "price": 104
         }
       ],
       "total": [
         {
           "name": "Over",
-          "point": 9.5,
-          "price": -106
+          "point": 9.0,
+          "price": -122
         },
         {
           "name": "Under",
-          "point": 9.5,
-          "price": -114
+          "point": 9.0,
+          "price": 100
+        }
+      ]
+    },
+    "Boston Red Sox_at_San Diego Padres": {
+      "moneyline": {
+        "Boston Red Sox": 128,
+        "San Diego Padres": -152
+      },
+      "runline": [
+        {
+          "team": "Boston Red Sox",
+          "point": 1.5,
+          "price": -176
+        },
+        {
+          "team": "San Diego Padres",
+          "point": -1.5,
+          "price": 146
+        }
+      ],
+      "total": [
+        {
+          "name": "Over",
+          "point": 7.5,
+          "price": -122
+        },
+        {
+          "name": "Under",
+          "point": 7.5,
+          "price": 100
+        }
+      ]
+    },
+    "Toronto Blue Jays_at_Los Angeles Dodgers": {
+      "moneyline": {
+        "Los Angeles Dodgers": -184,
+        "Toronto Blue Jays": 154
+      },
+      "runline": [
+        {
+          "team": "Los Angeles Dodgers",
+          "point": -1.5,
+          "price": 110
+        },
+        {
+          "team": "Toronto Blue Jays",
+          "point": 1.5,
+          "price": -132
+        }
+      ],
+      "total": [
+        {
+          "name": "Over",
+          "point": 8.5,
+          "price": -122
+        },
+        {
+          "name": "Under",
+          "point": 8.5,
+          "price": 100
         }
       ]
     },
     "Tampa Bay Rays_at_Seattle Mariners": {
       "moneyline": {
-        "Seattle Mariners": -126,
-        "Tampa Bay Rays": 104
+        "Seattle Mariners": -196,
+        "Tampa Bay Rays": 164
       },
       "runline": [
         {
           "team": "Seattle Mariners",
           "point": -1.5,
-          "price": 162
+          "price": 106
         },
         {
           "team": "Tampa Bay Rays",
           "point": 1.5,
-          "price": -200
+          "price": -128
+        }
+      ],
+      "total": [
+        {
+          "name": "Over",
+          "point": 7.5,
+          "price": -114
+        },
+        {
+          "name": "Under",
+          "point": 7.5,
+          "price": -106
+        }
+      ]
+    },
+    "Chicago Cubs_at_St. Louis Cardinals": {
+      "moneyline": {
+        "Chicago Cubs": -120,
+        "St. Louis Cardinals": 102
+      },
+      "runline": [
+        {
+          "team": "Chicago Cubs",
+          "point": -1.5,
+          "price": 134
+        },
+        {
+          "team": "St. Louis Cardinals",
+          "point": 1.5,
+          "price": -162
         }
       ],
       "total": [
         {
           "name": "Over",
           "point": 8.0,
-          "price": -108
+          "price": -105
         },
         {
           "name": "Under",
           "point": 8.0,
-          "price": -112
+          "price": -115
         }
       ]
     }
   },
-  "2025-08-09": {
-    "Boston Red Sox_at_San Diego Padres": {
+  "2025-08-11": {
+    "Kansas City Royals_at_Minnesota Twins": {
       "moneyline": {
-        "Boston Red Sox": 130,
-        "San Diego Padres": -154
+        "Kansas City Royals": -104,
+        "Minnesota Twins": -112
       },
       "runline": [
         {
-          "team": "Boston Red Sox",
-          "point": 1.5,
-          "price": -166
+          "team": "Kansas City Royals",
+          "point": -1.5,
+          "price": 146
         },
         {
-          "team": "San Diego Padres",
-          "point": -1.5,
-          "price": 138
+          "team": "Minnesota Twins",
+          "point": 1.5,
+          "price": -178
         }
       ],
       "total": [
         {
           "name": "Over",
-          "point": 8.0,
+          "point": 9.5,
           "price": 100
         },
         {
           "name": "Under",
-          "point": 8.0,
+          "point": 9.5,
           "price": -122
         }
       ]
     },
-    "Toronto Blue Jays_at_Los Angeles Dodgers": {
+    "Miami Marlins_at_Atlanta Braves": {
       "moneyline": {
-        "Los Angeles Dodgers": -166,
-        "Toronto Blue Jays": 140
+        "Atlanta Braves": -132,
+        "Miami Marlins": 112
       },
       "runline": [
         {
-          "team": "Los Angeles Dodgers",
+          "team": "Atlanta Braves",
           "point": -1.5,
-          "price": 122
+          "price": 152
         },
         {
-          "team": "Toronto Blue Jays",
+          "team": "Miami Marlins",
           "point": 1.5,
-          "price": -146
+          "price": -184
         }
       ],
       "total": [
         {
           "name": "Over",
           "point": 8.5,
-          "price": -110
+          "price": -102
         },
         {
           "name": "Under",
           "point": 8.5,
+          "price": -120
+        }
+      ]
+    },
+    "Oakland Athletics_at_Baltimore Orioles": {
+      "moneyline": {
+        "Baltimore Orioles": -118,
+        "Oakland Athletics": 100
+      },
+      "runline": [
+        {
+          "team": "Baltimore Orioles",
+          "point": 1.5,
+          "price": -192
+        },
+        {
+          "team": "Oakland Athletics",
+          "point": -1.5,
+          "price": 158
+        }
+      ],
+      "total": [
+        {
+          "name": "Over",
+          "point": 9.5,
+          "price": -110
+        },
+        {
+          "name": "Under",
+          "point": 9.5,
+          "price": -110
+        }
+      ]
+    },
+    "Cincinnati Reds_at_Pittsburgh Pirates": {
+      "moneyline": {
+        "Cincinnati Reds": -106,
+        "Pittsburgh Pirates": -110
+      },
+      "runline": [
+        {
+          "team": "Cincinnati Reds",
+          "point": -1.5,
+          "price": 155
+        },
+        {
+          "team": "Pittsburgh Pirates",
+          "point": 1.5,
+          "price": -192
+        }
+      ],
+      "total": [
+        {
+          "name": "Over",
+          "point": 8.5,
+          "price": 102
+        },
+        {
+          "name": "Under",
+          "point": 8.5,
+          "price": -124
+        }
+      ]
+    },
+    "Houston Astros_at_New York Yankees": {
+      "moneyline": {
+        "Houston Astros": 172,
+        "New York Yankees": -205
+      },
+      "runline": [
+        {
+          "team": "Houston Astros",
+          "point": 1.5,
+          "price": -111
+        },
+        {
+          "team": "New York Yankees",
+          "point": -1.5,
+          "price": -108
+        }
+      ],
+      "total": [
+        {
+          "name": "Over",
+          "point": 9.0,
+          "price": -118
+        },
+        {
+          "name": "Under",
+          "point": 9.0,
+          "price": -104
+        }
+      ]
+    },
+    "Los Angeles Angels_at_Detroit Tigers": {
+      "moneyline": {
+        "Detroit Tigers": -188,
+        "Los Angeles Angels": 158
+      },
+      "runline": [
+        {
+          "team": "Detroit Tigers",
+          "point": -1.5,
+          "price": 106
+        },
+        {
+          "team": "Los Angeles Angels",
+          "point": 1.5,
+          "price": -128
+        }
+      ],
+      "total": [
+        {
+          "name": "Over",
+          "point": 9.0,
+          "price": -118
+        },
+        {
+          "name": "Under",
+          "point": 9.0,
+          "price": -104
+        }
+      ]
+    },
+    "Cleveland Guardians_at_Chicago White Sox": {
+      "moneyline": {
+        "Chicago White Sox": 106,
+        "Cleveland Guardians": -124
+      },
+      "runline": [
+        {
+          "team": "Chicago White Sox",
+          "point": 1.5,
+          "price": -154
+        },
+        {
+          "team": "Cleveland Guardians",
+          "point": -1.5,
+          "price": 128
+        }
+      ],
+      "total": [
+        {
+          "name": "Over",
+          "point": 9.0,
+          "price": -102
+        },
+        {
+          "name": "Under",
+          "point": 9.0,
+          "price": -120
+        }
+      ]
+    },
+    "New York Mets_at_Milwaukee Brewers": {
+      "moneyline": {
+        "Milwaukee Brewers": -116,
+        "New York Mets": -102
+      },
+      "runline": [
+        {
+          "team": "Milwaukee Brewers",
+          "point": 1.5,
+          "price": -184
+        },
+        {
+          "team": "New York Mets",
+          "point": -1.5,
+          "price": 152
+        }
+      ],
+      "total": [
+        {
+          "name": "Over",
+          "point": 8.5,
+          "price": -102
+        },
+        {
+          "name": "Under",
+          "point": 8.5,
+          "price": -120
+        }
+      ]
+    },
+    "Philadelphia Phillies_at_Texas Rangers": {
+      "moneyline": {
+        "Philadelphia Phillies": -156,
+        "Texas Rangers": 132
+      },
+      "runline": [
+        {
+          "team": "Philadelphia Phillies",
+          "point": -1.5,
+          "price": 112
+        },
+        {
+          "team": "Texas Rangers",
+          "point": 1.5,
+          "price": -134
+        }
+      ],
+      "total": [
+        {
+          "name": "Over",
+          "point": 7.5,
+          "price": -110
+        },
+        {
+          "name": "Under",
+          "point": 7.5,
           "price": -110
         }
       ]
     },
     "Washington Nationals_at_San Francisco Giants": {
       "moneyline": {
-        "San Francisco Giants": -158,
-        "Washington Nationals": 134
+        "San Francisco Giants": -154,
+        "Washington Nationals": 130
       },
       "runline": [
         {
           "team": "San Francisco Giants",
           "point": -1.5,
-          "price": 128
+          "price": 134
         },
         {
           "team": "Washington Nationals",
           "point": 1.5,
-          "price": -154
+          "price": -162
         }
       ],
       "total": [
         {
           "name": "Over",
           "point": 8.0,
-          "price": -122
-        },
-        {
-          "name": "Under",
-          "point": 8.0,
-          "price": 100
-        }
-      ]
-    },
-    "Miami Marlins_at_Atlanta Braves": {
-      "moneyline": {
-        "Atlanta Braves": -104,
-        "Miami Marlins": -112
-      },
-      "runline": [
-        {
-          "team": "Atlanta Braves",
-          "point": 1.5,
-          "price": -188
-        },
-        {
-          "team": "Miami Marlins",
-          "point": -1.5,
-          "price": 155
-        }
-      ],
-      "total": [
-        {
-          "name": "Over",
-          "point": 8.5,
-          "price": -105
-        },
-        {
-          "name": "Under",
-          "point": 8.5,
-          "price": -115
-        }
-      ]
-    },
-    "Houston Astros_at_New York Yankees": {
-      "moneyline": {
-        "Houston Astros": -118,
-        "New York Yankees": 100
-      },
-      "runline": [
-        {
-          "team": "Houston Astros",
-          "point": -1.5,
-          "price": 140
-        },
-        {
-          "team": "New York Yankees",
-          "point": 1.5,
-          "price": -170
-        }
-      ],
-      "total": [
-        {
-          "name": "Over",
-          "point": 8.0,
-          "price": -110
-        },
-        {
-          "name": "Under",
-          "point": 8.0,
-          "price": -110
-        }
-      ]
-    },
-    "Los Angeles Angels_at_Detroit Tigers": {
-      "moneyline": {
-        "Detroit Tigers": -130,
-        "Los Angeles Angels": 110
-      },
-      "runline": [
-        {
-          "team": "Detroit Tigers",
-          "point": -1.5,
-          "price": 146
-        },
-        {
-          "team": "Los Angeles Angels",
-          "point": 1.5,
-          "price": -178
-        }
-      ],
-      "total": [
-        {
-          "name": "Over",
-          "point": 8.0,
-          "price": -122
-        },
-        {
-          "name": "Under",
-          "point": 8.0,
-          "price": 100
-        }
-      ]
-    },
-    "Cincinnati Reds_at_Pittsburgh Pirates": {
-      "moneyline": {
-        "Cincinnati Reds": -118,
-        "Pittsburgh Pirates": 100
-      },
-      "runline": [
-        {
-          "team": "Cincinnati Reds",
-          "point": -1.5,
-          "price": 146
-        },
-        {
-          "team": "Pittsburgh Pirates",
-          "point": 1.5,
-          "price": -176
-        }
-      ],
-      "total": [
-        {
-          "name": "Over",
-          "point": 8.5,
-          "price": -110
-        },
-        {
-          "name": "Under",
-          "point": 8.5,
-          "price": -110
-        }
-      ]
-    },
-    "Oakland Athletics_at_Baltimore Orioles": {
-      "moneyline": {
-        "Baltimore Orioles": -124,
-        "Oakland Athletics": 106
-      },
-      "runline": [
-        {
-          "team": "Baltimore Orioles",
-          "point": -1.5,
-          "price": 164
-        },
-        {
-          "team": "Oakland Athletics",
-          "point": 1.5,
-          "price": -200
-        }
-      ],
-      "total": [
-        {
-          "name": "Over",
-          "point": 10.0,
-          "price": -110
-        },
-        {
-          "name": "Under",
-          "point": 10.0,
-          "price": -110
-        }
-      ]
-    },
-    "Cleveland Guardians_at_Chicago White Sox": {
-      "moneyline": {
-        "Chicago White Sox": 116,
-        "Cleveland Guardians": -136
-      },
-      "runline": [
-        {
-          "team": "Chicago White Sox",
-          "point": 1.5,
-          "price": -146
-        },
-        {
-          "team": "Cleveland Guardians",
-          "point": -1.5,
-          "price": 122
-        }
-      ],
-      "total": [
-        {
-          "name": "Over",
-          "point": 8.5,
           "price": -115
         },
         {
           "name": "Under",
-          "point": 8.5,
+          "point": 8.0,
           "price": -105
-        }
-      ]
-    },
-    "Kansas City Royals_at_Minnesota Twins": {
-      "moneyline": {
-        "Kansas City Royals": -120,
-        "Minnesota Twins": 102
-      },
-      "runline": [
-        {
-          "team": "Kansas City Royals",
-          "point": -1.5,
-          "price": 142
-        },
-        {
-          "team": "Minnesota Twins",
-          "point": 1.5,
-          "price": -172
-        }
-      ],
-      "total": [
-        {
-          "name": "Over",
-          "point": 8.5,
-          "price": -110
-        },
-        {
-          "name": "Under",
-          "point": 8.5,
-          "price": -110
-        }
-      ]
-    },
-    "New York Mets_at_Milwaukee Brewers": {
-      "moneyline": {
-        "Milwaukee Brewers": 100,
-        "New York Mets": -118
-      },
-      "runline": [
-        {
-          "team": "Milwaukee Brewers",
-          "point": 1.5,
-          "price": -166
-        },
-        {
-          "team": "New York Mets",
-          "point": -1.5,
-          "price": 138
-        }
-      ],
-      "total": [
-        {
-          "name": "Over",
-          "point": 9.0,
-          "price": 100
-        },
-        {
-          "name": "Under",
-          "point": 9.0,
-          "price": -122
-        }
-      ]
-    },
-    "Chicago Cubs_at_St. Louis Cardinals": {
-      "moneyline": {
-        "Chicago Cubs": -108,
-        "St. Louis Cardinals": -108
-      },
-      "runline": [
-        {
-          "team": "Chicago Cubs",
-          "point": -1.5,
-          "price": 146
-        },
-        {
-          "team": "St. Louis Cardinals",
-          "point": 1.5,
-          "price": -178
-        }
-      ],
-      "total": [
-        {
-          "name": "Over",
-          "point": 9.0,
-          "price": -110
-        },
-        {
-          "name": "Under",
-          "point": 9.0,
-          "price": -110
-        }
-      ]
-    },
-    "Philadelphia Phillies_at_Texas Rangers": {
-      "moneyline": {
-        "Philadelphia Phillies": 116,
-        "Texas Rangers": -134
-      },
-      "runline": [
-        {
-          "team": "Philadelphia Phillies",
-          "point": 1.5,
-          "price": -194
-        },
-        {
-          "team": "Texas Rangers",
-          "point": -1.5,
-          "price": 160
-        }
-      ],
-      "total": [
-        {
-          "name": "Over",
-          "point": 7.5,
-          "price": 100
-        },
-        {
-          "name": "Under",
-          "point": 7.5,
-          "price": -122
         }
       ]
     },
     "Colorado Rockies_at_Arizona Diamondbacks": {
       "moneyline": {
-        "Arizona Diamondbacks": -215,
-        "Colorado Rockies": 180
+        "Arizona Diamondbacks": -255,
+        "Colorado Rockies": 210
       },
       "runline": [
         {
           "team": "Arizona Diamondbacks",
           "point": -1.5,
-          "price": -105
+          "price": -125
         },
         {
           "team": "Colorado Rockies",
           "point": 1.5,
-          "price": -113
+          "price": 104
         }
       ],
       "total": [
         {
           "name": "Over",
-          "point": 9.5,
-          "price": -106
+          "point": 9.0,
+          "price": -122
         },
         {
           "name": "Under",
-          "point": 9.5,
-          "price": -114
+          "point": 9.0,
+          "price": 100
+        }
+      ]
+    },
+    "Boston Red Sox_at_San Diego Padres": {
+      "moneyline": {
+        "Boston Red Sox": 128,
+        "San Diego Padres": -152
+      },
+      "runline": [
+        {
+          "team": "Boston Red Sox",
+          "point": 1.5,
+          "price": -176
+        },
+        {
+          "team": "San Diego Padres",
+          "point": -1.5,
+          "price": 146
+        }
+      ],
+      "total": [
+        {
+          "name": "Over",
+          "point": 7.5,
+          "price": -122
+        },
+        {
+          "name": "Under",
+          "point": 7.5,
+          "price": 100
+        }
+      ]
+    },
+    "Toronto Blue Jays_at_Los Angeles Dodgers": {
+      "moneyline": {
+        "Los Angeles Dodgers": -184,
+        "Toronto Blue Jays": 154
+      },
+      "runline": [
+        {
+          "team": "Los Angeles Dodgers",
+          "point": -1.5,
+          "price": 110
+        },
+        {
+          "team": "Toronto Blue Jays",
+          "point": 1.5,
+          "price": -132
+        }
+      ],
+      "total": [
+        {
+          "name": "Over",
+          "point": 8.5,
+          "price": -122
+        },
+        {
+          "name": "Under",
+          "point": 8.5,
+          "price": 100
         }
       ]
     },
     "Tampa Bay Rays_at_Seattle Mariners": {
       "moneyline": {
-        "Seattle Mariners": -126,
-        "Tampa Bay Rays": 104
+        "Seattle Mariners": -196,
+        "Tampa Bay Rays": 164
       },
       "runline": [
         {
           "team": "Seattle Mariners",
           "point": -1.5,
-          "price": 162
+          "price": 106
         },
         {
           "team": "Tampa Bay Rays",
           "point": 1.5,
-          "price": -200
+          "price": -128
+        }
+      ],
+      "total": [
+        {
+          "name": "Over",
+          "point": 7.5,
+          "price": -114
+        },
+        {
+          "name": "Under",
+          "point": 7.5,
+          "price": -106
+        }
+      ]
+    },
+    "Chicago Cubs_at_St. Louis Cardinals": {
+      "moneyline": {
+        "Chicago Cubs": -120,
+        "St. Louis Cardinals": 102
+      },
+      "runline": [
+        {
+          "team": "Chicago Cubs",
+          "point": -1.5,
+          "price": 134
+        },
+        {
+          "team": "St. Louis Cardinals",
+          "point": 1.5,
+          "price": -162
         }
       ],
       "total": [
         {
           "name": "Over",
           "point": 8.0,
-          "price": -108
+          "price": -105
         },
         {
           "name": "Under",
           "point": 8.0,
-          "price": -112
+          "price": -115
         }
       ]
     }

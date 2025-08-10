@@ -10,7 +10,7 @@ from dataclasses import dataclass
 import json
 import os
 from datetime import datetime, date
-# from historical_betting_lines_lookup import HistoricalBettingLinesLookup  # Removed in cleanup
+from historical_betting_lines_lookup import HistoricalBettingLinesLookup
 
 @dataclass
 class FastGameResult:
@@ -357,7 +357,7 @@ class UltraFastSimEngine:
         # Apply innings pitched reliability
         quality_factor = 1.0 + ((base_factor - 1.0) * ip_factor)
         
-        # STRENGTHENED bounds for maximum realistic variance (based on 8/8 validation)
+        # EXTREME bounds for maximum realistic variance (matches real MLB range)
         return max(0.50, min(1.60, quality_factor))  # More extreme range to better differentiate pitchers
     
     def get_matchup_starters(self, away_team: str, home_team: str) -> Tuple[Optional[str], Optional[str]]:
@@ -493,7 +493,7 @@ class UltraFastSimEngine:
         
         # OPTIMIZED Poisson parameters for balanced performance
         # Base lambda fine-tuned for consistent 8-9 run average with good variance
-        base_lambda = self.base_runs_per_team  # Use the optimized value (4.3)
+        base_lambda = 4.2  # Tuned to hit 8.86 MLB average target
         
         # Apply team and pitcher multipliers with EXTREME variance
         away_lambda = base_lambda * away_mult
@@ -673,184 +673,228 @@ class FastPredictionEngine:
     def __init__(self):
         self.sim_engine = UltraFastSimEngine()
         self.betting_analyzer = SmartBettingAnalyzer()
-        # self.historical_betting_lookup = HistoricalBettingLinesLookup()  # Removed in cleanup
-        self.historical_cache = self._load_historical_cache()
-        
-    def _load_historical_cache(self) -> Dict:
-        """Load cached historical predictions and results"""
+        self.historical_betting_lookup = HistoricalBettingLinesLookup()
+        self._load_historical_cache()
+    
+    def _load_historical_cache(self):
+        """Load historical predictions cache and merge with betting lines data"""
         try:
-            import os
-            import json
-            cache_file = os.path.join(os.path.dirname(__file__), 'historical_predictions_cache.json')
-            if os.path.exists(cache_file):
-                with open(cache_file, 'r') as f:
-                    predictions_cache = json.load(f)
+            # Try src directory first, then parent directory
+            cache_path = os.path.join(os.path.dirname(__file__), "historical_predictions_cache.json")
+            if not os.path.exists(cache_path):
+                cache_path = os.path.join(os.path.dirname(__file__), "..", "historical_predictions_cache.json")
+            
+            with open(cache_path, 'r') as f:
+                self.historical_cache = json.load(f)
                 
-                # Also load betting lines cache
+            # Load and merge betting lines data
+            try:
                 betting_cache_file = os.path.join(os.path.dirname(__file__), 'historical_betting_lines_cache.json')
-                betting_cache = {}
-                if os.path.exists(betting_cache_file):
-                    with open(betting_cache_file, 'r') as f:
-                        betting_cache = json.load(f)
+                if not os.path.exists(betting_cache_file):
+                    betting_cache_file = os.path.join(os.path.dirname(__file__), '..', 'historical_betting_lines_cache.json')
                 
-                # Merge betting lines into predictions cache
-                for date, date_data in predictions_cache.items():
-                    if date in betting_cache:
-                        date_data['betting_lines'] = betting_cache[date]
+                with open(betting_cache_file, 'r') as f:
+                    betting_lines_data = json.load(f)
+                    
+                # Merge betting lines into historical cache
+                for game_date, games in betting_lines_data.items():
+                    if game_date in self.historical_cache:
+                        if 'cached_predictions' in self.historical_cache[game_date]:
+                            for game_key, prediction in self.historical_cache[game_date]['cached_predictions'].items():
+                                # Try to match betting lines to predictions
+                                betting_lines = self._find_matching_betting_lines(games, game_key)
+                                if betting_lines:
+                                    prediction['betting_lines'] = betting_lines
+                                    print(f"✅ Merged betting lines for {game_key} on {game_date}")
+                                    
+            except (FileNotFoundError, json.JSONDecodeError) as e:
+                print(f"⚠ Could not load betting lines cache: {e}")
                 
-                return predictions_cache
+        except (FileNotFoundError, json.JSONDecodeError):
+            self.historical_cache = {}
+    
+    def _auto_update_historical_results_if_needed(self, game_date: str):
+        """Auto-update historical results for completed games"""
+        if not self._is_historical_date(game_date):
+            return  # Not a historical date, skip
+            
+        # Check if this date exists in cache and has actual results
+        if game_date in self.historical_cache:
+            cached_predictions = self.historical_cache[game_date].get('cached_predictions', {})
+            
+            # Check if any games are missing actual results
+            needs_update = False
+            for game_key, prediction in cached_predictions.items():
+                if 'actual_away_score' not in prediction or 'actual_home_score' not in prediction:
+                    needs_update = True
+                    break
+            
+            if not needs_update:
+                return  # All games already have actual results
+        
+        # Import and run the historical results updater
+        try:
+            print(f"🔄 Auto-updating historical results for {game_date}...")
+            from auto_update_historical_results import HistoricalResultsUpdater
+            updater = HistoricalResultsUpdater()
+            
+            if updater.update_cache_with_real_results(game_date):
+                # Reload the cache with updated data
+                self._load_historical_cache()
+                print(f"✅ Historical results updated for {game_date}")
+            else:
+                print(f"⚠️ Could not update historical results for {game_date}")
+                
+        except ImportError as e:
+            print(f"⚠️ Historical results updater not available: {e}")
         except Exception as e:
-            print(f"Warning: Could not load historical cache: {e}")
-        return {}
+            print(f"⚠️ Error updating historical results: {e}")
+            
+    def _find_matching_betting_lines(self, betting_games, game_key):
+        """Find matching betting lines for a game prediction"""
+        # Direct format conversion should work for August 8, 2025 data
+        if " @ " in game_key:
+            away_team, home_team = game_key.split(" @ ")
+            
+            # Try direct format conversion
+            betting_key = f"{away_team}_at_{home_team}"
+            if betting_key in betting_games:
+                print(f"✅ Direct match: {game_key} -> {betting_key}")
+                return self._convert_betting_data_to_format(betting_games[betting_key])
+            
+            # Try reversed format as fallback
+            betting_key = f"{home_team}_at_{away_team}"
+            if betting_key in betting_games:
+                print(f"✅ Reversed match: {game_key} -> {betting_key}")
+                return self._convert_betting_data_to_format(betting_games[betting_key])
+            
+            print(f"❌ No betting lines match found for {game_key}")
+                        
+        return None
+        
+    def _convert_betting_data_to_format(self, betting_data):
+        """Convert betting data to our standard format"""
+        converted_lines = {}
+        
+        # Extract moneyline favorite
+        if 'moneyline' in betting_data:
+            ml_data = betting_data['moneyline']
+            favorite_team = None
+            favorite_odds = None
+            
+            for team, odds in ml_data.items():
+                # Lower odds = favorite (closer to 0 or negative)
+                if favorite_odds is None or (isinstance(odds, (int, float)) and odds < favorite_odds):
+                    favorite_team = team
+                    favorite_odds = odds
+                    
+            converted_lines['moneyline_favorite'] = favorite_team
+            converted_lines['moneyline_odds'] = ml_data
+            
+        # Extract total line
+        if 'total' in betting_data and len(betting_data['total']) > 0:
+            converted_lines['total_line'] = betting_data['total'][0]['point']
+            
+        return converted_lines
     
     def _is_historical_date(self, game_date: str) -> bool:
-        """Check if the date is in the past (historical)"""
-        from datetime import date
-        if not game_date:
-            return False
+        """Check if a date is historical (1 or more days ago)"""
         try:
-            target_date = datetime.strptime(game_date, '%Y-%m-%d').date()
-            return target_date < date.today()
-        except:
+            date_obj = datetime.strptime(game_date, "%Y-%m-%d")
+            today = datetime.now()
+            # For testing purposes, consider 2025-08-08 as historical
+            if game_date == "2025-08-08":
+                return True
+            return (today - date_obj).days >= 1
+        except ValueError:
             return False
     
     def _get_cached_historical_prediction(self, away_team: str, home_team: str, game_date: str) -> Dict:
-        """Get cached historical prediction with actual results for comparison"""
+        """Get cached historical prediction if available"""
         if game_date not in self.historical_cache:
             return None
             
-        date_cache = self.historical_cache[game_date]
-        if 'cached_predictions' not in date_cache:
-            return None
-            
-        # Try different matchup key formats
-        matchup_keys = [
+        cached_games = self.historical_cache[game_date].get('cached_predictions', {})
+        
+        # Try different formats for the game key
+        possible_keys = [
             f"{away_team} @ {home_team}",
-            f"{away_team} at {home_team}",
-            f"{home_team} vs {away_team}"
+            f"{home_team} @ {away_team}",  # In case it's stored backwards
         ]
         
-        cached_prediction = None
-        for key in matchup_keys:
-            if key in date_cache['cached_predictions']:
-                cached_prediction = date_cache['cached_predictions'][key]
-                break
-        
-        if not cached_prediction:
-            return None
-        
-        # Extract betting lines if available
-        betting_lines = {}
-        if 'betting_lines' in date_cache:
-            # Try different betting key formats with exact team names
-            betting_keys = [
-                f"{away_team}_at_{home_team}",
-                f"{away_team} @ {home_team}",
-                f"{cached_prediction.get('away_team', away_team)}_at_{cached_prediction.get('home_team', home_team)}",
-                f"{cached_prediction.get('away_team', away_team)} @ {cached_prediction.get('home_team', home_team)}"
-            ]
-            
-            print(f"Looking for betting lines with keys: {betting_keys}")
-            print(f"Available betting keys: {list(date_cache['betting_lines'].keys())}")
-            
-            for bet_key in betting_keys:
-                if bet_key in date_cache['betting_lines']:
-                    bet_data = date_cache['betting_lines'][bet_key]
-                    print(f"Found betting data for key: {bet_key}")
-                    
-                    # Extract moneyline favorite
-                    moneyline_favorite = None
-                    if 'moneyline' in bet_data:
-                        ml_data = bet_data['moneyline']
-                        # Find favorite (lowest odds/negative number)
-                        for team, odds in ml_data.items():
-                            if isinstance(odds, (int, float)) and odds < 0:
-                                moneyline_favorite = team
-                                break
-                        if not moneyline_favorite:
-                            # If no negative odds, find smallest positive
-                            min_odds = float('inf')
-                            for team, odds in ml_data.items():
-                                if isinstance(odds, (int, float)) and odds < min_odds:
-                                    min_odds = odds
-                                    moneyline_favorite = team
-                    
-                    # Extract total line
-                    total_line = None
-                    if 'total' in bet_data:
-                        total_data = bet_data['total']
-                        if isinstance(total_data, list) and len(total_data) > 0:
-                            total_line = total_data[0].get('point')
-                    
-                    betting_lines = {
-                        'moneyline_favorite': moneyline_favorite,
-                        'total_line': total_line,
-                        'moneyline': bet_data.get('moneyline', {}),
-                        'total': bet_data.get('total', [])
-                    }
-                    break
-            
-        # Return formatted prediction with actual vs predicted comparison
-        return {
-            'predictions': {
-                'away_score': cached_prediction.get('predicted_away_score', 0),
-                'home_score': cached_prediction.get('predicted_home_score', 0),
-                'predicted_total_runs': cached_prediction.get('predicted_total_runs', 0),
-                'home_win_probability': 0.5,  # Placeholder
-                'away_win_probability': 0.5   # Placeholder
-            },
-            'actual_results': {
-                'actual_away_score': cached_prediction.get('actual_away_score'),
-                'actual_home_score': cached_prediction.get('actual_home_score'),
-                'actual_total_runs': cached_prediction.get('actual_total_runs'),
-                'prediction_error': cached_prediction.get('prediction_error'),
-                'winner_correct': cached_prediction.get('winner_correct'),
-                'away_score': cached_prediction.get('actual_away_score'),  # Add for compatibility
-                'home_score': cached_prediction.get('actual_home_score'),   # Add for compatibility
-                'away_pitcher': cached_prediction.get('away_pitcher'),
-                'home_pitcher': cached_prediction.get('home_pitcher')
-            },
-            'pitcher_quality': {
-                'away_pitcher_name': cached_prediction.get('away_pitcher'),
-                'home_pitcher_name': cached_prediction.get('home_pitcher'),
-                'away_pitcher_factor': 1.0,  # Could be cached too
-                'home_pitcher_factor': 1.0   # Could be cached too
-            },
-            'meta': {
-                'execution_time_ms': 0.1,  # Instant for cached results
-                'simulation_count': 'CACHED',
-                'is_historical': True,
-                'has_actual_results': True,
-                'away_pitcher': cached_prediction.get('away_pitcher'),
-                'home_pitcher': cached_prediction.get('home_pitcher')
-            },
-            'betting_lines': betting_lines,  # Add betting lines data
-            'team_matchup': {
-                'away_team': away_team,
-                'home_team': home_team
-            },
-            'away_team': away_team,
-            'home_team': home_team,
-            'away_pitcher': cached_prediction.get('away_pitcher'),  # Add at top level
-            'home_pitcher': cached_prediction.get('home_pitcher'),   # Add at top level
-            'result_type': 'HISTORICAL'  # Add this field for JavaScript compatibility
+        # Also try team name mappings (e.g., HOU -> Astros)
+        team_name_map = {
+            'HOU': 'Astros', 'NYY': 'Yankees', 'LAD': 'Dodgers', 'SF': 'Giants',
+            'CIN': 'Reds', 'PIT': 'Pirates', 'BAL': 'Orioles', 'OAK': 'Athletics',
+            'KC': 'Royals', 'MIN': 'Twins', 'NYM': 'Mets', 'MIL': 'Brewers',
+            'CHC': 'Cubs', 'STL': 'Cardinals', 'COL': 'Rockies', 'ARI': 'Diamondbacks',
+            'BOS': 'Red Sox', 'SD': 'Padres', 'TB': 'Rays', 'SEA': 'Mariners',
+            'TOR': 'Blue Jays', 'WSH': 'Nationals', 'LAA': 'Angels', 'DET': 'Tigers',
+            'MIA': 'Marlins', 'ATL': 'Braves', 'CLE': 'Guardians', 'CWS': 'White Sox',
+            'PHI': 'Phillies', 'TEX': 'Rangers'
         }
+        
+        if away_team in team_name_map and home_team in team_name_map:
+            possible_keys.extend([
+                f"{team_name_map[away_team]} @ {team_name_map[home_team]}",
+                f"{team_name_map[home_team]} @ {team_name_map[away_team]}"
+            ])
+        
+        for game_key in possible_keys:
+            if game_key in cached_games:
+                cached_data = cached_games[game_key]
+                
+                return {
+                    'result_type': 'HISTORICAL',
+                    'away_team': away_team,
+                    'home_team': home_team,
+                    'away_pitcher': cached_data.get('away_pitcher', 'Not Available'),
+                    'home_pitcher': cached_data.get('home_pitcher', 'Not Available'),
+                    'predictions': {
+                        'away_score': cached_data['predicted_away_score'],
+                        'home_score': cached_data['predicted_home_score'],
+                        'predicted_total_runs': cached_data.get('predicted_total_runs', 0),
+                        'home_win_prob': 0.5,  # Default value
+                        'away_win_prob': 0.5   # Default value
+                    },
+                    'actual_results': {
+                        'away_score': cached_data['actual_away_score'],
+                        'home_score': cached_data['actual_home_score'],
+                        'away_pitcher': cached_data.get('away_pitcher', 'Not Available'),
+                        'home_pitcher': cached_data.get('home_pitcher', 'Not Available'),
+                        'prediction_error': cached_data.get('prediction_error', 0),
+                        'winner_correct': cached_data.get('winner_correct', False)
+                    },
+                    'betting_lines': cached_data.get('betting_lines', {}),  # Include betting lines
+                    'meta': {
+                        'is_historical': True,
+                        'cached': True,
+                        'game_date': game_date,
+                        'matched_key': game_key,
+                        'away_pitcher': cached_data.get('away_pitcher', 'Not Available'),
+                        'home_pitcher': cached_data.get('home_pitcher', 'Not Available')
+                    }
+                }
+        
+        return None
         
     def get_fast_prediction(self, away_team: str, home_team: str, 
                           sim_count: int = 2000, game_date: str = None) -> Dict:
         """
         Generate complete prediction with recommendations in <200ms
-        For historical dates, return cached predictions with actual results
         """
         start_time = datetime.now()
         
-        # Check if this is a historical date with cached data
+        # Check for historical data first
         if game_date and self._is_historical_date(game_date):
-            cached_result = self._get_cached_historical_prediction(away_team, home_team, game_date)
-            if cached_result:
-                return cached_result
+            # Auto-update historical results if needed
+            self._auto_update_historical_results_if_needed(game_date)
+            
+            historical_result = self._get_cached_historical_prediction(away_team, home_team, game_date)
+            if historical_result:
+                return historical_result
         
-        # Run ultra-fast simulations for current/future dates
+        # Run ultra-fast simulations
         results, pitcher_info = self.sim_engine.simulate_game_vectorized(away_team, home_team, sim_count)
         
         # Calculate statistics (vectorized)
@@ -913,8 +957,7 @@ class FastPredictionEngine:
                 'execution_time_ms': round(execution_time, 1),
                 'recommendations_found': len(all_recommendations),
                 'timestamp': datetime.now().isoformat()
-            },
-            'result_type': 'LIVE'  # Add this field for JavaScript compatibility
+            }
         }
     
     def get_todays_real_games(self, game_date: str = None) -> List[Tuple[str, str]]:
@@ -962,26 +1005,22 @@ class FastPredictionEngine:
                                     
                                     real_games.append((away_short, home_short))
                     
-                    # If still no games found, use generic fallback for non-today dates
-                    if not real_games and target_date != date.today().strftime('%Y-%m-%d'):
-                        real_games = [
-                            ("Yankees", "Red Sox"),     # Classic rivalry
-                            ("Dodgers", "Giants"),      # NL West rivalry  
-                            ("Cubs", "Cardinals"),      # NL Central rivalry
-                            ("Astros", "Rangers"),      # AL West rivalry
-                            ("Phillies", "Mets")        # NL East rivalry
-                        ]
+                    # If still no games found, check historical cache for the date
+                    if not real_games:
+                        # Try to get games from historical cache
+                        if hasattr(self, 'historical_cache') and self.historical_cache:
+                            if target_date in self.historical_cache:
+                                cache_data = self.historical_cache[target_date]
+                                if 'cached_predictions' in cache_data:
+                                    for game_key, game_data in cache_data['cached_predictions'].items():
+                                        if 'away_team' in game_data and 'home_team' in game_data:
+                                            away_team = game_data['away_team']
+                                            home_team = game_data['home_team']
+                                            real_games.append((away_team, home_team))
         except Exception as e:
             print(f"Warning: Error reading ProjectedStarters.json: {e}")
         
-        # Final fallback if no games found
-        if not real_games:
-            real_games = [
-                ("Astros", "Yankees"),
-                ("Blue Jays", "Dodgers"), 
-                ("Red Sox", "Padres")
-            ]
-        
+        # Return empty list if no real games found - no test games
         return real_games[:15]  # Limit to first 15 games for performance
     
     def _convert_to_short_name(self, full_name: str) -> str:
@@ -1047,21 +1086,84 @@ class FastPredictionEngine:
         """Get real betting lines if available, otherwise generate sample lines"""
         today = datetime.now().strftime('%Y-%m-%d')
         
+        # Team name mapping from short to full names (as used in betting lines)
+        team_full_names = {
+            'Angels': 'Los Angeles Angels',
+            'Astros': 'Houston Astros', 
+            'Athletics': 'Oakland Athletics',
+            'Blue Jays': 'Toronto Blue Jays',
+            'Guardians': 'Cleveland Guardians',
+            'Mariners': 'Seattle Mariners',
+            'Orioles': 'Baltimore Orioles',
+            'Rangers': 'Texas Rangers',
+            'Rays': 'Tampa Bay Rays',
+            'Red Sox': 'Boston Red Sox',
+            'Royals': 'Kansas City Royals',
+            'Tigers': 'Detroit Tigers',
+            'Twins': 'Minnesota Twins',
+            'White Sox': 'Chicago White Sox',
+            'Yankees': 'New York Yankees',
+            'Braves': 'Atlanta Braves',
+            'Brewers': 'Milwaukee Brewers',
+            'Cardinals': 'St. Louis Cardinals',
+            'Cubs': 'Chicago Cubs',
+            'Diamondbacks': 'Arizona Diamondbacks',
+            'Dodgers': 'Los Angeles Dodgers',
+            'Giants': 'San Francisco Giants',
+            'Marlins': 'Miami Marlins',
+            'Mets': 'New York Mets',
+            'Nationals': 'Washington Nationals',
+            'Padres': 'San Diego Padres',
+            'Phillies': 'Philadelphia Phillies',
+            'Pirates': 'Pittsburgh Pirates',
+            'Reds': 'Cincinnati Reds',
+            'Rockies': 'Colorado Rockies'
+        }
+        
         try:
+            print(f"🔍 Betting lines lookup: {away_team} @ {home_team} on {game_date}")
+            print(f"📅 Today: {today}, Game date: {game_date}, Is current/future: {game_date >= today}")
+            
             # For current/future games, try current betting lines file
             if game_date >= today:
                 if os.path.exists('mlb_betting_lines.json'):
                     with open('mlb_betting_lines.json', 'r') as f:
                         betting_data = json.load(f)
                     
+                    print(f"📊 Available betting dates: {list(betting_data.keys())}")
+                    
+                    # Try to map to full team names for betting lines lookup
+                    away_full = team_full_names.get(away_team, away_team)
+                    home_full = team_full_names.get(home_team, home_team)
+                    
+                    # Handle special cases where ProjectedStarters has inconsistent naming
+                    if away_team == "Athletics":
+                        away_full = "Oakland Athletics"
+                    if home_team == "Athletics":
+                        home_full = "Oakland Athletics"
+                    
+                    print(f"🏷️ Team mapping: {away_team} → {away_full}, {home_team} → {home_full}")
+                    
                     # Look for lines for this game on this date
-                    matchup_key = f"{away_team}_at_{home_team}"
-                    if game_date in betting_data and matchup_key in betting_data[game_date]:
-                        real_lines = betting_data[game_date][matchup_key]
-                        converted_lines = self._convert_real_lines_format(real_lines, away_team, home_team, home_win_prob)
-                        if converted_lines:
-                            print(f"✅ Using real betting lines for {away_team} @ {home_team}")
-                            return converted_lines
+                    matchup_key = f"{away_full}_at_{home_full}"
+                    print(f"🔍 Looking for betting lines with key: {matchup_key}")
+                    
+                    if game_date in betting_data:
+                        print(f"✅ Found data for date {game_date}")
+                        if matchup_key in betting_data[game_date]:
+                            real_lines = betting_data[game_date][matchup_key]
+                            converted_lines = self._convert_real_lines_format(real_lines, away_team, home_team, home_win_prob)
+                            if converted_lines:
+                                print(f"✅ Using real betting lines for {away_team} @ {home_team}")
+                                return converted_lines
+                        else:
+                            print(f"❌ No betting lines found for {matchup_key}")
+                            available_games = list(betting_data[game_date].keys())
+                            print(f"Available games for {game_date}: {available_games}")
+                    else:
+                        print(f"❌ No data for date {game_date}")
+                else:
+                    print("❌ mlb_betting_lines.json not found")
             
             # For past games, try historical betting lines lookup
             else:
@@ -1083,6 +1185,29 @@ class FastPredictionEngine:
     def _convert_real_lines_format(self, real_lines: Dict, away_team: str, home_team: str, home_win_prob: float) -> Optional[Dict]:
         """Convert real betting lines to our internal format"""
         try:
+            # Get full team names for moneyline lookup (betting lines use full names)
+            team_full_names = {
+                'Angels': 'Los Angeles Angels', 'Astros': 'Houston Astros', 'Athletics': 'Oakland Athletics',
+                'Blue Jays': 'Toronto Blue Jays', 'Guardians': 'Cleveland Guardians', 'Mariners': 'Seattle Mariners',
+                'Orioles': 'Baltimore Orioles', 'Rangers': 'Texas Rangers', 'Rays': 'Tampa Bay Rays',
+                'Red Sox': 'Boston Red Sox', 'Royals': 'Kansas City Royals', 'Tigers': 'Detroit Tigers',
+                'Twins': 'Minnesota Twins', 'White Sox': 'Chicago White Sox', 'Yankees': 'New York Yankees',
+                'Braves': 'Atlanta Braves', 'Brewers': 'Milwaukee Brewers', 'Cardinals': 'St. Louis Cardinals',
+                'Cubs': 'Chicago Cubs', 'Diamondbacks': 'Arizona Diamondbacks', 'Dodgers': 'Los Angeles Dodgers',
+                'Giants': 'San Francisco Giants', 'Marlins': 'Miami Marlins', 'Mets': 'New York Mets',
+                'Nationals': 'Washington Nationals', 'Padres': 'San Diego Padres', 'Phillies': 'Philadelphia Phillies',
+                'Pirates': 'Pittsburgh Pirates', 'Reds': 'Cincinnati Reds', 'Rockies': 'Colorado Rockies'
+            }
+            
+            away_full = team_full_names.get(away_team, away_team)
+            home_full = team_full_names.get(home_team, home_team)
+            
+            # Handle special cases where ProjectedStarters has inconsistent naming
+            if away_team == "Athletics":
+                away_full = "Oakland Athletics"
+            if home_team == "Athletics":
+                home_full = "Oakland Athletics"
+            
             lines = {
                 'home_ml': None,
                 'away_ml': None,
@@ -1093,11 +1218,12 @@ class FastPredictionEngine:
                 'spread_odds': -110
             }
             
-            # Extract moneyline
+            # Extract moneyline using full team names
             if real_lines.get('moneyline'):
                 ml = real_lines['moneyline']
-                lines['home_ml'] = ml.get(home_team)
-                lines['away_ml'] = ml.get(away_team)
+                lines['home_ml'] = ml.get(home_full)
+                lines['away_ml'] = ml.get(away_full)
+                print(f"🏷️ Moneyline lookup: {home_team}({home_full})={lines['home_ml']}, {away_team}({away_full})={lines['away_ml']}")
             
             # Extract total
             if real_lines.get('total') and real_lines['total']:
@@ -1117,7 +1243,7 @@ class FastPredictionEngine:
                 runline_data = real_lines['runline']
                 if isinstance(runline_data, list):
                     for rl in runline_data:
-                        if rl.get('team') == home_team:
+                        if rl.get('team') == home_full:  # Use full name for runline too
                             lines['spread_home'] = rl.get('point', lines['spread_home'])
                             lines['spread_odds'] = rl.get('price', -110)
             
