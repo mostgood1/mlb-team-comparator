@@ -112,7 +112,23 @@ HTML_TEMPLATE = """
             position: fixed; top: 10px; right: 10px; 
             background: linear-gradient(45deg, #e74c3c, #c0392b);
             padding: 8px 15px; border-radius: 20px; font-size: 0.9em; font-weight: bold;
-            box-shadow: 0 2px 10px rgba(0,0,0,0.3);
+            box-shadow: 0 2px 10px rgba(0,0,0,0.3); z-index: 1000;
+        }
+        
+        .mode-indicator {
+            position: fixed; top: 10px; left: 10px; 
+            background: linear-gradient(45deg, #3498db, #2980b9);
+            padding: 8px 15px; border-radius: 20px; font-size: 0.9em; font-weight: bold;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.3); z-index: 1000;
+            transition: all 0.3s ease;
+        }
+        
+        .mode-indicator.historical {
+            background: linear-gradient(45deg, #ffc107, #e0a800);
+        }
+        
+        .mode-indicator.live {
+            background: linear-gradient(45deg, #28a745, #20c997);
         }
         
         .execution-time {
@@ -142,6 +158,7 @@ HTML_TEMPLATE = """
 </head>
 <body>
     <div class="speed-indicator">⚡ ULTRA-FAST v2.4</div>
+    <div class="mode-indicator" id="mode-indicator">🔄 AUTO-MODE</div>
     
     <div class="container">
         <div class="header">
@@ -150,19 +167,19 @@ HTML_TEMPLATE = """
         </div>
         
         <div class="speed-banner">
-            🎯 PRIMARY: Get today's betting recommendations • SECONDARY: Review historical accuracy with past game results
+            🔄 SMART AUTO-TRANSITION: System automatically shifts from betting recommendations to historical accuracy validation as each day's results become available
         </div>
         
         <div class="controls">
             <div style="display: flex; justify-content: center; gap: 15px; flex-wrap: wrap; margin-bottom: 15px;">
-                <button onclick="loadTodaysRealGames()" style="background: linear-gradient(45deg, #28a745, #20c997); font-size: 1.1em; padding: 15px 25px;">💰 Today's Betting Recommendations</button>
+                <button onclick="loadTodaysRealGames()" style="background: linear-gradient(45deg, #28a745, #20c997); font-size: 1.1em; padding: 15px 25px;">💰 Today's Live Betting</button>
+                <button onclick="loadYesterdayAccuracy()" style="background: linear-gradient(45deg, #ffc107, #e0a800); font-size: 1.1em; padding: 15px 25px;">📊 Yesterday's Accuracy</button>
                 <button onclick="speedTest()">⚡ Speed Test</button>
-                <button onclick="showMultipleGames()">📊 Game Analysis</button>
             </div>
             <div style="display: flex; justify-content: center; gap: 15px; flex-wrap: wrap; align-items: center;">
-                <span style="color: #ecf0f1; font-weight: bold;">📈 Historical Accuracy Review:</span>
+                <span style="color: #ecf0f1; font-weight: bold;">📈 Custom Date Review:</span>
                 <input type="date" id="game-date" style="padding: 8px; border-radius: 6px; border: 1px solid #ddd; font-size: 0.9em;" />
-                <button onclick="loadGamesForDate()" style="background: linear-gradient(45deg, #6c757d, #5a6268); font-size: 0.9em;">📊 Review Accuracy</button>
+                <button onclick="loadGamesForDate()" style="background: linear-gradient(45deg, #6c757d, #5a6268); font-size: 0.9em;">� Review Date</button>
             </div>
         </div>
         
@@ -171,6 +188,43 @@ HTML_TEMPLATE = """
 
     <script>
         let currentEngine = null;
+        
+        async function loadYesterdayAccuracy() {
+            const yesterday = new Date();
+            yesterday.setDate(yesterday.getDate() - 1);
+            const yesterdayStr = yesterday.toISOString().split('T')[0];
+            
+            document.getElementById('game-date').value = yesterdayStr;
+            document.getElementById('predictions-container').innerHTML = `<div class="loading">📊 Loading yesterday's accuracy data (${yesterdayStr})...</div>`;
+            
+            try {
+                const response = await fetch(`/api/games-predictions?date=${yesterdayStr}`);
+                if (!response.ok) {
+                    throw new Error(`HTTP ${response.status}: ${response.statusText}`);
+                }
+                const data = await response.json();
+                
+                if (data.error) throw new Error(data.error);
+                
+                if (!data.predictions || data.predictions.length === 0) {
+                    throw new Error(`No accuracy data available for ${yesterdayStr}`);
+                }
+                
+                displayMultiplePredictions(data.predictions, yesterdayStr);
+            } catch (error) {
+                console.error('loadYesterdayAccuracy error:', error);
+                document.getElementById('predictions-container').innerHTML = 
+                    `<div class="prediction-card">
+                        <h3>❌ No Accuracy Data for Yesterday (${yesterdayStr})</h3>
+                        <p><strong>Error:</strong> ${error.message}</p>
+                        <p><strong>Suggestion:</strong> Historical accuracy data becomes available 24-48 hours after games complete. Try August 8, 2025 for complete accuracy validation.</p>
+                        <button onclick="document.getElementById('game-date').value='2025-08-08'; loadGamesForDate();" 
+                                style="margin-top: 10px; padding: 8px 16px; background: #28a745; color: white; border: none; border-radius: 4px;">
+                            📊 Review Aug 8 Accuracy
+                        </button>
+                    </div>`;
+            }
+        }
         
         async function loadTodaysRealGames() {
             document.getElementById('predictions-container').innerHTML = '<div class="loading">⚡ Loading today\\'s REAL games with actual pitcher matchups...</div>';
@@ -709,15 +763,71 @@ HTML_TEMPLATE = """
             }
         }
         
-        // Auto-load today's betting recommendations on page load
-        window.onload = () => {
-            // Set today's date in the date picker for easy historical access
+        // Automated day transition: betting -> historical accuracy
+        function getDateContext() {
             const today = new Date();
             const todayStr = today.toISOString().split('T')[0];
-            document.getElementById('game-date').value = todayStr;
+            const yesterday = new Date(today);
+            yesterday.setDate(yesterday.getDate() - 1);
+            const yesterdayStr = yesterday.toISOString().split('T')[0];
             
-            // Load today's betting recommendations as primary purpose
-            loadTodaysRealGames();
+            return {
+                today: todayStr,
+                yesterday: yesterdayStr,
+                isWeekend: today.getDay() === 0 || today.getDay() === 6
+            };
+        }
+        
+        function autoLoadBasedOnDate() {
+            const context = getDateContext();
+            
+            // Check if we have historical data for yesterday
+            // If yes, show accuracy validation. If no, show live betting
+            fetch(`/api/check-historical-data?date=${context.yesterday}`)
+                .then(response => response.json())
+                .then(data => {
+                    const modeIndicator = document.getElementById('mode-indicator');
+                    
+                    if (data.has_historical_data) {
+                        // Yesterday has results - show historical accuracy as primary
+                        document.getElementById('game-date').value = context.yesterday;
+                        loadGamesForDate();
+                        
+                        // Update mode indicator
+                        modeIndicator.className = 'mode-indicator historical';
+                        modeIndicator.innerHTML = `📊 HISTORICAL (${context.yesterday})`;
+                        
+                        // Update interface to reflect this is now historical mode
+                        document.querySelector('.speed-banner').innerHTML = 
+                            `� AUTO-TRANSITION: Historical data available for ${context.yesterday} • <strong>PRIMARY:</strong> Model accuracy validation • <strong>SECONDARY:</strong> Live betting for ${context.today}`;
+                        document.querySelector('.header p').innerHTML = 
+                            `📊 MODEL ACCURACY TRACKER: Yesterday's results loaded automatically • Live betting still available • System auto-transitions daily`;
+                    } else {
+                        // No historical data yet - show live betting as primary
+                        document.getElementById('game-date').value = context.today;
+                        loadTodaysRealGames();
+                        
+                        // Update mode indicator
+                        modeIndicator.className = 'mode-indicator live';
+                        modeIndicator.innerHTML = `💰 LIVE (${context.today})`;
+                        
+                        // Update interface to reflect this is live mode
+                        document.querySelector('.speed-banner').innerHTML = 
+                            `💰 LIVE BETTING MODE: ${context.today} active • No historical data for ${context.yesterday} yet • System will auto-transition when results available`;
+                        document.querySelector('.header p').innerHTML = 
+                            `💰 DAILY BETTING RECOMMENDATIONS: Professional analysis for today's games • Real-time value detection • Historical accuracy validation`;
+                    }
+                })
+                .catch(() => {
+                    // Fallback to live betting if API fails
+                    document.getElementById('game-date').value = context.today;
+                    loadTodaysRealGames();
+                });
+        }
+        
+        // Auto-transition system on page load
+        window.onload = () => {
+            autoLoadBasedOnDate();
         };
     </script>
 </body>
@@ -767,6 +877,43 @@ def get_real_games_predictions():
             
     except Exception as e:
         return jsonify({'error': f'Error generating real game predictions: {str(e)}'})
+
+@app.route('/api/check-historical-data')
+def check_historical_data():
+    """Check if historical accuracy data is available for a specific date"""
+    try:
+        game_date = request.args.get('date')
+        if not game_date:
+            return jsonify({'error': 'Date parameter is required'})
+            
+        if ULTRA_FAST_AVAILABLE:
+            engine = FastPredictionEngine()
+            
+            # Check if we have historical cache data for this date
+            has_data = game_date in engine.historical_cache
+            
+            if has_data:
+                date_cache = engine.historical_cache[game_date]
+                cached_predictions = date_cache.get('cached_predictions', {})
+                game_count = len(cached_predictions)
+                
+                return jsonify({
+                    'has_historical_data': True,
+                    'date': game_date,
+                    'game_count': game_count,
+                    'recommendation': f'Historical accuracy data available for {game_count} games on {game_date}'
+                })
+            else:
+                return jsonify({
+                    'has_historical_data': False,
+                    'date': game_date,
+                    'recommendation': f'No historical data for {game_date}. Use live betting mode.'
+                })
+        else:
+            return jsonify({'error': 'Ultra-fast engine not available'})
+            
+    except Exception as e:
+        return jsonify({'error': f'Error checking historical data: {str(e)}'})
 
 @app.route('/api/games-predictions')
 def get_games_predictions():
