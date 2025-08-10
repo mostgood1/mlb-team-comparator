@@ -90,5 +90,97 @@
       "away_starter": "Joe Boyle",
       "home_starter": "Logan Evans"
     }
+  },
+  "2025-08-10": {
+    "Kansas City Royals at Minnesota Twins": {
+      "away_team": "Kansas City Royals",
+      "home_team": "Minnesota Twins",
+      "away_starter": "Ryan Bergert",
+      "home_starter": "Jos\u00e9 Ure\u00f1a"
+    },
+    "Athletics at Baltimore Orioles": {
+      "away_team": "Athletics",
+      "home_team": "Baltimore Orioles",
+      "away_starter": "Luis Morales",
+      "home_starter": "Cade Povich"
+    },
+    "Cincinnati Reds at Pittsburgh Pirates": {
+      "away_team": "Cincinnati Reds",
+      "home_team": "Pittsburgh Pirates",
+      "away_starter": "Zack Littell",
+      "home_starter": "Mike Burrows"
+    },
+    "Miami Marlins at Atlanta Braves": {
+      "away_team": "Miami Marlins",
+      "home_team": "Atlanta Braves",
+      "away_starter": "Cal Quantrill",
+      "home_starter": "Joey Wentz"
+    },
+    "Houston Astros at New York Yankees": {
+      "away_team": "Houston Astros",
+      "home_team": "New York Yankees",
+      "away_starter": "Jason Alexander",
+      "home_starter": "Max Fried"
+    },
+    "Los Angeles Angels at Detroit Tigers": {
+      "away_team": "Los Angeles Angels",
+      "home_team": "Detroit Tigers",
+      "away_starter": "Jack Kochanowicz",
+      "home_starter": "Casey Mize"
+    },
+    "Cleveland Guardians at Chicago White Sox": {
+      "away_team": "Cleveland Guardians",
+      "home_team": "Chicago White Sox",
+      "away_starter": "Slade Cecconi",
+      "home_starter": "Davis Martin"
+    },
+    "New York Mets at Milwaukee Brewers": {
+      "away_team": "New York Mets",
+      "home_team": "Milwaukee Brewers",
+      "away_starter": "Sean Manaea",
+      "home_starter": "Quinn Priester"
+    },
+    "Philadelphia Phillies at Texas Rangers": {
+      "away_team": "Philadelphia Phillies",
+      "home_team": "Texas Rangers",
+      "away_starter": "Zack Wheeler",
+      "home_starter": "Patrick Corbin"
+    },
+    "Washington Nationals at San Francisco Giants": {
+      "away_team": "Washington Nationals",
+      "home_team": "San Francisco Giants",
+      "away_starter": "MacKenzie Gore",
+      "home_starter": "Justin Verlander"
+    },
+    "Colorado Rockies at Arizona Diamondbacks": {
+      "away_team": "Colorado Rockies",
+      "home_team": "Arizona Diamondbacks",
+      "away_starter": "Tanner Gordon",
+      "home_starter": "Brandon Pfaadt"
+    },
+    "Boston Red Sox at San Diego Padres": {
+      "away_team": "Boston Red Sox",
+      "home_team": "San Diego Padres",
+      "away_starter": "Brayan Bello",
+      "home_starter": "Dylan Cease"
+    },
+    "Tampa Bay Rays at Seattle Mariners": {
+      "away_team": "Tampa Bay Rays",
+      "home_team": "Seattle Mariners",
+      "away_starter": "Adrian Houser",
+      "home_starter": "Bryan Woo"
+    },
+    "Toronto Blue Jays at Los Angeles Dodgers": {
+      "away_team": "Toronto Blue Jays",
+      "home_team": "Los Angeles Dodgers",
+      "away_starter": "Eric Lauer",
+      "home_starter": "Tyler Glasnow"
+    },
+    "Chicago Cubs at St. Louis Cardinals": {
+      "away_team": "Chicago Cubs",
+      "home_team": "St. Louis Cardinals",
+      "away_starter": "Shota Imanaga",
+      "home_starter": "Sonny Gray"
+    }
   }
 }

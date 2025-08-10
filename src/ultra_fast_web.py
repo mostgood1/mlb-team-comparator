@@ -205,8 +205,21 @@ Updated to use REAL GAME          <div         <div class="header">
 
 from flask import Flask, render_template_string, jsonify, request
 import traceback
+import json
+import os
 from datetime import datetime, date
 from typing import Dict, List
+
+# Load team assets for enhanced UI
+try:
+    team_assets_path = os.path.join(os.path.dirname(__file__), 'mlb_team_assets.json')
+    with open(team_assets_path, 'r', encoding='utf-8') as f:
+        TEAM_ASSETS = json.load(f)
+    print("✓ MLB team assets loaded successfully")
+    print(f"   Loaded {len(TEAM_ASSETS)} teams with logos and colors")
+except Exception as e:
+    print(f"⚠ Team assets not available: {e}")
+    TEAM_ASSETS = {}
 
 # Import the ultra-fast engine
 try:
@@ -216,6 +229,15 @@ try:
 except ImportError as e:
     print(f"⚠ Ultra-fast engine not available: {e}")
     ULTRA_FAST_AVAILABLE = False
+
+# Import betting lines auto-updater
+try:
+    from auto_update_betting_lines import BettingLinesAutoUpdater
+    print("✓ Betting lines auto-updater imported successfully")
+    BETTING_UPDATER_AVAILABLE = True
+except ImportError as e:
+    print(f"⚠ Betting lines auto-updater not available: {e}")
+    BETTING_UPDATER_AVAILABLE = False
 
 # Fallback imports
 try:
@@ -235,6 +257,33 @@ except ImportError as e:
     TODAYS_GAMES_AVAILABLE = False
 
 app = Flask(__name__)
+
+# Initialize betting lines auto-updater
+def initialize_betting_lines():
+    """Initialize and run betting lines auto-updater on startup"""
+    if BETTING_UPDATER_AVAILABLE:
+        try:
+            print("🔄 Initializing betting lines auto-updater...")
+            updater = BettingLinesAutoUpdater()
+            
+            # Check if betting lines need updating
+            if updater.should_update_betting_lines(max_age_hours=3):
+                print("📊 Updating betting lines on startup...")
+                success = updater.update_betting_lines()
+                if success:
+                    print("✅ Betting lines updated successfully on startup")
+                else:
+                    print("⚠️ Betting lines update failed on startup")
+            else:
+                print("✅ Betting lines are current")
+                
+        except Exception as e:
+            print(f"❌ Error initializing betting lines updater: {e}")
+    else:
+        print("⚠️ Betting lines auto-updater not available")
+
+# Run betting lines initialization
+initialize_betting_lines()
 
 # Enhanced HTML template with real-time features
 HTML_TEMPLATE = """
@@ -367,8 +416,153 @@ HTML_TEMPLATE = """
     <script>
         let currentEngine = null;
         
+        // Team assets cache
+        let teamAssets = {};
+        
+        // Load team assets on page load
+        async function loadTeamAssets() {
+            try {
+                const response = await fetch('/api/team-assets');
+                teamAssets = await response.json();
+                console.log('✓ Team assets loaded:', Object.keys(teamAssets).length, 'teams');
+                
+                // Log first few teams for debugging
+                const firstTeams = Object.keys(teamAssets).slice(0, 3);
+                firstTeams.forEach(team => {
+                    console.log(`${team}: ${teamAssets[team].logo_emoji} ${teamAssets[team].primary_color}`);
+                });
+                
+                return true;
+            } catch (error) {
+                console.warn('⚠ Could not load team assets:', error);
+                return false;
+            }
+        }
+        
+        // Get team assets for a team with better fallback
+        function getTeamAssets(teamName) {
+            if (!teamName) {
+                return {
+                    primary_color: '#2c3e50',
+                    secondary_color: '#ecf0f1',
+                    logo_emoji: '⚾',
+                    short_name: 'Team'
+                };
+            }
+            
+            // Special cases for team name variations (engine uses short names)
+            const teamMappings = {
+                'Royals': 'Kansas City Royals',
+                'Twins': 'Minnesota Twins', 
+                'Athletics': 'Oakland Athletics',
+                'Angels': 'Los Angeles Angels',
+                'Astros': 'Houston Astros',
+                'Mariners': 'Seattle Mariners',
+                'Orioles': 'Baltimore Orioles',
+                'Rangers': 'Texas Rangers',
+                'Rays': 'Tampa Bay Rays',
+                'Red Sox': 'Boston Red Sox',
+                'Tigers': 'Detroit Tigers',
+                'White Sox': 'Chicago White Sox',
+                'Yankees': 'New York Yankees',
+                'Blue Jays': 'Toronto Blue Jays',
+                'Guardians': 'Cleveland Guardians',
+                'Braves': 'Atlanta Braves',
+                'Brewers': 'Milwaukee Brewers',
+                'Cardinals': 'St. Louis Cardinals',
+                'Cubs': 'Chicago Cubs',
+                'Diamondbacks': 'Arizona Diamondbacks',
+                'Dodgers': 'Los Angeles Dodgers',
+                'Giants': 'San Francisco Giants',
+                'Marlins': 'Miami Marlins',
+                'Mets': 'New York Mets',
+                'Nationals': 'Washington Nationals',
+                'Padres': 'San Diego Padres',
+                'Phillies': 'Philadelphia Phillies',
+                'Pirates': 'Pittsburgh Pirates',
+                'Reds': 'Cincinnati Reds',
+                'Rockies': 'Colorado Rockies'
+            };
+            
+            // Check team mappings FIRST (most common case)
+            if (teamMappings[teamName] && teamAssets[teamMappings[teamName]]) {
+                console.log(`🎯 Mapped "${teamName}" -> "${teamMappings[teamName]}"`);
+                return teamAssets[teamMappings[teamName]];
+            }
+            
+            // Try exact match second
+            if (teamAssets[teamName]) {
+                console.log(`🎯 Direct match for "${teamName}"`);
+                return teamAssets[teamName];
+            }
+            
+            // Try to find by short name or partial match
+            for (const [fullName, assets] of Object.entries(teamAssets)) {
+                if (assets.short_name === teamName || 
+                    fullName.includes(teamName) || 
+                    teamName.includes(assets.short_name)) {
+                    console.log(`🎯 Partial match "${teamName}" -> "${fullName}"`);
+                    return assets;
+                }
+            }
+            
+            // Return default if not found
+            console.warn(`Team assets not found for: ${teamName}`);
+            return {
+                primary_color: '#2c3e50',
+                secondary_color: '#ecf0f1',
+                logo_emoji: '⚾',
+                short_name: teamName || 'Team'
+            };
+        }
+        
+        // Create team-styled HTML elements
+        function createTeamStyledElement(teamName, content, elementType = 'div') {
+            const assets = getTeamAssets(teamName);
+            return `<${elementType} style="
+                background: linear-gradient(135deg, ${assets.primary_color}15, ${assets.secondary_color}15);
+                border-left: 4px solid ${assets.primary_color};
+                color: ${assets.primary_color};
+                font-weight: bold;
+            ">${assets.logo_emoji} ${content}</${elementType}>`;
+        }
+        
+        // Create team logo span with debugging
+        function createTeamLogo(teamName) {
+            console.log(`🎨 Creating logo for: "${teamName}"`);
+            const assets = getTeamAssets(teamName);
+            console.log(`🎨 Assets found:`, assets);
+            
+            const logoHtml = `<span style="
+                background: linear-gradient(135deg, ${assets.primary_color}, ${assets.secondary_color}30);
+                color: white;
+                padding: 4px 8px;
+                border-radius: 12px;
+                font-weight: bold;
+                text-shadow: 1px 1px 2px rgba(0,0,0,0.3);
+                display: inline-block;
+                margin: 0 5px;
+            ">${assets.logo_emoji} ${assets.short_name || teamName}</span>`;
+            
+            console.log(`🎨 Generated HTML:`, logoHtml);
+            return logoHtml;
+        }
+
+        // Load team assets when page loads and ensure they're available
+        document.addEventListener('DOMContentLoaded', async () => {
+            console.log('🎨 Loading team assets...');
+            await loadTeamAssets();
+            console.log('✅ Page initialization complete');
+        });
+        
         async function loadTodaysRealGames() {
             document.getElementById('predictions-container').innerHTML = '<div class="loading">⚡ Loading today\\'s REAL games with actual pitcher matchups...</div>';
+            
+            // Ensure team assets are loaded
+            if (Object.keys(teamAssets).length === 0) {
+                console.log('🎨 Team assets not loaded, loading now...');
+                await loadTeamAssets();
+            }
             
             try {
                 const response = await fetch('/api/real-games-predictions');
@@ -406,6 +600,12 @@ HTML_TEMPLATE = """
             if (!selectedDate) {
                 alert('Please select a date first');
                 return;
+            }
+            
+            // Ensure team assets are loaded
+            if (Object.keys(teamAssets).length === 0) {
+                console.log('🎨 Team assets not loaded, loading now...');
+                await loadTeamAssets();
             }
             
             document.getElementById('predictions-container').innerHTML = `<div class="loading">⚡ Loading games for ${selectedDate}...</div>`;
@@ -639,7 +839,7 @@ HTML_TEMPLATE = """
                 </div>
                 
                 <div class="matchup">
-                    ✈️ ${data.away_team} @ 🏠 ${data.home_team}
+                    ${createTeamLogo(data.away_team)} @ ${createTeamLogo(data.home_team)}
                     <span class="real-game-badge" style="background: linear-gradient(45deg, #ffc107, #e0a800);">ACCURACY REVIEW</span>
                 </div>
                 
@@ -712,13 +912,22 @@ HTML_TEMPLATE = """
             const recs = data.recommendations;
             const pitchers = data.pitcher_quality || {};
             
+            // Get team assets for styling
+            const awayAssets = getTeamAssets(data.away_team);
+            const homeAssets = getTeamAssets(data.home_team);
+            
             let html = `
                 <div class="execution-time">
                     ⚡ Generated in ${meta.execution_time_ms}ms with ${meta.simulations_run} simulations
                 </div>
                 
-                <div class="matchup">
-                    ✈️ ${data.away_team} @ 🏠 ${data.home_team}
+                <div class="matchup" style="
+                    background: linear-gradient(135deg, ${awayAssets.primary_color}20, ${homeAssets.primary_color}20);
+                    border-radius: 12px;
+                    padding: 15px;
+                    margin: 15px 0;
+                ">
+                    ${createTeamLogo(data.away_team)} @ ${createTeamLogo(data.home_team)}
                     <span class="real-game-badge">REAL GAME</span>
                 </div>
                 
@@ -737,7 +946,7 @@ HTML_TEMPLATE = """
                 <div class="stats-grid">
                     <div class="stat-box">
                         <div class="stat-label">Win Probability</div>
-                        <div class="stat-value">✈️ ${(p.away_win_prob * 100).toFixed(1)}% | 🏠 ${(p.home_win_prob * 100).toFixed(1)}%</div>
+                        <div class="stat-value">${createTeamLogo(data.away_team)} ${(p.away_win_prob * 100).toFixed(1)}% | ${createTeamLogo(data.home_team)} ${(p.home_win_prob * 100).toFixed(1)}%</div>
                     </div>
                     <div class="stat-box">
                         <div class="stat-label">Predicted Score</div>
@@ -754,37 +963,37 @@ HTML_TEMPLATE = """
                 </div>
                 
                 <!-- Betting Odds Display -->
-                ${p.betting_lines ? `
+                ${data.betting_lines ? `
                 <div style="margin: 15px 0; padding: 15px; background: rgba(255, 193, 7, 0.1); border-radius: 8px; border-left: 3px solid #ffc107;">
                     <h4 style="color: #e67e22; margin-bottom: 10px; font-size: 1.1em;">💸 Current Betting Lines</h4>
                     <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 15px;">
-                        ${p.betting_lines.moneyline ? `
+                        ${data.betting_lines.home_ml && data.betting_lines.away_ml ? `
                         <div style="padding: 10px; background: rgba(156, 39, 176, 0.2); border-radius: 6px;">
                             <div style="font-weight: bold; color: #9c27b0; margin-bottom: 5px;">🎯 Moneyline</div>
                             <div style="font-size: 0.9em;">
-                                ✈️ ${data.away_team}: ${p.betting_lines.moneyline[data.away_team] || 'N/A'}<br>
-                                🏠 ${data.home_team}: ${p.betting_lines.moneyline[data.home_team] || 'N/A'}<br>
-                                <strong>Favorite: ${p.betting_lines.moneyline_favorite || 'N/A'}</strong>
+                                ${createTeamLogo(data.away_team)}: ${data.betting_lines.away_ml}<br>
+                                ${createTeamLogo(data.home_team)}: ${data.betting_lines.home_ml}<br>
+                                <strong>Favorite: ${createTeamLogo(data.betting_lines.away_ml < data.betting_lines.home_ml ? data.away_team : data.home_team)}</strong>
                             </div>
                         </div>
                         ` : ''}
-                        ${p.betting_lines.total_line ? `
+                        ${data.betting_lines.total_line ? `
                         <div style="padding: 10px; background: rgba(52, 152, 219, 0.2); border-radius: 6px;">
                             <div style="font-weight: bold; color: #3498db; margin-bottom: 5px;">💰 Over/Under</div>
                             <div style="font-size: 0.9em;">
-                                Total: <strong>${p.betting_lines.total_line}</strong><br>
-                                Over: ${p.betting_lines.total_over_odds || '-110'}<br>
-                                Under: ${p.betting_lines.total_under_odds || '-110'}
+                                Total: <strong>${data.betting_lines.total_line}</strong><br>
+                                Over: ${data.betting_lines.over_odds || '-110'}<br>
+                                Under: ${data.betting_lines.under_odds || '-110'}
                             </div>
                         </div>
                         ` : ''}
                     </div>
-                    ${p.betting_lines.runline ? `
+                    ${data.betting_lines.spread_home ? `
                     <div style="margin-top: 10px; padding: 10px; background: rgba(40, 167, 69, 0.2); border-radius: 6px;">
                         <div style="font-weight: bold; color: #28a745; margin-bottom: 5px;">📊 Run Line (1.5)</div>
                         <div style="font-size: 0.9em; display: grid; grid-template-columns: 1fr 1fr; gap: 10px;">
-                            <div>✈️ ${data.away_team} ${p.betting_lines.runline.away_spread || '+1.5'}: ${p.betting_lines.runline.away_odds || '-110'}</div>
-                            <div>🏠 ${data.home_team} ${p.betting_lines.runline.home_spread || '-1.5'}: ${p.betting_lines.runline.home_odds || '-110'}</div>
+                            <div>${createTeamLogo(data.away_team)} ${data.betting_lines.spread_home > 0 ? '+1.5' : '-1.5'}: ${data.betting_lines.spread_odds || '-110'}</div>
+                            <div>${createTeamLogo(data.home_team)} ${data.betting_lines.spread_home < 0 ? '+1.5' : '-1.5'}: ${data.betting_lines.spread_odds || '-110'}</div>
                         </div>
                     </div>
                     ` : ''}
@@ -798,10 +1007,8 @@ HTML_TEMPLATE = """
                 
                 <div class="pitcher-summary">
                     <strong>⚾ Starting Pitchers (Real Matchup):</strong><br>
-                    <span class="pitcher-factor">Away:</span> ${pitchers.away_pitcher_name || 'TBD'} 
-                    (Impact: <span class="pitcher-factor">${(pitchers.away_pitcher_factor || 1.0).toFixed(3)}</span>)<br>
-                    <span class="pitcher-factor">Home:</span> ${pitchers.home_pitcher_name || 'TBD'} 
-                    (Impact: <span class="pitcher-factor">${(pitchers.home_pitcher_factor || 1.0).toFixed(3)}</span>)
+                    <div style="margin: 8px 0;">${createTeamStyledElement(data.away_team, `${pitchers.away_pitcher_name || 'TBD'} (Impact: ${(pitchers.away_pitcher_factor || 1.0).toFixed(3)})`, 'div')}</div>
+                    <div style="margin: 8px 0;">${createTeamStyledElement(data.home_team, `${pitchers.home_pitcher_name || 'TBD'} (Impact: ${(pitchers.home_pitcher_factor || 1.0).toFixed(3)})`, 'div')}</div>
                     <div style="margin-top: 8px; font-size: 0.9em; opacity: 0.9;">
                         💡 Impact Factor: &lt;1.0 = reduces runs allowed, &gt;1.0 = allows more runs
                     </div>
@@ -976,6 +1183,15 @@ HTML_TEMPLATE = """
             predictions.forEach(pred => {
                 const predictionDiv = document.createElement('div');
                 predictionDiv.className = 'prediction-card';
+                
+                // Apply team-specific border styling
+                const awayAssets = getTeamAssets(pred.away_team);
+                const homeAssets = getTeamAssets(pred.home_team);
+                predictionDiv.style.borderImage = `linear-gradient(45deg, ${awayAssets.primary_color}, ${homeAssets.primary_color}) 1`;
+                predictionDiv.style.borderWidth = '2px';
+                predictionDiv.style.borderStyle = 'solid';
+                predictionDiv.style.background = `linear-gradient(135deg, rgba(255,255,255,0.1), ${awayAssets.primary_color}05, ${homeAssets.primary_color}05)`;
+                
                 predictionDiv.innerHTML = createPredictionHTML(pred, isHistorical);
                 container.appendChild(predictionDiv);
             });
@@ -1148,6 +1364,11 @@ def speed_test():
     except Exception as e:
         return jsonify({'error': f'Error in speed test: {str(e)}'})
 
+@app.route('/api/team-assets')
+def get_team_assets():
+    """Get team assets for enhanced UI"""
+    return jsonify(TEAM_ASSETS)
+
 @app.route('/api/status')
 def get_status():
     """Get system status"""
@@ -1164,6 +1385,43 @@ def get_status():
         ],
         'timestamp': datetime.now().isoformat()
     })
+
+@app.route('/api/update-betting-lines')
+def update_betting_lines():
+    """Manually trigger betting lines update"""
+    try:
+        if BETTING_UPDATER_AVAILABLE:
+            updater = BettingLinesAutoUpdater()
+            print("🔄 Manual betting lines update requested...")
+            
+            # Force update regardless of age
+            success = updater.update_betting_lines()
+            
+            if success:
+                return jsonify({
+                    'success': True,
+                    'message': 'Betting lines updated successfully',
+                    'timestamp': datetime.now().isoformat()
+                })
+            else:
+                return jsonify({
+                    'success': False,
+                    'message': 'Betting lines update failed',
+                    'timestamp': datetime.now().isoformat()
+                })
+        else:
+            return jsonify({
+                'success': False,
+                'message': 'Betting lines auto-updater not available',
+                'timestamp': datetime.now().isoformat()
+            })
+            
+    except Exception as e:
+        return jsonify({
+            'success': False,
+            'message': f'Error updating betting lines: {str(e)}',
+            'timestamp': datetime.now().isoformat()
+        })
 
 if __name__ == '__main__':
     print("⚡ Starting Ultra-Fast MLB Prediction Web Interface")
