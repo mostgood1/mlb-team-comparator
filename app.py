@@ -420,10 +420,31 @@ HTML_TEMPLATE = """
                     ${(actual.away_pitcher && actual.home_pitcher) ? '' : '<br><small style="opacity: 0.7;">📝 Pitcher data may not be available for this historical game</small>'}
                 </div>
                 
+                <div style="margin-top: 15px; padding: 15px; background: rgba(255, 193, 7, 0.1); border-radius: 8px; border-left: 3px solid #ffc107;">
+                    <h4 style="color: #e67e22; margin-bottom: 10px;">💸 Betting Lines vs Model Performance</h4>
+                    <div style="margin: 10px 0; padding: 12px; background: rgba(156, 39, 176, 0.2); border-radius: 8px; border-left: 3px solid #9c27b0;">
+                        <strong>🎯 Moneyline Analysis:</strong><br>
+                        • Betting Favorite: ${data.betting_lines?.moneyline_favorite || 'Not Available'}<br>
+                        • Model Predicted: ${(pred.away_score > pred.home_score) ? data.away_team : data.home_team}<br>
+                        • Actual Winner: ${(actual.away_score > actual.home_score) ? data.away_team : data.home_team}<br>
+                        • Model vs Favorite: <span style="color: ${((pred.away_score > pred.home_score) ? data.away_team : data.home_team) === (data.betting_lines?.moneyline_favorite || '') ? '#28a745' : '#f39c12'}; font-weight: bold;">${((pred.away_score > pred.home_score) ? data.away_team : data.home_team) === (data.betting_lines?.moneyline_favorite || '') ? 'AGREED' : 'DISAGREED'}</span><br>
+                        • Model Accuracy: <span style="color: ${winnerCorrect ? '#28a745' : '#dc3545'}; font-weight: bold;">${winnerCorrect ? '✅ CORRECT' : '❌ WRONG'}</span>
+                    </div>
+                    ${data.betting_lines?.total_line ? `
+                        <div style="margin: 10px 0; padding: 12px; background: rgba(52, 152, 219, 0.2); border-radius: 8px; border-left: 3px solid #3498db;">
+                            <strong>💰 Over/Under Analysis (Line: ${data.betting_lines.total_line}):</strong><br>
+                            • Model Predicted: ${predictedTotal > data.betting_lines.total_line ? 'Over' : 'Under'} (${predictedTotal.toFixed(1)} runs)<br>
+                            • Actual Result: ${actualTotal > data.betting_lines.total_line ? 'Over' : 'Under'} (${actualTotal} runs)<br>
+                            • Model O/U Accuracy: <span style="color: ${(predictedTotal > data.betting_lines.total_line) === (actualTotal > data.betting_lines.total_line) ? '#28a745' : '#dc3545'}; font-weight: bold;">${(predictedTotal > data.betting_lines.total_line) === (actualTotal > data.betting_lines.total_line) ? '✅ CORRECT' : '❌ WRONG'}</span>
+                        </div>
+                    ` : ''}
+                </div>
+                
                 <div style="margin-top: 15px; padding: 10px; background: rgba(40, 167, 69, 0.1); border-radius: 8px; border-left: 3px solid #28a745;">
-                    <strong>📊 Accuracy Details:</strong><br>
+                    <strong>📊 Accuracy Summary:</strong><br>
                     • Predicted Total: ${predictedTotal.toFixed(1)} runs | Actual: ${actualTotal} runs<br>
-                    • Winner Prediction: ${(pred.away_score > pred.home_score) ? data.away_team : data.home_team} | Actual Winner: ${(actual.away_score > actual.home_score) ? data.away_team : data.home_team}
+                    • Winner Prediction: ${(pred.away_score > pred.home_score) ? data.away_team : data.home_team} | Actual Winner: ${(actual.away_score > actual.home_score) ? data.away_team : data.home_team}<br>
+                    • Prediction Error: ${totalError.toFixed(1)} runs
                 </div>
             `;
         }
@@ -535,6 +556,10 @@ HTML_TEMPLATE = """
                 let winnersCorrect = 0;
                 let totalGames = 0;
                 let totalRunsErrors = [];
+                let overUnderCorrect = 0;
+                let moneylineCorrect = 0;
+                let totalOverUnder = 0;
+                let totalMoneyline = 0;
                 
                 predictions.forEach(pred => {
                     if (pred.actual_results && pred.actual_results.winner_correct !== undefined) {
@@ -545,6 +570,28 @@ HTML_TEMPLATE = """
                         const predictedTotal = pred.predictions.predicted_total_runs || (pred.predictions.away_score + pred.predictions.home_score) || 0;
                         const error = Math.abs(actualTotal - predictedTotal);
                         if (!isNaN(error)) totalRunsErrors.push(error);
+                        
+                        // Check if betting line data is available
+                        if (pred.betting_lines) {
+                            // Moneyline analysis
+                            const mlFavorite = pred.betting_lines.moneyline_favorite;
+                            const predictedWinner = (pred.predictions.away_score > pred.predictions.home_score) ? pred.away_team : pred.home_team;
+                            const actualWinner = (pred.actual_results.away_score > pred.actual_results.home_score) ? pred.away_team : pred.home_team;
+                            
+                            if (mlFavorite) {
+                                totalMoneyline++;
+                                if (predictedWinner === actualWinner) moneylineCorrect++;
+                            }
+                            
+                            // Over/Under analysis
+                            if (pred.betting_lines.total_line) {
+                                totalOverUnder++;
+                                const totalLine = pred.betting_lines.total_line;
+                                const predictedOU = predictedTotal > totalLine ? 'Over' : 'Under';
+                                const actualOU = actualTotal > totalLine ? 'Over' : 'Under';
+                                if (predictedOU === actualOU) overUnderCorrect++;
+                            }
+                        }
                     }
                 });
                 
@@ -552,6 +599,8 @@ HTML_TEMPLATE = """
                 const avgTotalError = totalRunsErrors.length > 0 ? (totalRunsErrors.reduce((a,b) => a+b, 0) / totalRunsErrors.length).toFixed(1) : 'N/A';
                 const goodTotalPredictions = totalRunsErrors.filter(err => err <= 2).length;
                 const totalAccuracy = totalRunsErrors.length > 0 ? (goodTotalPredictions / totalRunsErrors.length * 100).toFixed(1) : 'N/A';
+                const overUnderAccuracy = totalOverUnder > 0 ? (overUnderCorrect / totalOverUnder * 100).toFixed(1) : 'N/A';
+                const moneylineAccuracy = totalMoneyline > 0 ? (moneylineCorrect / totalMoneyline * 100).toFixed(1) : 'N/A';
                 
                 // Determine overall performance level
                 const winnerPct = parseFloat(winnerAccuracy) || 0;
@@ -590,16 +639,33 @@ HTML_TEMPLATE = """
                             Winner Accuracy: ${winnerAccuracy}% • Total Runs Accuracy: ${totalAccuracy}% • Avg Error: ${avgTotalError} runs • Games Analyzed: ${totalGames}
                         </div>
                     </div>
-                    <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 15px; margin: 15px 0;">
+                    <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 15px; margin: 15px 0;">
                         <div style="background: rgba(40, 167, 69, 0.2); padding: 15px; border-radius: 8px; border-left: 4px solid #28a745;">
                             <div style="font-size: 1.1em; font-weight: bold; color: #28a745;">🎯 Winner Predictions</div>
                             <div style="font-size: 1.5em; font-weight: bold;">${winnersCorrect}/${totalGames} (${winnerAccuracy}%)</div>
+                            <div style="font-size: 0.9em; opacity: 0.8;">Model vs Actual Game Winners</div>
                         </div>
                         <div style="background: rgba(52, 152, 219, 0.2); padding: 15px; border-radius: 8px; border-left: 4px solid #3498db;">
                             <div style="font-size: 1.1em; font-weight: bold; color: #3498db;">📊 Total Runs Accuracy</div>
                             <div style="font-size: 1.5em; font-weight: bold;">${goodTotalPredictions}/${totalRunsErrors.length} (${totalAccuracy}%)</div>
-                            <div style="font-size: 0.9em; opacity: 0.8;">Avg Error: ${avgTotalError} runs</div>
+                            <div style="font-size: 0.9em; opacity: 0.8;">Within 2 runs • Avg Error: ${avgTotalError}</div>
                         </div>
+                        <div style="background: rgba(255, 193, 7, 0.2); padding: 15px; border-radius: 8px; border-left: 4px solid #ffc107;">
+                            <div style="font-size: 1.1em; font-weight: bold; color: #e67e22;">💰 Over/Under vs Lines</div>
+                            <div style="font-size: 1.5em; font-weight: bold;">${overUnderCorrect}/${totalOverUnder} (${overUnderAccuracy}%)</div>
+                            <div style="font-size: 0.9em; opacity: 0.8;">Model O/U vs Betting Lines</div>
+                        </div>
+                        <div style="background: rgba(156, 39, 176, 0.2); padding: 15px; border-radius: 8px; border-left: 4px solid #9c27b0;">
+                            <div style="font-size: 1.1em; font-weight: bold; color: #9c27b0;">💸 Moneyline Performance</div>
+                            <div style="font-size: 1.5em; font-weight: bold;">${moneylineCorrect}/${totalMoneyline} (${moneylineAccuracy}%)</div>
+                            <div style="font-size: 0.9em; opacity: 0.8;">Model picks vs ML Favorites</div>
+                        </div>
+                    </div>
+                    
+                    <div style="background: rgba(52, 73, 94, 0.3); padding: 15px; border-radius: 8px; margin: 10px 0;">
+                        <h3 style="color: #ecf0f1; margin-bottom: 10px;">📈 Performance Analysis</h3>
+                        <p style="margin: 5px 0; font-size: 0.95em;"><strong>Model vs Betting Markets:</strong> How our predictions performed against professional oddsmakers</p>
+                        <p style="margin: 5px 0; font-size: 0.95em;"><strong>Individual Game Breakdown:</strong> Each game shows Model Pick vs Betting Favorite vs Actual Result</p>
                     </div>
                     <p>🎯 Final scores vs predictions • Individual game accuracy breakdown below</p>
                 `;
