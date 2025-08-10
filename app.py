@@ -12,7 +12,7 @@ from typing import Dict, List
 
 # Import the ultra-fast engine
 try:
-    from src.ultra_fast_engine import FastPredictionEngine
+    from ultra_fast_engine import FastPredictionEngine
     print("✓ Ultra-fast engine imported successfully")
     ULTRA_FAST_AVAILABLE = True
 except ImportError as e:
