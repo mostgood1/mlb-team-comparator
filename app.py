@@ -177,11 +177,11 @@ HTML_TEMPLATE = """
     <div class="container">
         <div class="header">
             <h1>⚡ Ultra-Fast MLB Predictions</h1>
-            <p>Realistic variance tuned to 2,548 real MLB games • Pitcher quality integration • True-to-life scoring patterns</p>
+            <p>🎯 MODEL ACCURACY TRACKER: Review prediction performance across historical dates • Validate system accuracy</p>
         </div>
         
         <div class="speed-banner">
-            🎯 ENHANCED PREDICTABILITY: Confidence intervals • Multiple scenarios • Realistic game variance • Ultra-fast performance
+            📊 ACCURACY REVIEW MODE: Select any date to see predicted vs actual results and track model performance!
         </div>
         
         <div class="date-selector">
@@ -729,8 +729,8 @@ HTML_TEMPLATE = """
             if (meta.is_historical && actual) {
                 historicalHeader = `
                     <div class="historical-header" style="background: linear-gradient(45deg, #3498db, #2980b9); padding: 15px; border-radius: 10px; margin-bottom: 15px; text-align: center;">
-                        <h3 style="margin: 0; color: white;">📊 HISTORICAL GAME - LOCKED PREDICTION</h3>
-                        <p style="margin: 5px 0 0 0; color: #ecf0f1;">Showing actual results vs our prediction for accuracy demonstration</p>
+                        <h3 style="margin: 0; color: white;">📊 ACCURACY VALIDATION - ARCHIVED PREDICTION</h3>
+                        <p style="margin: 5px 0 0 0; color: #ecf0f1;">Reviewing model accuracy: Compare predicted vs actual results to validate system performance</p>
                     </div>
                 `;
             }
