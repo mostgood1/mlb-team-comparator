@@ -445,6 +445,7 @@ HTML_TEMPLATE = """
             // Calculate accuracy indicators
             const scoreDiff = Math.abs((pred.away_score + pred.home_score) - (actual.away_score + actual.home_score));
             const winnerCorrect = actual.winner_correct;
+            const totalError = Math.abs(pred.predicted_total_runs - (actual.away_score + actual.home_score));
             
             return `
                 <div class="execution-time" style="background: rgba(255, 193, 7, 0.2);">
