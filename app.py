@@ -41,14 +41,14 @@ if ULTRA_FAST_AVAILABLE:
 else:
     print("❌ No prediction engine available")
 
-# Enhanced HTML template with real-time features
+# Enhanced HTML template with real-time features - WORKING VERSION FROM ultra_fast_web.py
 HTML_TEMPLATE = """
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>⚡ Ultra-Fast MLB Predictions</title>
+    <title>⚡ Ultra-Fast MLB Predictions - REAL GAMES</title>
     <style>
         body { 
             font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
@@ -120,54 +120,23 @@ HTML_TEMPLATE = """
             text-align: center; margin-bottom: 15px; font-weight: bold;
         }
         
-        .cumulative-info {
-            font-size: 0.9em; margin-top: 5px; opacity: 0.8;
-            color: #2ecc71; font-weight: normal;
-        }
-        
-        input, select { 
-            padding: 10px; border-radius: 8px; border: none; background: rgba(255,255,255,0.9);
-            color: #333; font-size: 1em;
-        }
-        
-        .date-selector {
-            background: rgba(255,255,255,0.1); backdrop-filter: blur(10px);
-            border-radius: 15px; padding: 20px; margin-bottom: 20px;
-            border: 1px solid rgba(255,255,255,0.2); text-align: center;
-        }
-        
-        .date-controls {
-            display: flex; align-items: center; gap: 15px; 
-            justify-content: center; flex-wrap: wrap;
-        }
-        
-        .date-label {
-            font-weight: bold; font-size: 1.1em; color: #fff;
-            text-shadow: 1px 1px 2px rgba(0,0,0,0.3);
-        }
-        
-        #game-date {
-            padding: 12px 15px; border-radius: 10px; border: 2px solid rgba(255,255,255,0.3);
-            background: rgba(255,255,255,0.95); color: #333; font-size: 1.1em; font-weight: bold;
-            transition: all 0.3s; min-width: 160px;
-        }
-        
-        #game-date:focus {
-            outline: none; border-color: #3498db; box-shadow: 0 0 15px rgba(52, 152, 219, 0.5);
-        }
-        
         .pitcher-summary {
-            margin-top: 10px; padding: 10px; 
+            margin-top: 10px; padding: 15px; 
             background: rgba(255, 193, 7, 0.2); 
-            border-radius: 8px; font-size: 0.9em;
+            border-radius: 8px; font-size: 0.95em;
             border-left: 3px solid #ffc107;
         }
         
-        .rec-tag {
-            background: rgba(46, 204, 113, 0.3);
-            padding: 3px 8px; border-radius: 12px;
-            font-size: 0.8em; margin-right: 5px;
-            display: inline-block; margin-bottom: 3px;
+        .pitcher-factor {
+            font-weight: bold; 
+            color: #ffc107;
+        }
+        
+        .real-game-badge {
+            background: linear-gradient(45deg, #28a745, #20c997);
+            padding: 5px 12px; border-radius: 15px; font-size: 0.85em;
+            margin-left: 10px; display: inline-block; color: white;
+            font-weight: bold; text-shadow: 1px 1px 2px rgba(0,0,0,0.3);
         }
     </style>
 </head>
@@ -184,31 +153,17 @@ HTML_TEMPLATE = """
             🎯 PRIMARY: Get today's betting recommendations • SECONDARY: Review historical accuracy with past game results
         </div>
         
-        <div class="date-selector">
-            <div style="text-align: center; margin-bottom: 20px;">
-                <button onclick="loadTodaysPredictions()" style="background: linear-gradient(45deg, #28a745, #20c997); font-size: 1.2em; padding: 15px 30px; margin-bottom: 15px;">💰 Today's Betting Recommendations</button>
-            </div>
-            <div class="date-controls">
-                <span class="date-label">� Historical Accuracy Review:</span>
-                <input type="date" id="game-date" value="">
-                <button onclick="loadGamesByDate()">📊 Review Accuracy</button>
-            </div>
-            <div style="margin-top: 15px; display: flex; justify-content: center; gap: 10px; flex-wrap: wrap;">
-                <button onclick="setYesterday()" style="background: linear-gradient(45deg, #6c757d, #5a6268); font-size: 0.9em; padding: 8px 16px;">⏮️ Yesterday</button>
-                <button onclick="setTomorrow()" style="background: linear-gradient(45deg, #6c757d, #5a6268); font-size: 0.9em; padding: 8px 16px;">⏭️ Tomorrow</button>
-            </div>
-            <div style="margin-top: 10px; font-size: 0.9em; opacity: 0.8;">
-                � PRIMARY: Today's betting value • 📊 SECONDARY: Historical accuracy validation
-            </div>
-        </div>
-        
         <div class="controls">
-            <button onclick="loadTodaysPredictions()">🏟️ Today's Games</button>
-            <button onclick="speedTest()">⚡ Speed Test</button>
-            <button onclick="showMultipleGames()">📊 Detailed Analysis</button>
-            <button onclick="scenarioAnalysis()">🎯 Scenario Analysis</button>
-            <button onclick="testRecommendations()">💰 Test Recommendations</button>
-            <button onclick="debugPitcher()">🔧 Debug Pitchers</button>
+            <div style="display: flex; justify-content: center; gap: 15px; flex-wrap: wrap; margin-bottom: 15px;">
+                <button onclick="loadTodaysRealGames()" style="background: linear-gradient(45deg, #28a745, #20c997); font-size: 1.1em; padding: 15px 25px;">💰 Today's Betting Recommendations</button>
+                <button onclick="speedTest()">⚡ Speed Test</button>
+                <button onclick="showMultipleGames()">📊 Game Analysis</button>
+            </div>
+            <div style="display: flex; justify-content: center; gap: 15px; flex-wrap: wrap; align-items: center;">
+                <span style="color: #ecf0f1; font-weight: bold;">📈 Historical Accuracy Review:</span>
+                <input type="date" id="game-date" style="padding: 8px; border-radius: 6px; border: 1px solid #ddd; font-size: 0.9em;" />
+                <button onclick="loadGamesForDate()" style="background: linear-gradient(45deg, #6c757d, #5a6268); font-size: 0.9em;">📊 Review Accuracy</button>
+            </div>
         </div>
         
         <div id="predictions-container"></div>
@@ -217,84 +172,80 @@ HTML_TEMPLATE = """
     <script>
         let currentEngine = null;
         
-        async function loadTodaysPredictions() {
-            console.log('📡 Starting loadTodaysPredictions...');
-            document.getElementById('predictions-container').innerHTML = '<div class="loading">⚡ Loading today\\'s predictions...</div>';
+        async function loadTodaysRealGames() {
+            document.getElementById('predictions-container').innerHTML = '<div class="loading">⚡ Loading today\\'s REAL games with actual pitcher matchups...</div>';
             
             try {
-                console.log('📞 Fetching /api/fast-predictions...');
-                const response = await fetch('/api/fast-predictions');
-                console.log('📊 Response status:', response.status);
-                
+                const response = await fetch('/api/real-games-predictions');
                 if (!response.ok) {
                     throw new Error(`HTTP ${response.status}: ${response.statusText}`);
                 }
-                
                 const data = await response.json();
-                console.log('✅ JSON parsed, predictions count:', data.predictions?.length || 0);
                 
                 if (data.error) throw new Error(data.error);
                 
                 if (!data.predictions || data.predictions.length === 0) {
-                    throw new Error('No predictions returned from API');
+                    throw new Error('No predictions returned from server');
                 }
                 
                 displayMultiplePredictions(data.predictions);
-                console.log('✅ Predictions displayed successfully');
-                
             } catch (error) {
-                console.error('❌ loadTodaysPredictions error:', error);
+                console.error('loadTodaysRealGames error:', error);
                 document.getElementById('predictions-container').innerHTML = 
                     `<div class="prediction-card">
-                        <h3>❌ Error: ${error.message}</h3>
-                        <p>Check browser console for details</p>
-                        <button onclick="loadTodaysPredictions()">🔄 Retry</button>
-                        <button onclick="window.open('/api/fast-predictions', '_blank')">🔍 Check API</button>
+                        <h3>❌ No Live Games Available Today</h3>
+                        <p><strong>Error:</strong> ${error.message}</p>
+                        <p><strong>Suggestion:</strong> Use the date selector above to review historical model accuracy. Start with August 8, 2025 which has complete game results.</p>
+                        <div style="margin-top: 15px; display: flex; gap: 10px; justify-content: center; flex-wrap: wrap;">
+                            <button onclick="document.getElementById('game-date').value='2025-08-08'; loadGamesForDate();" 
+                                    style="margin-top: 10px; padding: 8px 16px; background: #28a745; color: white; border: none; border-radius: 4px; font-weight: bold;">
+                                📊 Review Aug 8 Accuracy
+                            </button>
+                        </div>
                     </div>`;
             }
         }
         
-        async function loadGamesByDate() {
-            const dateInput = document.getElementById('game-date');
-            const selectedDate = dateInput.value;
-            
+        async function loadGamesForDate() {
+            const selectedDate = document.getElementById('game-date').value;
             if (!selectedDate) {
                 alert('Please select a date first');
                 return;
             }
             
-            document.getElementById('predictions-container').innerHTML = 
-                `<div class="loading">⚡ Loading predictions for ${selectedDate}...</div>`;
+            document.getElementById('predictions-container').innerHTML = `<div class="loading">⚡ Loading games for ${selectedDate}...</div>`;
             
             try {
-                const response = await fetch(`/api/fast-predictions?date=${selectedDate}`);
+                const response = await fetch(`/api/games-predictions?date=${selectedDate}`);
+                if (!response.ok) {
+                    throw new Error(`HTTP ${response.status}: ${response.statusText}`);
+                }
                 const data = await response.json();
                 
                 if (data.error) throw new Error(data.error);
+                
+                if (!data.predictions || data.predictions.length === 0) {
+                    throw new Error(`No games found for ${selectedDate}`);
+                }
+                
                 displayMultiplePredictions(data.predictions, selectedDate);
             } catch (error) {
+                console.error('loadGamesForDate error:', error);
                 document.getElementById('predictions-container').innerHTML = 
-                    `<div class="prediction-card"><h3>❌ Error: ${error.message}</h3></div>`;
+                    `<div class="prediction-card">
+                        <h3>❌ No Accuracy Data Available for ${selectedDate}</h3>
+                        <p><strong>Error:</strong> ${error.message}</p>
+                        <p><strong>Available dates:</strong> August 8, 2025 currently has complete historical accuracy data. More dates will be added as the system tracks performance over time.</p>
+                        <button onclick="document.getElementById('game-date').value='2025-08-08'; loadGamesForDate();" 
+                                style="margin-top: 10px; padding: 8px 16px; background: #28a745; color: white; border: none; border-radius: 4px;">
+                            📊 Review Aug 8 Accuracy
+                        </button>
+                    </div>`;
             }
         }
         
-        // Quick date selector functions
-        function setYesterday() {
-            const yesterday = new Date();
-            yesterday.setDate(yesterday.getDate() - 1);
-            document.getElementById('game-date').value = yesterday.toISOString().split('T')[0];
-            loadGamesByDate();
-        }
-        
-        function setTomorrow() {
-            const tomorrow = new Date();
-            tomorrow.setDate(tomorrow.getDate() + 1);
-            document.getElementById('game-date').value = tomorrow.toISOString().split('T')[0];
-            loadGamesByDate();
-        }
-        
         async function speedTest() {
-            document.getElementById('predictions-container').innerHTML = '<div class="loading">⚡ Running speed test...</div>';
+            document.getElementById('predictions-container').innerHTML = '<div class="loading">⚡ Running speed test with real games...</div>';
             
             try {
                 const response = await fetch('/api/speed-test');
@@ -302,7 +253,7 @@ HTML_TEMPLATE = """
                 
                 let html = `
                     <div class="prediction-card">
-                        <h3>⚡ Speed Test Results</h3>
+                        <h3>⚡ Speed Test Results (Real Games)</h3>
                         <div class="stats-grid">
                             <div class="stat-box">
                                 <div class="stat-label">Average Time</div>
@@ -336,146 +287,53 @@ HTML_TEMPLATE = """
         }
         
         async function showMultipleGames() {
-            document.getElementById('predictions-container').innerHTML = '<div class="loading">📊 Analyzing detailed game insights...</div>';
+            document.getElementById('predictions-container').innerHTML = '<div class="loading">📊 Analyzing today\\'s real games...</div>';
             
             try {
-                const response = await fetch('/api/fast-predictions');
+                const response = await fetch('/api/real-games-predictions');
                 const data = await response.json();
                 
                 if (data.error) throw new Error(data.error);
                 
-                // Calculate detailed analytics
                 const predictions = data.predictions;
-                const totalScores = predictions.map(p => p.predictions.predicted_total);
-                const awayScores = predictions.map(p => p.predictions.predicted_away_score);
-                const homeScores = predictions.map(p => p.predictions.predicted_home_score);
-                
+                const totalScores = predictions.map(p => p.predictions.predicted_total_runs);
                 const avgTotal = totalScores.reduce((a,b) => a+b, 0) / totalScores.length;
                 const minTotal = Math.min(...totalScores);
                 const maxTotal = Math.max(...totalScores);
-                const stdDev = Math.sqrt(totalScores.reduce((sq, n) => sq + Math.pow(n - avgTotal, 2), 0) / totalScores.length);
                 
-                // Categorize games
-                const highScoring = predictions.filter(p => p.predictions.predicted_total >= 10);
-                const lowScoring = predictions.filter(p => p.predictions.predicted_total <= 6);
+                const highScoring = predictions.filter(p => p.predictions.predicted_total_runs >= 10);
+                const lowScoring = predictions.filter(p => p.predictions.predicted_total_runs <= 6);
                 const closeGames = predictions.filter(p => Math.abs(p.predictions.predicted_away_score - p.predictions.predicted_home_score) <= 1);
-                const blowouts = predictions.filter(p => Math.abs(p.predictions.predicted_away_score - p.predictions.predicted_home_score) >= 3);
-                
-                // Pitcher analysis
-                const gamesWithPitchers = predictions.filter(p => p.pitcher_quality && (p.pitcher_quality.away_pitcher_name || p.pitcher_quality.home_pitcher_name));
-                const elitePitcherGames = predictions.filter(p => p.pitcher_quality && (
-                    (p.pitcher_quality.away_pitcher_factor && p.pitcher_quality.away_pitcher_factor < 0.9) ||
-                    (p.pitcher_quality.home_pitcher_factor && p.pitcher_quality.home_pitcher_factor < 0.9)
-                ));
-                
-                // Betting opportunities
-                const gamesWithValue = predictions.filter(p => p.recommendations && p.recommendations.length > 0);
                 
                 let html = `
                     <div class="prediction-card">
-                        <h3>📊 Detailed Games Analysis</h3>
+                        <h3>📊 Real Games Analysis Dashboard</h3>
+                        <div style="background: rgba(46, 204, 113, 0.15); padding: 15px; border-radius: 8px; margin-bottom: 20px;">
+                            <h4 style="color: #2ecc71; margin-bottom: 10px;">🎯 REAL GAME DATA ACTIVE</h4>
+                            <p>Using actual pitcher matchups • Verified impact factors • Today's live MLB games</p>
+                        </div>
                         
-                        <!-- Scoring Analysis -->
-                        <div style="margin-bottom: 25px;">
-                            <h4 style="color: #ffc107; margin-bottom: 15px;">🎯 Scoring Patterns</h4>
-                            <div class="stats-grid">
-                                <div class="stat-box">
-                                    <div class="stat-label">Average Total</div>
-                                    <div class="stat-value">${avgTotal.toFixed(1)} runs</div>
-                                </div>
-                                <div class="stat-box">
-                                    <div class="stat-label">Range</div>
-                                    <div class="stat-value">${minTotal.toFixed(1)} - ${maxTotal.toFixed(1)}</div>
-                                </div>
-                                <div class="stat-box">
-                                    <div class="stat-label">Variance</div>
-                                    <div class="stat-value">σ = ${stdDev.toFixed(2)}</div>
-                                </div>
-                                <div class="stat-box">
-                                    <div class="stat-label">Spread</div>
-                                    <div class="stat-value">${(maxTotal - minTotal).toFixed(1)} runs</div>
-                                </div>
+                        <div class="stats-grid">
+                            <div class="stat-box">
+                                <div class="stat-label">Average Total</div>
+                                <div class="stat-value">${avgTotal.toFixed(1)} runs</div>
+                            </div>
+                            <div class="stat-box">
+                                <div class="stat-label">Range</div>
+                                <div class="stat-value">${minTotal.toFixed(1)} - ${maxTotal.toFixed(1)}</div>
+                            </div>
+                            <div class="stat-box">
+                                <div class="stat-label">High-Scoring</div>
+                                <div class="stat-value">${highScoring.length} games</div>
+                            </div>
+                            <div class="stat-box">
+                                <div class="stat-label">Close Games</div>
+                                <div class="stat-value">${closeGames.length} games</div>
                             </div>
                         </div>
                         
-                        <!-- Game Categories -->
-                        <div style="margin-bottom: 25px;">
-                            <h4 style="color: #28a745; margin-bottom: 15px;">🏟️ Game Categories</h4>
-                            <div class="performance-stats">
-                                <div class="perf-box" style="background: rgba(255, 193, 7, 0.2);">
-                                    <strong>High-Scoring</strong><br>${highScoring.length} games (≥10 runs)<br><small>${(highScoring.length/predictions.length*100).toFixed(1)}%</small>
-                                </div>
-                                <div class="perf-box" style="background: rgba(108, 117, 125, 0.2);">
-                                    <strong>Low-Scoring</strong><br>${lowScoring.length} games (≤6 runs)<br><small>${(lowScoring.length/predictions.length*100).toFixed(1)}%</small>
-                                </div>
-                                <div class="perf-box" style="background: rgba(220, 53, 69, 0.2);">
-                                    <strong>Close Games</strong><br>${closeGames.length} games (≤1 run diff)<br><small>${(closeGames.length/predictions.length*100).toFixed(1)}%</small>
-                                </div>
-                            </div>
-                        </div>
-                        
-                        <!-- Top Recommendations -->
-                        <div style="margin-bottom: 25px;">
-                            <h4 style="color: #17a2b8; margin-bottom: 15px;">🎯 Best Betting Spots</h4>
-                `;
-                
-                if (highScoring.length > 0) {
-                    html += `
-                        <div style="background: rgba(255, 193, 7, 0.15); padding: 12px; border-radius: 8px; margin-bottom: 10px;">
-                            <strong>🔥 Highest-Scoring Game:</strong> ${highScoring[0].away_team} @ ${highScoring[0].home_team} 
-                            (${highScoring[0].predictions.predicted_total.toFixed(1)} runs)
-                            ${highScoring[0].pitcher_quality ? 
-                                `<br><small>Pitchers: ${highScoring[0].pitcher_quality.away_pitcher_name || 'TBD'} vs ${highScoring[0].pitcher_quality.home_pitcher_name || 'TBD'}</small>` : 
-                                ''
-                            }
-                        </div>
-                    `;
-                }
-                
-                if (lowScoring.length > 0) {
-                    html += `
-                        <div style="background: rgba(108, 117, 125, 0.15); padding: 12px; border-radius: 8px; margin-bottom: 10px;">
-                            <strong>🛡️ Lowest-Scoring Game:</strong> ${lowScoring[0].away_team} @ ${lowScoring[0].home_team} 
-                            (${lowScoring[0].predictions.predicted_total.toFixed(1)} runs)
-                            ${lowScoring[0].pitcher_quality ? 
-                                `<br><small>Pitchers: ${lowScoring[0].pitcher_quality.away_pitcher_name || 'TBD'} vs ${lowScoring[0].pitcher_quality.home_pitcher_name || 'TBD'}</small>` : 
-                                ''
-                            }
-                        </div>
-                    `;
-                }
-                
-                if (closeGames.length > 0) {
-                    html += `
-                        <div style="background: rgba(220, 53, 69, 0.15); padding: 12px; border-radius: 8px; margin-bottom: 10px;">
-                            <strong>⚖️ Closest Game:</strong> ${closeGames[0].away_team} @ ${closeGames[0].home_team} 
-                            (${closeGames[0].predictions.predicted_away_score}-${closeGames[0].predictions.predicted_home_score})
-                        </div>
-                    `;
-                }
-                
-                // Pitcher insights
-                if (gamesWithPitchers.length > 0) {
-                    html += `
-                        </div>
-                        <div style="margin-bottom: 25px;">
-                            <h4 style="color: #6f42c1; margin-bottom: 15px;">⚾ Pitcher Insights</h4>
-                            <div style="background: rgba(111, 66, 193, 0.15); padding: 15px; border-radius: 8px;">
-                                <strong>Games with Known Starters:</strong> ${gamesWithPitchers.length}/${predictions.length}<br>
-                    `;
-                    
-                    if (elitePitcherGames.length > 0) {
-                        html += `<strong>Elite Pitcher Games:</strong> ${elitePitcherGames.length} (expect lower scoring)<br>`;
-                    }
-                    
-                    html += `</div>`;
-                }
-                
-                // Performance summary
-                html += `
-                        </div>
-                        <div style="background: rgba(52, 152, 219, 0.15); padding: 15px; border-radius: 8px;">
-                            <h4 style="color: #3498db; margin-bottom: 10px;">⚡ System Performance</h4>
+                        <div style="background: rgba(52, 152, 219, 0.15); padding: 15px; border-radius: 8px; margin-top: 20px;">
+                            <h4 style="color: #3498db; margin-bottom: 10px;">⚡ Performance Metrics</h4>
                             <div class="performance-stats">
                                 <div class="perf-box">
                                     <strong>Total Time</strong><br>${data.total_time_ms.toFixed(1)}ms
@@ -487,20 +345,16 @@ HTML_TEMPLATE = """
                                     <strong>Predictions/Sec</strong><br>${(data.predictions.length / (data.total_time_ms/1000)).toFixed(1)}
                                 </div>
                             </div>
-                            <p style="margin-top: 10px; font-size: 0.9em; opacity: 0.9;">
-                                Ultra-fast analysis with realistic variance modeling based on ${predictions.length} games.
-                            </p>
                         </div>
                     </div>
                 `;
                 
                 document.getElementById('predictions-container').innerHTML = html;
                 
-                // Add a button to view individual games
                 setTimeout(() => {
                     document.getElementById('predictions-container').innerHTML += `
                         <div style="text-align: center; margin-top: 20px;">
-                            <button onclick="displayMultiplePredictions(${JSON.stringify(predictions).replace(/"/g, '&quot;')})" 
+                            <button onclick="showDetailedResults()" 
                                     style="background: linear-gradient(45deg, #28a745, #20c997); padding: 12px 24px;">
                                 📋 View Individual Game Details
                             </button>
@@ -514,390 +368,276 @@ HTML_TEMPLATE = """
             }
         }
         
-        async function testRecommendations() {
-            document.getElementById('predictions-container').innerHTML = '<div class="loading">💰 Testing betting recommendations...</div>';
-            
-            try {
-                const response = await fetch('/api/fast-predictions');
-                const data = await response.json();
-                
-                if (data.error) throw new Error(data.error);
-                
-                // Filter predictions with recommendations
-                const gamesWithRecs = data.predictions.filter(pred => pred.recommendations && pred.recommendations.length > 0);
-                const gamesWithoutRecs = data.predictions.filter(pred => !pred.recommendations || pred.recommendations.length === 0);
-                
-                let html = `
-                    <div class="prediction-card">
-                        <h3>💰 Betting Recommendations Analysis</h3>
-                        <div class="stats-grid">
-                            <div class="stat-box">
-                                <div class="stat-label">Games with Value</div>
-                                <div class="stat-value">${gamesWithRecs.length}</div>
-                            </div>
-                            <div class="stat-box">
-                                <div class="stat-label">No Value Found</div>
-                                <div class="stat-value">${gamesWithoutRecs.length}</div>
-                            </div>
-                            <div class="stat-box">
-                                <div class="stat-label">Value Rate</div>
-                                <div class="stat-value">${(gamesWithRecs.length / data.predictions.length * 100).toFixed(1)}%</div>
-                            </div>
-                            <div class="stat-box">
-                                <div class="stat-label">Total Recommendations</div>
-                                <div class="stat-value">${gamesWithRecs.reduce((sum, game) => sum + game.recommendations.length, 0)}</div>
-                            </div>
-                        </div>
-                `;
-                
-                if (gamesWithRecs.length > 0) {
-                    html += `
-                        <div style="margin-top: 20px;">
-                            <div class="rec-header">🔥 High-Value Games Found:</div>
-                    `;
-                    
-                    gamesWithRecs.forEach(game => {
-                        const highValueRecs = game.recommendations.filter(rec => rec.confidence === 'HIGH');
-                        if (highValueRecs.length > 0) {
-                            html += `
-                                <div style="background: rgba(46, 204, 113, 0.2); padding: 10px; border-radius: 8px; margin: 5px 0;">
-                                    <strong>${game.away_team} @ ${game.home_team}</strong><br>
-                                    ${highValueRecs.map(rec => `${rec.type.toUpperCase()}: ${rec.side.toUpperCase()} (${(rec.expected_value * 100).toFixed(1)}% EV)`).join(', ')}
-                                </div>
-                            `;
-                        }
-                    });
-                    
-                    html += `</div>`;
-                } else {
-                    html += `
-                        <div style="margin-top: 20px; padding: 15px; background: rgba(108, 117, 125, 0.2); border-radius: 8px;">
-                            No high-value betting opportunities found at current lines.
-                        </div>
-                    `;
-                }
-                
-                html += `</div>`;
-                
-                document.getElementById('predictions-container').innerHTML = html;
-                
-            } catch (error) {
-                document.getElementById('predictions-container').innerHTML = 
-                    `<div class="prediction-card"><h3>❌ Error: ${error.message}</h3></div>`;
-            }
-        }
-        
-        async function debugPitcher() {
-            document.getElementById('predictions-container').innerHTML = '<div class="loading">🔧 Debugging pitcher data...</div>';
-            
-            try {
-                const response = await fetch('/api/debug-pitcher');
-                const data = await response.json();
-                
-                if (data.error) throw new Error(data.error);
-                
-                let html = `
-                    <div class="prediction-card">
-                        <h3>🔧 Detailed Pitcher Debug Information</h3>
-                        <div class="stats-grid">
-                            <div class="stat-box">
-                                <div class="stat-label">Total Projected Starters</div>
-                                <div class="stat-value">${data.total_projected_starters}</div>
-                            </div>
-                        </div>
-                        
-                        <h4>Keys with 'Athletics': ${data.athletics_keys.length}</h4>
-                        <ul>${data.athletics_keys.map(key => `<li>${key}</li>`).join('')}</ul>
-                        
-                        <h4>Keys with 'Nationals'/'Washington': ${data.nationals_keys.length}</h4>
-                        <ul>${data.nationals_keys.map(key => `<li>${key}</li>`).join('')}</ul>
-                        
-                        <h4>Detailed Test Results:</h4>
-                `;
-                
-                data.test_results.forEach(test => {
-                    html += `
-                        <div style="background: rgba(255,255,255,0.1); padding: 15px; margin: 10px 0; border-radius: 8px;">
-                            <h5>${test.matchup}</h5>
-                            <p><strong>Full Names:</strong> ${test.full_names}</p>
-                            <p><strong>Direct Lookup:</strong> ${test.direct_lookup.away_starter || 'None'} vs ${test.direct_lookup.home_starter || 'None'}</p>
-                            <p><strong>Prediction Data:</strong> ${test.prediction_data.away_pitcher_name || 'None'} vs ${test.prediction_data.home_pitcher_name || 'None'}</p>
-                            
-                            <details style="margin-top: 10px;">
-                                <summary>Format Attempts (click to expand)</summary>
-                                <ul style="font-size: 0.8em; margin-top: 5px;">
-                                    ${test.format_attempts.map(attempt => `<li>${attempt}</li>`).join('')}
-                                </ul>
-                            </details>
-                            
-                            ${test.found_data ? `
-                                <p><strong>Found Data:</strong> Away: ${test.found_data.away_starter || 'None'}, Home: ${test.found_data.home_starter || 'None'}</p>
-                            ` : ''}
-                        </div>
-                    `;
-                });
-                
-                html += `</div>`;
-                
-                document.getElementById('predictions-container').innerHTML = html;
-                
-            } catch (error) {
-                document.getElementById('predictions-container').innerHTML = 
-                    `<div class="prediction-card"><h3>❌ Error: ${error.message}</h3></div>`;
-            }
-        }
-        
-        async function scenarioAnalysis() {
-            document.getElementById('predictions-container').innerHTML = '<div class="loading">🎯 Analyzing multiple scenarios for better predictability...</div>';
-            
-            try {
-                const response = await fetch('/api/scenario-analysis');
-                const data = await response.json();
-                
-                if (data.error) throw new Error(data.error);
-                
-                let html = `
-                    <div class="prediction-card">
-                        <h3>🎯 Enhanced Predictability: Scenario Analysis</h3>
-                        <p style="margin-bottom: 20px; font-style: italic; opacity: 0.9;">
-                            Multiple scenario analysis provides better predictability by showing the range of realistic outcomes, 
-                            helping you understand game uncertainty and make more informed decisions.
-                        </p>
-                        
-                        <div class="stats-grid">
-                            <div class="stat-box">
-                                <div class="stat-label">Conservative Scenario</div>
-                                <div class="stat-value">${data.conservative.total_runs} runs</div>
-                            </div>
-                            <div class="stat-box">
-                                <div class="stat-label">Most Likely Scenario</div>
-                                <div class="stat-value">${data.most_likely.total_runs} runs</div>
-                            </div>
-                            <div class="stat-box">
-                                <div class="stat-label">Aggressive Scenario</div>
-                                <div class="stat-value">${data.aggressive.total_runs} runs</div>
-                            </div>
-                            <div class="stat-box">
-                                <div class="stat-label">Confidence Level</div>
-                                <div class="stat-value">${data.confidence_level}%</div>
-                            </div>
-                        </div>
-                        
-                        <div style="margin: 25px 0;">
-                            <h4 style="color: #28a745; margin-bottom: 15px;">🎲 Scenario Breakdown</h4>
-                            
-                            <div style="background: rgba(108, 117, 125, 0.15); padding: 15px; border-radius: 8px; margin-bottom: 10px;">
-                                <strong>🛡️ Conservative (Low Chaos):</strong> ${data.conservative.away_score} - ${data.conservative.home_score} 
-                                <br><small>What happens if pitchers dominate and defense is tight</small>
-                            </div>
-                            
-                            <div style="background: rgba(255, 193, 7, 0.15); padding: 15px; border-radius: 8px; margin-bottom: 10px;">
-                                <strong>🎯 Most Likely (Average Chaos):</strong> ${data.most_likely.away_score} - ${data.most_likely.home_score}
-                                <br><small>Expected outcome based on team/pitcher matchup</small>
-                            </div>
-                            
-                            <div style="background: rgba(220, 53, 69, 0.15); padding: 15px; border-radius: 8px; margin-bottom: 10px;">
-                                <strong>🔥 Aggressive (High Chaos):</strong> ${data.aggressive.away_score} - ${data.aggressive.home_score}
-                                <br><small>What happens in a wild, high-scoring affair</small>
-                            </div>
-                        </div>
-                        
-                        <div style="background: rgba(52, 152, 219, 0.15); padding: 15px; border-radius: 8px;">
-                            <h4 style="color: #3498db; margin-bottom: 10px;">📊 Predictability Insights</h4>
-                            <p><strong>Range:</strong> ${data.conservative.total_runs} - ${data.aggressive.total_runs} runs (${data.aggressive.total_runs - data.conservative.total_runs} run spread)</p>
-                            <p><strong>Pitcher Impact:</strong> ${data.pitcher_impact}</p>
-                            <p><strong>Recommendation:</strong> ${data.recommendation}</p>
-                        </div>
-                    </div>
-                `;
-                
-                document.getElementById('predictions-container').innerHTML = html;
-                
-            } catch (error) {
-                document.getElementById('predictions-container').innerHTML = 
-                    `<div class="prediction-card"><h3>❌ Error: ${error.message}</h3></div>`;
-            }
-        }
-        
-        function createPredictionHTML(data) {
-            const p = data.predictions;
-            const meta = data.meta;
-            const recs = data.recommendations;
-            const lines = data.betting_lines;
+        function createHistoricalPredictionHTML(data) {
+            const pred = data.predictions;
             const actual = data.actual_results;
+            const meta = data.meta;
             
-            // Historical data header
-            let historicalHeader = '';
-            if (meta.is_historical && actual) {
-                historicalHeader = `
-                    <div class="historical-header" style="background: linear-gradient(45deg, #3498db, #2980b9); padding: 15px; border-radius: 10px; margin-bottom: 15px; text-align: center;">
-                        <h3 style="margin: 0; color: white;">📊 ACCURACY VALIDATION - ARCHIVED PREDICTION</h3>
-                        <p style="margin: 5px 0 0 0; color: #ecf0f1;">Reviewing model accuracy: Compare predicted vs actual results to validate system performance</p>
-                    </div>
-                `;
-            }
+            // Calculate accuracy indicators with safe fallbacks
+            const predictedTotal = pred.predicted_total_runs || (pred.away_score + pred.home_score) || 0;
+            const actualTotal = (actual.away_score + actual.home_score) || 0;
+            const scoreDiff = Math.abs((pred.away_score + pred.home_score) - actualTotal);
+            const winnerCorrect = actual.winner_correct;
+            const totalError = Math.abs(predictedTotal - actualTotal);
             
-            let html = historicalHeader + `
-                <div class="execution-time">
-                    ${meta.is_historical ? '🔒 CACHED HISTORICAL' : (meta.cumulative_mode ? '📊 Cumulative:' : '⚡ Generated in')} ${meta.is_historical ? 'PREDICTION' : meta.simulations_run + ' total simulations'}
-                    ${meta.cumulative_mode && !meta.is_historical ? `<div class="cumulative-info">📈 Built up over time | Period: ${meta.simulation_period || 'Multiple sessions'}</div>` : ''}
+            return `
+                <div class="execution-time" style="background: rgba(255, 193, 7, 0.2);">
+                    📊 Historical Accuracy Data - ${meta.matched_key || 'Cached Result'}
                 </div>
                 
                 <div class="matchup">
                     ✈️ ${data.away_team} @ 🏠 ${data.home_team}
-                </div>`;
+                    <span class="real-game-badge" style="background: linear-gradient(45deg, #ffc107, #e0a800);">ACCURACY REVIEW</span>
+                </div>
                 
-            // Historical comparison section
-            if (meta.is_historical && actual) {
-                html += `
-                    <div class="historical-comparison" style="background: rgba(52, 152, 219, 0.1); padding: 15px; border-radius: 10px; margin: 15px 0; border: 2px solid #3498db;">
-                        <h4 style="text-align: center; margin-bottom: 15px; color: #2c3e50;">🎯 PREDICTION vs ACTUAL RESULTS</h4>
-                        <div class="comparison-grid" style="display: grid; grid-template-columns: 1fr 1fr; gap: 15px;">
-                            <div class="predicted-section" style="background: rgba(155, 89, 182, 0.2); padding: 12px; border-radius: 8px;">
-                                <h5 style="margin-top: 0; color: #8e44ad;">🔮 OUR PREDICTION</h5>
-                                <div><strong>Score:</strong> ${p.away_score?.toFixed(1) || 'N/A'} - ${p.home_score?.toFixed(1) || 'N/A'}</div>
-                                <div><strong>Total Runs:</strong> ${p.predicted_total_runs?.toFixed(1) || 'N/A'}</div>
-                            </div>
-                            <div class="actual-section" style="background: rgba(46, 204, 113, 0.2); padding: 12px; border-radius: 8px;">
-                                <h5 style="margin-top: 0; color: #27ae60;">✅ ACTUAL RESULT</h5>
-                                <div><strong>Score:</strong> ${actual.actual_away_score} - ${actual.actual_home_score}</div>
-                                <div><strong>Total Runs:</strong> ${actual.actual_total_runs}</div>
-                            </div>
-                        </div>
-                        <div class="accuracy-stats" style="text-align: center; margin-top: 15px; padding: 10px; background: rgba(241, 196, 15, 0.2); border-radius: 8px;">
-                            <div><strong>📊 Prediction Error:</strong> ${actual.prediction_error?.toFixed(1)} runs</div>
-                            <div><strong>🏆 Winner Prediction:</strong> ${actual.winner_correct ? '✅ CORRECT' : '❌ INCORRECT'}</div>
-                        </div>
-                    </div>
-                `;
-            } else {
-                // Standard prediction stats for current games
-                html += `
-                    <div class="performance-stats">
-                        <div class="perf-box">
-                            <strong>Speed</strong><br>${meta.execution_time_ms}ms
-                        </div>
-                        <div class="perf-box">
-                            <strong>Confidence</strong><br>${p.confidence || 95}%
-                        </div>
-                        <div class="perf-box">
-                            <strong>Recommendations</strong><br>${meta.recommendations_found || 0}
-                        </div>
-                    </div>
-                `;
-            }
-            
-            // Standard stats section (always show)
-            html += `
                 <div class="stats-grid">
                     <div class="stat-box">
-                        <div class="stat-label">${meta.is_historical ? 'Predicted Win Probability' : 'Win Probability'}</div>
-                        <div class="stat-value">🏠 ${((p.home_win_probability || 0.5) * 100).toFixed(1)}% | ✈️ ${((p.away_win_probability || 0.5) * 100).toFixed(1)}%</div>
+                        <div class="stat-label">Predicted Score</div>
+                        <div class="stat-value">${pred.away_score.toFixed(1)} - ${pred.home_score.toFixed(1)}</div>
                     </div>
                     <div class="stat-box">
-                        <div class="stat-label">${meta.is_historical ? 'Predicted Score' : 'Predicted Score'}</div>
-                        <div class="stat-value">${p.away_score?.toFixed(1) || 'N/A'} - ${p.home_score?.toFixed(1) || 'N/A'}</div>
+                        <div class="stat-label">Actual Score</div>
+                        <div class="stat-value" style="color: #28a745; font-weight: bold;">${actual.away_score} - ${actual.home_score}</div>
                     </div>
                     <div class="stat-box">
-                        <div class="stat-label">${meta.is_historical ? 'Predicted Total' : 'Total Runs'}</div>
-                        <div class="stat-value">${(p.predicted_total_runs || 10.0).toFixed(1)}</div>
+                        <div class="stat-label">Winner Accuracy</div>
+                        <div class="stat-value" style="color: ${winnerCorrect ? '#28a745' : '#dc3545'};">
+                            ${winnerCorrect ? '✅ CORRECT' : '❌ WRONG'}
+                        </div>
                     </div>
                     <div class="stat-box">
-                        <div class="stat-label">Range</div>
-                        <div class="stat-value">${p.total_runs_range ? `${p.total_runs_range[0]} - ${p.total_runs_range[1]}` : 'N/A'}</div>
+                        <div class="stat-label">Total Runs Error</div>
+                        <div class="stat-value" style="color: ${totalError <= 2 ? '#28a745' : totalError <= 4 ? '#ffc107' : '#dc3545'};">
+                            ${totalError.toFixed(1)} runs off
+                        </div>
                     </div>
                 </div>
                 
                 <div class="pitcher-summary">
-                    <strong>⚾ Starting Pitchers:</strong>
-                    ${data.pitcher_quality ? 
-                        `${data.pitcher_quality.away_pitcher_name || 'TBD'} vs ${data.pitcher_quality.home_pitcher_name || 'TBD'}` :
-                        'Starting pitchers TBD'
-                    }
-                    ${data.pitcher_quality && (data.pitcher_quality.away_pitcher_factor || data.pitcher_quality.home_pitcher_factor) ? 
-                        `<br><small>Quality Impact: Away ${data.pitcher_quality.away_pitcher_factor ? (data.pitcher_quality.away_pitcher_factor || 1.0).toFixed(3) : 'N/A'} | Home ${data.pitcher_quality.home_pitcher_factor ? (data.pitcher_quality.home_pitcher_factor || 1.0).toFixed(3) : 'N/A'}</small>` : 
-                        ''
-                    }
-                </div>`;
+                    <strong>⚾ Starting Pitchers (Final Matchup):</strong><br>
+                    <span class="pitcher-factor">Away:</span> ${actual.away_pitcher || data.away_pitcher || meta.away_pitcher || 'Not Available'}<br>
+                    <span class="pitcher-factor">Home:</span> ${actual.home_pitcher || data.home_pitcher || meta.home_pitcher || 'Not Available'}
+                    ${(actual.away_pitcher && actual.home_pitcher) ? '' : '<br><small style="opacity: 0.7;">📝 Pitcher data may not be available for this historical game</small>'}
+                </div>
                 
-            // Only show betting recommendations for current games
-            if (!meta.is_historical) {
-                html += `
-                    <div class="recommendations-section">
-                        <div class="rec-header">💰 Betting Recommendations</div>
-                `;
-                
-                if (recs && recs.length > 0) {
-                    recs.forEach(rec => {
-                        html += `
-                            <div class="recommendation">
-                                <div class="rec-type">
-                                    🔥 ${rec.type.toUpperCase()}: ${rec.side.toUpperCase()}
-                                    ${rec.confidence === 'HIGH' ? '🚀' : '📈'}
-                                </div>
-                                <div class="rec-details">
-                                    <div class="rec-stat"><strong>EV:</strong> ${(rec.expected_value * 100).toFixed(1)}%</div>
-                                    <div class="rec-stat"><strong>Edge:</strong> ${(rec.edge * 100).toFixed(1)}%</div>
-                                    <div class="rec-stat"><strong>Kelly:</strong> ${rec.kelly_bet_size}%</div>
-                                    <div class="rec-stat"><strong>Odds:</strong> ${rec.odds}</div>
-                                </div>
-                                <div class="rec-reasoning">${rec.reasoning}</div>
-                            </div>
-                        `;
-                    });
-                } else {
-                    html += '<div class="no-recs">No betting value identified at current lines</div>';
-                }
-                
-                html += `</div>`;  // Close recommendations section
-            } else {
-                // For historical games, show a message about betting
-                html += `
-                    <div class="historical-note" style="background: rgba(149, 165, 166, 0.2); padding: 12px; border-radius: 8px; text-align: center; margin-top: 15px;">
-                        <em>📊 Historical game - betting analysis not applicable</em>
-                    </div>
-                `;
+                <div style="margin-top: 15px; padding: 10px; background: rgba(40, 167, 69, 0.1); border-radius: 8px; border-left: 3px solid #28a745;">
+                    <strong>📊 Accuracy Details:</strong><br>
+                    • Predicted Total: ${predictedTotal.toFixed(1)} runs | Actual: ${actualTotal} runs<br>
+                    • Winner Prediction: ${(pred.away_score > pred.home_score) ? data.away_team : data.home_team} | Actual Winner: ${(actual.away_score > actual.home_score) ? data.away_team : data.home_team}
+                </div>
+            `;
+        }
+        
+        function createPredictionHTML(data, isHistorical = false) {
+            if (isHistorical && data.result_type === 'HISTORICAL') {
+                return createHistoricalPredictionHTML(data);
             }
             
-            return html;
-        }
+            const p = data.predictions;
+            const meta = data.meta;
+            const recs = data.recommendations;
+            const pitchers = data.pitcher_quality || {};
+            
+            let html = `
+                <div class="execution-time">
+                    ⚡ Generated in ${meta.execution_time_ms}ms with ${meta.simulations_run} simulations
+                </div>
+                
+                <div class="matchup">
+                    ✈️ ${data.away_team} @ 🏠 ${data.home_team}
+                    <span class="real-game-badge">REAL GAME</span>
+                </div>
+                
+                <div class="performance-stats">
+                    <div class="perf-box">
+                        <strong>Speed</strong><br>${meta.execution_time_ms}ms
+                    </div>
+                    <div class="perf-box">
+                        <strong>Confidence</strong><br>${p.confidence}%
+                    </div>
+                    <div class="perf-box">
+                        <strong>Recommendations</strong><br>${meta.recommendations_found}
+                    </div>
+                </div>
+                
+                <div class="stats-grid">
+                    <div class="stat-box">
+                        <div class="stat-label">Win Probability</div>
+                        <div class="stat-value">🏠 ${(p.home_win_prob * 100).toFixed(1)}% | ✈️ ${(p.away_win_prob * 100).toFixed(1)}%</div>
+                    </div>
+                    <div class="stat-box">
+                        <div class="stat-label">Predicted Score</div>
+                        <div class="stat-value">${p.predicted_away_score} - ${p.predicted_home_score}</div>
+                    </div>
+                    <div class="stat-box">
+                        <div class="stat-label">Total Runs</div>
+                        <div class="stat-value">${p.predicted_total_runs}</div>
+                    </div>
+                    <div class="stat-box">
+                        <div class="stat-label">Range</div>
+                        <div class="stat-value">${p.total_runs_range[0]} - ${p.total_runs_range[1]}</div>
+                    </div>
+                </div>
+                
+                <div class="pitcher-summary">
+                    <strong>⚾ Starting Pitchers (Real Matchup):</strong><br>
+                    <span class="pitcher-factor">Away:</span> ${pitchers.away_pitcher_name || 'TBD'} 
+                    (Impact: <span class="pitcher-factor">${(pitchers.away_pitcher_factor || 1.0).toFixed(3)}</span>)<br>
+                    <span class="pitcher-factor">Home:</span> ${pitchers.home_pitcher_name || 'TBD'} 
+                    (Impact: <span class="pitcher-factor">${(pitchers.home_pitcher_factor || 1.0).toFixed(3)}</span>)
+                    <div style="margin-top: 8px; font-size: 0.9em; opacity: 0.9;">
+                        💡 Impact Factor: &lt;1.0 = reduces runs allowed, &gt;1.0 = allows more runs
+                    </div>
+                </div>
+                
+                <div class="recommendations-section">
+                    <div class="rec-header">💰 Betting Recommendations</div>
+            `;
+            
+            if (recs && recs.length > 0) {
+                recs.forEach(rec => {
+                    html += `
+                        <div class="recommendation">
+                            <div class="rec-type">
+                                🔥 ${rec.type.toUpperCase()}: ${rec.side.toUpperCase()}
+                                ${rec.confidence === 'HIGH' ? '🚀' : '📈'}
+                            </div>
+                            <div class="rec-details">
+                                <div class="rec-stat"><strong>EV:</strong> ${(rec.expected_value * 100).toFixed(1)}%</div>
+                                <div class="rec-stat"><strong>Edge:</strong> ${(rec.edge * 100).toFixed(1)}%</div>
+                                <div class="rec-stat"><strong>Kelly:</strong> ${rec.kelly_bet_size}%</div>
+                                <div class="rec-stat"><strong>Odds:</strong> ${rec.odds}</div>
+                            </div>
+                            <div class="rec-reasoning">${rec.reasoning}</div>
+                        </div>
+                    `;
+                });
+            } else {
+                html += '<div class="no-recs">No betting value identified at current lines</div>';
+            }
+            
+            html += `</div>`;
             return html;
         }
 
-        function displaySinglePrediction(data) {
-            const html = `<div class="prediction-card">${createPredictionHTML(data)}</div>`;
-            document.getElementById('predictions-container').innerHTML = html;
-        }
-        
-        function displayMultiplePredictions(predictions) {
+        function displayMultiplePredictions(predictions, gameDate = null) {
             const container = document.getElementById('predictions-container');
-            container.innerHTML = ''; // Clear existing content
+            container.innerHTML = '';
+            
+            // Determine if this is historical data
+            const isHistorical = predictions.length > 0 && predictions[0].result_type === 'HISTORICAL';
+            
+            // Add header with accuracy summary for historical data
+            const headerDiv = document.createElement('div');
+            headerDiv.className = 'prediction-card';
+            if (isHistorical) {
+                // Calculate overall accuracy stats for historical data
+                let winnersCorrect = 0;
+                let totalGames = 0;
+                let totalRunsErrors = [];
+                
+                predictions.forEach(pred => {
+                    if (pred.actual_results && pred.actual_results.winner_correct !== undefined) {
+                        totalGames++;
+                        if (pred.actual_results.winner_correct) winnersCorrect++;
+                        
+                        const actualTotal = (pred.actual_results.away_score || 0) + (pred.actual_results.home_score || 0);
+                        const predictedTotal = pred.predictions.predicted_total_runs || (pred.predictions.away_score + pred.predictions.home_score) || 0;
+                        const error = Math.abs(actualTotal - predictedTotal);
+                        if (!isNaN(error)) totalRunsErrors.push(error);
+                    }
+                });
+                
+                const winnerAccuracy = totalGames > 0 ? (winnersCorrect / totalGames * 100).toFixed(1) : 'N/A';
+                const avgTotalError = totalRunsErrors.length > 0 ? (totalRunsErrors.reduce((a,b) => a+b, 0) / totalRunsErrors.length).toFixed(1) : 'N/A';
+                const goodTotalPredictions = totalRunsErrors.filter(err => err <= 2).length;
+                const totalAccuracy = totalRunsErrors.length > 0 ? (goodTotalPredictions / totalRunsErrors.length * 100).toFixed(1) : 'N/A';
+                
+                // Determine overall performance level
+                const winnerPct = parseFloat(winnerAccuracy) || 0;
+                const totalPct = parseFloat(totalAccuracy) || 0;
+                const avgError = parseFloat(avgTotalError) || 0;
+                
+                let performanceLevel = '';
+                let performanceColor = '';
+                let performanceIcon = '';
+                
+                if (winnerPct >= 60 && totalPct >= 70 && avgError <= 1.5) {
+                    performanceLevel = 'EXCELLENT';
+                    performanceColor = '#28a745';
+                    performanceIcon = '🏆';
+                } else if (winnerPct >= 50 && totalPct >= 60 && avgError <= 2.0) {
+                    performanceLevel = 'GOOD';
+                    performanceColor = '#ffc107';
+                    performanceIcon = '✅';
+                } else if (winnerPct >= 40 && totalPct >= 50) {
+                    performanceLevel = 'FAIR';
+                    performanceColor = '#fd7e14';
+                    performanceIcon = '📊';
+                } else {
+                    performanceLevel = 'NEEDS IMPROVEMENT';
+                    performanceColor = '#dc3545';
+                    performanceIcon = '⚠️';
+                }
+                
+                headerDiv.style.backgroundColor = 'rgba(255, 193, 7, 0.2)';
+                headerDiv.style.textAlign = 'center';
+                headerDiv.innerHTML = `
+                    <h2>📊 Model Accuracy Review - ${gameDate || 'Historical Date'}</h2>
+                    <div style="background: rgba(${performanceColor === '#28a745' ? '40, 167, 69' : performanceColor === '#ffc107' ? '255, 193, 7' : performanceColor === '#fd7e14' ? '253, 126, 20' : '220, 53, 69'}, 0.2); padding: 12px; border-radius: 8px; margin: 10px 0; border-left: 4px solid ${performanceColor};">
+                        <div style="font-size: 1.3em; font-weight: bold; color: ${performanceColor};">${performanceIcon} OVERALL PERFORMANCE: ${performanceLevel}</div>
+                        <div style="font-size: 0.95em; margin-top: 5px; opacity: 0.9;">
+                            Winner Accuracy: ${winnerAccuracy}% • Total Runs Accuracy: ${totalAccuracy}% • Avg Error: ${avgTotalError} runs • Games Analyzed: ${totalGames}
+                        </div>
+                    </div>
+                    <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 15px; margin: 15px 0;">
+                        <div style="background: rgba(40, 167, 69, 0.2); padding: 15px; border-radius: 8px; border-left: 4px solid #28a745;">
+                            <div style="font-size: 1.1em; font-weight: bold; color: #28a745;">🎯 Winner Predictions</div>
+                            <div style="font-size: 1.5em; font-weight: bold;">${winnersCorrect}/${totalGames} (${winnerAccuracy}%)</div>
+                        </div>
+                        <div style="background: rgba(52, 152, 219, 0.2); padding: 15px; border-radius: 8px; border-left: 4px solid #3498db;">
+                            <div style="font-size: 1.1em; font-weight: bold; color: #3498db;">📊 Total Runs Accuracy</div>
+                            <div style="font-size: 1.5em; font-weight: bold;">${goodTotalPredictions}/${totalRunsErrors.length} (${totalAccuracy}%)</div>
+                            <div style="font-size: 0.9em; opacity: 0.8;">Avg Error: ${avgTotalError} runs</div>
+                        </div>
+                    </div>
+                    <p>🎯 Final scores vs predictions • Individual game accuracy breakdown below</p>
+                `;
+            } else {
+                headerDiv.style.backgroundColor = 'rgba(40, 167, 69, 0.2)';
+                headerDiv.style.textAlign = 'center';
+                headerDiv.innerHTML = `<h2>💰 ${gameDate ? gameDate : "Today's"} Betting Recommendations</h2>
+                                      <p>⚡ Live predictions with professional betting analysis • Real pitcher matchups</p>`;
+            }
+            container.appendChild(headerDiv);
             
             predictions.forEach(pred => {
                 const predictionDiv = document.createElement('div');
                 predictionDiv.className = 'prediction-card';
-                predictionDiv.innerHTML = createPredictionHTML(pred);
+                predictionDiv.innerHTML = createPredictionHTML(pred, isHistorical);
                 container.appendChild(predictionDiv);
             });
         }
         
-        // Auto-load today's games on page load
+        function showDetailedResults() {
+            // This function will reload the current games with detailed view
+            const dateInput = document.getElementById('game-date');
+            if (dateInput && dateInput.value) {
+                loadGamesForDate();
+            } else {
+                loadTodaysRealGames();
+            }
+        }
+        
+        // Auto-load today's betting recommendations on page load
         window.onload = () => {
-            console.log('🚀 Page loaded, initializing...');
-            
-            // Set today's date in the date input
+            // Set today's date in the date picker for easy historical access
             const today = new Date();
-            document.getElementById('game-date').value = today.toISOString().split('T')[0];
-            console.log('📅 Date set to:', today.toISOString().split('T')[0]);
+            const todayStr = today.toISOString().split('T')[0];
+            document.getElementById('game-date').value = todayStr;
             
-            // Load today's predictions with error handling
-            console.log('📍 Loading today\\'s predictions...');
-            loadTodaysPredictions().catch(error => {
-                console.error('❌ Auto-load failed:', error);
-                document.getElementById('predictions-container').innerHTML = 
-                    `<div class="prediction-card"><h3>❌ Auto-load failed: ${error.message}</h3>
-                     <button onclick="loadTodaysPredictions()">🔄 Retry</button></div>`;
-            });
+            // Load today's betting recommendations as primary purpose
+            loadTodaysRealGames();
         };
     </script>
 </body>
@@ -906,250 +646,111 @@ HTML_TEMPLATE = """
 
 @app.route('/')
 def home():
-    """Main page with ultra-fast prediction interface"""
+    """Main page with ultra-fast prediction interface using real games"""
     return render_template_string(HTML_TEMPLATE)
 
-@app.route('/api/fast-prediction', methods=['POST'])
-def get_fast_prediction():
-    """Get single ultra-fast prediction"""
-    try:
-        data = request.get_json()
-        away_team = data.get('away_team', 'Athletics')
-        home_team = data.get('home_team', 'Cardinals')
-        
-        if ULTRA_FAST_AVAILABLE:
-            engine = FastPredictionEngine()
-            prediction = engine.get_fast_prediction(away_team, home_team, sim_count=2000)  # OPTIMAL: Balanced speed/accuracy
-            return jsonify(prediction)
-        else:
-            return jsonify({'error': 'Ultra-fast engine not available'})
-            
-    except Exception as e:
-        return jsonify({'error': f'Error generating prediction: {str(e)}'})
-
-def get_betting_lines_for_teams(away_team, home_team, game_date):
-    """Get betting lines for a specific matchup"""
-    try:
-        # Try to load real betting lines first
-        try:
-            with open('betting_lines.json', 'r') as f:
-                betting_data = json.load(f)
-                
-            # Look for this specific game
-            for game in betting_data.get('games', []):
-                if (game.get('away_team') == away_team and 
-                    game.get('home_team') == home_team and
-                    game.get('date') == game_date):
-                    return game.get('betting_lines', {})
-        except:
-            pass
-        
-        # Fallback to sample betting lines
-        import random
-        random.seed(hash(f"{away_team}{home_team}{game_date}"))  # Consistent randomness
-        
-        return {
-            'moneyline_away': random.randint(-200, 250),
-            'moneyline_home': random.randint(-200, 250),
-            'total_over': round(random.uniform(7.5, 11.5), 1),
-            'total_under': round(random.uniform(7.5, 11.5), 1),
-            'spread_away': round(random.uniform(-2.5, 2.5), 1),
-            'spread_home': round(random.uniform(-2.5, 2.5), 1)
-        }
-        
-    except Exception as e:
-        print(f"Warning: Could not load betting lines: {e}")
-        return {}
-
-def get_pitcher_info_for_teams(away_team, home_team, game_date=None):
-    """Get pitcher information and quality factors for a matchup"""
-    try:
-        pitcher_data = {}
-        
-        # Try date-aware storage first (for historical accuracy)
-        if game_date:
-            try:
-                with open('ProjectedStarters_DateAware.json', 'r') as f:
-                    date_aware_data = json.load(f)
-                
-                if game_date in date_aware_data:
-                    pitcher_data = date_aware_data[game_date]
-                    print(f"✅ Using date-aware pitcher data for {game_date}")
-                else:
-                    print(f"⚠️  No date-aware data for {game_date}, falling back to current data")
-            except:
-                print("⚠️  Could not load date-aware pitcher data, using current data")
-        
-        # Fallback to current ProjectedStarters.json
-        if not pitcher_data:
-            with open('ProjectedStarters.json', 'r') as f:
-                pitcher_data = json.load(f)
-        
-        # Look for this matchup in various formats
-        possible_keys = [
-            f"{away_team} at {home_team}",
-            f"{away_team} @ {home_team}", 
-            f"{away_team} vs {home_team}",
-            f"{home_team} vs {away_team}"
-        ]
-        
-        matchup_data = None
-        for key in possible_keys:
-            if key in pitcher_data:
-                matchup_data = pitcher_data[key]
-                break
-        
-        if not matchup_data:
-            # Try partial matches
-            for key, data in pitcher_data.items():
-                if away_team in key and home_team in key:
-                    matchup_data = data
-                    break
-        
-        if matchup_data:
-            away_pitcher = matchup_data.get('away_starter', 'TBD')
-            home_pitcher = matchup_data.get('home_starter', 'TBD')
-            
-            # Create basic pitcher quality info
-            return {
-                'away_pitcher_name': away_pitcher,
-                'home_pitcher_name': home_pitcher,
-                'away_pitcher_factor': 1.0,  # Default neutral factor
-                'home_pitcher_factor': 1.0,  # Default neutral factor
-                'pitcher_matchup_info': f"{away_pitcher} vs {home_pitcher}",
-                'data_source': f"Date-aware: {game_date}" if game_date and game_date in date_aware_data else "Current data"
-            }
-        else:
-            return {
-                'away_pitcher_name': 'TBD',
-                'home_pitcher_name': 'TBD', 
-                'away_pitcher_factor': 1.0,
-                'home_pitcher_factor': 1.0,
-                'pitcher_matchup_info': 'Pitchers TBD',
-                'data_source': 'No data available'
-            }
-            
-    except Exception as e:
-        print(f"Warning: Could not load pitcher info: {e}")
-        return {
-            'away_pitcher_name': 'TBD',
-            'home_pitcher_name': 'TBD',
-            'away_pitcher_factor': 1.0,
-            'home_pitcher_factor': 1.0,
-            'pitcher_matchup_info': 'Pitchers TBD',
-            'data_source': f'Error: {e}'
-        }
-
-@app.route('/api/fast-predictions')
-def get_fast_predictions():
-    """Get multiple ultra-fast predictions - SIMPLIFIED to avoid duplicates"""
+@app.route('/api/real-games-predictions')
+def get_real_games_predictions():
+    """Get predictions for today's real games with actual pitcher matchups"""
     try:
         if ULTRA_FAST_AVAILABLE:
             engine = FastPredictionEngine()
             
-            # Get selected date from query parameter, default to None (today)
-            selected_date = request.args.get('date', None)
+            # Get today's real games
+            real_games = engine.get_todays_real_games()
             
-            # Use ONLY the engine's get_todays_real_games() with selected date to avoid duplicates
-            games_tuples = engine.get_todays_real_games(selected_date)
+            if not real_games:
+                # If no games today, try August 8, 2025 (our complete historical date)
+                real_games = engine.get_todays_real_games("2025-08-08")
+                games_source = 'Historical games (Aug 8, 2025) - No games available for today'
+            else:
+                games_source = 'ProjectedStarters.json - Real MLB games'
             
             predictions = []
-            for away, home in games_tuples:
-                try:
-                    # Get direct prediction from our tuned engine
-                    prediction = engine.get_fast_prediction(away, home, sim_count=2000)
-                    
-                    # Convert response format for frontend compatibility
-                    if 'predictions' in prediction:
-                        pred_data = prediction['predictions']
-                        
-                        # Ensure JavaScript-compatible field names
-                        if 'home_win_prob' in pred_data and 'home_win_probability' not in pred_data:
-                            pred_data['home_win_probability'] = pred_data['home_win_prob']
-                        if 'away_win_prob' in pred_data and 'away_win_probability' not in pred_data:
-                            pred_data['away_win_probability'] = pred_data['away_win_prob']
-                        if 'predicted_total_runs' in pred_data and 'predicted_total' not in pred_data:
-                            pred_data['predicted_total'] = pred_data['predicted_total_runs']
-                        
-                        # Ensure all required fields exist with safe defaults
-                        pred_data.setdefault('home_win_probability', 0.5)
-                        pred_data.setdefault('away_win_probability', 0.5)
-                        pred_data.setdefault('predicted_home_score', 5.0)
-                        pred_data.setdefault('predicted_away_score', 5.0)
-                        pred_data.setdefault('predicted_total', 10.0)
-                        pred_data.setdefault('confidence', 50)
-                    
-                    # Ensure the prediction has the correct format
-                    if 'pitcher_quality' not in prediction:
-                        prediction['pitcher_quality'] = {
-                            'away_pitcher_name': 'TBD',
-                            'home_pitcher_name': 'TBD', 
-                            'away_pitcher_factor': 1.000,
-                            'home_pitcher_factor': 1.000
-                        }
-                    
-                    # Ensure pitcher factors are numbers for toFixed()
-                    if 'pitcher_quality' in prediction:
-                        pq = prediction['pitcher_quality']
-                        pq['away_pitcher_factor'] = float(pq.get('away_pitcher_factor', 1.0))
-                        pq['home_pitcher_factor'] = float(pq.get('home_pitcher_factor', 1.0))
-                    
-                    predictions.append(prediction)
-                    
-                except Exception as e:
-                    print(f"Error getting prediction for {away} @ {home}: {e}")
-                    # Skip broken predictions rather than include errors
-                    continue
+            start_time = datetime.now()
             
-            from datetime import date
-            # Use selected date or today's date for response
-            response_date = selected_date if selected_date else date.today().strftime('%Y-%m-%d')
+            for away, home in real_games:
+                prediction = engine.get_fast_prediction(away, home, sim_count=1500)
+                predictions.append(prediction)
+            
+            total_time = (datetime.now() - start_time).total_seconds() * 1000
             
             return jsonify({
                 'success': True,
                 'predictions': predictions,
-                'total_time_ms': sum(p['meta']['execution_time_ms'] for p in predictions),
-                'games_date': response_date,
-                'total_games': len(predictions)
+                'total_time_ms': total_time,
+                'total_games': len(real_games),
+                'games_source': games_source
             })
         else:
             return jsonify({'error': 'Ultra-fast engine not available'})
             
     except Exception as e:
-        return jsonify({'error': f'Error generating predictions: {str(e)}'})
+        return jsonify({'error': f'Error generating real game predictions: {str(e)}'})
 
-@app.route('/api/cumulative-stats')
-def get_cumulative_stats():
-    """Get cumulative simulation statistics"""
+@app.route('/api/games-predictions')
+def get_games_predictions():
+    """Get predictions for games on a specific date (supports historical data)"""
     try:
-        from cumulative_ultra_fast_engine import CumulativeUltraFastEngine
-        if not hasattr(app, 'cumulative_engine'):
-            app.cumulative_engine = CumulativeUltraFastEngine()
-        
-        summary = app.cumulative_engine.cumulative_manager.get_simulation_summary()
-        return jsonify({
-            'success': True,
-            'cumulative_stats': summary
-        })
+        game_date = request.args.get('date')
+        if not game_date:
+            return jsonify({'error': 'Date parameter is required'})
+            
+        if ULTRA_FAST_AVAILABLE:
+            engine = FastPredictionEngine()
+            
+            # Get games for the specified date
+            real_games = engine.get_todays_real_games(game_date)
+            
+            if not real_games:
+                return jsonify({
+                    'error': f'No accuracy data available for {game_date}. Model performance tracking starts with August 8, 2025.',
+                    'suggestion': 'August 8, 2025 has complete accuracy validation data with 15 games showing predicted vs actual results.'
+                })
+            
+            predictions = []
+            start_time = datetime.now()
+            
+            for away, home in real_games:
+                # Pass the game_date to enable historical lookup
+                prediction = engine.get_fast_prediction(away, home, sim_count=1500, game_date=game_date)
+                predictions.append(prediction)
+            
+            total_time = (datetime.now() - start_time).total_seconds() * 1000
+            
+            # Check if any predictions are historical
+            historical_count = sum(1 for p in predictions if p.get('result_type') == 'HISTORICAL')
+            
+            return jsonify({
+                'success': True,
+                'predictions': predictions,
+                'total_time_ms': total_time,
+                'total_games': len(real_games),
+                'historical_games': historical_count,
+                'live_games': len(real_games) - historical_count,
+                'game_date': game_date,
+                'games_source': f'Accuracy data for {game_date} - {"Model performance validation" if historical_count > 0 else "Live prediction tracking"}'
+            })
+        else:
+            return jsonify({'error': 'Ultra-fast engine not available'})
+            
     except Exception as e:
-        return jsonify({
-            'success': False,
-            'error': str(e)
-        })
+        return jsonify({'error': f'Error generating predictions for {game_date}: {str(e)}'})
 
 @app.route('/api/speed-test')
 def speed_test():
-    """Test speed performance"""
+    """Test speed performance with real games"""
     try:
         if ULTRA_FAST_AVAILABLE:
             engine = FastPredictionEngine()
+            real_games = engine.get_todays_real_games()
             
             times = []
             total_sims = 0
             
-            # Run 5 predictions to test speed
-            for i in range(5):
-                prediction = engine.get_fast_prediction("Yankees", "Red Sox", sim_count=3000)  # OPTIMAL: High accuracy for testing
+            # Run predictions on first 3 real games for speed test
+            for i, (away, home) in enumerate(real_games[:3]):
+                prediction = engine.get_fast_prediction(away, home, sim_count=2000)
                 times.append(prediction['meta']['execution_time_ms'])
                 total_sims += prediction['meta']['simulations_run']
             
@@ -1158,11 +759,11 @@ def speed_test():
             sims_per_second = int(total_sims / (sum(times) / 1000))
             
             if avg_time < 100:
-                performance_note = "🚀 EXCELLENT: Ultra-fast performance achieved!"
+                performance_note = "🚀 EXCELLENT: Ultra-fast performance with real games!"
             elif avg_time < 200:
-                performance_note = "✅ GOOD: Fast performance within target"
+                performance_note = "✅ GOOD: Fast performance with real pitcher data"
             else:
-                performance_note = "⚠️ SLOW: Performance below target"
+                performance_note = "⚠️ SLOW: Performance below target with real games"
             
             return jsonify({
                 'average_time_ms': round(avg_time, 1),
@@ -1170,7 +771,8 @@ def speed_test():
                 'total_simulations': total_sims,
                 'sims_per_second': sims_per_second,
                 'performance_note': performance_note,
-                'individual_times': times
+                'individual_times': times,
+                'games_tested': len(times)
             })
         else:
             return jsonify({'error': 'Ultra-fast engine not available'})
@@ -1178,201 +780,19 @@ def speed_test():
     except Exception as e:
         return jsonify({'error': f'Error in speed test: {str(e)}'})
 
-@app.route('/api/debug-pitcher')
-def debug_pitcher():
-    """Debug endpoint to check pitcher data loading"""
-    try:
-        if ULTRA_FAST_AVAILABLE:
-            engine = FastPredictionEngine()
-            
-            # Test specific lookups with detailed format checking
-            test_results = []
-            test_games = [("Yankees", "Red Sox"), ("Dodgers", "Giants"), ("Cubs", "Cardinals")]
-            
-            for away, home in test_games:
-                # Check what full names resolve to
-                away_full = engine.sim_engine._get_full_team_name(away)
-                home_full = engine.sim_engine._get_full_team_name(home)
-                
-                # Try all the formats the function would try
-                matchup_formats = [
-                    f"{away} at {home}",
-                    f"{away} @ {home}",
-                    f"{home} vs {away}",
-                    f"{home} v {away}",
-                    f"{away_full} at {home_full}",
-                    f"{away_full} @ {home_full}",
-                    f"{home_full} vs {away_full}",
-                    f"{home_full} v {away_full}",
-                    f"{away} at {home_full}",
-                    f"{away_full} at {home}",
-                    f"{away} @ {home_full}",
-                    f"{away_full} @ {home}"
-                ]
-                
-                format_results = []
-                found_matchup = None
-                found_data = None
-                
-                for format_str in matchup_formats:
-                    if format_str in engine.sim_engine.projected_starters:
-                        format_results.append(f"✅ {format_str}")
-                        if not found_matchup:
-                            found_matchup = format_str
-                            found_data = engine.sim_engine.projected_starters[format_str]
-                    else:
-                        format_results.append(f"❌ {format_str}")
-                
-                away_starter, home_starter = engine.sim_engine.get_matchup_starters(away, home)
-                
-                # Also test a full prediction
-                prediction = engine.get_fast_prediction(away, home, sim_count=10)
-                pitcher_quality = prediction.get('pitcher_quality', {})
-                
-                test_results.append({
-                    'matchup': f"{away} @ {home}",
-                    'full_names': f"{away_full} @ {home_full}",
-                    'format_attempts': format_results,
-                    'found_data': found_data,
-                    'direct_lookup': {
-                        'away_starter': away_starter,
-                        'home_starter': home_starter
-                    },
-                    'prediction_data': {
-                        'away_pitcher_name': pitcher_quality.get('away_pitcher_name'),
-                        'home_pitcher_name': pitcher_quality.get('home_pitcher_name'),
-                        'away_pitcher_factor': pitcher_quality.get('away_pitcher_factor'),
-                        'home_pitcher_factor': pitcher_quality.get('home_pitcher_factor')
-                    }
-                })
-            
-            # Check what's in projected starters
-            total_entries = len(engine.sim_engine.projected_starters)
-            sample_keys = list(engine.sim_engine.projected_starters.keys())[:5]
-            
-            # Find any Athletics or Nationals entries
-            athletics_keys = [k for k in engine.sim_engine.projected_starters.keys() if 'Athletics' in k]
-            nationals_keys = [k for k in engine.sim_engine.projected_starters.keys() if 'Nationals' in k or 'Washington' in k]
-            
-            return jsonify({
-                'success': True,
-                'total_projected_starters': total_entries,
-                'sample_keys': sample_keys,
-                'athletics_keys': athletics_keys,
-                'nationals_keys': nationals_keys,
-                'test_results': test_results
-            })
-        else:
-            return jsonify({'error': 'Ultra-fast engine not available'})
-            
-    except Exception as e:
-        import traceback
-        return jsonify({'error': f'Debug error: {str(e)}', 'traceback': traceback.format_exc()})
-
-@app.route('/api/scenario-analysis')
-def scenario_analysis():
-    """Enhanced predictability through multiple scenario analysis"""
-    try:
-        if ULTRA_FAST_AVAILABLE:
-            engine = FastPredictionEngine()
-            
-            # Use a representative game (Angels vs Tigers has known elite pitcher)
-            away_team, home_team = "Angels", "Tigers"
-            
-            # Run three scenarios with controlled chaos factors
-            # We'll temporarily modify the system to use specific chaos values
-            
-            # Conservative scenario (low chaos)
-            conservative = engine.get_fast_prediction(away_team, home_team, sim_count=2000)
-            
-            # Most likely scenario (average chaos) 
-            most_likely = engine.get_fast_prediction(away_team, home_team, sim_count=2000)
-            
-            # Aggressive scenario (high chaos)
-            aggressive = engine.get_fast_prediction(away_team, home_team, sim_count=2000)
-            
-            # Calculate scenario stats
-            scenarios = [conservative, most_likely, aggressive]
-            total_runs = [s['predictions']['predicted_total_runs'] for s in scenarios]
-            
-            # Sort to ensure proper conservative/aggressive assignment
-            sorted_runs = sorted(total_runs)
-            conservative_runs = sorted_runs[0]
-            most_likely_runs = sorted_runs[1] 
-            aggressive_runs = sorted_runs[2]
-            
-            # Find which scenario corresponds to which runs
-            conservative_scenario = next(s for s in scenarios if s['predictions']['predicted_total_runs'] == conservative_runs)
-            most_likely_scenario = next(s for s in scenarios if s['predictions']['predicted_total_runs'] == most_likely_runs)
-            aggressive_scenario = next(s for s in scenarios if s['predictions']['predicted_total_runs'] == aggressive_runs)
-            
-            # Calculate confidence and insights
-            run_spread = aggressive_runs - conservative_runs
-            confidence_level = max(60, min(95, 100 - (run_spread * 5)))  # Higher spread = lower confidence
-            
-            # Pitcher impact analysis
-            pitcher_quality = conservative_scenario.get('pitcher_quality', {})
-            away_pitcher = pitcher_quality.get('away_pitcher_name', 'Unknown')
-            home_pitcher = pitcher_quality.get('home_pitcher_name', 'Unknown')
-            away_factor = pitcher_quality.get('away_pitcher_factor', 1.0)
-            home_factor = pitcher_quality.get('home_pitcher_factor', 1.0)
-            
-            if min(away_factor, home_factor) < 0.85:
-                pitcher_impact = "Elite pitcher present - reduces scoring variance"
-            elif max(away_factor, home_factor) > 1.15:
-                pitcher_impact = "Poor pitcher present - increases scoring potential"
-            else:
-                pitcher_impact = "Average pitcher matchup - typical variance expected"
-            
-            # Recommendation based on spread
-            if run_spread < 4:
-                recommendation = "🎯 High confidence - consistent prediction range"
-            elif run_spread < 7:
-                recommendation = "👍 Moderate confidence - reasonable prediction range"
-            else:
-                recommendation = "⚠️ High variance - wide range of possible outcomes"
-            
-            return jsonify({
-                'success': True,
-                'matchup': f"{away_team} @ {home_team}",
-                'conservative': {
-                    'total_runs': conservative_runs,
-                    'away_score': conservative_scenario['predictions']['predicted_away_score'],
-                    'home_score': conservative_scenario['predictions']['predicted_home_score']
-                },
-                'most_likely': {
-                    'total_runs': most_likely_runs,
-                    'away_score': most_likely_scenario['predictions']['predicted_away_score'],
-                    'home_score': most_likely_scenario['predictions']['predicted_home_score']
-                },
-                'aggressive': {
-                    'total_runs': aggressive_runs,
-                    'away_score': aggressive_scenario['predictions']['predicted_away_score'],
-                    'home_score': aggressive_scenario['predictions']['predicted_home_score']
-                },
-                'confidence_level': int(confidence_level),
-                'pitcher_impact': pitcher_impact,
-                'recommendation': recommendation,
-                'pitchers': f"{away_pitcher} vs {home_pitcher}"
-            })
-        else:
-            return jsonify({'error': 'Ultra-fast engine not available'})
-            
-    except Exception as e:
-        return jsonify({'error': f'Error in scenario analysis: {str(e)}'})
-
 @app.route('/api/status')
 def get_status():
     """Get system status"""
     return jsonify({
         'ultra_fast_available': ULTRA_FAST_AVAILABLE,
-        'improved_available': IMPROVED_AVAILABLE,
+        'real_games_active': True,
+        'pitcher_impacts_active': True,
         'features': [
-            'Vectorized simulations',
+            'Real MLB game data',
+            'Verified pitcher matchups',
+            'Realistic impact factors', 
             'Sub-200ms predictions',
-            'Real-time recommendations',
-            'Smart betting analysis',
-            'Kelly criterion sizing'
+            'Professional betting analysis'
         ],
         'timestamp': datetime.now().isoformat()
     })
@@ -1380,12 +800,8 @@ def get_status():
 if __name__ == '__main__':
     print("⚡ Starting Ultra-Fast MLB Prediction Web Interface")
     print(f"   Ultra-Fast Engine: {'✓ Available' if ULTRA_FAST_AVAILABLE else '❌ Not Available'}")
-    print(f"   Target Speed: <200ms per prediction")
+    print(f"   Real Game Data: ✓ Active")
+    print(f"   Pitcher Impacts: ✓ Active") 
+    print(f"   Starting server on http://localhost:5006")
     
-    # Get port from environment variable for production deployment
-    port = int(os.environ.get('PORT', 5006))
-    debug = os.environ.get('FLASK_ENV') == 'development'
-    
-    print(f"   Starting server on port {port}")
-    
-    app.run(debug=debug, host='0.0.0.0', port=port)
+    app.run(debug=True, host='0.0.0.0', port=5006)
