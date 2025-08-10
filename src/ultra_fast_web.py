@@ -737,7 +737,7 @@ HTML_TEMPLATE = """
                 <div class="stats-grid">
                     <div class="stat-box">
                         <div class="stat-label">Win Probability</div>
-                        <div class="stat-value">🏠 ${(p.home_win_prob * 100).toFixed(1)}% | ✈️ ${(p.away_win_prob * 100).toFixed(1)}%</div>
+                        <div class="stat-value">✈️ ${(p.away_win_prob * 100).toFixed(1)}% | 🏠 ${(p.home_win_prob * 100).toFixed(1)}%</div>
                     </div>
                     <div class="stat-box">
                         <div class="stat-label">Predicted Score</div>
@@ -752,6 +752,49 @@ HTML_TEMPLATE = """
                         <div class="stat-value">${p.total_runs_range[0]} - ${p.total_runs_range[1]}</div>
                     </div>
                 </div>
+                
+                <!-- Betting Odds Display -->
+                ${p.betting_lines ? `
+                <div style="margin: 15px 0; padding: 15px; background: rgba(255, 193, 7, 0.1); border-radius: 8px; border-left: 3px solid #ffc107;">
+                    <h4 style="color: #e67e22; margin-bottom: 10px; font-size: 1.1em;">💸 Current Betting Lines</h4>
+                    <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 15px;">
+                        ${p.betting_lines.moneyline ? `
+                        <div style="padding: 10px; background: rgba(156, 39, 176, 0.2); border-radius: 6px;">
+                            <div style="font-weight: bold; color: #9c27b0; margin-bottom: 5px;">🎯 Moneyline</div>
+                            <div style="font-size: 0.9em;">
+                                ✈️ ${data.away_team}: ${p.betting_lines.moneyline[data.away_team] || 'N/A'}<br>
+                                🏠 ${data.home_team}: ${p.betting_lines.moneyline[data.home_team] || 'N/A'}<br>
+                                <strong>Favorite: ${p.betting_lines.moneyline_favorite || 'N/A'}</strong>
+                            </div>
+                        </div>
+                        ` : ''}
+                        ${p.betting_lines.total_line ? `
+                        <div style="padding: 10px; background: rgba(52, 152, 219, 0.2); border-radius: 6px;">
+                            <div style="font-weight: bold; color: #3498db; margin-bottom: 5px;">💰 Over/Under</div>
+                            <div style="font-size: 0.9em;">
+                                Total: <strong>${p.betting_lines.total_line}</strong><br>
+                                Over: ${p.betting_lines.total_over_odds || '-110'}<br>
+                                Under: ${p.betting_lines.total_under_odds || '-110'}
+                            </div>
+                        </div>
+                        ` : ''}
+                    </div>
+                    ${p.betting_lines.runline ? `
+                    <div style="margin-top: 10px; padding: 10px; background: rgba(40, 167, 69, 0.2); border-radius: 6px;">
+                        <div style="font-weight: bold; color: #28a745; margin-bottom: 5px;">📊 Run Line (1.5)</div>
+                        <div style="font-size: 0.9em; display: grid; grid-template-columns: 1fr 1fr; gap: 10px;">
+                            <div>✈️ ${data.away_team} ${p.betting_lines.runline.away_spread || '+1.5'}: ${p.betting_lines.runline.away_odds || '-110'}</div>
+                            <div>🏠 ${data.home_team} ${p.betting_lines.runline.home_spread || '-1.5'}: ${p.betting_lines.runline.home_odds || '-110'}</div>
+                        </div>
+                    </div>
+                    ` : ''}
+                </div>
+                ` : `
+                <div style="margin: 15px 0; padding: 15px; background: rgba(108, 117, 125, 0.1); border-radius: 8px; border-left: 3px solid #6c757d;">
+                    <h4 style="color: #6c757d; margin-bottom: 5px; font-size: 1.1em;">💸 Betting Lines</h4>
+                    <div style="font-size: 0.9em; color: #6c757d;">Betting lines not available for this game</div>
+                </div>
+                `}
                 
                 <div class="pitcher-summary">
                     <strong>⚾ Starting Pitchers (Real Matchup):</strong><br>
