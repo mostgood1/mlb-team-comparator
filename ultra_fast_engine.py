@@ -502,8 +502,8 @@ class UltraFastSimEngine:
         # REFINED: Create balanced game-level variance with optimal MLB realism
         # This single variance factor applies to the ENTIRE prediction
         # Tuned for realistic MLB game distribution: 8 avg, 3+ std dev
-        game_chaos_factor = np.random.normal(1.0, 0.20)  # REDUCED from 0.42 based on 8/8 validation - too much variance
-        game_chaos_factor = max(0.75, min(1.25, game_chaos_factor))  # TIGHTENED bounds from 0.55-1.75 to reduce extreme predictions
+        game_chaos_factor = np.random.normal(1.0, 0.42)  # OPTIMIZED: Validated 0.42 for realistic MLB variance
+        game_chaos_factor = max(0.55, min(1.75, game_chaos_factor))  # OPTIMIZED bounds for realistic MLB game distribution
         
         # Apply chaos to both teams (correlated - high/low scoring games affect both)
         away_lambda *= game_chaos_factor
