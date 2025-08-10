@@ -740,15 +740,20 @@ class FastPredictionEngine:
                     'result_type': 'HISTORICAL',
                     'away_team': away_team,
                     'home_team': home_team,
+                    'away_pitcher': cached_data.get('away_pitcher', 'Not Available'),
+                    'home_pitcher': cached_data.get('home_pitcher', 'Not Available'),
                     'predictions': {
                         'away_score': cached_data['predicted_away_score'],
                         'home_score': cached_data['predicted_home_score'],
+                        'predicted_total_runs': cached_data.get('predicted_total_runs', 0),
                         'home_win_prob': 0.5,  # Default value
                         'away_win_prob': 0.5   # Default value
                     },
                     'actual_results': {
                         'away_score': cached_data['actual_away_score'],
                         'home_score': cached_data['actual_home_score'],
+                        'away_pitcher': cached_data.get('away_pitcher', 'Not Available'),
+                        'home_pitcher': cached_data.get('home_pitcher', 'Not Available'),
                         'prediction_error': cached_data.get('prediction_error', 0),
                         'winner_correct': cached_data.get('winner_correct', False)
                     },
@@ -756,7 +761,9 @@ class FastPredictionEngine:
                         'is_historical': True,
                         'cached': True,
                         'game_date': game_date,
-                        'matched_key': game_key
+                        'matched_key': game_key,
+                        'away_pitcher': cached_data.get('away_pitcher', 'Not Available'),
+                        'home_pitcher': cached_data.get('home_pitcher', 'Not Available')
                     }
                 }
         
