@@ -759,7 +759,8 @@ class FastPredictionEngine:
                 'home_team': home_team
             },
             'away_team': away_team,
-            'home_team': home_team
+            'home_team': home_team,
+            'result_type': 'HISTORICAL'  # Add this field for JavaScript compatibility
         }
         
     def get_fast_prediction(self, away_team: str, home_team: str, 
@@ -839,7 +840,8 @@ class FastPredictionEngine:
                 'execution_time_ms': round(execution_time, 1),
                 'recommendations_found': len(all_recommendations),
                 'timestamp': datetime.now().isoformat()
-            }
+            },
+            'result_type': 'LIVE'  # Add this field for JavaScript compatibility
         }
     
     def get_todays_real_games(self, game_date: str = None) -> List[Tuple[str, str]]:
