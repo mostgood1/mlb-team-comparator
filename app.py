@@ -224,9 +224,12 @@ HTML_TEMPLATE = """
                 
                 if (data.error) throw new Error(data.error);
                 
-                if (!data.predictions || data.predictions.length === 0) {
-                    throw new Error(`No games found for ${selectedDate}`);
+                if (!data.predictions || !Array.isArray(data.predictions) || data.predictions.length === 0) {
+                    throw new Error(`No valid prediction data found for ${selectedDate}`);
                 }
+                
+                // Log the data structure for debugging
+                console.log('Predictions data:', data.predictions);
                 
                 displayMultiplePredictions(data.predictions, selectedDate);
             } catch (error) {
@@ -545,8 +548,19 @@ HTML_TEMPLATE = """
             const container = document.getElementById('predictions-container');
             container.innerHTML = '';
             
-            // Determine if this is historical data
-            const isHistorical = predictions.length > 0 && predictions[0].result_type === 'HISTORICAL';
+            // Check if predictions is valid and has data
+            if (!predictions || !Array.isArray(predictions) || predictions.length === 0) {
+                container.innerHTML = `
+                    <div class="prediction-card">
+                        <h3>❌ No Prediction Data Available</h3>
+                        <p>No valid prediction data was returned from the server.</p>
+                    </div>
+                `;
+                return;
+            }
+            
+            // Determine if this is historical data - safely check the first prediction
+            const isHistorical = predictions.length > 0 && predictions[0] && predictions[0].result_type === 'HISTORICAL';
             
             // Add header with accuracy summary for historical data
             const headerDiv = document.createElement('div');
