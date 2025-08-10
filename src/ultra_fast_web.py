@@ -1,8 +1,62 @@
 """
 Ultra-Fast MLB Prediction Web Interface
 Real-time betting recommendations with sub-200ms prediction generation
-Updated to use REAL GAME          <div class="container">
-        <div class="header">
+Updated to use REAL GAME          <div         <div class="header">
+            <h1>⚡ Ultra-Fast MLB Predictions</h1>
+            <p>💰 DAILY BETTING RECOMMENDATIONS: Professional analysis for today's games • Real-time value detection • Historical accuracy validation</p>
+        </div>
+        
+        <div class="speed-banner">
+            🎯 PRIMARY: Get today's betting recommendations • SECONDARY: Review historical accuracy with past game results
+        </div>ontainer"            // Add header with accuracy summary for historical data
+            const headerDiv = document.createElement('div');
+            headerDiv.className = 'prediction-card';
+            if (isHistorical) {
+                // Calculate overall accuracy stats for historical data
+                let winnersCorrect = 0;
+                let totalGames = 0;
+                let totalRunsErrors = [];
+                
+                predictions.forEach(pred => {
+                    if (pred.actual_results && pred.actual_results.winner_correct !== undefined) {
+                        totalGames++;
+                        if (pred.actual_results.winner_correct) winnersCorrect++;
+                        
+                        const actualTotal = (pred.actual_results.away_score || 0) + (pred.actual_results.home_score || 0);
+                        const predictedTotal = pred.predictions.predicted_total_runs || (pred.predictions.away_score + pred.predictions.home_score) || 0;
+                        const error = Math.abs(actualTotal - predictedTotal);
+                        if (!isNaN(error)) totalRunsErrors.push(error);
+                    }
+                });
+                
+                const winnerAccuracy = totalGames > 0 ? (winnersCorrect / totalGames * 100).toFixed(1) : 'N/A';
+                const avgTotalError = totalRunsErrors.length > 0 ? (totalRunsErrors.reduce((a,b) => a+b, 0) / totalRunsErrors.length).toFixed(1) : 'N/A';
+                const goodTotalPredictions = totalRunsErrors.filter(err => err <= 2).length;
+                const totalAccuracy = totalRunsErrors.length > 0 ? (goodTotalPredictions / totalRunsErrors.length * 100).toFixed(1) : 'N/A';
+                
+                headerDiv.style.backgroundColor = 'rgba(255, 193, 7, 0.2)';
+                headerDiv.style.textAlign = 'center';
+                headerDiv.innerHTML = `
+                    <h2>📊 Historical Accuracy Review - ${gameDate || 'Historical Date'}</h2>
+                    <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 15px; margin: 15px 0;">
+                        <div style="background: rgba(40, 167, 69, 0.2); padding: 15px; border-radius: 8px; border-left: 4px solid #28a745;">
+                            <div style="font-size: 1.1em; font-weight: bold; color: #28a745;">🎯 Winner Predictions</div>
+                            <div style="font-size: 1.5em; font-weight: bold;">${winnersCorrect}/${totalGames} (${winnerAccuracy}%)</div>
+                        </div>
+                        <div style="background: rgba(52, 152, 219, 0.2); padding: 15px; border-radius: 8px; border-left: 4px solid #3498db;">
+                            <div style="font-size: 1.1em; font-weight: bold; color: #3498db;">📊 Total Runs Accuracy</div>
+                            <div style="font-size: 1.5em; font-weight: bold;">${goodTotalPredictions}/${totalRunsErrors.length} (${totalAccuracy}%)</div>
+                            <div style="font-size: 0.9em; opacity: 0.8;">Avg Error: ${avgTotalError} runs</div>
+                        </div>
+                    </div>
+                    <p>🎯 Final scores vs predictions • Individual game accuracy breakdown below</p>
+                `;
+            } else {
+                headerDiv.style.backgroundColor = 'rgba(40, 167, 69, 0.2)';
+                headerDiv.style.textAlign = 'center';
+                headerDiv.innerHTML = `<h2>💰 ${gameDate ? gameDate : "Today's"} Betting Recommendations</h2>
+                                      <p>⚡ Live predictions with professional betting analysis • Real pitcher matchups</p>`;
+            }v class="header">
             <h1>⚡ Ultra-Fast MLB Predictions</h1>
             <p>💰 DAILY BETTING RECOMMENDATIONS: Professional analysis for today's games • Real-time value detection • Historical accuracy validation</p>
         </div>
@@ -442,10 +496,12 @@ HTML_TEMPLATE = """
             const actual = data.actual_results;
             const meta = data.meta;
             
-            // Calculate accuracy indicators
-            const scoreDiff = Math.abs((pred.away_score + pred.home_score) - (actual.away_score + actual.home_score));
+            // Calculate accuracy indicators with safe fallbacks
+            const predictedTotal = pred.predicted_total_runs || (pred.away_score + pred.home_score) || 0;
+            const actualTotal = (actual.away_score + actual.home_score) || 0;
+            const scoreDiff = Math.abs((pred.away_score + pred.home_score) - actualTotal);
             const winnerCorrect = actual.winner_correct;
-            const totalError = Math.abs(pred.predicted_total_runs - (actual.away_score + actual.home_score));
+            const totalError = Math.abs(predictedTotal - actualTotal);
             
             return `
                 <div class="execution-time" style="background: rgba(255, 193, 7, 0.2);">
@@ -481,13 +537,16 @@ HTML_TEMPLATE = """
                 </div>
                 
                 <div class="pitcher-summary">
-                    <strong>⚾ Starting Pitchers (Historical Matchup):</strong><br>
-                    <span class="pitcher-factor">Away:</span> ${actual.away_pitcher || 'Unknown'}<br>
-                    <span class="pitcher-factor">Home:</span> ${actual.home_pitcher || 'Unknown'}
+                    <strong>⚾ Starting Pitchers (Final Matchup):</strong><br>
+                    <span class="pitcher-factor">Away:</span> ${actual.away_pitcher || data.away_pitcher || meta.away_pitcher || 'Not Available'}<br>
+                    <span class="pitcher-factor">Home:</span> ${actual.home_pitcher || data.home_pitcher || meta.home_pitcher || 'Not Available'}
+                    ${(actual.away_pitcher && actual.home_pitcher) ? '' : '<br><small style="opacity: 0.7;">📝 Pitcher data may not be available for this historical game</small>'}
                 </div>
                 
                 <div style="margin-top: 15px; padding: 10px; background: rgba(40, 167, 69, 0.1); border-radius: 8px; border-left: 3px solid #28a745;">
-                    <strong>📊 Model Performance:</strong> This shows how accurately our prediction engine performed against the actual MLB result for validation purposes.
+                    <strong>📊 Accuracy Details:</strong><br>
+                    • Predicted Total: ${predictedTotal.toFixed(1)} runs | Actual: ${actualTotal} runs<br>
+                    • Winner Prediction: ${(pred.away_score > pred.home_score) ? data.away_team : data.home_team} | Actual Winner: ${(actual.away_score > actual.home_score) ? data.away_team : data.home_team}
                 </div>
             `;
         }
