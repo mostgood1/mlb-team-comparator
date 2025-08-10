@@ -1,7 +1,15 @@
 """
 Ultra-Fast MLB Prediction Web Interface
 Real-time betting recommendations with sub-200ms prediction generation
-Updated to use REAL GAME        <div class="header">
+Updated to use REAL GAME          <div class="container">
+        <div class="header">
+            <h1>⚡ Ultra-Fast MLB Predictions</h1>
+            <p>💰 DAILY BETTING RECOMMENDATIONS: Professional analysis for today's games • Real-time value detection • Historical accuracy validation</p>
+        </div>
+        
+        <div class="speed-banner">
+            🎯 PRIMARY: Get today's betting recommendations • SECONDARY: Review historical accuracy with past game results
+        </div>lass="header">
             <h1>⚡ Ultra-Fast MLB Predictions</h1>
             <p>💰 DAILY BETTING RECOMMENDATIONS: Professional analysis for today's games • Real-time value detection • Historical accuracy validation</p>
         </div>
