@@ -172,7 +172,7 @@ HTML_TEMPLATE = """
     </style>
 </head>
 <body>
-    <div class="speed-indicator">⚡ ULTRA-FAST v2.3</div>
+    <div class="speed-indicator">⚡ ULTRA-FAST v2.4</div>
     
     <div class="container">
         <div class="header">
