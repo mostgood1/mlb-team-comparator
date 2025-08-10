@@ -142,24 +142,26 @@ HTML_TEMPLATE = """
     <div class="container">
         <div class="header">
             <h1>⚡ Ultra-Fast MLB Predictions</h1>
-            <p>🎯 REAL GAME DATA: Actual pitcher matchups • Realistic impact factors • Live updated games</p>
+            <p>🎯 MODEL ACCURACY TRACKER: Review prediction performance across historical dates • Validate system accuracy</p>
         </div>
         
         <div class="speed-banner">
-            🚀 LOADING TODAY'S GAMES: Live MLB matchups with real pitcher impacts! (Historical demo available)
+            � ACCURACY REVIEW MODE: Select any date to see predicted vs actual results and track model performance!
         </div>
         
         <div class="controls">
             <div style="display: flex; justify-content: center; gap: 15px; flex-wrap: wrap; margin-bottom: 15px;">
-                <input type="date" id="game-date" style="padding: 12px; border-radius: 8px; border: 1px solid #ddd; font-size: 1em;" />
-                <button onclick="loadGamesForDate()">📅 Load Games for Date</button>
+                <div style="display: flex; align-items: center; gap: 10px;">
+                    <label for="game-date" style="font-weight: bold;">📅 Select Date for Accuracy Review:</label>
+                    <input type="date" id="game-date" style="padding: 12px; border-radius: 8px; border: 1px solid #ddd; font-size: 1em;" />
+                    <button onclick="loadGamesForDate()" style="background: linear-gradient(45deg, #28a745, #20c997);">📊 Review Accuracy</button>
+                </div>
             </div>
             <div style="display: flex; justify-content: center; gap: 15px; flex-wrap: wrap;">
-                <button onclick="loadTodaysRealGames()">🏟️ Today's Real Games</button>
+                <button onclick="loadTodaysRealGames()">🏟️ Today's Live Games</button>
                 <button onclick="speedTest()">⚡ Speed Test</button>
                 <button onclick="showMultipleGames()">📊 Detailed Analysis</button>
                 <button onclick="testRecommendations()">💰 Test Recommendations</button>
-                <button onclick="loadHistoricalDemo()" style="background: linear-gradient(45deg, #ffc107, #e0a800);">📚 Historical Demo (Aug 8)</button>
             </div>
         </div>
         
@@ -190,17 +192,13 @@ HTML_TEMPLATE = """
                 console.error('loadTodaysRealGames error:', error);
                 document.getElementById('predictions-container').innerHTML = 
                     `<div class="prediction-card">
-                        <h3>❌ No Games Available Today</h3>
+                        <h3>❌ No Live Games Available Today</h3>
                         <p><strong>Error:</strong> ${error.message}</p>
-                        <p><strong>Suggestion:</strong> Try our historical accuracy demonstration with August 8, 2025 data - that date has complete MLB games with actual results.</p>
+                        <p><strong>Suggestion:</strong> Use the date selector above to review historical model accuracy. Start with August 8, 2025 which has complete game results.</p>
                         <div style="margin-top: 15px; display: flex; gap: 10px; justify-content: center; flex-wrap: wrap;">
-                            <button onclick="loadHistoricalDemo();" 
-                                    style="margin-top: 10px; padding: 8px 16px; background: #ffc107; color: black; border: none; border-radius: 4px; font-weight: bold;">
-                                📚 View Historical Demo (Aug 8)
-                            </button>
                             <button onclick="document.getElementById('game-date').value='2025-08-08'; loadGamesForDate();" 
-                                    style="margin-top: 10px; padding: 8px 16px; background: #007bff; color: white; border: none; border-radius: 4px;">
-                                📅 Load August 8 Games
+                                    style="margin-top: 10px; padding: 8px 16px; background: #28a745; color: white; border: none; border-radius: 4px; font-weight: bold;">
+                                � Review Aug 8 Accuracy
                             </button>
                         </div>
                     </div>`;
@@ -234,12 +232,12 @@ HTML_TEMPLATE = """
                 console.error('loadGamesForDate error:', error);
                 document.getElementById('predictions-container').innerHTML = 
                     `<div class="prediction-card">
-                        <h3>❌ Error Loading Games for ${selectedDate}</h3>
+                        <h3>❌ No Accuracy Data Available for ${selectedDate}</h3>
                         <p><strong>Error:</strong> ${error.message}</p>
-                        <p><strong>Available dates:</strong> August 8, 2025 has complete historical data with all 15 MLB games.</p>
+                        <p><strong>Available dates:</strong> August 8, 2025 currently has complete historical accuracy data. More dates will be added as the system tracks performance over time.</p>
                         <button onclick="document.getElementById('game-date').value='2025-08-08'; loadGamesForDate();" 
-                                style="margin-top: 10px; padding: 8px 16px; background: #007bff; color: white; border: none; border-radius: 4px;">
-                            📅 Load August 8 Games
+                                style="margin-top: 10px; padding: 8px 16px; background: #28a745; color: white; border: none; border-radius: 4px;">
+                            � Review Aug 8 Accuracy
                         </button>
                     </div>`;
             }
@@ -438,12 +436,12 @@ HTML_TEMPLATE = """
             
             return `
                 <div class="execution-time" style="background: rgba(255, 193, 7, 0.2);">
-                    🔒 Historical Data - Cached Prediction (${meta.matched_key})
+                    � Historical Accuracy Data - ${meta.matched_key || 'Cached Result'}
                 </div>
                 
                 <div class="matchup">
                     ✈️ ${data.away_team} @ 🏠 ${data.home_team}
-                    <span class="real-game-badge" style="background: linear-gradient(45deg, #ffc107, #e0a800);">HISTORICAL</span>
+                    <span class="real-game-badge" style="background: linear-gradient(45deg, #ffc107, #e0a800);">ACCURACY REVIEW</span>
                 </div>
                 
                 <div class="stats-grid">
@@ -474,7 +472,7 @@ HTML_TEMPLATE = """
                 </div>
                 
                 <div style="margin-top: 15px; padding: 10px; background: rgba(40, 167, 69, 0.1); border-radius: 8px; border-left: 3px solid #28a745;">
-                    <strong>🎯 Accuracy Demonstration:</strong> This historical game shows how our prediction engine performed against the actual MLB result.
+                    <strong>📊 Model Performance:</strong> This shows how accurately our prediction engine performed against the actual MLB result for validation purposes.
                 </div>
             `;
         }
@@ -584,12 +582,13 @@ HTML_TEMPLATE = """
             if (isHistorical) {
                 headerDiv.style.backgroundColor = 'rgba(255, 193, 7, 0.2)';
                 headerDiv.style.textAlign = 'center';
-                headerDiv.innerHTML = `<h2>📚 Historical Games - ${gameDate || 'Past Date'}</h2>
-                                      <p>🎯 Showing cached predictions with actual results for accuracy demonstration</p>`;
+                headerDiv.innerHTML = `<h2>� Model Accuracy Review - ${gameDate || 'Historical Date'}</h2>
+                                      <p>🎯 Predictions vs Actual Results • System Performance Validation</p>`;
             } else {
                 headerDiv.style.backgroundColor = 'rgba(40, 167, 69, 0.2)';
                 headerDiv.style.textAlign = 'center';
-                headerDiv.innerHTML = `<h2>🏟️ ${gameDate ? gameDate : "Today's"} Real MLB Games with Verified Pitcher Impacts</h2>`;
+                headerDiv.innerHTML = `<h2>🏟️ ${gameDate ? gameDate : "Today's"} Live MLB Games</h2>
+                                      <p>⚡ Real-time predictions with actual pitcher matchups</p>`;
             }
             container.appendChild(headerDiv);
             
@@ -612,20 +611,18 @@ HTML_TEMPLATE = """
         }
         
         function loadHistoricalDemo() {
-            // Load August 8, 2025 historical games for accuracy demonstration
+            // Legacy function - redirect to date-based accuracy review
             document.getElementById('game-date').value = '2025-08-08';
             loadGamesForDate();
         }
         
-        // Auto-load today's games on page load
+        // Auto-load accuracy review on page load
         window.onload = () => {
-            // Set the date to today (August 9, 2025)
-            const today = new Date();
-            const todayString = today.toISOString().split('T')[0];
-            document.getElementById('game-date').value = todayString;
+            // Start with August 8, 2025 - the first date with complete accuracy data
+            document.getElementById('game-date').value = '2025-08-08';
             
-            // Try to load today's games first
-            loadTodaysRealGames();
+            // Load the accuracy review for August 8
+            loadGamesForDate();
         };
     </script>
 </body>
@@ -692,8 +689,8 @@ def get_games_predictions():
             
             if not real_games:
                 return jsonify({
-                    'error': f'No games found for {game_date}. August 8, 2025 has complete historical data.',
-                    'suggestion': 'Try selecting August 8, 2025 which has 15 complete games with historical results.'
+                    'error': f'No accuracy data available for {game_date}. Model performance tracking starts with August 8, 2025.',
+                    'suggestion': 'August 8, 2025 has complete accuracy validation data with 15 games showing predicted vs actual results.'
                 })
             
             predictions = []
@@ -717,7 +714,7 @@ def get_games_predictions():
                 'historical_games': historical_count,
                 'live_games': len(real_games) - historical_count,
                 'game_date': game_date,
-                'games_source': f'Games for {game_date} - {"Historical cache" if historical_count > 0 else "Live simulation"}'
+                'games_source': f'Accuracy data for {game_date} - {"Model performance validation" if historical_count > 0 else "Live prediction tracking"}'
             })
         else:
             return jsonify({'error': 'Ultra-fast engine not available'})
