@@ -684,7 +684,21 @@ class FastPredictionEngine:
             cache_file = os.path.join(os.path.dirname(__file__), 'historical_predictions_cache.json')
             if os.path.exists(cache_file):
                 with open(cache_file, 'r') as f:
-                    return json.load(f)
+                    predictions_cache = json.load(f)
+                
+                # Also load betting lines cache
+                betting_cache_file = os.path.join(os.path.dirname(__file__), 'historical_betting_lines_cache.json')
+                betting_cache = {}
+                if os.path.exists(betting_cache_file):
+                    with open(betting_cache_file, 'r') as f:
+                        betting_cache = json.load(f)
+                
+                # Merge betting lines into predictions cache
+                for date, date_data in predictions_cache.items():
+                    if date in betting_cache:
+                        date_data['betting_lines'] = betting_cache[date]
+                
+                return predictions_cache
         except Exception as e:
             print(f"Warning: Could not load historical cache: {e}")
         return {}
@@ -724,6 +738,57 @@ class FastPredictionEngine:
         
         if not cached_prediction:
             return None
+        
+        # Extract betting lines if available
+        betting_lines = {}
+        if 'betting_lines' in date_cache:
+            # Try different betting key formats with exact team names
+            betting_keys = [
+                f"{away_team}_at_{home_team}",
+                f"{away_team} @ {home_team}",
+                f"{cached_prediction.get('away_team', away_team)}_at_{cached_prediction.get('home_team', home_team)}",
+                f"{cached_prediction.get('away_team', away_team)} @ {cached_prediction.get('home_team', home_team)}"
+            ]
+            
+            print(f"Looking for betting lines with keys: {betting_keys}")
+            print(f"Available betting keys: {list(date_cache['betting_lines'].keys())}")
+            
+            for bet_key in betting_keys:
+                if bet_key in date_cache['betting_lines']:
+                    bet_data = date_cache['betting_lines'][bet_key]
+                    print(f"Found betting data for key: {bet_key}")
+                    
+                    # Extract moneyline favorite
+                    moneyline_favorite = None
+                    if 'moneyline' in bet_data:
+                        ml_data = bet_data['moneyline']
+                        # Find favorite (lowest odds/negative number)
+                        for team, odds in ml_data.items():
+                            if isinstance(odds, (int, float)) and odds < 0:
+                                moneyline_favorite = team
+                                break
+                        if not moneyline_favorite:
+                            # If no negative odds, find smallest positive
+                            min_odds = float('inf')
+                            for team, odds in ml_data.items():
+                                if isinstance(odds, (int, float)) and odds < min_odds:
+                                    min_odds = odds
+                                    moneyline_favorite = team
+                    
+                    # Extract total line
+                    total_line = None
+                    if 'total' in bet_data:
+                        total_data = bet_data['total']
+                        if isinstance(total_data, list) and len(total_data) > 0:
+                            total_line = total_data[0].get('point')
+                    
+                    betting_lines = {
+                        'moneyline_favorite': moneyline_favorite,
+                        'total_line': total_line,
+                        'moneyline': bet_data.get('moneyline', {}),
+                        'total': bet_data.get('total', [])
+                    }
+                    break
             
         # Return formatted prediction with actual vs predicted comparison
         return {
@@ -739,7 +804,11 @@ class FastPredictionEngine:
                 'actual_home_score': cached_prediction.get('actual_home_score'),
                 'actual_total_runs': cached_prediction.get('actual_total_runs'),
                 'prediction_error': cached_prediction.get('prediction_error'),
-                'winner_correct': cached_prediction.get('winner_correct')
+                'winner_correct': cached_prediction.get('winner_correct'),
+                'away_score': cached_prediction.get('actual_away_score'),  # Add for compatibility
+                'home_score': cached_prediction.get('actual_home_score'),   # Add for compatibility
+                'away_pitcher': cached_prediction.get('away_pitcher'),
+                'home_pitcher': cached_prediction.get('home_pitcher')
             },
             'pitcher_quality': {
                 'away_pitcher_name': cached_prediction.get('away_pitcher'),
@@ -751,15 +820,19 @@ class FastPredictionEngine:
                 'execution_time_ms': 0.1,  # Instant for cached results
                 'simulation_count': 'CACHED',
                 'is_historical': True,
-                'has_actual_results': True
+                'has_actual_results': True,
+                'away_pitcher': cached_prediction.get('away_pitcher'),
+                'home_pitcher': cached_prediction.get('home_pitcher')
             },
-            'betting_analysis': {},  # Placeholder for cached historical data
+            'betting_lines': betting_lines,  # Add betting lines data
             'team_matchup': {
                 'away_team': away_team,
                 'home_team': home_team
             },
             'away_team': away_team,
             'home_team': home_team,
+            'away_pitcher': cached_prediction.get('away_pitcher'),  # Add at top level
+            'home_pitcher': cached_prediction.get('home_pitcher'),   # Add at top level
             'result_type': 'HISTORICAL'  # Add this field for JavaScript compatibility
         }
         
