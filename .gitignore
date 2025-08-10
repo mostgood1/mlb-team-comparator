@@ -3,6 +3,15 @@
 # Block ALL files by default, then explicitly allow what we need
 *
 
+# Python cache files (explicitly blocked)
+__pycache__/
+*.py[cod]
+*$py.class
+
+# Backup files (explicitly blocked)  
+*_backup_*.py
+*_backup_*.json
+
 # Allow essential root files
 !.gitignore
 !README.md
