@@ -438,7 +438,7 @@ class UltraFastSimEngine:
     def _setup_speed_cache(self):
         """Setup caching for maximum speed"""
         self.home_field_advantage = 0.15
-        self.base_runs_per_team = 3.75  # REDUCED from 4.43 based on 8/8 validation (was predicting ~11 vs actual ~8)
+        self.base_runs_per_team = 4.3  # OPTIMIZED: Updated based on real MLB data analysis (was 3.75)
     
     def get_team_multiplier_with_pitchers(self, away_team: str, home_team: str) -> Tuple[float, float]:
         """Get run multipliers for both teams including pitcher quality"""

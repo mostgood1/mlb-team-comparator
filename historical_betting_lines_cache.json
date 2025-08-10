@@ -481,6 +481,96 @@
           "price": -111
         }
       ]
+    },
+    "White Sox_at_Mariners": {
+      "moneyline": {
+        "Mariners": -106,
+        "White Sox": 93
+      },
+      "runline": [
+        {
+          "team": "Mariners",
+          "point": 1.5,
+          "price": -150
+        },
+        {
+          "team": "White Sox",
+          "point": -1.5,
+          "price": 121
+        }
+      ],
+      "total": [
+        {
+          "name": "Over",
+          "point": 8.3,
+          "price": -106
+        },
+        {
+          "name": "Under",
+          "point": 8.3,
+          "price": -113
+        }
+      ]
+    },
+    "Reds_at_Pirates": {
+      "moneyline": {
+        "Pirates": -106,
+        "Reds": 93
+      },
+      "runline": [
+        {
+          "team": "Pirates",
+          "point": 1.5,
+          "price": -148
+        },
+        {
+          "team": "Reds",
+          "point": -1.5,
+          "price": 140
+        }
+      ],
+      "total": [
+        {
+          "name": "Over",
+          "point": 8.8,
+          "price": -108
+        },
+        {
+          "name": "Under",
+          "point": 8.8,
+          "price": -108
+        }
+      ]
+    },
+    "Marlins_at_Braves": {
+      "moneyline": {
+        "Braves": -106,
+        "Marlins": 93
+      },
+      "runline": [
+        {
+          "team": "Braves",
+          "point": 1.5,
+          "price": -160
+        },
+        {
+          "team": "Marlins",
+          "point": -1.5,
+          "price": 127
+        }
+      ],
+      "total": [
+        {
+          "name": "Over",
+          "point": 7.7,
+          "price": -109
+        },
+        {
+          "name": "Under",
+          "point": 7.7,
+          "price": -110
+        }
+      ]
     }
   },
   "2025-08-01": {
@@ -515,5 +605,789 @@
       ]
     }
   },
-  "2025-08-06": {}
+  "2025-08-06": {},
+  "2025-08-08": {
+    "Reds_at_Pirates": {
+      "moneyline": {
+        "Pirates": -106,
+        "Reds": 93
+      },
+      "runline": [
+        {
+          "team": "Pirates",
+          "point": 1.5,
+          "price": -156
+        },
+        {
+          "team": "Reds",
+          "point": -1.5,
+          "price": 111
+        }
+      ],
+      "total": [
+        {
+          "name": "Over",
+          "point": 8.1,
+          "price": -106
+        },
+        {
+          "name": "Under",
+          "point": 8.1,
+          "price": -109
+        }
+      ]
+    },
+    "Angels_at_Tigers": {
+      "moneyline": {
+        "Tigers": -106,
+        "Angels": 93
+      },
+      "runline": [
+        {
+          "team": "Tigers",
+          "point": 1.5,
+          "price": -140
+        },
+        {
+          "team": "Angels",
+          "point": -1.5,
+          "price": 133
+        }
+      ],
+      "total": [
+        {
+          "name": "Over",
+          "point": 8.7,
+          "price": -108
+        },
+        {
+          "name": "Under",
+          "point": 8.7,
+          "price": -109
+        }
+      ]
+    },
+    "Guardians_at_White Sox": {
+      "moneyline": {
+        "White Sox": -106,
+        "Guardians": 93
+      },
+      "runline": [
+        {
+          "team": "White Sox",
+          "point": 1.5,
+          "price": -148
+        },
+        {
+          "team": "Guardians",
+          "point": -1.5,
+          "price": 128
+        }
+      ],
+      "total": [
+        {
+          "name": "Over",
+          "point": 7.8,
+          "price": -113
+        },
+        {
+          "name": "Under",
+          "point": 7.8,
+          "price": -111
+        }
+      ]
+    },
+    "Phillies_at_Rangers": {
+      "moneyline": {
+        "Rangers": -106,
+        "Phillies": 93
+      },
+      "runline": [
+        {
+          "team": "Rangers",
+          "point": 1.5,
+          "price": -156
+        },
+        {
+          "team": "Phillies",
+          "point": -1.5,
+          "price": 120
+        }
+      ],
+      "total": [
+        {
+          "name": "Over",
+          "point": 8.6,
+          "price": -108
+        },
+        {
+          "name": "Under",
+          "point": 8.6,
+          "price": -111
+        }
+      ]
+    },
+    "Royals_at_Twins": {
+      "moneyline": {
+        "Twins": -106,
+        "Royals": 93
+      },
+      "runline": [
+        {
+          "team": "Twins",
+          "point": 1.5,
+          "price": -149
+        },
+        {
+          "team": "Royals",
+          "point": -1.5,
+          "price": 123
+        }
+      ],
+      "total": [
+        {
+          "name": "Over",
+          "point": 7.9,
+          "price": -108
+        },
+        {
+          "name": "Under",
+          "point": 7.9,
+          "price": -109
+        }
+      ]
+    },
+    "Mets_at_Brewers": {
+      "moneyline": {
+        "Brewers": -106,
+        "Mets": 93
+      },
+      "runline": [
+        {
+          "team": "Brewers",
+          "point": 1.5,
+          "price": -139
+        },
+        {
+          "team": "Mets",
+          "point": -1.5,
+          "price": 119
+        }
+      ],
+      "total": [
+        {
+          "name": "Over",
+          "point": 9.2,
+          "price": -106
+        },
+        {
+          "name": "Under",
+          "point": 9.2,
+          "price": -105
+        }
+      ]
+    },
+    "Cubs_at_Cardinals": {
+      "moneyline": {
+        "Cardinals": -106,
+        "Cubs": 93
+      },
+      "runline": [
+        {
+          "team": "Cardinals",
+          "point": 1.5,
+          "price": -134
+        },
+        {
+          "team": "Cubs",
+          "point": -1.5,
+          "price": 128
+        }
+      ],
+      "total": [
+        {
+          "name": "Over",
+          "point": 8.6,
+          "price": -106
+        },
+        {
+          "name": "Under",
+          "point": 8.6,
+          "price": -106
+        }
+      ]
+    },
+    "Rockies_at_Diamondbacks": {
+      "moneyline": {
+        "Diamondbacks": -106,
+        "Rockies": 93
+      },
+      "runline": [
+        {
+          "team": "Diamondbacks",
+          "point": 1.5,
+          "price": -149
+        },
+        {
+          "team": "Rockies",
+          "point": -1.5,
+          "price": 112
+        }
+      ],
+      "total": [
+        {
+          "name": "Over",
+          "point": 9.2,
+          "price": -109
+        },
+        {
+          "name": "Under",
+          "point": 9.2,
+          "price": -107
+        }
+      ]
+    },
+    "Red Sox_at_Padres": {
+      "moneyline": {
+        "Padres": -106,
+        "Red Sox": 93
+      },
+      "runline": [
+        {
+          "team": "Padres",
+          "point": 1.5,
+          "price": -139
+        },
+        {
+          "team": "Red Sox",
+          "point": -1.5,
+          "price": 134
+        }
+      ],
+      "total": [
+        {
+          "name": "Over",
+          "point": 9.3,
+          "price": -109
+        },
+        {
+          "name": "Under",
+          "point": 9.3,
+          "price": -112
+        }
+      ]
+    },
+    "Rays_at_Mariners": {
+      "moneyline": {
+        "Mariners": -106,
+        "Rays": 93
+      },
+      "runline": [
+        {
+          "team": "Mariners",
+          "point": 1.5,
+          "price": -147
+        },
+        {
+          "team": "Rays",
+          "point": -1.5,
+          "price": 117
+        }
+      ],
+      "total": [
+        {
+          "name": "Over",
+          "point": 9.5,
+          "price": -110
+        },
+        {
+          "name": "Under",
+          "point": 9.5,
+          "price": -105
+        }
+      ]
+    },
+    "Blue Jays_at_Dodgers": {
+      "moneyline": {
+        "Dodgers": -106,
+        "Blue Jays": 93
+      },
+      "runline": [
+        {
+          "team": "Dodgers",
+          "point": 1.5,
+          "price": -138
+        },
+        {
+          "team": "Blue Jays",
+          "point": -1.5,
+          "price": 121
+        }
+      ],
+      "total": [
+        {
+          "name": "Over",
+          "point": 8.6,
+          "price": -107
+        },
+        {
+          "name": "Under",
+          "point": 8.6,
+          "price": -113
+        }
+      ]
+    },
+    "Nationals_at_Giants": {
+      "moneyline": {
+        "Giants": -106,
+        "Nationals": 93
+      },
+      "runline": [
+        {
+          "team": "Giants",
+          "point": 1.5,
+          "price": -138
+        },
+        {
+          "team": "Nationals",
+          "point": -1.5,
+          "price": 112
+        }
+      ],
+      "total": [
+        {
+          "name": "Over",
+          "point": 8.9,
+          "price": -107
+        },
+        {
+          "name": "Under",
+          "point": 8.9,
+          "price": -113
+        }
+      ]
+    }
+  },
+  "2025-08-09": {
+    "Marlins_at_Braves": {
+      "moneyline": {
+        "Braves": -106,
+        "Marlins": 93
+      },
+      "runline": [
+        {
+          "team": "Braves",
+          "point": 1.5,
+          "price": -160
+        },
+        {
+          "team": "Marlins",
+          "point": -1.5,
+          "price": 111
+        }
+      ],
+      "total": [
+        {
+          "name": "Over",
+          "point": 9.0,
+          "price": -112
+        },
+        {
+          "name": "Under",
+          "point": 9.0,
+          "price": -114
+        }
+      ]
+    },
+    "Astros_at_Yankees": {
+      "moneyline": {
+        "Yankees": -106,
+        "Astros": 93
+      },
+      "runline": [
+        {
+          "team": "Yankees",
+          "point": 1.5,
+          "price": -160
+        },
+        {
+          "team": "Astros",
+          "point": -1.5,
+          "price": 129
+        }
+      ],
+      "total": [
+        {
+          "name": "Over",
+          "point": 8.1,
+          "price": -114
+        },
+        {
+          "name": "Under",
+          "point": 8.1,
+          "price": -115
+        }
+      ]
+    },
+    "Nationals_at_Giants": {
+      "moneyline": {
+        "Giants": -106,
+        "Nationals": 93
+      },
+      "runline": [
+        {
+          "team": "Giants",
+          "point": 1.5,
+          "price": -150
+        },
+        {
+          "team": "Nationals",
+          "point": -1.5,
+          "price": 110
+        }
+      ],
+      "total": [
+        {
+          "name": "Over",
+          "point": 7.9,
+          "price": -105
+        },
+        {
+          "name": "Under",
+          "point": 7.9,
+          "price": -114
+        }
+      ]
+    },
+    "Angels_at_Tigers": {
+      "moneyline": {
+        "Tigers": -106,
+        "Angels": 93
+      },
+      "runline": [
+        {
+          "team": "Tigers",
+          "point": 1.5,
+          "price": -142
+        },
+        {
+          "team": "Angels",
+          "point": -1.5,
+          "price": 128
+        }
+      ],
+      "total": [
+        {
+          "name": "Over",
+          "point": 9.2,
+          "price": -114
+        },
+        {
+          "name": "Under",
+          "point": 9.2,
+          "price": -110
+        }
+      ]
+    },
+    "Reds_at_Pirates": {
+      "moneyline": {
+        "Pirates": -106,
+        "Reds": 93
+      },
+      "runline": [
+        {
+          "team": "Pirates",
+          "point": 1.5,
+          "price": -134
+        },
+        {
+          "team": "Reds",
+          "point": -1.5,
+          "price": 132
+        }
+      ],
+      "total": [
+        {
+          "name": "Over",
+          "point": 9.4,
+          "price": -112
+        },
+        {
+          "name": "Under",
+          "point": 9.4,
+          "price": -113
+        }
+      ]
+    },
+    "Royals_at_Twins": {
+      "moneyline": {
+        "Twins": -106,
+        "Royals": 93
+      },
+      "runline": [
+        {
+          "team": "Twins",
+          "point": 1.5,
+          "price": -147
+        },
+        {
+          "team": "Royals",
+          "point": -1.5,
+          "price": 129
+        }
+      ],
+      "total": [
+        {
+          "name": "Over",
+          "point": 9.1,
+          "price": -110
+        },
+        {
+          "name": "Under",
+          "point": 9.1,
+          "price": -108
+        }
+      ]
+    },
+    "Guardians_at_White Sox": {
+      "moneyline": {
+        "White Sox": -106,
+        "Guardians": 93
+      },
+      "runline": [
+        {
+          "team": "White Sox",
+          "point": 1.5,
+          "price": -136
+        },
+        {
+          "team": "Guardians",
+          "point": -1.5,
+          "price": 121
+        }
+      ],
+      "total": [
+        {
+          "name": "Over",
+          "point": 8.4,
+          "price": -111
+        },
+        {
+          "name": "Under",
+          "point": 8.4,
+          "price": -109
+        }
+      ]
+    },
+    "Mets_at_Brewers": {
+      "moneyline": {
+        "Brewers": -106,
+        "Mets": 93
+      },
+      "runline": [
+        {
+          "team": "Brewers",
+          "point": 1.5,
+          "price": -148
+        },
+        {
+          "team": "Mets",
+          "point": -1.5,
+          "price": 134
+        }
+      ],
+      "total": [
+        {
+          "name": "Over",
+          "point": 8.4,
+          "price": -105
+        },
+        {
+          "name": "Under",
+          "point": 8.4,
+          "price": -112
+        }
+      ]
+    },
+    "Cubs_at_Cardinals": {
+      "moneyline": {
+        "Cardinals": -106,
+        "Cubs": 93
+      },
+      "runline": [
+        {
+          "team": "Cardinals",
+          "point": 1.5,
+          "price": -147
+        },
+        {
+          "team": "Cubs",
+          "point": -1.5,
+          "price": 133
+        }
+      ],
+      "total": [
+        {
+          "name": "Over",
+          "point": 8.7,
+          "price": -105
+        },
+        {
+          "name": "Under",
+          "point": 8.7,
+          "price": -109
+        }
+      ]
+    },
+    "Phillies_at_Rangers": {
+      "moneyline": {
+        "Rangers": -106,
+        "Phillies": 93
+      },
+      "runline": [
+        {
+          "team": "Rangers",
+          "point": 1.5,
+          "price": -160
+        },
+        {
+          "team": "Phillies",
+          "point": -1.5,
+          "price": 119
+        }
+      ],
+      "total": [
+        {
+          "name": "Over",
+          "point": 8.4,
+          "price": -112
+        },
+        {
+          "name": "Under",
+          "point": 8.4,
+          "price": -105
+        }
+      ]
+    },
+    "Rockies_at_Diamondbacks": {
+      "moneyline": {
+        "Diamondbacks": -106,
+        "Rockies": 93
+      },
+      "runline": [
+        {
+          "team": "Diamondbacks",
+          "point": 1.5,
+          "price": -137
+        },
+        {
+          "team": "Rockies",
+          "point": -1.5,
+          "price": 124
+        }
+      ],
+      "total": [
+        {
+          "name": "Over",
+          "point": 8.3,
+          "price": -113
+        },
+        {
+          "name": "Under",
+          "point": 8.3,
+          "price": -113
+        }
+      ]
+    },
+    "Red Sox_at_Padres": {
+      "moneyline": {
+        "Padres": -106,
+        "Red Sox": 93
+      },
+      "runline": [
+        {
+          "team": "Padres",
+          "point": 1.5,
+          "price": -160
+        },
+        {
+          "team": "Red Sox",
+          "point": -1.5,
+          "price": 134
+        }
+      ],
+      "total": [
+        {
+          "name": "Over",
+          "point": 9.5,
+          "price": -108
+        },
+        {
+          "name": "Under",
+          "point": 9.5,
+          "price": -114
+        }
+      ]
+    },
+    "Blue Jays_at_Dodgers": {
+      "moneyline": {
+        "Dodgers": -106,
+        "Blue Jays": 93
+      },
+      "runline": [
+        {
+          "team": "Dodgers",
+          "point": 1.5,
+          "price": -155
+        },
+        {
+          "team": "Blue Jays",
+          "point": -1.5,
+          "price": 110
+        }
+      ],
+      "total": [
+        {
+          "name": "Over",
+          "point": 9.0,
+          "price": -114
+        },
+        {
+          "name": "Under",
+          "point": 9.0,
+          "price": -105
+        }
+      ]
+    },
+    "Rays_at_Mariners": {
+      "moneyline": {
+        "Mariners": -106,
+        "Rays": 93
+      },
+      "runline": [
+        {
+          "team": "Mariners",
+          "point": 1.5,
+          "price": -142
+        },
+        {
+          "team": "Rays",
+          "point": -1.5,
+          "price": 140
+        }
+      ],
+      "total": [
+        {
+          "name": "Over",
+          "point": 9.0,
+          "price": -111
+        },
+        {
+          "name": "Under",
+          "point": 9.0,
+          "price": -108
+        }
+      ]
+    }
+  }
 }
