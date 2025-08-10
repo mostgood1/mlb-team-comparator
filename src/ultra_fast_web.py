@@ -7,32 +7,8 @@ Updated to use REAL GAME          <div         <div class="header">
         </div>
         
         <div class="speed-banner">
-            🎯 PRIMARY: Get today's betting recommendations • SECONDARY: Review historical accuracy with past game results
-        </div>ontainer"            // Add header with accuracy summary for historical data
-            co            // Add header with comprehensive accuracy analysis for historical data
-            const headerDiv = document.createElement('div');
-            headerDiv.className = 'prediction-card';
-            if (isHistorical) {
-                // Calculate overall accuracy stats for historical data
-                let winnersCorrect = 0;
-                let totalGames = 0;
-                let totalRunsErrors = [];
-                let overUnderCorrect = 0;
-                let moneylineCorrect = 0;
-                let totalOverUnder = 0;
-                let totalMoneyline = 0;
-                
-                predictions.forEach(pred => {
-                    if (pred.actual_results && pred.actual_results.winner_correct !== undefined) {
-                        totalGames++;
-                        if (pred.actual_results.winner_correct) winnersCorrect++;
-                        
-                        const actualTotal = (pred.actual_results.away_score || 0) + (pred.actual_results.home_score || 0);
-                        const predictedTotal = pred.predictions.predicted_total_runs || (pred.predictions.away_score + pred.predictions.home_score) || 0;
-                        const error = Math.abs(actualTotal - predictedTotal);
-                        if (!isNaN(error)) totalRunsErrors.push(error);
-                        
-                        // Check if betting line data is available
+            📈 ACCURACY REVIEW MODE: Select any date to see predicted vs actual results and track model performance!
+        </div>
                         if (pred.betting_lines) {
                             // Moneyline analysis
                             const mlFavorite = pred.betting_lines.moneyline_favorite;
@@ -825,19 +801,132 @@ HTML_TEMPLATE = """
             // Determine if this is historical data
             const isHistorical = predictions.length > 0 && predictions[0].result_type === 'HISTORICAL';
             
-            // Add header
+            // Add header with comprehensive accuracy analysis for historical data
             const headerDiv = document.createElement('div');
             headerDiv.className = 'prediction-card';
             if (isHistorical) {
+                // Calculate overall accuracy stats for historical data
+                let winnersCorrect = 0;
+                let totalGames = 0;
+                let totalRunsErrors = [];
+                let overUnderCorrect = 0;
+                let moneylineCorrect = 0;
+                let totalOverUnder = 0;
+                let totalMoneyline = 0;
+                
+                predictions.forEach(pred => {
+                    if (pred.actual_results && pred.actual_results.winner_correct !== undefined) {
+                        totalGames++;
+                        if (pred.actual_results.winner_correct) winnersCorrect++;
+                        
+                        const actualTotal = (pred.actual_results.away_score || 0) + (pred.actual_results.home_score || 0);
+                        const predictedTotal = pred.predictions.predicted_total_runs || (pred.predictions.away_score + pred.predictions.home_score) || 0;
+                        const error = Math.abs(actualTotal - predictedTotal);
+                        if (!isNaN(error)) totalRunsErrors.push(error);
+                        
+                        // Check if betting line data is available
+                        if (pred.betting_lines) {
+                            // Moneyline analysis
+                            const mlFavorite = pred.betting_lines.moneyline_favorite;
+                            const predictedWinner = (pred.predictions.away_score > pred.predictions.home_score) ? pred.away_team : pred.home_team;
+                            const actualWinner = (pred.actual_results.away_score > pred.actual_results.home_score) ? pred.away_team : pred.home_team;
+                            
+                            if (mlFavorite) {
+                                totalMoneyline++;
+                                if (predictedWinner === actualWinner) moneylineCorrect++;
+                            }
+                            
+                            // Over/Under analysis
+                            if (pred.betting_lines.total_line) {
+                                totalOverUnder++;
+                                const totalLine = pred.betting_lines.total_line;
+                                const predictedOU = predictedTotal > totalLine ? 'Over' : 'Under';
+                                const actualOU = actualTotal > totalLine ? 'Over' : 'Under';
+                                if (predictedOU === actualOU) overUnderCorrect++;
+                            }
+                        }
+                    }
+                });
+                
+                const winnerAccuracy = totalGames > 0 ? (winnersCorrect / totalGames * 100).toFixed(1) : 'N/A';
+                const avgTotalError = totalRunsErrors.length > 0 ? (totalRunsErrors.reduce((a,b) => a+b, 0) / totalRunsErrors.length).toFixed(1) : 'N/A';
+                const goodTotalPredictions = totalRunsErrors.filter(err => err <= 2).length;
+                const totalAccuracy = totalRunsErrors.length > 0 ? (goodTotalPredictions / totalRunsErrors.length * 100).toFixed(1) : 'N/A';
+                const overUnderAccuracy = totalOverUnder > 0 ? (overUnderCorrect / totalOverUnder * 100).toFixed(1) : 'N/A';
+                const moneylineAccuracy = totalMoneyline > 0 ? (moneylineCorrect / totalMoneyline * 100).toFixed(1) : 'N/A';
+                
+                // Determine overall performance level
+                const winnerPct = parseFloat(winnerAccuracy) || 0;
+                const totalPct = parseFloat(totalAccuracy) || 0;
+                const avgError = parseFloat(avgTotalError) || 0;
+                
+                let performanceLevel = '';
+                let performanceColor = '';
+                let performanceIcon = '';
+                
+                if (winnerPct >= 60 && totalPct >= 70 && avgError <= 1.5) {
+                    performanceLevel = 'EXCELLENT';
+                    performanceColor = '#28a745';
+                    performanceIcon = '🏆';
+                } else if (winnerPct >= 50 && totalPct >= 60 && avgError <= 2.0) {
+                    performanceLevel = 'GOOD';
+                    performanceColor = '#ffc107';
+                    performanceIcon = '✅';
+                } else if (winnerPct >= 40 && totalPct >= 50) {
+                    performanceLevel = 'FAIR';
+                    performanceColor = '#fd7e14';
+                    performanceIcon = '📊';
+                } else {
+                    performanceLevel = 'NEEDS IMPROVEMENT';
+                    performanceColor = '#dc3545';
+                    performanceIcon = '⚠️';
+                }
+                
                 headerDiv.style.backgroundColor = 'rgba(255, 193, 7, 0.2)';
                 headerDiv.style.textAlign = 'center';
-                headerDiv.innerHTML = `<h2>� Model Accuracy Review - ${gameDate || 'Historical Date'}</h2>
-                                      <p>🎯 Predictions vs Actual Results • System Performance Validation</p>`;
+                headerDiv.innerHTML = `
+                    <h2>📊 Model Accuracy Review - ${gameDate || 'Historical Date'}</h2>
+                    <div style="background: rgba(${performanceColor === '#28a745' ? '40, 167, 69' : performanceColor === '#ffc107' ? '255, 193, 7' : performanceColor === '#fd7e14' ? '253, 126, 20' : '220, 53, 69'}, 0.2); padding: 12px; border-radius: 8px; margin: 10px 0; border-left: 4px solid ${performanceColor};">
+                        <div style="font-size: 1.3em; font-weight: bold; color: ${performanceColor};">${performanceIcon} OVERALL PERFORMANCE: ${performanceLevel}</div>
+                        <div style="font-size: 0.95em; margin-top: 5px; opacity: 0.9;">
+                            Winner Accuracy: ${winnerAccuracy}% • Total Runs Accuracy: ${totalAccuracy}% • Avg Error: ${avgTotalError} runs • Games Analyzed: ${totalGames}
+                        </div>
+                    </div>
+                    
+                    <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 15px; margin: 15px 0;">
+                        <div style="background: rgba(40, 167, 69, 0.2); padding: 15px; border-radius: 8px; border-left: 4px solid #28a745;">
+                            <div style="font-size: 1.1em; font-weight: bold; color: #28a745;">🎯 Winner Predictions</div>
+                            <div style="font-size: 1.5em; font-weight: bold;">${winnersCorrect}/${totalGames} (${winnerAccuracy}%)</div>
+                            <div style="font-size: 0.9em; opacity: 0.8;">Model vs Actual Game Winners</div>
+                        </div>
+                        <div style="background: rgba(52, 152, 219, 0.2); padding: 15px; border-radius: 8px; border-left: 4px solid #3498db;">
+                            <div style="font-size: 1.1em; font-weight: bold; color: #3498db;">📊 Total Runs Accuracy</div>
+                            <div style="font-size: 1.5em; font-weight: bold;">${goodTotalPredictions}/${totalRunsErrors.length} (${totalAccuracy}%)</div>
+                            <div style="font-size: 0.9em; opacity: 0.8;">Within 2 runs • Avg Error: ${avgTotalError}</div>
+                        </div>
+                        <div style="background: rgba(255, 193, 7, 0.2); padding: 15px; border-radius: 8px; border-left: 4px solid #ffc107;">
+                            <div style="font-size: 1.1em; font-weight: bold; color: #e67e22;">💰 Over/Under vs Lines</div>
+                            <div style="font-size: 1.5em; font-weight: bold;">${overUnderCorrect}/${totalOverUnder} (${overUnderAccuracy}%)</div>
+                            <div style="font-size: 0.9em; opacity: 0.8;">Model O/U vs Betting Lines</div>
+                        </div>
+                        <div style="background: rgba(156, 39, 176, 0.2); padding: 15px; border-radius: 8px; border-left: 4px solid #9c27b0;">
+                            <div style="font-size: 1.1em; font-weight: bold; color: #9c27b0;">💸 Moneyline Performance</div>
+                            <div style="font-size: 1.5em; font-weight: bold;">${moneylineCorrect}/${totalMoneyline} (${moneylineAccuracy}%)</div>
+                            <div style="font-size: 0.9em; opacity: 0.8;">Model picks vs ML Favorites</div>
+                        </div>
+                    </div>
+                    
+                    <div style="background: rgba(52, 73, 94, 0.3); padding: 15px; border-radius: 8px; margin: 10px 0;">
+                        <h3 style="color: #ecf0f1; margin-bottom: 10px;">📈 Performance Analysis</h3>
+                        <p style="margin: 5px 0; font-size: 0.95em;"><strong>Model vs Betting Markets:</strong> How our predictions performed against professional oddsmakers</p>
+                        <p style="margin: 5px 0; font-size: 0.95em;"><strong>Individual Game Breakdown:</strong> Each game shows Model Pick vs Betting Favorite vs Actual Result</p>
+                    </div>
+                `;
             } else {
                 headerDiv.style.backgroundColor = 'rgba(40, 167, 69, 0.2)';
                 headerDiv.style.textAlign = 'center';
-                headerDiv.innerHTML = `<h2>🏟️ ${gameDate ? gameDate : "Today's"} Live MLB Games</h2>
-                                      <p>⚡ Real-time predictions with actual pitcher matchups</p>`;
+                headerDiv.innerHTML = `<h2>💰 ${gameDate ? gameDate : "Today's"} Betting Recommendations</h2>
+                                      <p>⚡ Live predictions with professional betting analysis • Real pitcher matchups</p>`;
             }
             container.appendChild(headerDiv);
             

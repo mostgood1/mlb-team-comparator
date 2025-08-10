@@ -677,7 +677,7 @@ class FastPredictionEngine:
         self._load_historical_cache()
     
     def _load_historical_cache(self):
-        """Load historical predictions cache"""
+        """Load historical predictions cache and merge with betting lines data"""
         try:
             # Try src directory first, then parent directory
             cache_path = os.path.join(os.path.dirname(__file__), "historical_predictions_cache.json")
@@ -686,8 +686,79 @@ class FastPredictionEngine:
             
             with open(cache_path, 'r') as f:
                 self.historical_cache = json.load(f)
+                
+            # Load and merge betting lines data
+            try:
+                betting_cache_file = os.path.join(os.path.dirname(__file__), 'historical_betting_lines_cache.json')
+                if not os.path.exists(betting_cache_file):
+                    betting_cache_file = os.path.join(os.path.dirname(__file__), '..', 'historical_betting_lines_cache.json')
+                
+                with open(betting_cache_file, 'r') as f:
+                    betting_lines_data = json.load(f)
+                    
+                # Merge betting lines into historical cache
+                for game_date, games in betting_lines_data.items():
+                    if game_date in self.historical_cache:
+                        if 'cached_predictions' in self.historical_cache[game_date]:
+                            for game_key, prediction in self.historical_cache[game_date]['cached_predictions'].items():
+                                # Try to match betting lines to predictions
+                                betting_lines = self._find_matching_betting_lines(games, game_key)
+                                if betting_lines:
+                                    prediction['betting_lines'] = betting_lines
+                                    print(f"✅ Merged betting lines for {game_key} on {game_date}")
+                                    
+            except (FileNotFoundError, json.JSONDecodeError) as e:
+                print(f"⚠ Could not load betting lines cache: {e}")
+                
         except (FileNotFoundError, json.JSONDecodeError):
             self.historical_cache = {}
+            
+    def _find_matching_betting_lines(self, betting_games, game_key):
+        """Find matching betting lines for a game prediction"""
+        # Direct format conversion should work for August 8, 2025 data
+        if " @ " in game_key:
+            away_team, home_team = game_key.split(" @ ")
+            
+            # Try direct format conversion
+            betting_key = f"{away_team}_at_{home_team}"
+            if betting_key in betting_games:
+                print(f"✅ Direct match: {game_key} -> {betting_key}")
+                return self._convert_betting_data_to_format(betting_games[betting_key])
+            
+            # Try reversed format as fallback
+            betting_key = f"{home_team}_at_{away_team}"
+            if betting_key in betting_games:
+                print(f"✅ Reversed match: {game_key} -> {betting_key}")
+                return self._convert_betting_data_to_format(betting_games[betting_key])
+            
+            print(f"❌ No betting lines match found for {game_key}")
+                        
+        return None
+        
+    def _convert_betting_data_to_format(self, betting_data):
+        """Convert betting data to our standard format"""
+        converted_lines = {}
+        
+        # Extract moneyline favorite
+        if 'moneyline' in betting_data:
+            ml_data = betting_data['moneyline']
+            favorite_team = None
+            favorite_odds = None
+            
+            for team, odds in ml_data.items():
+                # Lower odds = favorite (closer to 0 or negative)
+                if favorite_odds is None or (isinstance(odds, (int, float)) and odds < favorite_odds):
+                    favorite_team = team
+                    favorite_odds = odds
+                    
+            converted_lines['moneyline_favorite'] = favorite_team
+            converted_lines['moneyline_odds'] = ml_data
+            
+        # Extract total line
+        if 'total' in betting_data and len(betting_data['total']) > 0:
+            converted_lines['total_line'] = betting_data['total'][0]['point']
+            
+        return converted_lines
     
     def _is_historical_date(self, game_date: str) -> bool:
         """Check if a date is historical (more than 1 day ago)"""
@@ -757,6 +828,7 @@ class FastPredictionEngine:
                         'prediction_error': cached_data.get('prediction_error', 0),
                         'winner_correct': cached_data.get('winner_correct', False)
                     },
+                    'betting_lines': cached_data.get('betting_lines', {}),  # Include betting lines
                     'meta': {
                         'is_historical': True,
                         'cached': True,
