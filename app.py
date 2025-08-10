@@ -177,26 +177,28 @@ HTML_TEMPLATE = """
     <div class="container">
         <div class="header">
             <h1>⚡ Ultra-Fast MLB Predictions</h1>
-            <p>🎯 MODEL ACCURACY TRACKER: Review prediction performance across historical dates • Validate system accuracy</p>
+            <p>💰 DAILY BETTING RECOMMENDATIONS: Professional analysis for today's games • Real-time value detection • Historical accuracy validation</p>
         </div>
         
         <div class="speed-banner">
-            📊 ACCURACY REVIEW MODE: Select any date to see predicted vs actual results and track model performance!
+            🎯 PRIMARY: Get today's betting recommendations • SECONDARY: Review historical accuracy with past game results
         </div>
         
         <div class="date-selector">
+            <div style="text-align: center; margin-bottom: 20px;">
+                <button onclick="loadTodaysPredictions()" style="background: linear-gradient(45deg, #28a745, #20c997); font-size: 1.2em; padding: 15px 30px; margin-bottom: 15px;">💰 Today's Betting Recommendations</button>
+            </div>
             <div class="date-controls">
-                <span class="date-label">📅 Select Game Date:</span>
+                <span class="date-label">� Historical Accuracy Review:</span>
                 <input type="date" id="game-date" value="">
-                <button onclick="loadGamesByDate()">🏟️ Load Games</button>
-                <button onclick="loadTodaysPredictions()">📍 Today</button>
+                <button onclick="loadGamesByDate()">📊 Review Accuracy</button>
             </div>
             <div style="margin-top: 15px; display: flex; justify-content: center; gap: 10px; flex-wrap: wrap;">
-                <button onclick="setYesterday()" style="background: linear-gradient(45deg, #e67e22, #d35400); font-size: 0.9em; padding: 8px 16px;">⏮️ Yesterday</button>
-                <button onclick="setTomorrow()" style="background: linear-gradient(45deg, #27ae60, #229954); font-size: 0.9em; padding: 8px 16px;">⏭️ Tomorrow</button>
+                <button onclick="setYesterday()" style="background: linear-gradient(45deg, #6c757d, #5a6268); font-size: 0.9em; padding: 8px 16px;">⏮️ Yesterday</button>
+                <button onclick="setTomorrow()" style="background: linear-gradient(45deg, #6c757d, #5a6268); font-size: 0.9em; padding: 8px 16px;">⏭️ Tomorrow</button>
             </div>
             <div style="margin-top: 10px; font-size: 0.9em; opacity: 0.8;">
-                💡 View any date - past games show final results, future games show predictions
+                � PRIMARY: Today's betting value • 📊 SECONDARY: Historical accuracy validation
             </div>
         </div>
         

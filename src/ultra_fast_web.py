@@ -1,7 +1,14 @@
 """
 Ultra-Fast MLB Prediction Web Interface
 Real-time betting recommendations with sub-200ms prediction generation
-Updated to use REAL GAME DATA with actual pitcher matchups
+Updated to use REAL GAME        <div class="header">
+            <h1>⚡ Ultra-Fast MLB Predictions</h1>
+            <p>💰 DAILY BETTING RECOMMENDATIONS: Professional analysis for today's games • Real-time value detection • Historical accuracy validation</p>
+        </div>
+        
+        <div class="speed-banner">
+            🎯 PRIMARY: Get today's betting recommendations • SECONDARY: Review historical accuracy with past game results
+        </div>th actual pitcher matchups
 """
 
 from flask import Flask, render_template_string, jsonify, request
@@ -151,17 +158,14 @@ HTML_TEMPLATE = """
         
         <div class="controls">
             <div style="display: flex; justify-content: center; gap: 15px; flex-wrap: wrap; margin-bottom: 15px;">
-                <div style="display: flex; align-items: center; gap: 10px;">
-                    <label for="game-date" style="font-weight: bold;">📅 Select Date for Accuracy Review:</label>
-                    <input type="date" id="game-date" style="padding: 12px; border-radius: 8px; border: 1px solid #ddd; font-size: 1em;" />
-                    <button onclick="loadGamesForDate()" style="background: linear-gradient(45deg, #28a745, #20c997);">📊 Review Accuracy</button>
-                </div>
-            </div>
-            <div style="display: flex; justify-content: center; gap: 15px; flex-wrap: wrap;">
-                <button onclick="loadTodaysRealGames()">🏟️ Today's Live Games</button>
+                <button onclick="loadTodaysRealGames()" style="background: linear-gradient(45deg, #28a745, #20c997); font-size: 1.1em; padding: 15px 25px;">💰 Today's Betting Recommendations</button>
                 <button onclick="speedTest()">⚡ Speed Test</button>
-                <button onclick="showMultipleGames()">📊 Detailed Analysis</button>
-                <button onclick="testRecommendations()">💰 Test Recommendations</button>
+                <button onclick="showMultipleGames()">📊 Game Analysis</button>
+            </div>
+            <div style="display: flex; justify-content: center; gap: 15px; flex-wrap: wrap; align-items: center;">
+                <span style="color: #ecf0f1; font-weight: bold;">📈 Historical Accuracy Review:</span>
+                <input type="date" id="game-date" style="padding: 8px; border-radius: 6px; border: 1px solid #ddd; font-size: 0.9em;" />
+                <button onclick="loadGamesForDate()" style="background: linear-gradient(45deg, #6c757d, #5a6268); font-size: 0.9em;">� Review Accuracy</button>
             </div>
         </div>
         
@@ -454,13 +458,15 @@ HTML_TEMPLATE = """
                         <div class="stat-value" style="color: #28a745; font-weight: bold;">${actual.away_score} - ${actual.home_score}</div>
                     </div>
                     <div class="stat-box">
-                        <div class="stat-label">Prediction Error</div>
-                        <div class="stat-value">${actual.prediction_error || scoreDiff.toFixed(1)} runs</div>
+                        <div class="stat-label">Winner Accuracy</div>
+                        <div class="stat-value" style="color: ${winnerCorrect ? '#28a745' : '#dc3545'};">
+                            ${winnerCorrect ? '✅ CORRECT' : '❌ WRONG'}
+                        </div>
                     </div>
                     <div class="stat-box">
-                        <div class="stat-label">Winner Prediction</div>
-                        <div class="stat-value" style="color: ${winnerCorrect ? '#28a745' : '#dc3545'};">
-                            ${winnerCorrect ? '✅ Correct' : '❌ Incorrect'}
+                        <div class="stat-label">Total Runs Error</div>
+                        <div class="stat-value" style="color: ${totalError <= 2 ? '#28a745' : totalError <= 4 ? '#ffc107' : '#dc3545'};">
+                            ${totalError.toFixed(1)} runs off
                         </div>
                     </div>
                 </div>
@@ -616,13 +622,15 @@ HTML_TEMPLATE = """
             loadGamesForDate();
         }
         
-        // Auto-load accuracy review on page load
+        // Auto-load today's betting recommendations on page load
         window.onload = () => {
-            // Start with August 8, 2025 - the first date with complete accuracy data
-            document.getElementById('game-date').value = '2025-08-08';
+            // Set today's date in the date picker for easy historical access
+            const today = new Date();
+            const todayStr = today.toISOString().split('T')[0];
+            document.getElementById('game-date').value = todayStr;
             
-            // Load the accuracy review for August 8
-            loadGamesForDate();
+            // Load today's betting recommendations as primary purpose
+            loadTodaysRealGames();
         };
     </script>
 </body>
