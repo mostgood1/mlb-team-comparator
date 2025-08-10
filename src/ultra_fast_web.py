@@ -34,10 +34,43 @@ Updated to use REAL GAME          <div         <div class="header">
                 const goodTotalPredictions = totalRunsErrors.filter(err => err <= 2).length;
                 const totalAccuracy = totalRunsErrors.length > 0 ? (goodTotalPredictions / totalRunsErrors.length * 100).toFixed(1) : 'N/A';
                 
+                // Determine overall performance level
+                const winnerPct = parseFloat(winnerAccuracy) || 0;
+                const totalPct = parseFloat(totalAccuracy) || 0;
+                const avgError = parseFloat(avgTotalError) || 0;
+                
+                let performanceLevel = '';
+                let performanceColor = '';
+                let performanceIcon = '';
+                
+                if (winnerPct >= 60 && totalPct >= 70 && avgError <= 1.5) {
+                    performanceLevel = 'EXCELLENT';
+                    performanceColor = '#28a745';
+                    performanceIcon = '🏆';
+                } else if (winnerPct >= 50 && totalPct >= 60 && avgError <= 2.0) {
+                    performanceLevel = 'GOOD';
+                    performanceColor = '#ffc107';
+                    performanceIcon = '✅';
+                } else if (winnerPct >= 40 && totalPct >= 50) {
+                    performanceLevel = 'FAIR';
+                    performanceColor = '#fd7e14';
+                    performanceIcon = '📊';
+                } else {
+                    performanceLevel = 'NEEDS IMPROVEMENT';
+                    performanceColor = '#dc3545';
+                    performanceIcon = '⚠️';
+                }
+                
                 headerDiv.style.backgroundColor = 'rgba(255, 193, 7, 0.2)';
                 headerDiv.style.textAlign = 'center';
                 headerDiv.innerHTML = `
-                    <h2>📊 Historical Accuracy Review - ${gameDate || 'Historical Date'}</h2>
+                    <h2>📊 Model Accuracy Review - ${gameDate || 'Historical Date'}</h2>
+                    <div style="background: rgba(${performanceColor === '#28a745' ? '40, 167, 69' : performanceColor === '#ffc107' ? '255, 193, 7' : performanceColor === '#fd7e14' ? '253, 126, 20' : '220, 53, 69'}, 0.2); padding: 12px; border-radius: 8px; margin: 10px 0; border-left: 4px solid ${performanceColor};">
+                        <div style="font-size: 1.3em; font-weight: bold; color: ${performanceColor};">${performanceIcon} OVERALL PERFORMANCE: ${performanceLevel}</div>
+                        <div style="font-size: 0.95em; margin-top: 5px; opacity: 0.9;">
+                            Winner Accuracy: ${winnerAccuracy}% • Total Runs Accuracy: ${totalAccuracy}% • Avg Error: ${avgTotalError} runs • Games Analyzed: ${totalGames}
+                        </div>
+                    </div>
                     <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 15px; margin: 15px 0;">
                         <div style="background: rgba(40, 167, 69, 0.2); padding: 15px; border-radius: 8px; border-left: 4px solid #28a745;">
                             <div style="font-size: 1.1em; font-weight: bold; color: #28a745;">🎯 Winner Predictions</div>
