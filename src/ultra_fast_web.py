@@ -173,13 +173,30 @@ HTML_TEMPLATE = """
             
             try {
                 const response = await fetch('/api/real-games-predictions');
+                if (!response.ok) {
+                    throw new Error(`HTTP ${response.status}: ${response.statusText}`);
+                }
                 const data = await response.json();
                 
                 if (data.error) throw new Error(data.error);
+                
+                if (!data.predictions || data.predictions.length === 0) {
+                    throw new Error('No predictions returned from server');
+                }
+                
                 displayMultiplePredictions(data.predictions);
             } catch (error) {
+                console.error('loadTodaysRealGames error:', error);
                 document.getElementById('predictions-container').innerHTML = 
-                    `<div class="prediction-card"><h3>❌ Error: ${error.message}</h3></div>`;
+                    `<div class="prediction-card">
+                        <h3>❌ Error Loading Games</h3>
+                        <p><strong>Error:</strong> ${error.message}</p>
+                        <p><strong>Suggestion:</strong> Try selecting August 8, 2025 from the date picker above - that date has complete historical data.</p>
+                        <button onclick="document.getElementById('game-date').value='2025-08-08'; loadGamesForDate();" 
+                                style="margin-top: 10px; padding: 8px 16px; background: #007bff; color: white; border: none; border-radius: 4px;">
+                            📅 Load August 8 Games
+                        </button>
+                    </div>`;
             }
         }
         
@@ -194,13 +211,30 @@ HTML_TEMPLATE = """
             
             try {
                 const response = await fetch(`/api/games-predictions?date=${selectedDate}`);
+                if (!response.ok) {
+                    throw new Error(`HTTP ${response.status}: ${response.statusText}`);
+                }
                 const data = await response.json();
                 
                 if (data.error) throw new Error(data.error);
+                
+                if (!data.predictions || data.predictions.length === 0) {
+                    throw new Error(`No games found for ${selectedDate}`);
+                }
+                
                 displayMultiplePredictions(data.predictions, selectedDate);
             } catch (error) {
+                console.error('loadGamesForDate error:', error);
                 document.getElementById('predictions-container').innerHTML = 
-                    `<div class="prediction-card"><h3>❌ Error: ${error.message}</h3></div>`;
+                    `<div class="prediction-card">
+                        <h3>❌ Error Loading Games for ${selectedDate}</h3>
+                        <p><strong>Error:</strong> ${error.message}</p>
+                        <p><strong>Available dates:</strong> August 8, 2025 has complete historical data with all 15 MLB games.</p>
+                        <button onclick="document.getElementById('game-date').value='2025-08-08'; loadGamesForDate();" 
+                                style="margin-top: 10px; padding: 8px 16px; background: #007bff; color: white; border: none; border-radius: 4px;">
+                            📅 Load August 8 Games
+                        </button>
+                    </div>`;
             }
         }
         
@@ -314,7 +348,7 @@ HTML_TEMPLATE = """
                 setTimeout(() => {
                     document.getElementById('predictions-container').innerHTML += `
                         <div style="text-align: center; margin-top: 20px;">
-                            <button onclick="displayMultiplePredictions(${JSON.stringify(predictions).replace(/"/g, '&quot;')})" 
+                            <button onclick="showDetailedResults()" 
                                     style="background: linear-gradient(45deg, #28a745, #20c997); padding: 12px 24px;">
                                 📋 View Individual Game Details
                             </button>
@@ -560,9 +594,21 @@ HTML_TEMPLATE = """
             });
         }
         
-        // Auto-load today's real games on page load
+        function showDetailedResults() {
+            // This function will reload the current games with detailed view
+            const dateInput = document.getElementById('game-date');
+            if (dateInput && dateInput.value) {
+                loadGamesForDate();
+            } else {
+                loadTodaysRealGames();
+            }
+        }
+        
+        // Auto-load historical games on page load (Aug 8 has complete data)
         window.onload = () => {
-            loadTodaysRealGames();
+            // Set the date to August 8, 2025 (our complete historical date)
+            document.getElementById('game-date').value = '2025-08-08';
+            loadGamesForDate();
         };
     </script>
 </body>
@@ -584,6 +630,13 @@ def get_real_games_predictions():
             # Get today's real games
             real_games = engine.get_todays_real_games()
             
+            if not real_games:
+                # If no games today, try August 8, 2025 (our complete historical date)
+                real_games = engine.get_todays_real_games("2025-08-08")
+                games_source = 'Historical games (Aug 8, 2025) - No games available for today'
+            else:
+                games_source = 'ProjectedStarters.json - Real MLB games'
+            
             predictions = []
             start_time = datetime.now()
             
@@ -598,7 +651,7 @@ def get_real_games_predictions():
                 'predictions': predictions,
                 'total_time_ms': total_time,
                 'total_games': len(real_games),
-                'games_source': 'ProjectedStarters.json - Real MLB games'
+                'games_source': games_source
             })
         else:
             return jsonify({'error': 'Ultra-fast engine not available'})
