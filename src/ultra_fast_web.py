@@ -673,6 +673,12 @@ def get_games_predictions():
             # Get games for the specified date
             real_games = engine.get_todays_real_games(game_date)
             
+            if not real_games:
+                return jsonify({
+                    'error': f'No games found for {game_date}. August 8, 2025 has complete historical data.',
+                    'suggestion': 'Try selecting August 8, 2025 which has 15 complete games with historical results.'
+                })
+            
             predictions = []
             start_time = datetime.now()
             

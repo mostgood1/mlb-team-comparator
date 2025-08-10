@@ -886,26 +886,22 @@ class FastPredictionEngine:
                                     
                                     real_games.append((away_short, home_short))
                     
-                    # If still no games found, use generic fallback for non-today dates
-                    if not real_games and target_date != date.today().strftime('%Y-%m-%d'):
-                        real_games = [
-                            ("Yankees", "Red Sox"),     # Classic rivalry
-                            ("Dodgers", "Giants"),      # NL West rivalry  
-                            ("Cubs", "Cardinals"),      # NL Central rivalry
-                            ("Astros", "Rangers"),      # AL West rivalry
-                            ("Phillies", "Mets")        # NL East rivalry
-                        ]
+                    # If still no games found, check historical cache for the date
+                    if not real_games:
+                        # Try to get games from historical cache
+                        if hasattr(self, 'historical_cache') and self.historical_cache:
+                            if target_date in self.historical_cache:
+                                cache_data = self.historical_cache[target_date]
+                                if 'cached_predictions' in cache_data:
+                                    for game_key, game_data in cache_data['cached_predictions'].items():
+                                        if 'away_team' in game_data and 'home_team' in game_data:
+                                            away_team = game_data['away_team']
+                                            home_team = game_data['home_team']
+                                            real_games.append((away_team, home_team))
         except Exception as e:
             print(f"Warning: Error reading ProjectedStarters.json: {e}")
         
-        # Final fallback if no games found
-        if not real_games:
-            real_games = [
-                ("Astros", "Yankees"),
-                ("Blue Jays", "Dodgers"), 
-                ("Red Sox", "Padres")
-            ]
-        
+        # Return empty list if no real games found - no test games
         return real_games[:15]  # Limit to first 15 games for performance
     
     def _convert_to_short_name(self, full_name: str) -> str:
